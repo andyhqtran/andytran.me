@@ -1,0 +1,40 @@
+{
+  "name": "andytran.me",
+  "version": "1.0.0",
+  "description": "Next.js + Ghost API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyhqtran/andytran.me.git"
+  },
+  "author": "Andy Tran <hello@andytran.me> (https://andytran.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andyhqtran/andytran.me/issues"
+  },
+  "homepage": "https://github.com/andyhqtran/andytran.me#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "babel-plugin-styled-components": "^1.10.7",
+    "cz-conventional-changelog": "^3.1.0"
+  },
+  "dependencies": {
+    "next": "^9.2.1",
+    "polished": "^3.4.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.0.1",
+    "styled-system": "^5.1.4"
+  }
+}
