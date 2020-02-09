@@ -4,11 +4,12 @@ import React, { Fragment } from 'react'
 import { getSettings } from 'api/settings'
 import { Button } from 'components/Button'
 import { Card } from 'components/Card'
+import { Heading } from 'components/Heading'
 
 const IndexPage = ({ settings }) => {
   return (
     <Fragment>
-      {settings.title}
+      <Heading level={1}>{settings.title}</Heading>
       {settings.description}
       <Card>
         Index page
