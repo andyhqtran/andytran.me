@@ -1,3 +1,3 @@
-export Card from './Card';
+export Card from './Card'
 
-export * from './Card.styles';
+export * from './Card.styles'

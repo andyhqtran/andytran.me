@@ -1,6 +1,6 @@
-import { rem } from 'polished';
-import styled from 'styled-components';
-import { margin } from 'styled-system';
+import { rem } from 'polished'
+import styled from 'styled-components'
+import { margin } from 'styled-system'
 
 const StyledButton = styled.button`
   outline: none;
@@ -16,6 +16,6 @@ const StyledButton = styled.button`
   font-size: ${rem(18)};
   letter-spacing: ${rem(-0.2)};
   cursor: pointer;
-`;
+`
 
-export { StyledButton };
+export { StyledButton }

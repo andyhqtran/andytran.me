@@ -1,16 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
 
-import { Button } from 'components/Button';
-import { Card } from 'components/Card';
+import { Button } from 'components/Button'
+import { Card } from 'components/Card'
 
 const HomePage = () => {
-	return (
-		<Card>
-			Home page
+  return (
+    <Card>
+      Home page
       <Button>View project &#10230;</Button>
-		</Card>
-	);
-};
+    </Card>
+  )
+}
 
-export default HomePage;
+export default HomePage

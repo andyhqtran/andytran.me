@@ -1,15 +1,21 @@
-import React from 'react';
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import { StyledButton } from './Button.styles';
+import { StyledButton } from './Button.styles'
 
 const Button = ({ children, ...restOfProps }) => {
   return (
     <StyledButton {...restOfProps}>
       {children}
     </StyledButton>
-  );
-};
+  )
+}
 
-Button.propTypes = {};
+Button.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
+}
 
-export default Button;
+export default Button
