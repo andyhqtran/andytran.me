@@ -1,21 +1,32 @@
+import styled from '@emotion/styled'
+import { css } from '@styled-system/css'
 import { rem } from 'polished'
-import styled from 'styled-components'
-import { margin } from 'styled-system'
+import { background, color, compose, flexbox, layout, position, space, typography } from 'styled-system'
 
-const StyledButton = styled.button`
-  outline: none;
-  background-color: transparent;
-  height: 56px;
-  border: 0;
-  border-radius: 36px;
-  box-shadow: inset 0 0 0 1px #2B2927;
-  padding: 0 32px;
-  ${margin}
-  color: #DCDAD8;
-  font-family: Inter, sans-serif;
-  font-size: ${rem(18)};
-  letter-spacing: ${rem(-0.2)};
-  cursor: pointer;
-`
+export const StyledButton = styled('button')(
+  {
+    outline: 'none',
+    backgroundColor: 'transparent',
+    height: 56,
+    borderRadius: 28,
+    letterSpacing: rem(-0.2),
+    cursor: 'pointer'
+  },
+  css({
+    paddingLeft: 4,
+    paddingRight: 4,
+    color: 'white',
+    fontSize: 'body'
+  }),
+  compose(
+    background,
+    color,
+    flexbox,
+    layout,
+    position,
+    space,
+    typography
+  )
+)
 
-export { StyledButton }
+// export { StyledButton }
