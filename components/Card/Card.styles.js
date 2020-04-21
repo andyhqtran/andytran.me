@@ -5,7 +5,7 @@ import { background, color, compose, flexbox, layout, position, space } from 'st
 export const StyledCard = styled('div')(
   css({
     backgroundColor: 'contrast',
-    borderRadius: 8
+    borderRadius: 5
   }),
   compose(
     background,
