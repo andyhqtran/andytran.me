@@ -4,7 +4,7 @@ import { ThemeProvider } from 'emotion-theming'
 import App from 'next/app'
 import React, { Fragment } from 'react'
 
-import { GlobalStyle } from 'components/GlobalStyle'
+import { GlobalStyles } from 'components/GlobalStyles'
 import { common } from 'themes'
 
 const cache = createCache()
