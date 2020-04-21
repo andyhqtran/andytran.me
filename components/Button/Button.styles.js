@@ -28,5 +28,3 @@ export const StyledButton = styled('button')(
     typography
   )
 )
-
-// export { StyledButton }
