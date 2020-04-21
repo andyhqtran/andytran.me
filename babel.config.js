@@ -3,11 +3,12 @@ module.exports = {
   plugins: [
     '@babel/plugin-proposal-export-default-from',
     [
-      'babel-plugin-styled-components',
+      'emotion',
       {
-        displayName: true,
-        fileName: false,
-        ssr: true
+        autoLabel: process.env.NODE_ENV !== 'production',
+        cssPropOptimization: true,
+        labelFormat: '[local]',
+        sourceMap: true
       }
     ]
   ]
