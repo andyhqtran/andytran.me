@@ -5,7 +5,7 @@ import App from 'next/app'
 import React, { Fragment } from 'react'
 
 import { GlobalStyles } from 'components/GlobalStyles'
-import { common } from 'themes'
+import { common, light } from 'themes'
 
 const cache = createCache()
 
@@ -29,15 +29,17 @@ class MyApp extends App {
   render () {
     const { Component, pageProps } = this.props
 
+    const { theme } = this.state
+
     return (
       <CacheProvider value={cache}>
         <ThemeProvider
           theme={{
-            ...common
+            ...common,
+            ...theme === 'dark' ? light : light
           }}
         >
           <Fragment>
-            {this.state.theme}
             <GlobalStyles />
             <Component {...pageProps} />
           </Fragment>
