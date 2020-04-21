@@ -10,6 +10,22 @@ import { common } from 'themes'
 const cache = createCache()
 
 class MyApp extends App {
+  constructor () {
+    super()
+
+    this.state = {
+      theme: 'light'
+    }
+  }
+
+  componentDidMount () {
+    if (typeof window !== 'undefined') {
+      const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+      this.setState({ theme: isDarkMode ? 'dark' : 'light' })
+    }
+  }
+
   render () {
     const { Component, pageProps } = this.props
 
@@ -21,6 +37,7 @@ class MyApp extends App {
           }}
         >
           <Fragment>
+            {this.state.theme}
             <GlobalStyle />
             <Component {...pageProps} />
           </Fragment>
