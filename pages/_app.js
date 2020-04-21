@@ -38,7 +38,7 @@ class MyApp extends App {
         >
           <Fragment>
             {this.state.theme}
-            <GlobalStyle />
+            <GlobalStyles />
             <Component {...pageProps} />
           </Fragment>
         </ThemeProvider>
