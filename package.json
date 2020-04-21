@@ -51,7 +51,7 @@
     "emotion-server": "^10.0.27",
     "emotion-theming": "^10.0.27",
     "next": "^9.3.5",
-    "polished": "^3.4.4",
+    "polished": "^3.5.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.12.0",
