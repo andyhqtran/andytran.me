@@ -1,32 +1,31 @@
-import React, { Fragment } from 'react'
-import Document from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, { Head, Main, NextScript } from 'next/document'
+import { extractCritical } from '@emotion/server'
+import React from 'react'
 
 class MyDocument extends Document {
-  static async getInitialProps (ctx) {
-    const sheet = new ServerStyleSheet()
+  static getInitialProps ({ renderPage }) {
+    const page = renderPage()
 
-    const originalRenderPage = ctx.renderPage
+    const styles = extractCritical(page.html)
 
-    try {
-      ctx.renderPage = () => originalRenderPage({
-        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
-      })
+    return { ...page, ...styles }
+  }
 
-      const initialProps = await Document.getInitialProps(ctx)
-
-      return {
-        ...initialProps,
-        styles: (
-          <Fragment>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </Fragment>
-        )
-      }
-    } finally {
-      sheet.seal()
-    }
+  render () {
+    return (
+      <html lang='en'>
+        <Head>
+          <style
+            data-emotion-css={this.props.ids.join(' ')}
+            dangerouslySetInnerHTML={{ __html: this.props.css }}
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    )
   }
 }
 
