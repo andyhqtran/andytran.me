@@ -9,7 +9,7 @@ import { Heading } from 'components/Heading'
 const IndexPage = ({ settings }) => {
   return (
     <Fragment>
-      <Heading level={1}>{settings.title}</Heading>
+      <Heading variant='h1'>{settings.title}</Heading>
       {settings.description}
       <Card>
         Index page

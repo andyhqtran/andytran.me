@@ -40,15 +40,15 @@ lineHeights.h4 = lineHeights[20] // 40px
 lineHeights.h5 = lineHeights[12] // 24px
 lineHeights.h6 = lineHeights[9] // 18px
 
-const letterSpacings = [rem(0), rem(0.1), rem(0.2), rem(0.3), rem(0.4), rem(0.5), rem(0.6), rem(0.7), rem(0.8), rem(0.9), rem(1), rem(1.1), rem(1.2), rem(1.3), rem(1.4), rem(1.5), rem(1.5), rem(1.6), rem(1.7), rem(1.8), rem(1.9), rem(2)]
+const letterSpacings = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2]
 
-letterSpacings.body = letterSpacings[2] // 0.2px
-letterSpacings.h1 = rem(20) // 2px
-letterSpacings.h2 = rem(10) // 1px
-letterSpacings.h3 = rem(10) // 1px
-letterSpacings.h4 = rem(3) // 0.3px
-letterSpacings.h5 = rem(3) // 0.3px
-letterSpacings.h6 = rem(3) // 0.3px
+letterSpacings.body = letterSpacings[2] * -1 // -0.2px
+letterSpacings.h1 = letterSpacings[20] * -1 // -2px
+letterSpacings.h2 = letterSpacings[10] * -1 // -1px
+letterSpacings.h3 = letterSpacings[10] * -1 // -1px
+letterSpacings.h4 = letterSpacings[3] * -1 // -0.3px
+letterSpacings.h5 = letterSpacings[3] * -1 // -0.3px
+letterSpacings.h6 = letterSpacings[3] * -1 // -0.3px
 
 const radii = [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40]
 

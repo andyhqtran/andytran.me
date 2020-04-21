@@ -1,20 +1,25 @@
+import { pick } from '@styled-system/props'
+import propTypes from '@styled-system/prop-types'
 import PropTypes from 'prop-types'
 import React from 'react'
 
 import { StyledHeading } from './Heading.styles'
 
-const Heading = ({ children, level, ...restOfProps }) => {
-  const element = [1, 2, 3, 4, 5, 6].includes(level) ? `h${level}` : 'h6'
-
+const Heading = ({ children, className, variant, ...restOfProps }) => {
   return (
-    <StyledHeading as={element} level={level} {...restOfProps}>
+    <StyledHeading
+      as={variant}
+      className={className}
+      variant={variant}
+      {...pick(restOfProps)}
+    >
       {children}
     </StyledHeading>
   )
 }
 
 Heading.defaultProps = {
-  level: 1
+  variant: 'h1'
 }
 
 Heading.propTypes = {
@@ -22,7 +27,11 @@ Heading.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6])
+  className: PropTypes.string,
+  variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  ...propTypes.color,
+  ...propTypes.space,
+  ...propTypes.typography
 }
 
 export default Heading

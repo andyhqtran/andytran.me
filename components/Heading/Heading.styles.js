@@ -1,43 +1,54 @@
-import { rem } from 'polished'
-import styled from 'styled-components'
-import { color, space, typography, variant } from 'styled-system'
+import styled from '@emotion/styled'
+import { color, compose, space, typography, variant } from 'styled-system'
 
-const StyledHeading = styled('h1')(
+export const StyledHeading = styled('h1')(
   {
     margin: 0
   },
   variant({
-    prop: 'level',
+    prop: 'variant',
     variants: {
-      1: {
+      h1: {
         fontSize: 'h1',
         fontWeight: 'black',
-        letterSpacing: rem(-2),
-        lineHeight: rem(76)
+        letterSpacing: 'h1',
+        lineHeight: 'h1'
       },
-      2: {
+      h2: {
         fontSize: 'h2',
         fontWeight: 'black',
-        letterSpacing: rem(-2), // @TODO: Figure out letter spacing for h2
-        lineHeight: rem(76) // @TODO: Figure out line height for h2
+        letterSpacing: 'h2',
+        lineHeight: 'h2'
       },
-      3: {
+      h3: {
         fontSize: 'h3',
         fontWeight: 'black',
-        letterSpacing: rem(-0.3),
-        lineHeight: rem(40)
+        letterSpacing: 'h3',
+        lineHeight: 'h3'
       },
-      4: {
+      h4: {
         fontSize: 'h4',
         fontWeight: 'bold',
-        letterSpacing: rem(-0.3),
-        lineHeight: rem(40)
+        letterSpacing: 'h4',
+        lineHeight: 'h4'
+      },
+      h5: {
+        fontSize: 'h5',
+        fontWeight: 'bold',
+        letterSpacing: 'h5',
+        lineHeight: 'h5'
+      },
+      h6: {
+        fontSize: 'h6',
+        fontWeight: 'bold',
+        letterSpacing: 'h6',
+        lineHeight: 'h6'
       }
     }
   }),
-  color,
-  space,
-  typography
+  compose(
+    color,
+    space,
+    typography
+  )
 )
-
-export { StyledHeading }
