@@ -1,9 +1,18 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
+import { css } from '@styled-system/css'
+import { background, color, compose, flexbox, layout, position, space } from 'styled-system'
 
-const StyledCard = styled.div`
-  background-color: #181614;
-  border-radius: 16px;
-  color: #FFFFFF;
-`
-
-export { StyledCard }
+export const StyledCard = styled('div')(
+  css({
+    backgroundColor: 'contrast',
+    borderRadius: 8
+  }),
+  compose(
+    background,
+    color,
+    flexbox,
+    layout,
+    position,
+    space
+  )
+)
