@@ -38,8 +38,18 @@
     "eslint-plugin-standard": "^4.0.1"
   },
   "dependencies": {
+    "@emotion/cache": "^10.0.29",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@styled-system/css": "^5.1.5",
+    "@styled-system/prop-types": "^5.1.5",
+    "@styled-system/props": "^5.1.5",
+    "@styled-system/theme-get": "^5.1.2",
     "@tryghost/content-api": "^1.4.1",
     "dotenv": "^8.2.0",
+    "emotion": "^10.0.27",
+    "emotion-server": "^10.0.27",
+    "emotion-theming": "^10.0.27",
     "next": "^9.3.2",
     "polished": "^3.4.4",
     "prop-types": "^15.7.2",
