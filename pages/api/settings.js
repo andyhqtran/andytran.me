@@ -6,12 +6,15 @@ const api = new GhostContentAPI({
   version: 'v3'
 })
 
-export const getSettings = () => {
-  return api.settings
+export default async (req, res) => {
+  return await api
+    .settings
     .browse({
       limit: 'all'
     })
-    .catch((error) => {
-      console.log(error)
+    .then((response) => {
+      res.status = 200
+      res.setHeader('Content-Type', 'application/json')
+      res.json(response)
     })
 }

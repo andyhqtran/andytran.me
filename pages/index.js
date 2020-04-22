@@ -1,16 +1,15 @@
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 
-import { getSettings } from 'api/settings'
 import { Button } from 'components/Button'
 import { Card } from 'components/Card'
 import { Heading } from 'components/Heading'
 
-const IndexPage = ({ settings }) => {
+const IndexPage = ({ description, title }) => {
   return (
     <Fragment>
-      <Heading variant='h1'>{settings.title}</Heading>
-      {settings.description}
+      <Heading variant='h1'>{title}</Heading>
+      {description}
       <Card>
         Index page
         <Button>View project &#10230;</Button>
@@ -26,10 +25,13 @@ IndexPage.propTypes = {
   }).isRequired
 }
 
-IndexPage.getInitialProps = async () => {
-  const settings = await getSettings()
-
-  return { settings }
+IndexPage.getStaticProps = async () => {
+  return {
+    props: {
+      title: 'Title',
+      description: 'Title'
+    }
+  }
 }
 
 export default IndexPage
