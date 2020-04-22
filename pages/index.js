@@ -1,3 +1,4 @@
+import fetch from 'isomorphic-unfetch'
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 
@@ -23,15 +24,6 @@ IndexPage.propTypes = {
     description: PropTypes.string,
     title: PropTypes.string
   }).isRequired
-}
-
-IndexPage.getStaticProps = async () => {
-  return {
-    props: {
-      title: 'Title',
-      description: 'Title'
-    }
-  }
 }
 
 export default IndexPage
