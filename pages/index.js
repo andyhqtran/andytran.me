@@ -14,8 +14,12 @@ const IndexPage = ({ description, title }) => {
       <Header />
       <Block maxWidth={1184} mx='auto' width='100%'>
         <Block px={14} py={16}>
-          <Heading mb={6} variant='h1'>{title}</Heading>
-          <Paragraph fontSize={12} lineHeight={17}>{description}</Paragraph>
+          <Heading mb={6} variant='h1'>
+            {title}
+          </Heading>
+          <Paragraph color='description' fontSize={12} lineHeight={17}>
+            {description}
+          </Paragraph>
         </Block>
         <PostCard />
       </Block>

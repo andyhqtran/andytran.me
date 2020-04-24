@@ -13,7 +13,7 @@ const PostCard = ({ ...restOfProps }) => {
         <Heading mb={4} variant='h2'>
           Automation Library
         </Heading>
-        <Paragraph mb={10}>
+        <Paragraph color='description' mb={10}>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </Paragraph>
         <Button>View project &#10230;</Button>
