@@ -37,9 +37,9 @@ const colors = {
 colors.background = colors.white // #FFFFFF
 colors.body = colors.grayscale[16] // #000000, 0.64
 colors.border = colors.grayscale[3] // #000000, 0.12
-colors.buttonText = colors.grayscale[25] // #000000
+colors.buttonText = colors.grayscale[25] // #000000, 1
 colors.contrast = colors.grayscale[1] // #000000, 0.04
-colors.heading = colors.grayscale[0] // #000000, 1
+colors.heading = colors.grayscale[25] // #000000, 1
 
 export default {
   colors
