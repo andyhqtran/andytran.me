@@ -1,0 +1,1 @@
+export Inter from './Inter'
