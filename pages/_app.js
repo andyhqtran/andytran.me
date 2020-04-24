@@ -5,6 +5,8 @@ import App from 'next/app'
 import React, { Fragment } from 'react'
 
 import { GlobalStyles } from 'components/GlobalStyles'
+import { Inter } from 'components/Inter'
+import { Normalize } from 'components/Normalize'
 import { common, light } from 'themes'
 
 const cache = createCache()
@@ -40,7 +42,9 @@ class MyApp extends App {
           }}
         >
           <Fragment>
+            <Normalize />
             <GlobalStyles />
+            <Inter />
             <Component {...pageProps} />
           </Fragment>
         </ThemeProvider>
