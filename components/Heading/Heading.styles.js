@@ -1,10 +1,14 @@
 import styled from '@emotion/styled'
+import { css } from '@styled-system/css'
 import { color, compose, space, typography, variant } from 'styled-system'
 
 export const StyledHeading = styled('h1')(
   {
     margin: 0
   },
+  css({
+    color: 'heading'
+  }),
   variant({
     prop: 'variant',
     variants: {
