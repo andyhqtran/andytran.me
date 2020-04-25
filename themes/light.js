@@ -3,7 +3,7 @@ import { rgba } from 'polished'
 const colors = {
   black: '#000000',
   primary: '#2B67BF',
-  grayscale: [
+  shade: [
     rgba('#000000', 0),
     rgba('#000000', 0.04),
     rgba('#000000', 0.08),
@@ -35,12 +35,12 @@ const colors = {
 }
 
 colors.background = colors.white // #FFFFFF
-colors.body = colors.grayscale[23] // #000000, 0.92
-colors.border = colors.grayscale[3] // #000000, 0.12
-colors.buttonText = colors.grayscale[25] // #000000, 1
-colors.contrast = colors.grayscale[1] // #000000, 0.04
-colors.description = colors.grayscale[16] // #000000, 0.64
-colors.heading = colors.grayscale[25] // #000000, 1
+colors.body = colors.shade[23] // #000000, 0.92
+colors.border = colors.shade[3] // #000000, 0.12
+colors.buttonText = colors.shade[25] // #000000, 1
+colors.contrast = colors.shade[1] // #000000, 0.04
+colors.description = colors.shade[16] // #000000, 0.64
+colors.heading = colors.shade[25] // #000000, 1
 
 export default {
   colors
