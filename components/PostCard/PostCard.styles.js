@@ -4,6 +4,8 @@ import { Card } from 'components/Card'
 
 export const StyledPostCard = styled(Card)(
   {
-    display: 'flex'
+    display: 'flex',
+    justifyContent: 'space-between',
+    overflow: 'hidden'
   }
 )
