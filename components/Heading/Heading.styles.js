@@ -47,6 +47,26 @@ export const StyledHeading = styled('h1')(
         fontWeight: 'bold',
         letterSpacing: 'h6',
         lineHeight: 'h6'
+      },
+      'h6-alt': {
+        fontSize: 'h6',
+        fontWeight: 'bold',
+        letterSpacing: 'h6alt',
+        lineHeight: 'h6',
+        textTransform: 'uppercase'
+      },
+      h7: {
+        fontSize: 'h7',
+        fontWeight: 'bold',
+        letterSpacing: 'h7',
+        lineHeight: 'h7'
+      },
+      'h7-alt': {
+        fontSize: 'h7',
+        fontWeight: 'bold',
+        letterSpacing: 'h7alt',
+        lineHeight: 'h7',
+        textTransform: 'uppercase'
       }
     }
   }),
