@@ -1,5 +1,8 @@
 module.exports = {
-  presets: ['next/babel'],
+  presets: [
+    'next/babel',
+    '@emotion/babel-preset-css-prop'
+  ],
   plugins: [
     '@babel/plugin-proposal-export-default-from',
     [

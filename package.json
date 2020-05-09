@@ -44,6 +44,7 @@
     "react-is": "^16.13.1"
   },
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.27",
     "@emotion/cache": "^10.0.29",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
