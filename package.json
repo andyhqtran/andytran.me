@@ -7,7 +7,8 @@
     "build": "next build",
     "dev": "next",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,13 @@
     }
   },
   "devDependencies": {
+    "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@storybook/addon-a11y": "^5.3.18",
+    "@storybook/addon-docs": "^5.3.18",
+    "@storybook/react": "^5.3.18",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
@@ -34,7 +40,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "react-is": "^16.13.1"
   },
   "dependencies": {
     "@emotion/cache": "^10.0.29",
