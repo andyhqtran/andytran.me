@@ -7,16 +7,25 @@ const fonts = ['Inter, sans-serif']
 fonts.body = fonts[0] // Inter
 fonts.heading = fonts[0] // Inter
 
-const fontSizes = [rem(0), rem(2), rem(4), rem(6), rem(8), rem(10), rem(12), rem(14), rem(16), rem(18), rem(20), rem(22), rem(24), rem(26), rem(28), rem(30), rem(32), rem(34), rem(36), rem(38), rem(40), rem(42), rem(44), rem(46), rem(48), rem(50), rem(52), rem(54), rem(56), rem(58), rem(60), rem(62), rem(64), rem(66), rem(68), rem(70), rem(72), rem(74), rem(76), rem(78), rem(80)]
+const fontSizes = [
+  rem(12),
+  rem(14),
+  rem(18),
+  rem(21),
+  rem(24),
+  rem(40),
+  rem(50),
+  rem(70)
+]
 
-fontSizes.body = fontSizes[9] // 18px
-fontSizes.button = fontSizes[9] // 18px
-fontSizes.h1 = fontSizes[35] // 70px
-fontSizes.h2 = fontSizes[25] // 50px
-fontSizes.h3 = fontSizes[16] // 32px
-fontSizes.h4 = fontSizes[12] // 24px
-fontSizes.h5 = fontSizes[9] // 18px
-fontSizes.h6 = fontSizes[7] // 18px
+fontSizes.body = fontSizes[2] // 18px
+fontSizes.button = fontSizes[2] // 18px
+fontSizes.h1 = fontSizes[7] // 70px
+fontSizes.h2 = fontSizes[6] // 50px
+fontSizes.h3 = fontSizes[5] // 32px
+fontSizes.h4 = fontSizes[4] // 24px
+fontSizes.h5 = fontSizes[2] // 18px
+fontSizes.h6 = fontSizes[1] // 14px
 
 const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 
