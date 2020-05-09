@@ -39,15 +39,25 @@ fontWeights.bold = fontWeights[6] // 700
 fontWeights.extraBold = fontWeights[7] // 800
 fontWeights.black = fontWeights[8] // 900
 
-const lineHeights = [rem(0), rem(2), rem(4), rem(6), rem(8), rem(10), rem(12), rem(14), rem(16), rem(18), rem(20), rem(22), rem(24), rem(26), rem(28), rem(30), rem(32), rem(34), rem(36), rem(38), rem(40), rem(42), rem(44), rem(46), rem(48), rem(50), rem(52), rem(54), rem(56), rem(58), rem(60), rem(62), rem(64), rem(66), rem(68), rem(70), rem(72), rem(74), rem(76), rem(78), rem(80)]
+const lineHeights = [
+  rem(18),
+  rem(22),
+  rem(24),
+  rem(28),
+  rem(32),
+  rem(34),
+  rem(40),
+  rem(52),
+  rem(76)
+]
 
-lineHeights.body = lineHeights[14] // 28px
-lineHeights.h1 = lineHeights[38] // 76px
-lineHeights.h2 = lineHeights[26] // 52px
-lineHeights.h3 = lineHeights[20] // 40px
-lineHeights.h4 = lineHeights[20] // 40px
-lineHeights.h5 = lineHeights[12] // 24px
-lineHeights.h6 = lineHeights[9] // 18px
+lineHeights.body = lineHeights[3] // 28px
+lineHeights.h1 = lineHeights[8] // 76px
+lineHeights.h2 = lineHeights[7] // 52px
+lineHeights.h3 = lineHeights[6] // 40px
+lineHeights.h4 = lineHeights[6] // 40px
+lineHeights.h5 = lineHeights[2] // 24px
+lineHeights.h6 = lineHeights[1] // 18px
 
 const letterSpacings = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2]
 
