@@ -3,6 +3,7 @@ import { pick } from '@styled-system/props'
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import { motionPick } from 'utils/motion-props'
 import { StyledIconButton } from './IconButton.styles'
 
 const IconButton = ({
@@ -16,6 +17,7 @@ const IconButton = ({
       className={className}
       onClick={onClick}
       whileTap={{ scale: 0.92 }}
+      {...motionPick(restOfProps)}
       {...pick(restOfProps)}
     >
       {children}
