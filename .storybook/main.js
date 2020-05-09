@@ -9,6 +9,7 @@ module.exports = {
   webpackFinal: (config) => {
     config.resolve.alias.components = path.resolve(__dirname, '../components')
     config.resolve.alias.themes = path.resolve(__dirname, '../themes')
+    config.resolve.alias.utils = path.resolve(__dirname, '../utils')
 
     return config
   }
