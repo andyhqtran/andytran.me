@@ -15,6 +15,7 @@ const IconButton = ({
     <StyledIconButton
       className={className}
       onClick={onClick}
+      whileTap={{ scale: 0.9 }}
       {...pick(restOfProps)}
     >
       {children}

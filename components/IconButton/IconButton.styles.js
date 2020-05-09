@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
 import { css } from '@styled-system/css'
 import { themeGet } from '@styled-system/theme-get'
+import { motion } from 'framer-motion'
 import { transitions } from 'polished'
 import { background, color, compose, flexbox, layout, position, space, typography } from 'styled-system'
 
-export const StyledIconButton = styled('button')(
+export const StyledIconButton = styled(motion.button)(
   {
     outline: 'none',
     display: 'flex',
