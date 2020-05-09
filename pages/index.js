@@ -5,22 +5,17 @@ import React, { Fragment } from 'react'
 import { Block } from 'components/Block'
 import { PostCard } from 'components/PostCard'
 import { Header } from 'components/Header'
-import { Heading } from 'components/Heading'
-import { Paragraph } from 'components/Paragraph'
+import { Hero } from 'components/Hero'
 
 const IndexPage = ({ description, title }) => {
   return (
     <Fragment>
       <Header />
       <Block maxWidth={1184} mx='auto' width='100%'>
-        <Block px={14} py={16}>
-          <Heading mb={4} variant='h1'>
-            {title}
-          </Heading>
-          <Paragraph color='description' fontSize={12} lineHeight={17}>
-            {description}
-          </Paragraph>
-        </Block>
+        <Hero
+          description={description}
+          title={title}
+        />
         <PostCard />
       </Block>
     </Fragment>
