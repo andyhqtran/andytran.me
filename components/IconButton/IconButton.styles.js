@@ -11,6 +11,7 @@ export const StyledIconButton = styled(motion.button)(
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'transparent',
     width: 56,
     height: 56,
     border: 0,
