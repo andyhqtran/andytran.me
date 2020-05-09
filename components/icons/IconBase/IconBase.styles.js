@@ -6,7 +6,8 @@ export const StyledIconBase = styled(motion.svg)(
   {
     display: 'block',
     width: 24,
-    height: 24
+    height: 24,
+    fill: 'currentColor'
   },
   compose(
     background,
