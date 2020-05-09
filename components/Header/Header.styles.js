@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { css } from '@styled-system/css'
+import { themeGet } from '@styled-system/theme-get'
 
 export const StyledHeader = styled('header')(
   {
@@ -11,6 +12,9 @@ export const StyledHeader = styled('header')(
     justifyContent: 'center',
     height: 88
   },
+  (props) => ({
+    boxShadow: `inset 0 -1px 0 ${themeGet('colors.border')(props)}`
+  }),
   css({
     backgroundColor: 'white'
   })
