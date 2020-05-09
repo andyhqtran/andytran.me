@@ -1,0 +1,1 @@
+export LinkedInIcon from './LinkedInIcon'
