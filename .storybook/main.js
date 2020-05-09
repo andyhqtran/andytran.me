@@ -4,7 +4,7 @@ module.exports = {
   stories: ['../components/**/*.stories.[tj]s'],
   addons: [
     '@storybook/addon-docs',
-    '@storybook/addon-a11y'
+    '@storybook/addon-a11y/register'
   ],
   webpackFinal: (config) => {
     config.resolve.alias.components = path.resolve(__dirname, '../components')
