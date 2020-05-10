@@ -27,7 +27,7 @@ const Header = ({ title }) => {
           {isPostsPage && (
             <IconButton
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 56, opacity: 0  }}
+              exit={{ x: 56, opacity: 0 }}
               initial={{ x: 56, opacity: 0 }}
               left={-72}
               onClick={() => Router.push('/')}
