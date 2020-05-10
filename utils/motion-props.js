@@ -32,14 +32,14 @@ const props = [
   'transition',
   'variants',
   'whileHover',
-  'whileTap',
-];
+  'whileTap'
+]
 
 const regex = new RegExp(`^(${props.join('|')})$`)
 
 export const motionOmit = props => {
   const next = {}
-  for (let key in props) {
+  for (const key in props) {
     if (regex.test(key)) continue
     next[key] = props[key]
   }
@@ -48,7 +48,7 @@ export const motionOmit = props => {
 
 export const motionPick = props => {
   const next = {}
-  for (let key in props) {
+  for (const key in props) {
     if (!regex.test(key)) continue
     next[key] = props[key]
   }
