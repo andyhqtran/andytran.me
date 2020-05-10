@@ -1,12 +1,11 @@
-import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 
 import { Header } from 'components/Header'
 
-const PostsSlugPage = ({ description, title }) => {
+const PostsSlugPage = () => {
   return (
     <Fragment>
-      <Header title={title} />
+      <Header />
     </Fragment>
   )
 }
