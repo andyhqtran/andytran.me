@@ -1,3 +1,4 @@
+import GhostContentAPI from '@tryghost/content-api'
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 
@@ -22,6 +23,27 @@ const IndexPage = ({ description, title }) => {
 IndexPage.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string
+}
+
+export async function getStaticProps () {
+  const api = new GhostContentAPI({
+    url: process.env.GHOST_API_URL,
+    key: process.env.GHOST_CONTENT_API_KEY,
+    version: 'v3'
+  })
+
+  const { description, title } = await api
+    .settings
+    .browse({
+      limit: 'all'
+    })
+
+  return {
+    props: {
+      description,
+      title
+    }
+  }
 }
 
 export default IndexPage
