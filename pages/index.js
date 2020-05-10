@@ -2,6 +2,7 @@ import GhostContentAPI from '@tryghost/content-api'
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 
+import { getSettings } from 'api/settings'
 import { Block } from 'components/Block'
 import { PostCard } from 'components/PostCard'
 import { Hero } from 'components/Hero'
@@ -26,17 +27,7 @@ IndexPage.propTypes = {
 }
 
 export async function getStaticProps () {
-  const api = new GhostContentAPI({
-    url: process.env.GHOST_API_URL,
-    key: process.env.GHOST_CONTENT_API_KEY,
-    version: 'v3'
-  })
-
-  const { description, title } = await api
-    .settings
-    .browse({
-      limit: 'all'
-    })
+  const { description, title } = await getSettings()
 
   return {
     props: {
