@@ -7,21 +7,38 @@ import React from 'react'
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
 import { Paragraph } from 'components/Paragraph'
+import { Tag } from 'components/Tag'
 
 const PostTitle = ({
   className,
   excerpt,
+  tags,
   title,
   ...restOfProps
 }) => {
   return (
     <Block
       className={className}
+      maxWidth={1072}
+      mx='auto'
+      pt={20}
       {...pick(restOfProps)}
     >
       <Head>
         <title>{title}</title>
       </Head>
+      <Block mb={6}>
+        {tags && tags.map((tag, index) => (
+          <Tag
+            description={tag.description}
+            image={tag.image}
+            key={tag.id}
+            mr={tags.length !== index && 2}
+            name={tag.name}
+            slug={tag.slug}
+          />
+        ))}
+      </Block>
       <Heading maxWidth={736} mb={4} variant='h1'>
         {title}
       </Heading>
@@ -35,6 +52,14 @@ const PostTitle = ({
 PostTitle.propTypes = {
   className: PropTypes.string,
   excerpt: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.shape({
+    description: PropTypes.string,
+    id: PropTypes.string,
+    image: PropTypes.string,
+    name: PropTypes.string,
+    slug: PropTypes.string,
+    visibility: PropTypes.string
+  })),
   title: PropTypes.string,
   ...propTypes.background,
   ...propTypes.border,
