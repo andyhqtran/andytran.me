@@ -1,7 +1,7 @@
 import Router, { useRouter } from 'next/router'
 import { AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
-import React, { useState } from 'react'
+import React from 'react'
 
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
