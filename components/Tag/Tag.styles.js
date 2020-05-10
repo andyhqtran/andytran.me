@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { css } from '@styled-system/css'
 import { motion } from 'framer-motion'
 import { background, color, compose, flexbox, layout, position, space } from 'styled-system'
 export const StyledTag = styled(motion.a)(
@@ -12,6 +13,9 @@ export const StyledTag = styled(motion.a)(
     cursor: 'pointer',
     userSelect: 'none'
   },
+  css({
+    backgroundColor: 'contrast'
+  }),
   compose(
     background,
     color,
