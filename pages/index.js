@@ -1,4 +1,3 @@
-import GhostContentAPI from '@tryghost/content-api'
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 
