@@ -7,13 +7,15 @@ import { Block } from 'components/Block'
 import { PostTitle } from 'components/PostTitle'
 
 const PostsSlugPage = ({ post, title }) => {
+  console.log(post.tags)
   return (
     <Fragment>
+      <PostTitle
+        excerpt={post.excerpt}
+        tags={post.tags}
+        title={post.title}
+      />
       <Block maxWidth={1184} mx='auto' width='100%'>
-        <PostTitle
-          excerpt={post.excerpt}
-          title={post.title}
-        />
       </Block>
     </Fragment>
   )
@@ -22,6 +24,14 @@ const PostsSlugPage = ({ post, title }) => {
 PostsSlugPage.propTypes = {
   post: PropTypes.shape({
     excerpt: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.shape({
+      description: PropTypes.string,
+      id: PropTypes.string,
+      image: PropTypes.string,
+      name: PropTypes.string,
+      slug: PropTypes.string,
+      visibility: PropTypes.string
+    })),
     title: PropTypes.string
   }),
   title: PropTypes.string
@@ -48,7 +58,20 @@ export async function getStaticProps ({ params }) {
 
   return {
     props: {
-      post,
+      post: {
+        excerpt: post.excerpt,
+        id: post.id,
+        slug: post.slug,
+        tags: post.tags && post.tags.filter((tag) => tag.visibility === 'public').map((tag) => ({
+          description: tag.description,
+          id: tag.id,
+          image: tag.feature_image,
+          name: tag.name,
+          slug: tag.slug,
+          visibility: tag.visibility
+        })),
+        title: post.title
+      },
       title
     }
   }
