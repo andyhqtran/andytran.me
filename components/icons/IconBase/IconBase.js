@@ -19,7 +19,7 @@ const IconBase = ({ children, className, ...restOfProps }) => {
 }
 
 IconBase.propTypes = {
-  children: PropTypes.oneOf([
+  children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),

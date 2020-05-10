@@ -26,7 +26,7 @@ const IconButton = ({
 }
 
 IconButton.propTypes = {
-  children: PropTypes.oneOf([
+  children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
