@@ -13,12 +13,12 @@ const PostCard = ({ ...restOfProps }) => {
     <StyledPostCard>
       <Block alignItems='flex-start' display='flex' flexDirection='column' maxWidth={520} p={14}>
         <Heading mb={4} variant='h2'>
-          Automation Library
+          Mixmax
         </Heading>
         <Paragraph color='description' mb={10}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Mixmax is the #1 sales engagement platform for the complete sales cycle
         </Paragraph>
-        <Button onClick={() => Router.push('/posts/automation-library')}>View project &#10230;</Button>
+        <Button onClick={() => Router.push('/posts/mixmax')}>View project &#10230;</Button>
       </Block>
       <Window position='relative' right={-20} top={56} width={620} />
     </StyledPostCard>
