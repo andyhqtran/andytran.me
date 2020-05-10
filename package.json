@@ -52,6 +52,7 @@
     "@styled-system/css": "^5.1.5",
     "@styled-system/prop-types": "^5.1.5",
     "@styled-system/props": "^5.1.5",
+    "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
     "@tryghost/content-api": "^1.4.1",
     "dotenv": "^8.2.0",

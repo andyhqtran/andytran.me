@@ -1,10 +1,11 @@
 import styled from '@emotion/styled'
 import { css } from '@styled-system/css'
+import shouldForwardProp from '@styled-system/should-forward-prop'
 import { themeGet } from '@styled-system/theme-get'
 import { rem, transitions } from 'polished'
 import { background, color, compose, flexbox, layout, position, space, typography } from 'styled-system'
 
-export const StyledButton = styled('button')(
+export const StyledButton = styled('button', { shouldForwardProp })(
   {
     outline: 'none',
     backgroundColor: 'transparent',
