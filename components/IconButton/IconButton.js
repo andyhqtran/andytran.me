@@ -9,11 +9,13 @@ import { StyledIconButton } from './IconButton.styles'
 const IconButton = ({
   children,
   className,
+  name,
   onClick,
   ...restOfProps
 }) => {
   return (
     <StyledIconButton
+      aria-label={name}
       className={className}
       onClick={onClick}
       whileTap={{ scale: 0.92 }}
@@ -31,6 +33,7 @@ IconButton.propTypes = {
     PropTypes.node
   ]),
   className: PropTypes.string,
+  name: PropTypes.string,
   onClick: PropTypes.func,
   ...propTypes.background,
   ...propTypes.color,

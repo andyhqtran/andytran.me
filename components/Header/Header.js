@@ -53,22 +53,22 @@ const Header = ({ title }) => {
         )}
         <Block display='flex'>
           {githubUrl && (
-            <IconButton onClick={() => { window.location.href = githubUrl }}>
+            <IconButton name='Github' onClick={() => { window.location.href = githubUrl }}>
               <GithubIcon />
             </IconButton>
           )}
           {linkedInUrl && (
-            <IconButton onClick={() => { window.location.href = linkedInUrl }}>
+            <IconButton name='LinkedIn' onClick={() => { window.location.href = linkedInUrl }}>
               <LinkedInIcon />
             </IconButton>
           )}
           {twitterUrl && (
-            <IconButton onClick={() => { window.location.href = twitterUrl }}>
+            <IconButton name='Twitter' onClick={() => { window.location.href = twitterUrl }}>
               <TwitterIcon />
             </IconButton>
           )}
           {codePenUrl && (
-            <IconButton onClick={() => { window.location.href = codePenUrl }}>
+            <IconButton name='CodePen' onClick={() => { window.location.href = codePenUrl }}>
               <CodePenIcon />
             </IconButton>
           )}
