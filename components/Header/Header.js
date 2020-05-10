@@ -1,4 +1,5 @@
 import Router, { useRouter } from 'next/router'
+import { AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -28,18 +29,22 @@ const Header = ({ title }) => {
   return (
     <StyledHeader key='header'>
       <Block alignItems='center' display='flex' justifyContent='space-between' position='relative' maxWidth={1184} mx='auto' width='100%'>
-        {isPostsPage && (
-          <IconButton
-            animate={{ x: 0, opacity: 1 }}
-            initial={{ x: 28, opacity: 0 }}
-            left={-72}
-            onClick={() => Router.push('/')}
-            position='absolute'
-            transition={{ duration: 0.4 }}
-          >
-            <ArrowLeftIcon />
-          </IconButton>
-        )}
+        <AnimatePresence>
+          {isPostsPage && (
+            <IconButton
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: 28, opacity: 0 }}
+              initial={{ x: 28, opacity: 0 }}
+              key='previous-arrow'
+              left={-72}
+              onClick={() => Router.push('/')}
+              position='absolute'
+              transition={{ duration: 0.4 }}
+            >
+              <ArrowLeftIcon />
+            </IconButton>
+          )}
+        </AnimatePresence>
         <Logo justifySelf='left' title={title} />
         {isPostsPage && (
           <Block alignItems='center' display='flex' flexDirection='column'>
@@ -73,19 +78,22 @@ const Header = ({ title }) => {
             </IconButton>
           )}
         </Block>
-        {isPostsPage && (
-          <IconButton
-            ml='auto'
-            animate={{ x: 0, opacity: 1 }}
-            initial={{ x: -28, opacity: 0 }}
-            onClick={() => Router.push('/')}
-            position='absolute'
-            right={-72}
-            transition={{ duration: 0.4 }}
-          >
-            <ArrowRightIcon />
-          </IconButton>
-        )}
+        <AnimatePresence>
+          {isPostsPage && (
+            <IconButton
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -28, opacity: 0 }}
+              initial={{ x: -28, opacity: 0 }}
+              key='next-arrow'
+              onClick={() => Router.push('/')}
+              position='absolute'
+              right={-72}
+              transition={{ duration: 0.4 }}
+            >
+              <ArrowRightIcon />
+            </IconButton>
+          )}
+        </AnimatePresence>
       </Block>
     </StyledHeader>
   )
