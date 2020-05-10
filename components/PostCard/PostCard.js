@@ -1,3 +1,4 @@
+import Router from 'next/router'
 import React from 'react'
 
 import { Block } from 'components/Block'
@@ -17,7 +18,7 @@ const PostCard = ({ ...restOfProps }) => {
         <Paragraph color='description' mb={10}>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </Paragraph>
-        <Button>View project &#10230;</Button>
+        <Button onClick={() => Router.push('/posts/automation-library')}>View project &#10230;</Button>
       </Block>
       <Window position='relative' right={-20} top={56} width={620} />
     </StyledPostCard>
