@@ -12,8 +12,8 @@ const Tag = ({
   className,
   description,
   image,
+  name,
   slug,
-  title,
   ...restOfProps
 }) => {
   return (
@@ -31,7 +31,7 @@ const Tag = ({
         <Image
           alt={description}
           src={image}
-          title={title}
+          title={name}
         />
       </StyledTag>
     </Link>
@@ -42,8 +42,8 @@ Tag.propTypes = {
   className: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
+  name: PropTypes.string,
   slug: PropTypes.string,
-  title: PropTypes.string,
   ...propTypes.background,
   ...propTypes.color,
   ...propTypes.flexbox,
