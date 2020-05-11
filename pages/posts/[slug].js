@@ -20,8 +20,10 @@ const PostsSlugPage = ({ post, title }) => {
         image={post.image}
         title={post.title}
       />
-      <Block maxWidth={1072} mt={20} mx='auto' width='100%'>
-        {parseHTML(post.html)}
+      <Block display='grid' gridTemplateColumns='704px 1fr' maxWidth={1072} mt={20} mx='auto' width='100%'>
+        <article>
+          {parseHTML(post.html)}
+        </article>
       </Block>
     </Fragment>
   )
