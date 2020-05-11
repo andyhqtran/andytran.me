@@ -39,10 +39,10 @@ const PostTitle = ({
           />
         ))}
       </Block>
-      <Heading maxWidth={736} mb={4} variant='h1'>
+      <Heading maxWidth={704} mb={4} variant='h1'>
         {title}
       </Heading>
-      <Paragraph color='description' fontSize={4} lineHeight={5} maxWidth={736}>
+      <Paragraph color='description' fontSize={4} lineHeight={5} maxWidth={704}>
         {excerpt}
       </Paragraph>
     </Block>
