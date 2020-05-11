@@ -27,13 +27,13 @@ const PostTitle = ({
       <Head>
         <title>{title}</title>
       </Head>
-      <Block mb={6}>
+      <Block display='flex' mb={6}>
         {tags && tags.map((tag, index) => (
           <Tag
             description={tag.description}
             image={tag.image}
             key={tag.id}
-            mr={tags.length !== index && 2}
+            mr={tags.length !== index && 4}
             name={tag.name}
             slug={tag.slug}
           />
