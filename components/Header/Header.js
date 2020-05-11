@@ -8,23 +8,14 @@ import { Heading } from 'components/Heading'
 import { IconButton } from 'components/IconButton'
 import { ArrowLeftIcon } from 'components/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from 'components/icons/ArrowRightIcon'
-import { CodePenIcon } from 'components/icons/CodePenIcon'
-import { GithubIcon } from 'components/icons/GithubIcon'
-import { LinkedInIcon } from 'components/icons/LinkedInIcon'
-import { TwitterIcon } from 'components/icons/TwitterIcon'
 import { Logo } from 'components/Logo'
-import { getCodePenUrl, getGithubUrl, getLinkedInUrl, getTwitterUrl } from 'utils/environment'
+import { SocialIcons } from 'components/SocialIcons'
 import { StyledHeader } from './Header.styles'
 
 const Header = ({ postTitle, title }) => {
   const router = useRouter()
 
   const isPostsPage = router.pathname === '/posts/[slug]'
-
-  const codePenUrl = getCodePenUrl()
-  const githubUrl = getGithubUrl()
-  const linkedInUrl = getLinkedInUrl()
-  const twitterUrl = getTwitterUrl()
 
   return (
     <StyledHeader key='header'>
@@ -57,28 +48,7 @@ const Header = ({ postTitle, title }) => {
           </Block>
         )}
         {!isPostsPage && (
-          <Block display='flex' justifyContent='flex-end'>
-            {githubUrl && (
-              <IconButton name='Github' onClick={() => { window.location.href = githubUrl }}>
-                <GithubIcon />
-              </IconButton>
-            )}
-            {linkedInUrl && (
-              <IconButton name='LinkedIn' onClick={() => { window.location.href = linkedInUrl }}>
-                <LinkedInIcon />
-              </IconButton>
-            )}
-            {twitterUrl && (
-              <IconButton name='Twitter' onClick={() => { window.location.href = twitterUrl }}>
-                <TwitterIcon />
-              </IconButton>
-            )}
-            {codePenUrl && (
-              <IconButton name='CodePen' onClick={() => { window.location.href = codePenUrl }}>
-                <CodePenIcon />
-              </IconButton>
-            )}
-          </Block>
+          <SocialIcons />
         )}
         <AnimatePresence>
           {isPostsPage && (
