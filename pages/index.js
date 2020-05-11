@@ -8,7 +8,6 @@ import { PostCard } from 'components/PostCard'
 import { Hero } from 'components/Hero'
 
 const IndexPage = ({ description, navigation, posts, title }) => {
-  console.log(posts)
   return (
     <Fragment>
       <Block maxWidth={1184} mx='auto' width='100%'>
