@@ -16,7 +16,7 @@ import { Logo } from 'components/Logo'
 import { getCodePenUrl, getGithubUrl, getLinkedInUrl, getTwitterUrl } from 'utils/environment'
 import { StyledHeader } from './Header.styles'
 
-const Header = ({ title }) => {
+const Header = ({ postTitle, title }) => {
   const router = useRouter()
 
   const isPostsPage = router.pathname === '/posts/[slug]'
@@ -28,7 +28,7 @@ const Header = ({ title }) => {
 
   return (
     <StyledHeader key='header'>
-      <Block alignItems='center' display='flex' justifyContent='space-between' position='relative' maxWidth={1184} mx='auto' width='100%'>
+      <Block display='grid' gridTemplateColumns={isPostsPage ? '1fr 1fr 1fr' : '1fr 1fr'} position='relative' maxWidth={1184} mx='auto' width='100%'>
         <AnimatePresence>
           {isPostsPage && (
             <IconButton
@@ -45,39 +45,41 @@ const Header = ({ title }) => {
             </IconButton>
           )}
         </AnimatePresence>
-        <Logo justifySelf='left' title={title} />
+        <Logo title={title} />
         {isPostsPage && (
           <Block alignItems='center' display='flex' flexDirection='column'>
             <Heading color='shade.4' mb={1} variant='h7-alt'>
               Case study
             </Heading>
             <Heading color='shade.5' variant='h6-alt'>
-              Mixmax
+              {postTitle}
             </Heading>
           </Block>
         )}
-        <Block display='flex'>
-          {githubUrl && (
-            <IconButton name='Github' onClick={() => { window.location.href = githubUrl }}>
-              <GithubIcon />
-            </IconButton>
-          )}
-          {linkedInUrl && (
-            <IconButton name='LinkedIn' onClick={() => { window.location.href = linkedInUrl }}>
-              <LinkedInIcon />
-            </IconButton>
-          )}
-          {twitterUrl && (
-            <IconButton name='Twitter' onClick={() => { window.location.href = twitterUrl }}>
-              <TwitterIcon />
-            </IconButton>
-          )}
-          {codePenUrl && (
-            <IconButton name='CodePen' onClick={() => { window.location.href = codePenUrl }}>
-              <CodePenIcon />
-            </IconButton>
-          )}
-        </Block>
+        {!isPostsPage && (
+          <Block display='flex' justifyContent='flex-end'>
+            {githubUrl && (
+              <IconButton name='Github' onClick={() => { window.location.href = githubUrl }}>
+                <GithubIcon />
+              </IconButton>
+            )}
+            {linkedInUrl && (
+              <IconButton name='LinkedIn' onClick={() => { window.location.href = linkedInUrl }}>
+                <LinkedInIcon />
+              </IconButton>
+            )}
+            {twitterUrl && (
+              <IconButton name='Twitter' onClick={() => { window.location.href = twitterUrl }}>
+                <TwitterIcon />
+              </IconButton>
+            )}
+            {codePenUrl && (
+              <IconButton name='CodePen' onClick={() => { window.location.href = codePenUrl }}>
+                <CodePenIcon />
+              </IconButton>
+            )}
+          </Block>
+        )}
         <AnimatePresence>
           {isPostsPage && (
             <IconButton
@@ -100,6 +102,7 @@ const Header = ({ title }) => {
 }
 
 Header.propTypes = {
+  postTitle: PropTypes.string,
   title: PropTypes.string
 }
 
