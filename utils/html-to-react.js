@@ -2,6 +2,7 @@
 import { Parser, ProcessNodeDefinitions } from 'html-to-react'
 import React from 'react'
 
+import { Blockquote } from 'components/Blockquote'
 import { Heading } from 'components/Heading'
 import { Paragraph } from 'components/Paragraph'
 
@@ -76,10 +77,18 @@ const processingInstructions = [
     }
   },
   {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      return node.name === 'blockquote'
+    },
+    processNode: (node, children) => {
+      return <Blockquote mb={6}>{children}</Blockquote>
+    }
+  },
+  {
     shouldProcessNode: function (node) {
       return true
     },
-
     processNode: processNodeDefinitions.processDefaultNode
   }
 ]
