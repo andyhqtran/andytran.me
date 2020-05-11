@@ -4,6 +4,7 @@ import React, { Fragment } from 'react'
 import { getPosts, getPostBySlug } from 'api/posts'
 import { getSettings } from 'api/settings'
 import { Block } from 'components/Block'
+import { PostFeaturedImage } from 'components/PostFeaturedImage'
 import { PostTitle } from 'components/PostTitle'
 import { parseHTML } from 'utils/html-to-react'
 
@@ -13,6 +14,10 @@ const PostsSlugPage = ({ post, title }) => {
       <PostTitle
         excerpt={post.excerpt}
         tags={post.tags}
+        title={post.title}
+      />
+      <PostFeaturedImage
+        image={post.image}
         title={post.title}
       />
       <Block maxWidth={1072} mt={10} mx='auto' width='100%'>
@@ -26,6 +31,7 @@ PostsSlugPage.propTypes = {
   post: PropTypes.shape({
     excerpt: PropTypes.string,
     html: PropTypes.string,
+    image: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.shape({
       description: PropTypes.string,
       id: PropTypes.string,
@@ -64,6 +70,7 @@ export async function getStaticProps ({ params }) {
         excerpt: post.excerpt,
         html: post.html,
         id: post.id,
+        image: post.feature_image,
         slug: post.slug,
         tags: post.tags && post.tags.filter((tag) => tag.visibility === 'public').map((tag) => ({
           description: tag.description,
