@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { css } from '@styled-system/css'
 import shouldForwardProp from '@styled-system/should-forward-prop'
 import { themeGet } from '@styled-system/theme-get'
-import { rem, transitions } from 'polished'
+import { rem, rgba, transitions } from 'polished'
 import { background, color, compose, flexbox, layout, position, space, typography } from 'styled-system'
 
 export const StyledButton = styled('button', { shouldForwardProp })(
@@ -21,12 +21,18 @@ export const StyledButton = styled('button', { shouldForwardProp })(
     paddingRight: 8,
     color: 'buttonText',
     fontSize: 'body',
-    '&:focus, &:hover': {
-      backgroundColor: 'contrast'
+    '&:hover': {
+      backgroundColor: 'shade.0'
+    },
+    '&:focus': {
+      backgroundColor: 'shade.1'
     }
   }),
   (props) => ({
-    boxShadow: `inset 0 0 0 1px ${themeGet('colors.border')(props)}`
+    boxShadow: `inset 0 0 0 1px ${themeGet('colors.border')(props)}`,
+    '&:focus': {
+      boxShadow: `inset 0 0 0 1px ${themeGet('colors.border')(props)}, 0 0 0 2px ${rgba(themeGet('colors.primary')(props), 0.36)}`
+    }
   }),
   compose(
     background,
