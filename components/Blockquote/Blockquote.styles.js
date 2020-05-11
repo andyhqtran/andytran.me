@@ -5,6 +5,9 @@ import { themeGet } from '@styled-system/theme-get'
 import { color, compose, space } from 'styled-system'
 
 export const StyledBlockquote = styled('blockquote', { shouldForwardProp })(
+  {
+    margin: 0
+  },
   (props) => ({
     boxShadow: `inset 2px 0 0 ${themeGet('colors.shade.1')(props)}`
   }),
