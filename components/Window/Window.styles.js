@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { css } from '@styled-system/css'
 import { themeGet } from '@styled-system/theme-get'
 import { rgba } from 'polished'
-import { compose, flexbox, layout, position, space } from 'styled-system'
+import { border, compose, flexbox, layout, position, space } from 'styled-system'
 
 export const StyledWindow = styled('div')(
   css({
@@ -13,6 +13,7 @@ export const StyledWindow = styled('div')(
     boxShadow: `0 12px 24px ${rgba(themeGet('colors.black')(props), 0.04)}`
   }),
   compose(
+    border,
     flexbox,
     layout,
     position,
