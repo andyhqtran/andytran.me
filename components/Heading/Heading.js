@@ -5,14 +5,14 @@ import React from 'react'
 
 import { StyledHeading } from './Heading.styles'
 
-const Heading = ({ children, className, variant, ...restOfProps }) => {
+const Heading = ({ as, children, className, variant, ...restOfProps }) => {
   const validElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
 
   const asProp = validElements.includes(variant) ? variant : 'h6'
 
   return (
     <StyledHeading
-      as={asProp}
+      as={as || asProp}
       className={className}
       variant={variant}
       {...pick(restOfProps)}
@@ -27,6 +27,7 @@ Heading.defaultProps = {
 }
 
 Heading.propTypes = {
+  as: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
