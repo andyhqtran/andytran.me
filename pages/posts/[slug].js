@@ -5,9 +5,9 @@ import { getPosts, getPostBySlug } from 'api/posts'
 import { getSettings } from 'api/settings'
 import { Block } from 'components/Block'
 import { PostTitle } from 'components/PostTitle'
+import { parseHTML } from 'utils/html-to-react'
 
 const PostsSlugPage = ({ post, title }) => {
-  console.log(post.tags)
   return (
     <Fragment>
       <PostTitle
@@ -15,7 +15,8 @@ const PostsSlugPage = ({ post, title }) => {
         tags={post.tags}
         title={post.title}
       />
-      <Block maxWidth={1184} mx='auto' width='100%'>
+      <Block maxWidth={1072} mt={10} mx='auto' width='100%'>
+        {parseHTML(post.html)}
       </Block>
     </Fragment>
   )
@@ -24,6 +25,7 @@ const PostsSlugPage = ({ post, title }) => {
 PostsSlugPage.propTypes = {
   post: PropTypes.shape({
     excerpt: PropTypes.string,
+    html: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.shape({
       description: PropTypes.string,
       id: PropTypes.string,
@@ -60,6 +62,7 @@ export async function getStaticProps ({ params }) {
     props: {
       post: {
         excerpt: post.excerpt,
+        html: post.html,
         id: post.id,
         slug: post.slug,
         tags: post.tags && post.tags.filter((tag) => tag.visibility === 'public').map((tag) => ({
