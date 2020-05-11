@@ -1,5 +1,6 @@
 import propTypes from '@styled-system/prop-types'
 import { pick } from '@styled-system/props'
+import Head from 'next/head'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -18,6 +19,9 @@ const PageTitle = ({
       className={className}
       {...pick(restOfProps)}
     >
+      <Head>
+        <title>{title}</title>
+      </Head>
       <Heading mb={4} variant='h1'>
         {title}
       </Heading>
