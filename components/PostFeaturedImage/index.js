@@ -1,0 +1,1 @@
+export PostFeaturedImage from './PostFeaturedImage'
