@@ -1,28 +1,72 @@
+import propTypes from '@styled-system/prop-types'
+import { pick } from '@styled-system/props'
+import PropTypes from 'prop-types'
 import Router from 'next/router'
 import React from 'react'
 
 import { Block } from 'components/Block'
 import { Button } from 'components/Button'
 import { Heading } from 'components/Heading'
+import { Image } from 'components/Image'
 import { Paragraph } from 'components/Paragraph'
+import { Tag } from 'components/Tag'
 import { Window } from 'components/Window'
 import { StyledPostCard } from './PostCard.styles'
 
-const PostCard = ({ ...restOfProps }) => {
+const PostCard = ({ className, excerpt, image, slug, tags, title, ...restOfProps }) => {
   return (
-    <StyledPostCard>
+    <StyledPostCard
+      className={className}
+      {...pick(restOfProps)}
+    >
       <Block alignItems='flex-start' display='flex' flexDirection='column' maxWidth={520} p={14}>
+        <Block display='flex' mb={6}>
+          {tags && tags.map((tag, index) => (
+            <Tag
+              description={tag.description}
+              image={tag.image}
+              key={tag.id}
+              mr={tags.length !== index && 4}
+              name={tag.name}
+              slug={tag.slug}
+            />
+          ))}
+        </Block>
         <Heading mb={4} variant='h2'>
-          Mixmax
+          {title}
         </Heading>
         <Paragraph color='description' mb={10}>
-          Mixmax is the #1 sales engagement platform for the complete sales cycle
+          {excerpt}
         </Paragraph>
-        <Button onClick={() => Router.push('/posts/mixmax')}>View project &#10230;</Button>
+        <Button onClick={() => Router.push('/posts/[slug]', `/posts/${slug}`)}>View project &#10230;</Button>
       </Block>
-      <Window position='relative' right={-20} top={56} width={620} />
+      <Window position='relative' right={-20} top={56} width={620}>
+        {image && (
+          <Image alt={title} src={image} />
+        )}
+      </Window>
     </StyledPostCard>
   )
+}
+
+PostCard.propTypes = {
+  className: PropTypes.string,
+  excerpt: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.shape({
+    description: PropTypes.string,
+    id: PropTypes.string,
+    image: PropTypes.string,
+    name: PropTypes.string,
+    slug: PropTypes.string,
+    visibility: PropTypes.string
+  })),
+  title: PropTypes.string,
+  ...propTypes.background,
+  ...propTypes.color,
+  ...propTypes.flexbox,
+  ...propTypes.layout,
+  ...propTypes.position,
+  ...propTypes.space
 }
 
 export default PostCard
