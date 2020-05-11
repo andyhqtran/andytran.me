@@ -10,14 +10,29 @@ const Link = ({
   as,
   children,
   className,
+  external,
   href,
   passHref,
   prefetch,
   replace,
   scroll,
   shallow,
+  target,
   ...restOfProps
 }) => {
+  if (external) {
+    return (
+      <StyledLink
+        className={className}
+        href={href}
+        target={target}
+        {...pick(restOfProps)}
+      >
+        {children}
+      </StyledLink>
+    )
+  }
+
   return (
     <NextLink
       as={as}
@@ -39,6 +54,7 @@ const Link = ({
 }
 
 Link.defaultProps = {
+  external: false,
   href: '/',
   passHref: true,
   prefetch: true,
@@ -53,12 +69,14 @@ Link.propTypes = {
     PropTypes.node
   ]),
   className: PropTypes.string,
+  external: PropTypes.bool,
   href: PropTypes.string,
   passHref: PropTypes.bool,
   prefetch: PropTypes.bool,
   replace: PropTypes.bool,
   scroll: PropTypes.bool,
   shallow: PropTypes.bool,
+  target: PropTypes.string,
   ...propTypes.color,
   ...propTypes.layout,
   ...propTypes.position,
