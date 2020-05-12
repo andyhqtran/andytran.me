@@ -6,7 +6,7 @@ import { color, compose, flexbox, layout, position, shadow, space, typography } 
 export const StyledParagraph = styled('p', { shouldForwardProp })(
   css({
     margin: 0,
-    color: 'body',
+    color: 'shade.6',
     fontSize: 'body',
     fontWeight: 'regular'
   }),

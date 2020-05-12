@@ -9,7 +9,7 @@ const GlobalStyles = () => {
         body: {
           backgroundColor: 'shade.inverse',
           color: 'body',
-          fontFamily: 'body',
+          fontFamily: 'shade.6',
           fontWeight: 'regular',
           lineHeight: 'body',
           WebkitFontSmoothing: 'antialiased',
