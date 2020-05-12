@@ -8,8 +8,8 @@ const GlobalStyles = () => {
       styles={css({
         body: {
           backgroundColor: 'shade.inverse',
-          color: 'body',
-          fontFamily: 'shade.6',
+          color: 'shade.6',
+          fontFamily: 'body',
           fontWeight: 'regular',
           lineHeight: 'body',
           WebkitFontSmoothing: 'antialiased',
