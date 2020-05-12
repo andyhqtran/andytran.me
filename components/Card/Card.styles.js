@@ -5,7 +5,7 @@ import { background, color, compose, flexbox, layout, position, space } from 'st
 
 export const StyledCard = styled('div', { shouldForwardProp })(
   css({
-    backgroundColor: 'contrast',
+    backgroundColor: 'shade.0',
     borderRadius: 5
   }),
   compose(

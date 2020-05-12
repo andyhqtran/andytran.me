@@ -13,7 +13,7 @@ export const StyledLogo = styled('div')(
     overflow: 'hidden'
   },
   css({
-    backgroundColor: 'contrast',
+    backgroundColor: 'shade.0',
     fontSize: 2,
     fontWeight: 'bold',
     letterSpacing: -0.3,

@@ -22,7 +22,7 @@ export const StyledTag = styled(motion.a)(
     }
   }),
   css({
-    backgroundColor: 'contrast'
+    backgroundColor: 'shade.0'
   }),
   compose(
     background,

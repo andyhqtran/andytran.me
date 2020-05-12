@@ -27,7 +27,7 @@ export const StyledWindowButton = styled('div')(
     height: 8
   },
   css({
-    backgroundColor: 'contrast',
+    backgroundColor: 'shade.0',
     borderRadius: 2,
     marginRight: 2,
 
@@ -48,6 +48,6 @@ export const StyledWindowToolbar = styled('div')(
     paddingRight: 5
   }),
   (props) => ({
-    boxShadow: `inset 0 -1px 0 ${themeGet('colors.contrast')(props)}`
+    boxShadow: `inset 0 -1px 0 ${themeGet('colors.shade.0')(props)}`
   })
 )

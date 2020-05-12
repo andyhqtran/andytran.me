@@ -19,7 +19,6 @@ const colors = {
 colors.shade.inverse = '#FFFFFF'
 colors.body = colors.shade[6] // #000000, 0.84
 colors.border = colors.shade[1] // #000000, 0.08
-colors.contrast = colors.shade[0] // #000000, 0.04
 
 export default {
   colors

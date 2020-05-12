@@ -30,7 +30,7 @@ export const StyledIconButton = styled(motion.button)(
       color: 'shade.7'
     },
     '&:hover': {
-      backgroundColor: 'contrast'
+      backgroundColor: 'shade.0'
     }
   }),
   compose(
