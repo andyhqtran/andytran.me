@@ -17,7 +17,6 @@ const colors = {
 }
 
 colors.shade.inverse = '#FFFFFF'
-colors.border = colors.shade[1] // #000000, 0.08
 
 export default {
   colors

@@ -21,7 +21,7 @@ export const StyledIconButton = styled(motion.button)(
   transitions(['background-color', 'color', 'box-shadow'], '0.2s ease'),
   (props) => ({
     '&:focus': {
-      boxShadow: `inset 0 0 0 1px ${themeGet('colors.border')(props)}`
+      boxShadow: `inset 0 0 0 1px ${themeGet('colors.shade.1')(props)}`
     }
   }),
   css({

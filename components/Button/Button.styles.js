@@ -32,7 +32,7 @@ export const StyledButton = styled('button', { shouldForwardProp })(
     }
   }),
   (props) => ({
-    boxShadow: `inset 0 0 0 1px ${themeGet('colors.border')(props)}`,
+    boxShadow: `inset 0 0 0 1px ${themeGet('colors.shade.1')(props)}`,
     '&:focus': {
       boxShadow: `0 0 0 4px ${rgba(themeGet('colors.primary')(props), 0.36)}`
     }
