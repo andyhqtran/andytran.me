@@ -35,7 +35,7 @@ const PostCard = ({ className, excerpt, image, slug, tags, title, ...restOfProps
         <Heading mb={4} variant='h2'>
           {title}
         </Heading>
-        <Paragraph color='description' mb={10}>
+        <Paragraph color='shade.5' mb={10}>
           {excerpt}
         </Paragraph>
         <Button onClick={() => Router.push('/posts/[slug]', `/posts/${slug}`)}>View project &#10230;</Button>

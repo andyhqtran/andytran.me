@@ -20,7 +20,6 @@ colors.shade.inverse = '#FFFFFF'
 colors.body = colors.shade[6] // #000000, 0.84
 colors.border = colors.shade[1] // #000000, 0.08
 colors.contrast = colors.shade[0] // #000000, 0.04
-colors.description = colors.shade[5] // #000000, 0.64
 
 export default {
   colors
