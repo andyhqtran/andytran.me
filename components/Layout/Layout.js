@@ -2,6 +2,7 @@ import Router from 'next/router'
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 
+import { Footer } from 'components/Footer'
 import { Header } from 'components/Header'
 
 /**
@@ -11,7 +12,7 @@ Router.events.on('routeChangeComplete', url => {
   window.analytics.page(url)
 })
 
-const Layout = ({ children, postTitle, socialIcons, title }) => {
+const Layout = ({ children, navigation, postTitle, socialIcons, title }) => {
   return (
     <Fragment>
       <Header
@@ -20,6 +21,7 @@ const Layout = ({ children, postTitle, socialIcons, title }) => {
         title={title}
       />
       {children}
+      <Footer navigation={navigation} title={title} />
     </Fragment>
   )
 }
@@ -29,6 +31,10 @@ Layout.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
+  navigation: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string,
+    url: PropTypes.string
+  })),
   postTitle: PropTypes.string,
   socialIcons: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.oneOf([

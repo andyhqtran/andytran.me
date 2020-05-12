@@ -16,9 +16,10 @@ const Navigation = ({ className, items, ...restOfProps }) => {
         <Link
           color='inherit'
           external
+          fontSize='inherit'
           href={item.url}
           key={item.label}
-          mr={items.length !== index && 4}
+          mr={items.length - 1 !== index && 4}
         >
           {item.label}
         </Link>

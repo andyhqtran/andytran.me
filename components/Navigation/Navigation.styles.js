@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { css } from '@styled-system/css'
-import { color, compose, flexbox, grid, layout, space } from 'styled-system'
+import { color, compose, flexbox, grid, layout, space, typography } from 'styled-system'
 
 export const StyledNavigation = styled('nav')(
   {
@@ -8,13 +8,15 @@ export const StyledNavigation = styled('nav')(
     alignItems: 'center'
   },
   css({
-    color: 'shade.7'
+    color: 'shade.7',
+    fontSize: 2
   }),
   compose(
     color,
     flexbox,
     grid,
     layout,
-    space
+    space,
+    typography
   )
 )

@@ -28,6 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
         <GlobalStyles />
         <Inter />
         <Layout
+          navigation={pageProps.navigation}
           postTitle={pageProps.post && pageProps.post.title}
           socialIcons={pageProps.socialIcons}
           title={pageProps.title}
