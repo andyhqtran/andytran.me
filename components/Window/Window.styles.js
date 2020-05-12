@@ -6,7 +6,7 @@ import { border, compose, flexbox, layout, position, space } from 'styled-system
 
 export const StyledWindow = styled('div')(
   css({
-    backgroundColor: 'white',
+    backgroundColor: 'shade.inverse',
     borderRadius: 3
   }),
   (props) => ({

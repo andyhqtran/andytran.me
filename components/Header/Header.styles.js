@@ -17,6 +17,6 @@ export const StyledHeader = styled('header')(
     boxShadow: `inset 0 -1px 0 ${themeGet('colors.shade.1')(props)}`
   }),
   css({
-    backgroundColor: 'white'
+    backgroundColor: 'shade.inverse'
   })
 )
