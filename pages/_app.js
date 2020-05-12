@@ -27,7 +27,7 @@ const MyApp = ({ Component, pageProps }) => {
         <Normalize />
         <GlobalStyles />
         <Inter />
-        <Layout title={pageProps.title}>
+        <Layout postTitle={pageProps.post && pageProps.post.title} title={pageProps.title}>
           <Component
             {...pageProps}
             key={router.route}

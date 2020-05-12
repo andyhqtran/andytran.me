@@ -11,10 +11,10 @@ Router.events.on('routeChangeComplete', url => {
   window.analytics.page(url)
 })
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, postTitle, title }) => {
   return (
     <Fragment>
-      <Header title={title} />
+      <Header postTitle={postTitle} title={title} />
       {children}
     </Fragment>
   )
@@ -25,6 +25,7 @@ Layout.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
+  postTitle: PropTypes.string,
   title: PropTypes.string
 }
 
