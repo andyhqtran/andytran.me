@@ -8,7 +8,7 @@ export const StyledHeading = styled('h1', { shouldForwardProp })(
     margin: 0
   },
   css({
-    color: 'heading'
+    color: 'shade.7'
   }),
   variant({
     prop: 'variant',

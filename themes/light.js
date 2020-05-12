@@ -20,10 +20,8 @@ colors.shade.inverse = '#FFFFFF'
 colors.background = colors.white // #FFFFFF
 colors.body = colors.shade[6] // #000000, 0.84
 colors.border = colors.shade[1] // #000000, 0.08
-colors.buttonText = colors.shade[7] // #000000, 1
 colors.contrast = colors.shade[0] // #000000, 0.04
 colors.description = colors.shade[5] // #000000, 0.64
-colors.heading = colors.shade[7] // #000000, 1
 
 export default {
   colors

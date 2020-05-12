@@ -22,7 +22,7 @@ export const StyledButton = styled('button', { shouldForwardProp })(
   css({
     paddingLeft: 8,
     paddingRight: 8,
-    color: 'buttonText',
+    color: 'shade.7',
     fontSize: 'body',
     '&:hover': {
       backgroundColor: 'shade.0'
