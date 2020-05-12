@@ -2,7 +2,7 @@ import propTypes from '@styled-system/prop-types'
 import { pick } from '@styled-system/props'
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
-import React from 'react'
+import React, { createElement } from 'react'
 
 import { Block } from 'components/Block'
 import { IconButton } from 'components/IconButton'
@@ -11,13 +11,15 @@ import { GithubIcon } from 'components/icons/GithubIcon'
 import { LinkedInIcon } from 'components/icons/LinkedInIcon'
 import { TwitterIcon } from 'components/icons/TwitterIcon'
 
-const SocialIcons = ({ className, ...restOfProps }) => {
-  const router = useRouter()
+const iconMap = {
+  codepen: CodePenIcon,
+  github: GithubIcon,
+  linkedin: LinkedInIcon,
+  twitter: TwitterIcon
+}
 
-  const codePenUrl = process.env.SOCIAL_CODEPEN_URL
-  const githubUrl = process.env.SOCIAL_GITHUB_URL
-  const linkedInUrl = process.env.SOCIAL_LINKEDIN_URL
-  const twitterUrl = process.env.SOCIAL_TWITTER_URL
+const SocialIcons = ({ className, icons, ...restOfProps }) => {
+  const router = useRouter()
 
   return (
     <Block
@@ -26,76 +28,41 @@ const SocialIcons = ({ className, ...restOfProps }) => {
       justifyContent='flex-end'
       {...pick(restOfProps)}
     >
-      {githubUrl && (
-        <IconButton
-          name='Github'
-          onClick={() => {
-            window.analytics.track('Social button clicked', {
-              pathname: router.pathname,
-              name: 'Github',
-              url: githubUrl
-            })
+      {icons && icons.map((icon) => {
+        if (!icon.label || !(icon.label.toLowerCase() in iconMap)) return
 
-            window.location.href = githubUrl
-          }}
-        >
-          <GithubIcon />
-        </IconButton>
-      )}
-      {linkedInUrl && (
-        <IconButton
-          name='LinkedIn'
-          onClick={() => {
-            window.analytics.track('Social button clicked', {
-              pathname: router.pathname,
-              name: 'LinkedIn',
-              url: linkedInUrl
-            })
+        return (
+          <IconButton
+            key={icon.label}
+            onClick={() => {
+              window.analytics.track('Social button clicked', {
+                pathname: router.pathname,
+                name: icon.label,
+                url: icon.url
+              })
 
-            window.location.href = linkedInUrl
-          }}
-        >
-          <LinkedInIcon />
-        </IconButton>
-      )}
-      {twitterUrl && (
-        <IconButton
-          name='Twitter'
-          onClick={() => {
-            window.analytics.track('Social button clicked', {
-              pathname: router.pathname,
-              name: 'Twitter',
-              url: twitterUrl
-            })
-
-            window.location.href = twitterUrl
-          }}
-        >
-          <TwitterIcon />
-        </IconButton>
-      )}
-      {codePenUrl && (
-        <IconButton
-          name='CodePen'
-          onClick={() => {
-            window.analytics.track('Social button clicked', {
-              pathname: router.pathname,
-              name: 'CodePen',
-              url: codePenUrl
-            })
-
-            window.location.href = codePenUrl
-          }}
-        >
-          <CodePenIcon />
-        </IconButton>
-      )}
+              window.location.href = icon.url
+            }}
+          >
+            {createElement(iconMap[icon.label.toLowerCase()], null, null)}
+          </IconButton>
+        )
+      })}
     </Block>
   )
 }
 
 SocialIcons.propTypes = {
   className: PropTypes.string,
+  icons: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.oneOf([
+      'CodePen',
+      'Github',
+      'LinkedIn',
+      'Twitter'
+    ]),
+    url: PropTypes.string
+  })),
   ...propTypes.background,
   ...propTypes.border,
   ...propTypes.color,
