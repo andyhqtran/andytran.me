@@ -3,12 +3,14 @@ import propTypes from '@styled-system/prop-types'
 import PropTypes from 'prop-types'
 import React from 'react'
 
+import { motionPick } from 'utils/motion-props'
 import { StyledBlock } from './Block.styles'
 
 const Block = ({ children, className, ...restOfProps }) => {
   return (
     <StyledBlock
       className={className}
+      {...motionPick(restOfProps)}
       {...pick(restOfProps)}
     >
       {children}

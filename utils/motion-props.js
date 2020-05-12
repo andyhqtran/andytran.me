@@ -1,4 +1,4 @@
-const props = [
+export const motionProps = [
   'animate',
   'custom',
   'drag',
@@ -35,7 +35,7 @@ const props = [
   'whileTap'
 ]
 
-const regex = new RegExp(`^(${props.join('|')})$`)
+const regex = new RegExp(`^(${motionProps.join('|')})$`)
 
 export const motionOmit = props => {
   const next = {}
