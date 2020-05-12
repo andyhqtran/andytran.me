@@ -4,6 +4,7 @@ import { themeGet } from '@styled-system/theme-get'
 
 export const StyledHeader = styled('header')(
   {
+    zIndex: 1,
     position: 'sticky',
     top: 0,
     left: 0,
