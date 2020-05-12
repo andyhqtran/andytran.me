@@ -14,6 +14,7 @@ const Navigation = ({ className, items, ...restOfProps }) => {
     >
       {items && items.map((item, index) => (
         <Link
+          color='inherit'
           external
           href={item.url}
           key={item.label}
