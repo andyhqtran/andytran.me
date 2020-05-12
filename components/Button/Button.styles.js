@@ -13,7 +13,10 @@ export const StyledButton = styled('button', { shouldForwardProp })(
     border: 0,
     borderRadius: 28,
     letterSpacing: rem(-0.2),
-    cursor: 'pointer'
+    cursor: 'pointer',
+    '&:hover': {
+      boxShadow: 'none'
+    }
   },
   transitions('background-color', '0.2s ease'),
   css({
@@ -31,7 +34,7 @@ export const StyledButton = styled('button', { shouldForwardProp })(
   (props) => ({
     boxShadow: `inset 0 0 0 1px ${themeGet('colors.border')(props)}`,
     '&:focus': {
-      boxShadow: `inset 0 0 0 1px ${themeGet('colors.border')(props)}, 0 0 0 2px ${rgba(themeGet('colors.primary')(props), 0.36)}`
+      boxShadow: `0 0 0 4px ${rgba(themeGet('colors.primary')(props), 0.36)}`
     }
   }),
   compose(
