@@ -11,10 +11,14 @@ Router.events.on('routeChangeComplete', url => {
   window.analytics.page(url)
 })
 
-const Layout = ({ children, postTitle, title }) => {
+const Layout = ({ children, postTitle, socialIcons, title }) => {
   return (
     <Fragment>
-      <Header postTitle={postTitle} title={title} />
+      <Header
+        postTitle={postTitle}
+        socialIcons={socialIcons}
+        title={title}
+      />
       {children}
     </Fragment>
   )
@@ -26,6 +30,15 @@ Layout.propTypes = {
     PropTypes.node
   ]),
   postTitle: PropTypes.string,
+  socialIcons: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.oneOf([
+      'CodePen',
+      'Github',
+      'LinkedIn',
+      'Twitter'
+    ]),
+    url: PropTypes.string
+  })),
   title: PropTypes.string
 }
 

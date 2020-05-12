@@ -64,7 +64,7 @@ export async function getStaticPaths () {
 
 export async function getStaticProps ({ params }) {
   const post = await getPostBySlug(params.slug)
-  const { title } = await getSettings()
+  const settings = await getSettings()
 
   return {
     props: {
@@ -84,7 +84,7 @@ export async function getStaticProps ({ params }) {
         })),
         title: post.title
       },
-      title
+      title: settings.title
     }
   }
 }

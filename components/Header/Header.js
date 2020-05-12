@@ -1,7 +1,7 @@
 import Router, { useRouter } from 'next/router'
 import { AnimatePresence } from 'framer-motion'
 import PropTypes from 'prop-types'
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
@@ -12,7 +12,7 @@ import { Logo } from 'components/Logo'
 import { SocialIcons } from 'components/SocialIcons'
 import { StyledHeader } from './Header.styles'
 
-const Header = ({ postTitle, title }) => {
+const Header = ({ postTitle, socialIcons, title }) => {
   const router = useRouter()
 
   const isPostsPage = router.pathname === '/posts/[slug]'
@@ -70,14 +70,14 @@ const Header = ({ postTitle, title }) => {
           </AnimatePresence>
         </Block>
         {!isPostsPage && (
-          <SocialIcons />
+          <SocialIcons icons={socialIcons} />
         )}
         <AnimatePresence>
           {isPostsPage && (
             <IconButton
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -40, opacity: 0 }}
-              initial={{ x: -28, opacity: 0 }}
+              initial={{ x: -40, opacity: 0 }}
               key='next-arrow'
               onClick={() => Router.push('/')}
               position='absolute'
@@ -95,6 +95,15 @@ const Header = ({ postTitle, title }) => {
 
 Header.propTypes = {
   postTitle: PropTypes.string,
+  socialIcons: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.oneOf([
+      'CodePen',
+      'Github',
+      'LinkedIn',
+      'Twitter'
+    ]),
+    url: PropTypes.string
+  })),
   title: PropTypes.string
 }
 

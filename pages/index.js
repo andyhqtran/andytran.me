@@ -56,12 +56,12 @@ IndexPage.propTypes = {
 
 export async function getStaticProps () {
   const posts = await getPosts({ include: 'tags,author', limit: 'all' })
-  const { description, navigation, title } = await getSettings()
+  const settings = await getSettings()
 
   return {
     props: {
-      description,
-      navigation,
+      description: settings.description,
+      navigation: settings.navigation,
       posts: posts.map((post) => ({
         excerpt: post.excerpt,
         id: post.id,
@@ -77,7 +77,8 @@ export async function getStaticProps () {
         })),
         title: post.title
       })),
-      title
+      socialIcons: settings.secondary_navigation,
+      title: settings.title
     }
   }
 }
