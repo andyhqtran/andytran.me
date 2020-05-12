@@ -7,7 +7,7 @@ const GlobalStyles = () => {
     <Global
       styles={css({
         body: {
-          backgroundColor: 'background',
+          backgroundColor: 'shade.inverse',
           color: 'body',
           fontFamily: 'body',
           fontWeight: 'regular',
