@@ -76,7 +76,7 @@ const Header = ({ postTitle, title }) => {
           {isPostsPage && (
             <IconButton
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -28, opacity: 0 }}
+              exit={{ x: -40, opacity: 0 }}
               initial={{ x: -28, opacity: 0 }}
               key='next-arrow'
               onClick={() => Router.push('/')}
