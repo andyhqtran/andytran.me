@@ -19,7 +19,7 @@ const processingInstructions = [
       return node.name === 'h1'
     },
     processNode: (node, children) => {
-      return <Heading as='h1' my={4} variant='h3'>{children}</Heading>
+      return <Heading as='h1' my={4} variant='h2'>{children}</Heading>
     }
   },
   {
@@ -28,7 +28,7 @@ const processingInstructions = [
       return node.name === 'h2'
     },
     processNode: (node, children) => {
-      return <Heading as='h2' my={4} variant='h4'>{children}</Heading>
+      return <Heading as='h2' my={4} variant='h3'>{children}</Heading>
     }
   },
   {
@@ -37,7 +37,7 @@ const processingInstructions = [
       return node.name === 'h3'
     },
     processNode: (node, children) => {
-      return <Heading as='h3' my={4} variant='h5'>{children}</Heading>
+      return <Heading as='h3' my={4} variant='h4'>{children}</Heading>
     }
   },
   {
@@ -73,6 +73,8 @@ const processingInstructions = [
       return node.name === 'p'
     },
     processNode: (node, children) => {
+      if (children.length < 1) return <br />
+
       return <Paragraph my={6}>{children}</Paragraph>
     }
   },
