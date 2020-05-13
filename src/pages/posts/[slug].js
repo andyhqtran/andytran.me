@@ -84,7 +84,7 @@ export async function getStaticProps ({ params }) {
           visibility: tag.visibility
         })),
         title: post.title
-      },
+      }
     }
   }
 }
