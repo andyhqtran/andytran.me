@@ -5,6 +5,7 @@ import React from 'react'
 import { Blockquote } from 'design-system/Blockquote'
 import { Heading } from 'design-system/Heading'
 import { Image } from 'design-system/Image'
+import { Link } from 'design-system/Link'
 import { Paragraph } from 'design-system/Paragraph'
 
 const isValidNode = function () {
@@ -86,6 +87,19 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return <Blockquote mb={6}>{children}</Blockquote>
+    }
+  },
+  {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      return node.name === 'a'
+    },
+    processNode: (node, children) => {
+      return (
+        <Link external fontSize='inherit' href={node.attribs.href} lineHeight='inherit'>
+          {children}
+        </Link>
+      )
     }
   },
   {
