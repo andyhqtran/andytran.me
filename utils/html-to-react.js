@@ -2,8 +2,8 @@
 import { Parser, ProcessNodeDefinitions } from 'html-to-react'
 import React from 'react'
 
-import { Heading } from 'components/Heading'
 import { Blockquote } from 'design-system/Blockquote'
+import { Heading } from 'design-system/Heading'
 import { Paragraph } from 'design-system/Paragraph'
 
 const isValidNode = function () {

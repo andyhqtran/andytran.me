@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import { Block } from 'components/Block'
-import { Heading } from 'components/Heading'
+import { Heading } from 'design-system/Heading'
 import { Paragraph } from 'design-system/Paragraph'
 import { Tag } from 'design-system/Tag'
 

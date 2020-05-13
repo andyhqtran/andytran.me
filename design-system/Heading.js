@@ -5,7 +5,7 @@ import React from 'react'
 
 import { StyledHeading } from './Heading.styles'
 
-const Heading = ({ as, children, className, variant, ...restOfProps }) => {
+export const Heading = ({ as, children, className, variant, ...restOfProps }) => {
   const validElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
 
   const asProp = validElements.includes(variant) ? variant : 'h6'
@@ -38,5 +38,3 @@ Heading.propTypes = {
   ...propTypes.space,
   ...propTypes.typography
 }
-
-export default Heading

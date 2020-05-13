@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 
-import { Heading } from 'components/Heading'
+import { Heading } from 'design-system/Heading'
 
 export default {
-  title: 'Core/Heading',
+  title: 'Design System/Typography/Heading',
   component: Heading
 }
 
