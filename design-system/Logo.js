@@ -5,7 +5,7 @@ import React from 'react'
 
 import { StyledLogo } from './Logo.styles'
 
-const Logo = ({ className, title, ...restOfProps }) => {
+export const Logo = ({ className, title, ...restOfProps }) => {
   const initials = title && title.replace(/[^a-zA-Z- ]/g, '').match(/\b\w/g)
 
   return (
@@ -27,5 +27,3 @@ Logo.propTypes = {
   ...propTypes.position,
   ...propTypes.space
 }
-
-export default Logo

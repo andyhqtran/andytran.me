@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Logo } from 'components/Logo'
+import { Logo } from 'design-system/Logo'
 
 export default {
-  title: 'Core/Logo',
+  title: 'Design System/Logo',
   component: Logo
 }
 

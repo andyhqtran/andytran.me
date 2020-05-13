@@ -5,10 +5,10 @@ import React from 'react'
 
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
-import { Logo } from 'components/Logo'
 import { SocialIcons } from 'components/SocialIcons'
 import { ArrowLeftIcon, ArrowRightIcon } from 'design-system/Icon'
 import { IconButton } from 'design-system/IconButton'
+import { Logo } from 'design-system/Logo'
 import { StyledHeader } from './Header.styles'
 
 const Header = ({ postTitle, socialIcons, title }) => {
