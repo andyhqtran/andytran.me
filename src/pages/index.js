@@ -60,8 +60,7 @@ export async function getStaticProps () {
 
   return {
     props: {
-      description: settings.description,
-      navigation: settings.navigation,
+      ...settings,
       posts: posts.map((post) => ({
         excerpt: post.excerpt,
         id: post.id,
@@ -77,8 +76,6 @@ export async function getStaticProps () {
         })),
         title: post.title
       })),
-      socialIcons: settings.secondary_navigation,
-      title: settings.title
     }
   }
 }

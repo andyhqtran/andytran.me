@@ -68,6 +68,7 @@ export async function getStaticProps ({ params }) {
 
   return {
     props: {
+      ...settings,
       post: {
         excerpt: post.excerpt,
         html: post.html,
@@ -84,7 +85,6 @@ export async function getStaticProps ({ params }) {
         })),
         title: post.title
       },
-      title: settings.title
     }
   }
 }
