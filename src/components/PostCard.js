@@ -41,7 +41,15 @@ export const PostCard = ({ className, excerpt, image, slug, tags, title, ...rest
         <Paragraph color='shade.5' mb={10}>
           {excerpt}
         </Paragraph>
-        <Button onClick={() => Router.push('/posts/[slug]', `/posts/${slug}`)}>View project &#10230;</Button>
+        <Button
+          onClick={() => {
+            Router
+              .push('/posts/[slug]', `/posts/${slug}`)
+              .then(() => window.scrollTo(0, 0))
+          }}
+        >
+          View project &#10230;
+        </Button>
       </Block>
       <Window position='relative' right={-20} top={56} width={620}>
         {image && (
