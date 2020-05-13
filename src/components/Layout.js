@@ -12,7 +12,7 @@ Router.events.on('routeChangeComplete', url => {
   window.analytics.page(url)
 })
 
-const Layout = ({ children, navigation, postTitle, socialIcons, title }) => {
+export const Layout = ({ children, navigation, postTitle, socialIcons, title }) => {
   return (
     <Fragment>
       <Header
@@ -47,5 +47,3 @@ Layout.propTypes = {
   })),
   title: PropTypes.string
 }
-
-export default Layout

@@ -6,7 +6,7 @@ import React from 'react'
 import { Link } from 'design-system/Link'
 import { StyledNavigation } from './Navigation.styles'
 
-const Navigation = ({ className, items, ...restOfProps }) => {
+export const Navigation = ({ className, items, ...restOfProps }) => {
   return (
     <StyledNavigation
       className={className}
@@ -40,5 +40,3 @@ Navigation.propTypes = {
   ...propTypes.layout,
   ...propTypes.space
 }
-
-export default Navigation

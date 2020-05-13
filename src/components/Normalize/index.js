@@ -1,1 +1,0 @@
-export Normalize from './Normalize'

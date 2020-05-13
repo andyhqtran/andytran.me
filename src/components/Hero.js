@@ -6,7 +6,7 @@ import { Block } from 'components/Block'
 import { Navigation } from 'components/Navigation'
 import { PageTitle } from 'components/PageTitle'
 
-const Hero = ({ description, navigation, title, ...restOfProps }) => {
+export const Hero = ({ description, navigation, title, ...restOfProps }) => {
   return (
     <Block px={14} py={16} {...pick(restOfProps)}>
       <PageTitle
@@ -28,5 +28,3 @@ Hero.propTypes = {
   })),
   title: PropTypes.string
 }
-
-export default Hero

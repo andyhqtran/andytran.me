@@ -8,7 +8,7 @@ import { Block } from 'components/Block'
 import { Heading } from 'design-system/Heading'
 import { Paragraph } from 'design-system/Paragraph'
 
-const PageTitle = ({
+export const PageTitle = ({
   className,
   description,
   title,
@@ -47,5 +47,3 @@ PageTitle.propTypes = {
   ...propTypes.space,
   ...propTypes.typography
 }
-
-export default PageTitle

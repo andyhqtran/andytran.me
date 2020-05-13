@@ -3,7 +3,7 @@ import React from 'react'
 import { PageTitle } from 'components/PageTitle'
 
 export default {
-  title: 'Page/PageTitle',
+  title: 'Components/PageTitle',
   component: PageTitle
 }
 

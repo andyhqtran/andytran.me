@@ -11,7 +11,7 @@ import { IconButton } from 'design-system/IconButton'
 import { Logo } from 'design-system/Logo'
 import { StyledHeader } from './Header.styles'
 
-const Header = ({ postTitle, socialIcons, title }) => {
+export const Header = ({ postTitle, socialIcons, title }) => {
   const router = useRouter()
 
   const isPostsPage = router.pathname === '/posts/[slug]'
@@ -105,5 +105,3 @@ Header.propTypes = {
   })),
   title: PropTypes.string
 }
-
-export default Header

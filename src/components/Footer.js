@@ -5,7 +5,7 @@ import { Block } from 'components/Block'
 import { Navigation } from 'components/Navigation'
 import { StyledFooter } from './Footer.styles'
 
-const Footer = ({ navigation, title }) => {
+export const Footer = ({ navigation, title }) => {
   return (
     <StyledFooter>
       <Block>
@@ -24,5 +24,3 @@ Footer.propTypes = {
   })),
   title: PropTypes.string
 }
-
-export default Footer

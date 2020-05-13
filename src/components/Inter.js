@@ -1,7 +1,7 @@
 import { Global, css } from '@emotion/core'
 import React from 'react'
 
-const Inter = () => {
+export const Inter = () => {
   return (
     <Global
       styles={css`
@@ -196,5 +196,3 @@ const Inter = () => {
     />
   )
 }
-
-export default Inter
