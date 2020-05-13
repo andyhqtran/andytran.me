@@ -3,7 +3,7 @@ import React from 'react'
 import { PostFeaturedImage } from 'components/PostFeaturedImage'
 
 export default {
-  title: 'Post/PostFeaturedImage',
+  title: 'Components/PostFeaturedImage',
   component: PostFeaturedImage
 }
 

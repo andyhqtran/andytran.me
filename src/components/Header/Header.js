@@ -69,7 +69,7 @@ const Header = ({ postTitle, socialIcons, title }) => {
           </AnimatePresence>
         </Block>
         {!isPostsPage && (
-          <SocialIcons icons={socialIcons} />
+          <SocialIcons icons={socialIcons} justifyContent='flex-end' />
         )}
         <AnimatePresence>
           {isPostsPage && (

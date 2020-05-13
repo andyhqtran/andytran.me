@@ -3,7 +3,7 @@ import React from 'react'
 import { PostTitle } from 'components/PostTitle'
 
 export default {
-  title: 'Post/PostTitle',
+  title: 'Components/PostTitle',
   component: PostTitle
 }
 

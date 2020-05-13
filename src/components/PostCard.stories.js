@@ -3,7 +3,7 @@ import React from 'react'
 import { PostCard } from 'components/PostCard'
 
 export default {
-  title: 'Post/PostCard',
+  title: 'Components/PostCard',
   component: PostCard
 }
 

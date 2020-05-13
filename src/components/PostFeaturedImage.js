@@ -7,7 +7,7 @@ import { Card } from 'design-system/Card'
 import { Image } from 'design-system/Image'
 import { Window } from 'design-system/Window'
 
-const PostFeaturedImage = ({ className, image, title, ...restOfProps }) => {
+export const PostFeaturedImage = ({ className, image, title, ...restOfProps }) => {
   return (
     <Card
       maxWidth={1184}
@@ -37,5 +37,3 @@ PostFeaturedImage.propTypes = {
   ...propTypes.position,
   ...propTypes.space
 }
-
-export default PostFeaturedImage

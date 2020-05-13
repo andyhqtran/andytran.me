@@ -9,7 +9,7 @@ import { Heading } from 'design-system/Heading'
 import { Paragraph } from 'design-system/Paragraph'
 import { Tag } from 'design-system/Tag'
 
-const PostTitle = ({
+export const PostTitle = ({
   className,
   excerpt,
   tags,
@@ -72,5 +72,3 @@ PostTitle.propTypes = {
   ...propTypes.space,
   ...propTypes.typography
 }
-
-export default PostTitle

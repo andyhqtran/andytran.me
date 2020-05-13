@@ -15,14 +15,13 @@ const iconMap = {
   twitter: TwitterIcon
 }
 
-const SocialIcons = ({ className, icons, ...restOfProps }) => {
+export const SocialIcons = ({ className, icons, ...restOfProps }) => {
   const router = useRouter()
 
   return (
     <Block
       className={className}
       display='flex'
-      justifyContent='flex-end'
       {...pick(restOfProps)}
     >
       {icons && icons.map((icon) => {
@@ -71,5 +70,3 @@ SocialIcons.propTypes = {
   ...propTypes.space,
   ...propTypes.typography
 }
-
-export default SocialIcons
