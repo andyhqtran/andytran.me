@@ -6,7 +6,7 @@ import React from 'react'
 import { motionPick } from 'utils/motion-props'
 import { StyledIconButton } from './IconButton.styles'
 
-const IconButton = ({
+export const IconButton = ({
   children,
   className,
   name,
@@ -43,5 +43,3 @@ IconButton.propTypes = {
   ...propTypes.space,
   ...propTypes.typography
 }
-
-export default IconButton

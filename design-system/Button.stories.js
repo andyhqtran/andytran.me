@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Button } from 'components/Button'
+import { Button } from 'design-system/Button'
 
 export default {
-  title: 'Core/Button',
+  title: 'Design System/Button',
   component: Button
 }
 

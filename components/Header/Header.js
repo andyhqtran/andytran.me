@@ -5,11 +5,11 @@ import React from 'react'
 
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
-import { IconButton } from 'components/IconButton'
 import { ArrowLeftIcon } from 'components/icons/ArrowLeftIcon'
 import { ArrowRightIcon } from 'components/icons/ArrowRightIcon'
 import { Logo } from 'components/Logo'
 import { SocialIcons } from 'components/SocialIcons'
+import { IconButton } from 'design-system/IconButton'
 import { StyledHeader } from './Header.styles'
 
 const Header = ({ postTitle, socialIcons, title }) => {

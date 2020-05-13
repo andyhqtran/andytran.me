@@ -5,7 +5,7 @@ import React from 'react'
 
 import { StyledButton } from './Button.styles'
 
-const Button = ({ children, className, onClick, type, ...restOfProps }) => {
+export const Button = ({ children, className, onClick, type, ...restOfProps }) => {
   return (
     <StyledButton
       className={className}
@@ -37,5 +37,3 @@ Button.propTypes = {
   ...propTypes.space,
   ...propTypes.typography
 }
-
-export default Button

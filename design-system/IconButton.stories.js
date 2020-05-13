@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { IconButton } from 'components/IconButton'
 import { GithubIcon } from 'components/icons/GithubIcon'
+import { IconButton } from 'design-system/IconButton'
 
 export default {
-  title: 'Core/IconButton',
+  title: 'Design System/IconButton',
   component: IconButton
 }
 

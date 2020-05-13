@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import { Card } from 'components/Card'
+import { Card } from 'design-system/Card'
 
 export const StyledPostCard = styled(Card)(
   {

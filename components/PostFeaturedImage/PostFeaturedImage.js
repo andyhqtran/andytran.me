@@ -3,9 +3,9 @@ import { pick } from '@styled-system/props'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { Card } from 'components/Card'
 import { Image } from 'components/Image'
 import { Window } from 'components/Window'
+import { Card } from 'design-system/Card'
 
 const PostFeaturedImage = ({ className, image, title, ...restOfProps }) => {
   return (

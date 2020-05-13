@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import React, { createElement } from 'react'
 
 import { Block } from 'components/Block'
-import { IconButton } from 'components/IconButton'
 import { CodePenIcon } from 'components/icons/CodePenIcon'
 import { GithubIcon } from 'components/icons/GithubIcon'
 import { LinkedInIcon } from 'components/icons/LinkedInIcon'
 import { TwitterIcon } from 'components/icons/TwitterIcon'
+import { IconButton } from 'design-system/IconButton'
 
 const iconMap = {
   codepen: CodePenIcon,

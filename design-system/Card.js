@@ -5,7 +5,7 @@ import React from 'react'
 
 import { StyledCard } from './Card.styles'
 
-const Card = ({ children, className, ...restOfProps }) => {
+export const Card = ({ children, className, ...restOfProps }) => {
   return (
     <StyledCard
       className={className}
@@ -29,5 +29,3 @@ Card.propTypes = {
   ...propTypes.position,
   ...propTypes.space
 }
-
-export default Card
