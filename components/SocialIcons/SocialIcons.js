@@ -5,10 +5,7 @@ import PropTypes from 'prop-types'
 import React, { createElement } from 'react'
 
 import { Block } from 'components/Block'
-import { CodePenIcon } from 'components/icons/CodePenIcon'
-import { GithubIcon } from 'components/icons/GithubIcon'
-import { LinkedInIcon } from 'components/icons/LinkedInIcon'
-import { TwitterIcon } from 'components/icons/TwitterIcon'
+import { CodePenIcon, GithubIcon, LinkedInIcon, TwitterIcon } from 'design-system/Icon'
 import { IconButton } from 'design-system/IconButton'
 
 const iconMap = {

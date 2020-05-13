@@ -5,10 +5,9 @@ import React from 'react'
 
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
-import { ArrowLeftIcon } from 'components/icons/ArrowLeftIcon'
-import { ArrowRightIcon } from 'components/icons/ArrowRightIcon'
 import { Logo } from 'components/Logo'
 import { SocialIcons } from 'components/SocialIcons'
+import { ArrowLeftIcon, ArrowRightIcon } from 'design-system/Icon'
 import { IconButton } from 'design-system/IconButton'
 import { StyledHeader } from './Header.styles'
 

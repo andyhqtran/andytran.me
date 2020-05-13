@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { GithubIcon } from 'components/icons/GithubIcon'
+import { GithubIcon } from 'design-system/Icon'
 import { IconButton } from 'design-system/IconButton'
 
 export default {

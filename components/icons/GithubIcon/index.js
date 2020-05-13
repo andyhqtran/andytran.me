@@ -1,1 +1,0 @@
-export GithubIcon from './GithubIcon'

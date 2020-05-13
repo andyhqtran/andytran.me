@@ -1,1 +1,0 @@
-export TwitterIcon from './TwitterIcon'
