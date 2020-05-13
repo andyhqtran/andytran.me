@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Blockquote } from 'components/Blockquote'
+import { Blockquote } from 'design-system/Blockquote'
 
 export default {
-  title: 'Core/Blockquote',
+  title: 'Design System/Typography/Blockquote',
   component: Blockquote
 }
 

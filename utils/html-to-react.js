@@ -2,9 +2,9 @@
 import { Parser, ProcessNodeDefinitions } from 'html-to-react'
 import React from 'react'
 
-import { Blockquote } from 'components/Blockquote'
 import { Heading } from 'components/Heading'
 import { Paragraph } from 'components/Paragraph'
+import { Blockquote } from 'design-system/Blockquote'
 
 const isValidNode = function () {
   return true

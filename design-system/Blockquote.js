@@ -5,7 +5,7 @@ import React from 'react'
 
 import { StyledBlockquote } from './Blockquote.styles'
 
-const Blockquote = ({ className, children, ...restOfProps }) => {
+export const Blockquote = ({ className, children, ...restOfProps }) => {
   return (
     <StyledBlockquote
       className={className}
@@ -25,5 +25,3 @@ Blockquote.propTypes = {
   ...propTypes.color,
   ...propTypes.space
 }
-
-export default Blockquote
