@@ -6,7 +6,7 @@ import React from 'react'
 
 import { StyledLink } from './Link.styles'
 
-const Link = ({
+export const Link = ({
   as,
   children,
   className,
@@ -83,5 +83,3 @@ Link.propTypes = {
   ...propTypes.space,
   ...propTypes.typography
 }
-
-export default Link

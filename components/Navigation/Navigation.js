@@ -3,7 +3,7 @@ import { pick } from '@styled-system/props'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { Link } from 'components/Link'
+import { Link } from 'design-system/Link'
 import { StyledNavigation } from './Navigation.styles'
 
 const Navigation = ({ className, items, ...restOfProps }) => {

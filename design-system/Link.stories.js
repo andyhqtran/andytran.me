@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Link } from 'components/Link'
+import { Link } from 'design-system/Link'
 
 export default {
-  title: 'Core/Link',
+  title: 'Design System/Link',
   component: Link
 }
 
