@@ -6,10 +6,6 @@ module.exports = {
     GHOST_API_URL: process.env.GHOST_API_URL,
     GHOST_ADMIN_API_KEY: process.env.GHOST_ADMIN_API_KEY,
     GHOST_CONTENT_API_KEY: process.env.GHOST_CONTENT_API_KEY,
-    SOCIAL_CODEPEN_URL: process.env.SOCIAL_CODEPEN_URL,
-    SOCIAL_GITHUB_URL: process.env.SOCIAL_GITHUB_URL,
-    SOCIAL_LINKEDIN_URL: process.env.SOCIAL_LINKEDIN_URL,
-    SOCIAL_TWITTER_URL: process.env.SOCIAL_TWITTER_URL
   },
   webpack (config, options) {
     config.resolve.alias.api = path.join(__dirname, 'api')
