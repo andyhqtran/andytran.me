@@ -4,7 +4,7 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { Image } from 'components/Image'
+import { Image } from 'design-system/Image'
 import { motionPick } from 'utils/motion-props'
 import { StyledTag } from './Tag.styles'
 

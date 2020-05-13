@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { Image } from 'components/Image'
+import { Image } from 'design-system/Image'
 
 export default {
-  title: 'Core/Image',
+  title: 'Design System/Image',
   component: Image
 }
 

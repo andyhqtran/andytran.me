@@ -5,7 +5,7 @@ import React from 'react'
 
 import { StyledImage } from './Image.styles'
 
-const Image = ({
+export const Image = ({
   alt,
   className,
   src,
@@ -38,5 +38,3 @@ Image.propTypes = {
   ...propTypes.position,
   ...propTypes.space
 }
-
-export default Image
