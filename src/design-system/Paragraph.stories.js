@@ -3,7 +3,7 @@ import React from 'react'
 import { Paragraph } from 'design-system/Paragraph'
 
 export default {
-  title: 'Design System/Typography/Paragraph',
+  title: 'Design System/Paragraph',
   component: Paragraph
 }
 

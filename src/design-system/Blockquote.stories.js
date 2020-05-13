@@ -3,7 +3,7 @@ import React from 'react'
 import { Blockquote } from 'design-system/Blockquote'
 
 export default {
-  title: 'Design System/Typography/Blockquote',
+  title: 'Design System/Blockquote',
   component: Blockquote
 }
 

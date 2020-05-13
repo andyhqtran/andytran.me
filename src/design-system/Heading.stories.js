@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import { Heading } from 'design-system/Heading'
 
 export default {
-  title: 'Design System/Typography/Heading',
+  title: 'Design System/Heading',
   component: Heading
 }
 
