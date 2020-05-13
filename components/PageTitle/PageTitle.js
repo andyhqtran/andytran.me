@@ -6,7 +6,7 @@ import React from 'react'
 
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
-import { Paragraph } from 'components/Paragraph'
+import { Paragraph } from 'design-system/Paragraph'
 
 const PageTitle = ({
   className,

@@ -5,7 +5,7 @@ import React from 'react'
 
 import { StyledParagraph } from './Paragraph.styles'
 
-const Paragraph = ({ children, className, ...restOfProps }) => {
+export const Paragraph = ({ children, className, ...restOfProps }) => {
   return (
     <StyledParagraph
       className={className}

@@ -7,10 +7,10 @@ import React from 'react'
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
 import { Image } from 'components/Image'
-import { Paragraph } from 'components/Paragraph'
 import { Tag } from 'components/Tag'
 import { Window } from 'components/Window'
 import { Button } from 'design-system/Button'
+import { Paragraph } from 'design-system/Paragraph'
 import { StyledPostCard } from './PostCard.styles'
 
 const PostCard = ({ className, excerpt, image, slug, tags, title, ...restOfProps }) => {
