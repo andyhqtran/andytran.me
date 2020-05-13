@@ -6,11 +6,11 @@ import React from 'react'
 
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
-import { Tag } from 'components/Tag'
 import { Window } from 'components/Window'
 import { Button } from 'design-system/Button'
 import { Image } from 'design-system/Image'
 import { Paragraph } from 'design-system/Paragraph'
+import { Tag } from 'design-system/Tag'
 import { StyledPostCard } from './PostCard.styles'
 
 const PostCard = ({ className, excerpt, image, slug, tags, title, ...restOfProps }) => {

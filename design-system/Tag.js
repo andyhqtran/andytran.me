@@ -8,7 +8,7 @@ import { Image } from 'design-system/Image'
 import { motionPick } from 'utils/motion-props'
 import { StyledTag } from './Tag.styles'
 
-const Tag = ({
+export const Tag = ({
   className,
   description,
   image,
@@ -51,5 +51,3 @@ Tag.propTypes = {
   ...propTypes.position,
   ...propTypes.space
 }
-
-export default Tag

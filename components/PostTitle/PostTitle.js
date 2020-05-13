@@ -6,8 +6,8 @@ import React from 'react'
 
 import { Block } from 'components/Block'
 import { Heading } from 'components/Heading'
-import { Tag } from 'components/Tag'
 import { Paragraph } from 'design-system/Paragraph'
+import { Tag } from 'design-system/Tag'
 
 const PostTitle = ({
   className,
