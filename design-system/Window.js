@@ -5,7 +5,7 @@ import React from 'react'
 
 import { StyledWindow, StyledWindowButton, StyledWindowToolbar } from './Window.styles'
 
-const Window = ({ children, className, ...restOfProps }) => {
+export const Window = ({ children, className, ...restOfProps }) => {
   return (
     <StyledWindow
       className={className}
@@ -32,5 +32,3 @@ Window.propTypes = {
   ...propTypes.position,
   ...propTypes.space
 }
-
-export default Window

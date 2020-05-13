@@ -5,12 +5,12 @@ import Router from 'next/router'
 import React from 'react'
 
 import { Block } from 'components/Block'
-import { Window } from 'components/Window'
 import { Button } from 'design-system/Button'
 import { Heading } from 'design-system/Heading'
 import { Image } from 'design-system/Image'
 import { Paragraph } from 'design-system/Paragraph'
 import { Tag } from 'design-system/Tag'
+import { Window } from 'design-system/Window'
 import { StyledPostCard } from './PostCard.styles'
 
 const PostCard = ({ className, excerpt, image, slug, tags, title, ...restOfProps }) => {
