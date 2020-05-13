@@ -4,6 +4,7 @@ import React from 'react'
 
 import { Blockquote } from 'design-system/Blockquote'
 import { Heading } from 'design-system/Heading'
+import { Image } from 'design-system/Image'
 import { Paragraph } from 'design-system/Paragraph'
 
 const isValidNode = function () {
@@ -85,6 +86,15 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return <Blockquote mb={6}>{children}</Blockquote>
+    }
+  },
+  {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      return node.name === 'img'
+    },
+    processNode: (node, children) => {
+      return <Image src={node.attribs.src} />
     }
   },
   {
