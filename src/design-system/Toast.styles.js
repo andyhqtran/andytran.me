@@ -30,8 +30,8 @@ export const StyledToastContainer = styled(motion.div)(
   {
     zIndex: 2,
     position: 'fixed',
-    bottom: 0,
     right: 0,
+    top: 88,
     display: 'flex',
     alignItems: 'flex-end',
     flexDirection: 'column',
