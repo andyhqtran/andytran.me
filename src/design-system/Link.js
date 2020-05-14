@@ -12,6 +12,7 @@ export const Link = ({
   className,
   external,
   href,
+  onClick,
   passHref,
   prefetch,
   replace,
@@ -25,6 +26,7 @@ export const Link = ({
       <StyledLink
         className={className}
         href={href}
+        onClick={onClick}
         target={target}
         {...pick(restOfProps)}
       >
@@ -37,6 +39,7 @@ export const Link = ({
     <NextLink
       as={as}
       href={href}
+      onClick={onClick}
       passHref={passHref}
       prefetch={prefetch}
       replace={replace}
