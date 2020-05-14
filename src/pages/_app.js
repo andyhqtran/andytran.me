@@ -9,6 +9,7 @@ import { GlobalStyles } from 'components/GlobalStyles'
 import { Inter } from 'components/Inter'
 import { Layout } from 'components/Layout'
 import { Normalize } from 'components/Normalize'
+import { ToastProvider } from 'design-system/Toast'
 import { common, light } from 'themes'
 
 const cache = createCache()
@@ -24,20 +25,22 @@ const MyApp = ({ Component, pageProps }) => {
           ...light
         }}
       >
-        <Normalize />
-        <GlobalStyles />
-        <Inter />
-        <Layout
-          navigation={pageProps.navigation}
-          postTitle={pageProps.post && pageProps.post.title}
-          socialIcons={pageProps.socialIcons}
-          title={pageProps.title}
-        >
-          <Component
-            {...pageProps}
-            key={router.route}
-          />
-        </Layout>
+        <ToastProvider>
+          <Normalize />
+          <GlobalStyles />
+          <Inter />
+          <Layout
+            navigation={pageProps.navigation}
+            postTitle={pageProps.post && pageProps.post.title}
+            socialIcons={pageProps.socialIcons}
+            title={pageProps.title}
+          >
+            <Component
+              {...pageProps}
+              key={router.route}
+            />
+          </Layout>
+        </ToastProvider>
       </ThemeProvider>
     </CacheProvider>
   )

@@ -9,7 +9,7 @@ const {
   NODE_ENV = 'development'
 } = process.env
 
-class MyDocument extends Document {
+export default class MyDocument extends Document {
   static getInitialProps ({ renderPage }) {
     const page = renderPage()
 
@@ -63,11 +63,10 @@ class MyDocument extends Document {
         </Head>
         <body>
           <Main />
+          <div id='notifications' />
           <NextScript />
         </body>
       </html>
     )
   }
 }
-
-export default MyDocument
