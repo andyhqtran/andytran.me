@@ -14,6 +14,7 @@ export const StyledToast = styled(motion.div)(
   }),
   css({
     backgroundColor: 'shade.inverse',
+    borderRadius: 2,
     padding: 4,
     fontSize: 1
   }),
