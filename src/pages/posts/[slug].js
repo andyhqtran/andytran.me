@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { Fragment } from 'react'
 
-import { getPosts, getPostBySlug } from 'api/posts'
+import { getPosts, getPostBySlug, getPreviousPost, getNextPost } from 'api/posts'
 import { getSettings } from 'api/settings'
 import { Block } from 'components/Block'
 import { PostFeaturedImage } from 'components/PostFeaturedImage'
@@ -66,9 +66,14 @@ export async function getStaticProps ({ params }) {
   const post = await getPostBySlug(params.slug)
   const settings = await getSettings()
 
+  const prevPost = await getPreviousPost(params.slug)
+  const nextPost = await getNextPost(params.slug)
+
   return {
     props: {
       ...settings,
+      prevPost,
+      nextPost,
       post: {
         excerpt: post.excerpt,
         html: post.html,

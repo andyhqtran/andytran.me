@@ -31,7 +31,9 @@ const MyApp = ({ Component, pageProps }) => {
           <Inter />
           <Layout
             navigation={pageProps.navigation}
+            nextPost={pageProps.nextPost}
             postTitle={pageProps.post && pageProps.post.title}
+            prevPost={pageProps.prevPost}
             socialIcons={pageProps.socialIcons}
             title={pageProps.title}
           >

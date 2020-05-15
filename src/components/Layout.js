@@ -20,10 +20,20 @@ Router.events.on('routeChangeComplete', url => {
   }
 })
 
-export const Layout = ({ children, navigation, postTitle, socialIcons, title }) => {
+export const Layout = ({
+  children,
+  navigation,
+  nextPost,
+  postTitle,
+  prevPost,
+  socialIcons,
+  title
+}) => {
   return (
     <Fragment>
       <Header
+        nextPost={nextPost}
+        prevPost={prevPost}
         postTitle={postTitle}
         socialIcons={socialIcons}
         title={title}
@@ -43,7 +53,15 @@ Layout.propTypes = {
     label: PropTypes.string,
     url: PropTypes.string
   })),
+  nextPost: PropTypes.shape({
+    slug: PropTypes.string,
+    title: PropTypes.string
+  }),
   postTitle: PropTypes.string,
+  prevPost: PropTypes.shape({
+    slug: PropTypes.string,
+    title: PropTypes.string
+  }),
   socialIcons: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.oneOf([
       'CodePen',
