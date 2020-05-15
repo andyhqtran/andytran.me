@@ -1,5 +1,6 @@
 import propTypes from '@styled-system/prop-types'
 import { pick } from '@styled-system/props'
+import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -7,6 +8,8 @@ import { Link } from 'design-system/Link'
 import { StyledNavigation } from './Navigation.styles'
 
 export const Navigation = ({ className, items, ...restOfProps }) => {
+  const router = useRouter()
+
   return (
     <StyledNavigation
       className={className}
@@ -17,6 +20,13 @@ export const Navigation = ({ className, items, ...restOfProps }) => {
           color='inherit'
           external
           fontSize='inherit'
+          onClick={() => {
+            window.analytics.track('Navigation link clicked', {
+              pathname: router.pathname,
+              name: item.label,
+              url: item.url
+            })
+          }}
           href={item.url}
           key={item.label}
           mr={items.length - 1 !== index ? 4 : 0}
