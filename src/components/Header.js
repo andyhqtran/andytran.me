@@ -42,7 +42,13 @@ export const Header = ({ nextPost, postTitle, prevPost, socialIcons, title }) =>
             </IconButton>
           )}
         </AnimatePresence>
-        <Logo title={title} />
+        <Logo
+          css={{
+            cursor: 'pointer'
+          }}
+          onClick={() => Router.push('/').then(() => window.scrollTo(0, 0))}
+          title={title}
+        />
         <Block
           alignItems='center'
           display='flex'
