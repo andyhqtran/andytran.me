@@ -30,7 +30,7 @@
     "@babel/plugin-proposal-export-default-from": "^7.8.3",
     "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-docs": "^5.3.18",
-    "@storybook/react": "^5.3.18",
+    "@storybook/react": "^5.3.19",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "cz-conventional-changelog": "^3.2.0",
