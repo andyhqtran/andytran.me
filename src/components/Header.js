@@ -14,7 +14,7 @@ import { StyledHeader } from './Header.styles'
 export const Header = ({ nextPost, postTitle, prevPost, socialIcons, title }) => {
   const router = useRouter()
 
-  const isPostsPage = router.pathname === '/posts/[slug]'
+  const isPostsPage = router && router.pathname === '/posts/[slug]'
 
   const hasPrevPost = prevPost && prevPost.constructor === Object && Object.keys(prevPost).length !== 0
   const hasNextPost = nextPost && nextPost.constructor === Object && Object.keys(nextPost).length !== 0
