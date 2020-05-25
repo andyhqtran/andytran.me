@@ -61,7 +61,7 @@
     "emotion-server": "^10.0.27",
     "emotion-theming": "^10.0.27",
     "framer-motion": "^1.11.0",
-    "html-to-react": "^1.4.2",
+    "html-to-react": "^1.4.3",
     "next": "^9.4.2",
     "polished": "^3.6.3",
     "prop-types": "^15.7.2",
