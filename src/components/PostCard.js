@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Router from 'next/router'
 import React from 'react'
 
-import { Block } from 'components/Block'
+import { Block } from 'design-system/Block'
 import { Button } from 'design-system/Button'
 import { Card } from 'design-system/Card'
 import { Heading } from 'design-system/Heading'

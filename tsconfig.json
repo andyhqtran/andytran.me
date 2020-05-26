@@ -16,7 +16,22 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "api": ["src/api/*"],
+      "api/*": ["src/api/*"],
+      "components": ["src/components/*"],
+      "components/*": ["src/components/*"],
+      "design-system": ["src/design-system/*"],
+      "design-system/*": ["src/design-system/*"],
+      "pages": ["src/pages/*"],
+      "pages/*": ["src/pages/*"],
+      "theme": ["src/theme/*"],
+      "theme/*": ["src/theme/*"],
+      "utils": ["src/utils/*"],
+      "utils/*": ["src/utils/*"]
+    }
   },
   "exclude": [
     "node_modules"

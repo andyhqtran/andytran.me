@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 import React, { createElement } from 'react'
 
-import { Block } from 'components/Block'
+import { Block } from 'design-system/Block'
 import { CodePenIcon, GithubIcon, LinkedInIcon, TwitterIcon } from 'design-system/Icon'
 import { IconButton } from 'design-system/IconButton'
 

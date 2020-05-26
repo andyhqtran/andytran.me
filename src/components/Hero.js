@@ -2,9 +2,9 @@ import { pick } from '@styled-system/props'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { Block } from 'components/Block'
 import { Navigation } from 'components/Navigation'
 import { PageTitle } from 'components/PageTitle'
+import { Block } from 'design-system/Block'
 
 export const Hero = ({ description, navigation, title, ...restOfProps }) => {
   return (

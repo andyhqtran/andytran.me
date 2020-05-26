@@ -1,4 +1,4 @@
-export const motionProps = [
+export const motionProps: Array<String> = [
   'animate',
   'custom',
   'drag',

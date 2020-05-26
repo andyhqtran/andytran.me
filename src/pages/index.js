@@ -3,9 +3,9 @@ import React, { Fragment } from 'react'
 
 import { getPosts } from 'api/posts'
 import { getSettings } from 'api/settings'
-import { Block } from 'components/Block'
 import { PostCard } from 'components/PostCard'
 import { Hero } from 'components/Hero'
+import { Block } from 'design-system/Block'
 
 const IndexPage = ({ description, navigation, posts, title }) => {
   return (

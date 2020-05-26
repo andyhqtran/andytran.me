@@ -4,7 +4,7 @@ import React, { Component, createContext, useContext } from 'react'
 import { createPortal } from 'react-dom'
 import PropTypes from 'prop-types'
 
-import { Block } from 'components/Block'
+import { Block } from 'design-system/Block'
 import { Link } from 'design-system/Link'
 import { motionPick } from 'utils/motion-props'
 import { StyledToast, StyledToastContainer } from './Toast.styles'

@@ -1,12 +1,24 @@
 import { pick } from '@styled-system/props'
 import propTypes from '@styled-system/prop-types'
+import { BackgroundProps, BorderProps, FlexboxProps, SpaceProps } from 'styled-system'
 import PropTypes from 'prop-types'
-import React from 'react'
+import * as React from 'react'
 
 import { motionPick } from 'utils/motion-props'
 import { StyledBlock } from './Block.styles'
 
-const Block = ({ children, className, ...restOfProps }) => {
+export interface BlockProps extends BackgroundProps, BorderProps, FlexboxProps, SpaceProps {
+  children: React.ReactNode,
+  className: string,
+  onClick?: React.MouseEvent<HTMLDivElement>,
+}
+
+export const Block: React.FunctionComponent<BlockProps> = ({
+  children,
+  className,
+  onClick,
+  ...restOfProps
+}) => {
   return (
     <StyledBlock
       className={className}
@@ -24,6 +36,7 @@ Block.propTypes = {
     PropTypes.node
   ]),
   className: PropTypes.string,
+  onClick: PropTypes.string,
   ...propTypes.background,
   ...propTypes.border,
   ...propTypes.color,
@@ -35,5 +48,3 @@ Block.propTypes = {
   ...propTypes.space,
   ...propTypes.typography
 }
-
-export default Block

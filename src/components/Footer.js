@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import { Block } from 'components/Block'
 import { Navigation } from 'components/Navigation'
+import { Block } from 'design-system/Block'
 import { StyledFooter } from './Footer.styles'
 
 export const Footer = ({ navigation, title }) => {

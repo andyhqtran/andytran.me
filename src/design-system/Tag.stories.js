@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Block } from 'components/Block'
+import { Block } from 'design-system/Block'
 import { Tag } from 'design-system/Tag'
 
 export default {

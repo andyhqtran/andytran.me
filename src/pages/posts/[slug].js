@@ -3,9 +3,9 @@ import React, { Fragment } from 'react'
 
 import { getPosts, getPostBySlug, getPreviousPost, getNextPost } from 'api/posts'
 import { getSettings } from 'api/settings'
-import { Block } from 'components/Block'
 import { PostFeaturedImage } from 'components/PostFeaturedImage'
 import { PostTitle } from 'components/PostTitle'
+import { Block } from 'design-system/Block'
 import { parseHTML } from 'utils/html-to-react'
 
 const PostsSlugPage = ({ post, title }) => {
