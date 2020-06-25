@@ -1,6 +1,5 @@
 import React from 'react'
 import { RouterContext } from 'next/dist/next-server/lib/router-context'
-import Router from 'next/router'
 
 import { Header } from 'components/Header'
 
