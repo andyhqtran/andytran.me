@@ -1,11 +1,24 @@
 import { pick } from '@styled-system/props'
 import propTypes from '@styled-system/prop-types'
 import PropTypes from 'prop-types'
-import React from 'react'
+import * as React from 'react'
 
 import { StyledButton } from './Button.styles'
 
-export const Button = ({ children, className, onClick, type, ...restOfProps }) => {
+export interface ButtonProps {
+  children: React.ReactNode,
+  className?: string,
+  onClick?: React.MouseEvent<HTMLDivElement>,
+  type: 'button' | 'submit' | 'reset'
+}
+
+export const Button: React.FunctionComponent<ButtonProps> = ({
+  children,
+  className,
+  onClick,
+  type,
+  ...restOfProps
+}) => {
   return (
     <StyledButton
       className={className}
@@ -18,7 +31,7 @@ export const Button = ({ children, className, onClick, type, ...restOfProps }) =
   )
 }
 
-Button.propTypes = {
+Button.defaultProps = {
   type: 'button'
 }
 
@@ -29,6 +42,11 @@ Button.propTypes = {
   ]),
   className: PropTypes.string,
   onClick: PropTypes.func,
+  type: PropTypes.oneOf([
+    'button',
+    'submit',
+    'reset'
+  ]),
   ...propTypes.background,
   ...propTypes.color,
   ...propTypes.flexbox,
