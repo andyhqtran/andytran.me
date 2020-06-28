@@ -30,6 +30,7 @@ export const SocialIcons = ({ className, icons, ...restOfProps }) => {
         return (
           <IconButton
             key={icon.label}
+            name={icon.label}
             onClick={() => {
               window.analytics.track('Social button clicked', {
                 pathname: router.pathname,
