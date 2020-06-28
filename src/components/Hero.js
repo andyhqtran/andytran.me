@@ -11,6 +11,7 @@ export const Hero = ({ description, navigation, title, ...restOfProps }) => {
     <Block px={14} py={16} {...pick(restOfProps)}>
       <PageTitle
         description={description}
+        maxWidth={526}
         title={title}
       />
       {navigation && (
