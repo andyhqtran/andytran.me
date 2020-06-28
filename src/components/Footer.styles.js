@@ -19,7 +19,7 @@ export const StyledFooter = styled('footer')(
   css({
     marginBottom: 24,
     marginTop: 24,
-    color: 'shade.4',
+    color: 'shade.5',
     fontSize: 14
   })
 )
