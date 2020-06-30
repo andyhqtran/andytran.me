@@ -1,6 +1,5 @@
 import { pick } from '@styled-system/props'
 import propTypes from '@styled-system/prop-types'
-import PropTypes from 'prop-types'
 import React, { FunctionComponent, MouseEvent, ReactNode } from 'react'
 
 import { StyledButton } from './Button.styles'
