@@ -21,7 +21,7 @@ export const Logo = ({ className, onClick, title, ...restOfProps }) => {
 
 Logo.propTypes = {
   className: PropTypes.string,
-  onClick: PropTypes.string,
+  onClick: PropTypes.func,
   title: PropTypes.string,
   ...propTypes.background,
   ...propTypes.color,

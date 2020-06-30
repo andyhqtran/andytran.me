@@ -2,10 +2,16 @@ const path = require('path')
 
 module.exports = {
   stories: [
-    '../src/design-system/**/*.stories.[tj]s',
-    '../src/components/**/*.stories.[tj]s'
+    '../src/design-system/**/*.stories.(ts|tsx|js|jsx)',
+    '../src/components/**/*.stories.[tj][sx]'
   ],
   addons: [
+    {
+      name: '@storybook/preset-typescript',
+      options: {
+        include: [path.resolve(__dirname, '../src')],
+      },
+    },
     '@storybook/addon-docs',
     '@storybook/addon-a11y/register'
   ],

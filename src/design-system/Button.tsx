@@ -1,24 +1,26 @@
 import { pick } from '@styled-system/props'
 import propTypes from '@styled-system/prop-types'
 import PropTypes from 'prop-types'
-import * as React from 'react'
+import React, { FunctionComponent, MouseEvent, ReactNode } from 'react'
 
 import { StyledButton } from './Button.styles'
 
+export type ButtonType = 'button' | 'submit' | 'reset'
+
 export interface ButtonProps {
-  children: React.ReactNode,
+  children: ReactNode,
   className?: string,
-  onClick?: React.MouseEvent<HTMLDivElement>,
-  type: 'button' | 'submit' | 'reset'
+  onClick?: MouseEvent<HTMLButtonElement>,
+  type: ButtonType
 }
 
-export const Button: React.FunctionComponent<ButtonProps> = ({
+export const Button: FunctionComponent<ButtonProps> = ({
   children,
   className,
   onClick,
-  type,
+  type = 'button',
   ...restOfProps
-}) => {
+}: ButtonProps) => {
   return (
     <StyledButton
       className={className}
@@ -29,29 +31,4 @@ export const Button: React.FunctionComponent<ButtonProps> = ({
       {children}
     </StyledButton>
   )
-}
-
-Button.defaultProps = {
-  type: 'button'
-}
-
-Button.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]),
-  className: PropTypes.string,
-  onClick: PropTypes.func,
-  type: PropTypes.oneOf([
-    'button',
-    'submit',
-    'reset'
-  ]),
-  ...propTypes.background,
-  ...propTypes.color,
-  ...propTypes.flexbox,
-  ...propTypes.layout,
-  ...propTypes.position,
-  ...propTypes.space,
-  ...propTypes.typography
 }
