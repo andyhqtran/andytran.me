@@ -10,7 +10,7 @@ export interface ButtonProps {
   children: ReactNode,
   className?: string,
   onClick?: MouseEvent<HTMLButtonElement>,
-  type: ButtonType
+  type?: ButtonType
 }
 
 export const Button: FunctionComponent<ButtonProps> = ({
