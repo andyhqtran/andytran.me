@@ -43,7 +43,7 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-standard": "^4.0.1",
     "react-is": "^16.13.1",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.6"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
