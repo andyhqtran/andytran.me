@@ -10,7 +10,8 @@ import { Inter } from 'components/Inter';
 import { Layout } from 'components/Layout';
 import { Normalize } from 'components/Normalize';
 import { ToastProvider } from 'design-system/Toast';
-import { common, light } from 'themes';
+import { common } from 'themes/common';
+import { light } from 'themes/light';
 
 const cache = createCache();
 
