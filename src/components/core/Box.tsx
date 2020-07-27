@@ -22,7 +22,7 @@ import {
   space,
   typography,
 } from 'styled-system';
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
 export type BoxProps = BackgroundProps &
   BorderProps &
@@ -35,7 +35,7 @@ export type BoxProps = BackgroundProps &
   SpaceProps &
   TypographyProps;
 
-export const Box = styled('div')<BoxProps>(
+export const Box = styled('div')<HTMLProps<HTMLElement> & BoxProps>(
   compose(
     background,
     border,

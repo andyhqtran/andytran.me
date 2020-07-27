@@ -2,7 +2,7 @@
 import { Parser, ProcessNodeDefinitions } from 'html-to-react';
 import React from 'react';
 
-import { Blockquote } from 'design-system/Blockquote';
+import { Blockquote } from 'components/Core/Blockquote';
 import { Heading } from 'design-system/Heading';
 import { Image } from 'design-system/Image';
 import { Link } from 'design-system/Link';
@@ -22,7 +22,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as="h1" my={4} variant="h2">
+        <Heading as='h1' my={4} variant='h2'>
           {children}
         </Heading>
       );
@@ -35,7 +35,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as="h2" my={4} variant="h3">
+        <Heading as='h2' my={4} variant='h3'>
           {children}
         </Heading>
       );
@@ -48,7 +48,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as="h3" my={4} variant="h4">
+        <Heading as='h3' my={4} variant='h4'>
           {children}
         </Heading>
       );
@@ -61,7 +61,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as="h4" my={4} variant="h5">
+        <Heading as='h4' my={4} variant='h5'>
           {children}
         </Heading>
       );
@@ -74,7 +74,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as="h5" my={4} variant="h5">
+        <Heading as='h5' my={4} variant='h5'>
           {children}
         </Heading>
       );
@@ -87,7 +87,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as="h6" my={4} variant="h5">
+        <Heading as='h6' my={4} variant='h5'>
           {children}
         </Heading>
       );
@@ -122,9 +122,9 @@ const processingInstructions = [
       return (
         <Link
           external
-          fontSize="inherit"
+          fontSize='inherit'
           href={node.attribs.href}
-          lineHeight="inherit"
+          lineHeight='inherit'
         >
           {children}
         </Link>
