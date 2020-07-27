@@ -1,5 +1,5 @@
-export common from './common'
+export { common } from './common'
 
-export dark from './dark'
+export { dark } from './dark'
 
-export light from './light'
+export { light } from './light'

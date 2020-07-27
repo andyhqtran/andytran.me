@@ -18,6 +18,6 @@ const colors = {
 
 colors.shade.inverse = '#FFFFFF'
 
-export default {
+export const light = {
   colors
 }

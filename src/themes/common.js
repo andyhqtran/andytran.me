@@ -76,7 +76,7 @@ letterSpacings.h7alt = letterSpacings[8] // 0.8px
 
 const radii = [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40]
 
-export default {
+export const common = {
   space,
   fonts,
   fontSizes,
