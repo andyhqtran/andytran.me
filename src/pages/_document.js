@@ -1,43 +1,46 @@
-import * as snippet from '@segment/snippet'
-import { extractCritical } from 'emotion-server'
-import Document, { Head, Main, NextScript } from 'next/document'
-import React, { Fragment } from 'react'
+import * as snippet from '@segment/snippet';
+import { extractCritical } from 'emotion-server';
+import Document, { Head, Main, NextScript } from 'next/document';
+import React, { Fragment } from 'react';
 
 const {
   GA_TRACKING_ID,
   SEGMENT_WRITE_KEY,
-  NODE_ENV = 'development'
-} = process.env
+  NODE_ENV = 'development',
+} = process.env;
 
 export default class MyDocument extends Document {
-  static getInitialProps ({ renderPage }) {
-    const page = renderPage()
+  static getInitialProps({ renderPage }) {
+    const page = renderPage();
 
-    const styles = extractCritical(page.html)
+    const styles = extractCritical(page.html);
 
-    return { ...page, ...styles }
+    return { ...page, ...styles };
   }
 
-  renderSnippet () {
+  renderSnippet() {
     const opts = {
       apiKey: SEGMENT_WRITE_KEY,
-      page: true
-    }
+      page: true,
+    };
 
     if (NODE_ENV === 'development') {
-      return snippet.max(opts)
+      return snippet.max(opts);
     }
 
-    return snippet.min(opts)
+    return snippet.min(opts);
   }
 
-  render () {
+  render() {
     return (
-      <html lang='en'>
+      <html lang="en">
         <Head>
           {GA_TRACKING_ID && (
             <Fragment>
-              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              />
               <script
                 dangerouslySetInnerHTML={{
                   __html: `
@@ -48,13 +51,15 @@ export default class MyDocument extends Document {
                     gtag('config', '${GA_TRACKING_ID}', {
                       page_path: window.location.pathname,
                     });
-                  `
+                  `,
                 }}
               />
             </Fragment>
           )}
           {SEGMENT_WRITE_KEY && (
-            <script dangerouslySetInnerHTML={{ __html: this.renderSnippet() }} />
+            <script
+              dangerouslySetInnerHTML={{ __html: this.renderSnippet() }}
+            />
           )}
           <style
             data-emotion-css={this.props.ids.join(' ')}
@@ -63,10 +68,10 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <Main />
-          <div id='notifications' />
+          <div id="notifications" />
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }

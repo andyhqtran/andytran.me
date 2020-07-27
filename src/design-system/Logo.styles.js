@@ -1,6 +1,13 @@
-import styled from '@emotion/styled'
-import { css } from '@styled-system/css'
-import { background, color, compose, layout, position, space } from 'styled-system'
+import styled from '@emotion/styled';
+import { css } from '@styled-system/css';
+import {
+  background,
+  color,
+  compose,
+  layout,
+  position,
+  space,
+} from 'styled-system';
 
 export const StyledLogo = styled('div')(
   {
@@ -10,20 +17,14 @@ export const StyledLogo = styled('div')(
     width: 56,
     height: 56,
     borderRadius: '100%',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   css({
     backgroundColor: 'shade.0',
     fontSize: 2,
     fontWeight: 'bold',
     letterSpacing: -0.3,
-    lineHeight: 3
+    lineHeight: 3,
   }),
-  compose(
-    background,
-    color,
-    layout,
-    position,
-    space
-  )
-)
+  compose(background, color, layout, position, space),
+);

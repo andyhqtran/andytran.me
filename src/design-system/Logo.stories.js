@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import { Logo } from 'design-system/Logo'
+import { Logo } from 'design-system/Logo';
 
 export default {
   title: 'Design System/Logo',
-  component: Logo
-}
+  component: Logo,
+};
 
 export const preview = () => {
-  return (
-    <Logo title='Andy Tran' />
-  )
-}
+  return <Logo title="Andy Tran" />;
+};

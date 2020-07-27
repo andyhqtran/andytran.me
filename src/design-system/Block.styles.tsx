@@ -1,6 +1,18 @@
-import styled from '@emotion/styled'
-import { motion } from 'framer-motion'
-import { background, border, color, compose, flexbox, grid, layout, position, shadow, space, typography } from 'styled-system'
+import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+import {
+  background,
+  border,
+  color,
+  compose,
+  flexbox,
+  grid,
+  layout,
+  position,
+  shadow,
+  space,
+  typography,
+} from 'styled-system';
 
 export const StyledBlock = styled(motion.div)(
   compose(
@@ -13,6 +25,6 @@ export const StyledBlock = styled(motion.div)(
     position,
     shadow,
     space,
-    typography
-  )
-)
+    typography,
+  ),
+);

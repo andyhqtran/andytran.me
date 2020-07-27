@@ -1,14 +1,20 @@
-import { pick } from '@styled-system/props'
-import propTypes from '@styled-system/prop-types'
-import PropTypes from 'prop-types'
-import React from 'react'
+import { pick } from '@styled-system/props';
+import propTypes from '@styled-system/prop-types';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import { StyledHeading } from './Heading.styles'
+import { StyledHeading } from './Heading.styles';
 
-export const Heading = ({ as, children, className, variant, ...restOfProps }) => {
-  const validElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+export const Heading = ({
+  as,
+  children,
+  className,
+  variant,
+  ...restOfProps
+}) => {
+  const validElements = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
 
-  const asProp = validElements.includes(variant) ? variant : 'h6'
+  const asProp = validElements.includes(variant) ? variant : 'h6';
 
   return (
     <StyledHeading
@@ -19,22 +25,32 @@ export const Heading = ({ as, children, className, variant, ...restOfProps }) =>
     >
       {children}
     </StyledHeading>
-  )
-}
+  );
+};
 
 Heading.defaultProps = {
-  variant: 'h1'
-}
+  variant: 'h1',
+};
 
 Heading.propTypes = {
   as: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   className: PropTypes.string,
-  variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h6-alt', 'h7', 'h7-alt']),
+  variant: PropTypes.oneOf([
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'h6-alt',
+    'h7',
+    'h7-alt',
+  ]),
   ...propTypes.color,
   ...propTypes.space,
-  ...propTypes.typography
-}
+  ...propTypes.typography,
+};

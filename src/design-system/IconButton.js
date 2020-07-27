@@ -1,10 +1,10 @@
-import propTypes from '@styled-system/prop-types'
-import { pick } from '@styled-system/props'
-import PropTypes from 'prop-types'
-import React from 'react'
+import propTypes from '@styled-system/prop-types';
+import { pick } from '@styled-system/props';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import { motionPick } from 'utils/motion-props'
-import { StyledIconButton } from './IconButton.styles'
+import { motionPick } from 'utils/motion-props';
+import { StyledIconButton } from './IconButton.styles';
 
 export const IconButton = ({
   children,
@@ -24,13 +24,13 @@ export const IconButton = ({
     >
       {children}
     </StyledIconButton>
-  )
-}
+  );
+};
 
 IconButton.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   className: PropTypes.string,
   name: PropTypes.string,
@@ -41,5 +41,5 @@ IconButton.propTypes = {
   ...propTypes.layout,
   ...propTypes.position,
   ...propTypes.space,
-  ...propTypes.typography
-}
+  ...propTypes.typography,
+};

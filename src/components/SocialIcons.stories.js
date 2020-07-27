@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import { SocialIcons } from 'components/SocialIcons'
+import { SocialIcons } from 'components/SocialIcons';
 
 export default {
   title: 'Components/SocialIcons',
-  component: SocialIcons
-}
+  component: SocialIcons,
+};
 
 export const preview = () => {
   return (
@@ -13,21 +13,21 @@ export const preview = () => {
       icons={[
         {
           label: 'Github',
-          url: 'https://github.com/andyhqtran'
+          url: 'https://github.com/andyhqtran',
         },
         {
           label: 'LinkedIn',
-          url: 'https://www.linkedin.com/in/andyhqtran/'
+          url: 'https://www.linkedin.com/in/andyhqtran/',
         },
         {
           label: 'Twitter',
-          url: 'https://twitter.com/helloandytran'
+          url: 'https://twitter.com/helloandytran',
         },
         {
           label: 'Github',
-          url: 'https://codepen.io/andytran'
-        }
+          url: 'https://codepen.io/andytran',
+        },
       ]}
     />
-  )
-}
+  );
+};

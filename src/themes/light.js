@@ -1,4 +1,4 @@
-import { rgba } from 'polished'
+import { rgba } from 'polished';
 
 const colors = {
   black: '#000000',
@@ -11,13 +11,13 @@ const colors = {
     rgba('#000000', 0.4),
     rgba('#000000', 0.64),
     rgba('#000000', 0.84),
-    rgba('#000000', 1)
+    rgba('#000000', 1),
   ],
-  white: '#FFFFFF'
-}
+  white: '#FFFFFF',
+};
 
-colors.shade.inverse = '#FFFFFF'
+colors.shade.inverse = '#FFFFFF';
 
 export const light = {
-  colors
-}
+  colors,
+};

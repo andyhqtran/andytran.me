@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import { PostCard } from 'components/PostCard'
+import { PostCard } from 'components/PostCard';
 
 export default {
   title: 'Components/PostCard',
-  component: PostCard
-}
+  component: PostCard,
+};
 
 export const preview = () => {
   return (
@@ -14,11 +14,11 @@ export const preview = () => {
         {
           description: 'This is a placeholder image',
           image: 'https://via.placeholder.com/112x112/1A62CC/1A62CC',
-          title: 'Placeholder'
-        }
+          title: 'Placeholder',
+        },
       ]}
-      excerpt='Mixmax is the #1 sales engagement platform for the complete sales cycle'
-      title='Mixmax'
+      excerpt="Mixmax is the #1 sales engagement platform for the complete sales cycle"
+      title="Mixmax"
     />
-  )
-}
+  );
+};

@@ -1,8 +1,5 @@
 module.exports = {
-  presets: [
-    'next/babel',
-    '@emotion/babel-preset-css-prop'
-  ],
+  presets: ['next/babel', '@emotion/babel-preset-css-prop'],
   plugins: [
     '@babel/plugin-proposal-export-default-from',
     [
@@ -11,8 +8,8 @@ module.exports = {
         autoLabel: process.env.NODE_ENV !== 'production',
         cssPropOptimization: true,
         labelFormat: '[local]',
-        sourceMap: true
-      }
-    ]
-  ]
-}
+        sourceMap: true,
+      },
+    ],
+  ],
+};

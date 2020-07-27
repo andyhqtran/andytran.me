@@ -1,73 +1,78 @@
-import PropTypes from 'prop-types'
-import React, { Fragment } from 'react'
+import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 
-import { getPosts, getPostBySlug, getPreviousPost, getNextPost } from 'api/posts'
-import { getSettings } from 'api/settings'
-import { PostFeaturedImage } from 'components/PostFeaturedImage'
-import { PostTitle } from 'components/PostTitle'
-import { Block } from 'design-system/Block'
-import { parseHTML } from 'utils/html-to-react'
+import {
+  getPosts,
+  getPostBySlug,
+  getPreviousPost,
+  getNextPost,
+} from 'api/posts';
+import { getSettings } from 'api/settings';
+import { PostFeaturedImage } from 'components/PostFeaturedImage';
+import { PostTitle } from 'components/PostTitle';
+import { Block } from 'design-system/Block';
+import { parseHTML } from 'utils/html-to-react';
 
 const PostsSlugPage = ({ post, title }) => {
   return (
     <Fragment>
-      <PostTitle
-        excerpt={post.excerpt}
-        tags={post.tags}
-        title={post.title}
-      />
-      <PostFeaturedImage
-        image={post.image}
-        title={post.title}
-      />
-      <Block display='grid' gridTemplateColumns='704px 1fr' maxWidth={1072} mt={20} mx='auto' width='100%'>
-        <article>
-          {parseHTML(post.html)}
-        </article>
+      <PostTitle excerpt={post.excerpt} tags={post.tags} title={post.title} />
+      <PostFeaturedImage image={post.image} title={post.title} />
+      <Block
+        display="grid"
+        gridTemplateColumns="704px 1fr"
+        maxWidth={1072}
+        mt={20}
+        mx="auto"
+        width="100%"
+      >
+        <article>{parseHTML(post.html)}</article>
       </Block>
     </Fragment>
-  )
-}
+  );
+};
 
 PostsSlugPage.propTypes = {
   post: PropTypes.shape({
     excerpt: PropTypes.string,
     html: PropTypes.string,
     image: PropTypes.string,
-    tags: PropTypes.arrayOf(PropTypes.shape({
-      description: PropTypes.string,
-      id: PropTypes.string,
-      image: PropTypes.string,
-      name: PropTypes.string,
-      slug: PropTypes.string,
-      visibility: PropTypes.string
-    })),
-    title: PropTypes.string
+    tags: PropTypes.arrayOf(
+      PropTypes.shape({
+        description: PropTypes.string,
+        id: PropTypes.string,
+        image: PropTypes.string,
+        name: PropTypes.string,
+        slug: PropTypes.string,
+        visibility: PropTypes.string,
+      }),
+    ),
+    title: PropTypes.string,
   }),
-  title: PropTypes.string
-}
+  title: PropTypes.string,
+};
 
-export async function getStaticPaths () {
-  const posts = await getPosts({ include: 'tags,author', limit: 'all' })
+export async function getStaticPaths() {
+  const posts = await getPosts({ include: 'tags,author', limit: 'all' });
 
   const paths = posts.map((post) => ({
     params: {
-      slug: post.slug
-    }
-  }))
+      slug: post.slug,
+    },
+  }));
 
   return {
     paths,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps ({ params }) {
-  const post = await getPostBySlug(params.slug)
-  const settings = await getSettings()
+export async function getStaticProps({ params }) {
+  const post = await getPostBySlug(params.slug);
+  const settings = await getSettings();
 
-  const prevPost = await getPreviousPost(params.slug)
-  const nextPost = await getNextPost(params.slug)
+  const prevPost = await getPreviousPost(params.slug);
+  const nextPost = await getNextPost(params.slug);
 
   return {
     props: {
@@ -80,18 +85,22 @@ export async function getStaticProps ({ params }) {
         id: post.id,
         image: post.feature_image,
         slug: post.slug,
-        tags: post.tags && post.tags.filter((tag) => tag.visibility === 'public').map((tag) => ({
-          description: tag.description,
-          id: tag.id,
-          image: tag.feature_image,
-          name: tag.name,
-          slug: tag.slug,
-          visibility: tag.visibility
-        })),
-        title: post.title
-      }
-    }
-  }
+        tags:
+          post.tags &&
+          post.tags
+            .filter((tag) => tag.visibility === 'public')
+            .map((tag) => ({
+              description: tag.description,
+              id: tag.id,
+              image: tag.feature_image,
+              name: tag.name,
+              slug: tag.slug,
+              visibility: tag.visibility,
+            })),
+        title: post.title,
+      },
+    },
+  };
 }
 
-export default PostsSlugPage
+export default PostsSlugPage;

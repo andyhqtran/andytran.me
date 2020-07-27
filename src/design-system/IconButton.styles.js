@@ -1,9 +1,18 @@
-import styled from '@emotion/styled'
-import { css } from '@styled-system/css'
-import { themeGet } from '@styled-system/theme-get'
-import { motion } from 'framer-motion'
-import { transitions } from 'polished'
-import { background, color, compose, flexbox, layout, position, space, typography } from 'styled-system'
+import styled from '@emotion/styled';
+import { css } from '@styled-system/css';
+import { themeGet } from '@styled-system/theme-get';
+import { motion } from 'framer-motion';
+import { transitions } from 'polished';
+import {
+  background,
+  color,
+  compose,
+  flexbox,
+  layout,
+  position,
+  space,
+  typography,
+} from 'styled-system';
 
 export const StyledIconButton = styled(motion.button)(
   {
@@ -16,30 +25,22 @@ export const StyledIconButton = styled(motion.button)(
     height: 56,
     border: 0,
     borderRadius: '100%',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   transitions(['background-color', 'color', 'box-shadow'], '0.2s ease'),
   (props) => ({
     '&:focus': {
-      boxShadow: `inset 0 0 0 1px ${themeGet('colors.shade.1')(props)}`
-    }
+      boxShadow: `inset 0 0 0 1px ${themeGet('colors.shade.1')(props)}`,
+    },
   }),
   css({
     color: 'shade.4',
     '&:focus, &:hover': {
-      color: 'shade.7'
+      color: 'shade.7',
     },
     '&:hover': {
-      backgroundColor: 'shade.0'
-    }
+      backgroundColor: 'shade.0',
+    },
   }),
-  compose(
-    background,
-    color,
-    flexbox,
-    layout,
-    position,
-    space,
-    typography
-  )
-)
+  compose(background, color, flexbox, layout, position, space, typography),
+);

@@ -1,9 +1,9 @@
-import propTypes from '@styled-system/prop-types'
-import { pick } from '@styled-system/props'
-import PropTypes from 'prop-types'
-import React from 'react'
+import propTypes from '@styled-system/prop-types';
+import { pick } from '@styled-system/props';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import { StyledImage } from './Image.styles'
+import { StyledImage } from './Image.styles';
 
 export const Image = ({
   alt,
@@ -22,8 +22,8 @@ export const Image = ({
       title={title}
       {...pick(restOfProps)}
     />
-  )
-}
+  );
+};
 
 Image.propTypes = {
   alt: PropTypes.string,
@@ -36,5 +36,5 @@ Image.propTypes = {
   ...propTypes.grid,
   ...propTypes.layout,
   ...propTypes.position,
-  ...propTypes.space
-}
+  ...propTypes.space,
+};

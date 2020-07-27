@@ -1,16 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import { Button } from 'design-system/Button'
+import { Button } from 'design-system/Button';
 
 export default {
   title: 'Design System/Button',
-  component: Button
-}
+  component: Button,
+};
 
 export const preview = () => {
-  return (
-    <Button>
-      View project ⟶
-    </Button>
-  )
-}
+  return <Button>View project ⟶</Button>;
+};

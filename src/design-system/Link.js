@@ -1,10 +1,10 @@
-import propTypes from '@styled-system/prop-types'
-import { pick } from '@styled-system/props'
-import NextLink from 'next/link'
-import PropTypes from 'prop-types'
-import React from 'react'
+import propTypes from '@styled-system/prop-types';
+import { pick } from '@styled-system/props';
+import NextLink from 'next/link';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import { StyledLink } from './Link.styles'
+import { StyledLink } from './Link.styles';
 
 export const Link = ({
   as,
@@ -32,7 +32,7 @@ export const Link = ({
       >
         {children}
       </StyledLink>
-    )
+    );
   }
 
   return (
@@ -46,15 +46,12 @@ export const Link = ({
       scroll={scroll}
       shallow={shallow}
     >
-      <StyledLink
-        className={className}
-        {...pick(restOfProps)}
-      >
+      <StyledLink className={className} {...pick(restOfProps)}>
         {children}
       </StyledLink>
     </NextLink>
-  )
-}
+  );
+};
 
 Link.defaultProps = {
   external: false,
@@ -62,14 +59,14 @@ Link.defaultProps = {
   passHref: true,
   prefetch: true,
   replace: false,
-  scroll: true
-}
+  scroll: true,
+};
 
 Link.propTypes = {
   as: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   className: PropTypes.string,
   external: PropTypes.bool,
@@ -84,5 +81,5 @@ Link.propTypes = {
   ...propTypes.layout,
   ...propTypes.position,
   ...propTypes.space,
-  ...propTypes.typography
-}
+  ...propTypes.typography,
+};

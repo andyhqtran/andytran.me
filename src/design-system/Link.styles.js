@@ -1,11 +1,18 @@
-import styled from '@emotion/styled'
-import { css } from '@styled-system/css'
-import { transitions } from 'polished'
-import { color, compose, layout, position, space, typography } from 'styled-system'
+import styled from '@emotion/styled';
+import { css } from '@styled-system/css';
+import { transitions } from 'polished';
+import {
+  color,
+  compose,
+  layout,
+  position,
+  space,
+  typography,
+} from 'styled-system';
 
 export const StyledLink = styled('a')(
   {
-    textDecorationLine: 'underline'
+    textDecorationLine: 'underline',
   },
   transitions(['color', 'text-decoration-color'], '0.2s ease'),
   css({
@@ -14,14 +21,8 @@ export const StyledLink = styled('a')(
     letterSpacing: 1,
     lineHeight: 3,
     '&:focus, &:hover': {
-      color: 'primary'
-    }
+      color: 'primary',
+    },
   }),
-  compose(
-    color,
-    layout,
-    position,
-    space,
-    typography
-  )
-)
+  compose(color, layout, position, space, typography),
+);

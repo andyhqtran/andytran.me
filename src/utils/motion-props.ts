@@ -32,25 +32,25 @@ export const motionProps: Array<String> = [
   'transition',
   'variants',
   'whileHover',
-  'whileTap'
-]
+  'whileTap',
+];
 
-const regex = new RegExp(`^(${motionProps.join('|')})$`)
+const regex = new RegExp(`^(${motionProps.join('|')})$`);
 
-export const motionOmit = props => {
-  const next = {}
+export const motionOmit = (props) => {
+  const next = {};
   for (const key in props) {
-    if (regex.test(key)) continue
-    next[key] = props[key]
+    if (regex.test(key)) continue;
+    next[key] = props[key];
   }
-  return next
-}
+  return next;
+};
 
-export const motionPick = props => {
-  const next = {}
+export const motionPick = (props) => {
+  const next = {};
   for (const key in props) {
-    if (!regex.test(key)) continue
-    next[key] = props[key]
+    if (!regex.test(key)) continue;
+    next[key] = props[key];
   }
-  return next
-}
+  return next;
+};

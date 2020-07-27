@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 
 import {
   ArrowLeftIcon,
@@ -9,13 +9,13 @@ import {
   LinkedInIcon,
   MoonIcon,
   SunIcon,
-  TwitterIcon
-} from 'design-system/Icon'
+  TwitterIcon,
+} from 'design-system/Icon';
 
 export default {
   title: 'Design System/Icon',
-  component: Icon
-}
+  component: Icon,
+};
 
 export const preview = () => {
   return (
@@ -29,53 +29,37 @@ export const preview = () => {
       <SunIcon />
       <TwitterIcon />
     </Fragment>
-  )
-}
+  );
+};
 
 export const arrowLeft = () => {
-  return (
-    <ArrowLeftIcon />
-  )
-}
+  return <ArrowLeftIcon />;
+};
 
 export const arrowRight = () => {
-  return (
-    <ArrowRightIcon />
-  )
-}
+  return <ArrowRightIcon />;
+};
 
 export const codepen = () => {
-  return (
-    <CodePenIcon />
-  )
-}
+  return <CodePenIcon />;
+};
 
 export const github = () => {
-  return (
-    <GithubIcon />
-  )
-}
+  return <GithubIcon />;
+};
 
 export const linkedin = () => {
-  return (
-    <LinkedInIcon />
-  )
-}
+  return <LinkedInIcon />;
+};
 
 export const moon = () => {
-  return (
-    <MoonIcon />
-  )
-}
+  return <MoonIcon />;
+};
 
 export const sun = () => {
-  return (
-    <SunIcon />
-  )
-}
+  return <SunIcon />;
+};
 
 export const twitter = () => {
-  return (
-    <TwitterIcon />
-  )
-}
+  return <TwitterIcon />;
+};

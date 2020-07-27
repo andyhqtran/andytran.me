@@ -1,16 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import { Blockquote } from 'design-system/Blockquote'
+import { Blockquote } from 'design-system/Blockquote';
 
 export default {
   title: 'Design System/Blockquote',
-  component: Blockquote
-}
+  component: Blockquote,
+};
 
 export const preview = () => {
-  return (
-    <Blockquote>
-      This is an example of a blockquote
-    </Blockquote>
-  )
-}
+  return <Blockquote>This is an example of a blockquote</Blockquote>;
+};

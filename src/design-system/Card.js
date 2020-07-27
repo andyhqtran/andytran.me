@@ -1,25 +1,22 @@
-import { pick } from '@styled-system/props'
-import propTypes from '@styled-system/prop-types'
-import PropTypes from 'prop-types'
-import React from 'react'
+import { pick } from '@styled-system/props';
+import propTypes from '@styled-system/prop-types';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import { StyledCard } from './Card.styles'
+import { StyledCard } from './Card.styles';
 
 export const Card = ({ children, className, ...restOfProps }) => {
   return (
-    <StyledCard
-      className={className}
-      {...pick(restOfProps)}
-    >
+    <StyledCard className={className} {...pick(restOfProps)}>
       {children}
     </StyledCard>
-  )
-}
+  );
+};
 
 Card.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   className: PropTypes.string,
   ...propTypes.background,
@@ -27,5 +24,5 @@ Card.propTypes = {
   ...propTypes.flexbox,
   ...propTypes.layout,
   ...propTypes.position,
-  ...propTypes.space
-}
+  ...propTypes.space,
+};

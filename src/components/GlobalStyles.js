@@ -1,6 +1,6 @@
-import { Global } from '@emotion/core'
-import { css } from '@styled-system/css'
-import React from 'react'
+import { Global } from '@emotion/core';
+import { css } from '@styled-system/css';
+import React from 'react';
 
 export const GlobalStyles = () => {
   return (
@@ -13,9 +13,9 @@ export const GlobalStyles = () => {
           fontWeight: 'regular',
           lineHeight: 'body',
           WebkitFontSmoothing: 'antialiased',
-          MozOsxFontSmoothing: 'grayscale'
-        }
+          MozOsxFontSmoothing: 'grayscale',
+        },
       })}
     />
-  )
-}
+  );
+};

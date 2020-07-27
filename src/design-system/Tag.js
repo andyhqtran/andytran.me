@@ -1,12 +1,12 @@
-import propTypes from '@styled-system/prop-types'
-import { pick } from '@styled-system/props'
-import Link from 'next/link'
-import PropTypes from 'prop-types'
-import React from 'react'
+import propTypes from '@styled-system/prop-types';
+import { pick } from '@styled-system/props';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-import { Image } from 'design-system/Image'
-import { motionPick } from 'utils/motion-props'
-import { StyledTag } from './Tag.styles'
+import { Image } from 'design-system/Image';
+import { motionPick } from 'utils/motion-props';
+import { StyledTag } from './Tag.styles';
 
 export const Tag = ({
   className,
@@ -17,26 +17,18 @@ export const Tag = ({
   ...restOfProps
 }) => {
   return (
-    <Link
-      as={`/tag/${slug}`}
-      passHref
-      href='/tag/[slug]'
-    >
+    <Link as={`/tag/${slug}`} passHref href="/tag/[slug]">
       <StyledTag
         className={className}
         whileTap={{ scale: 0.92 }}
         {...motionPick(restOfProps)}
         {...pick(restOfProps)}
       >
-        <Image
-          alt={description}
-          src={image}
-          title={name}
-        />
+        <Image alt={description} src={image} title={name} />
       </StyledTag>
     </Link>
-  )
-}
+  );
+};
 
 Tag.propTypes = {
   className: PropTypes.string,
@@ -49,5 +41,5 @@ Tag.propTypes = {
   ...propTypes.flexbox,
   ...propTypes.layout,
   ...propTypes.position,
-  ...propTypes.space
-}
+  ...propTypes.space,
+};

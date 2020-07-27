@@ -1,11 +1,7 @@
-import { Global, css } from '@emotion/core'
-import emotionNormalize from 'emotion-normalize'
-import React from 'react'
+import { Global, css } from '@emotion/core';
+import emotionNormalize from 'emotion-normalize';
+import React from 'react';
 
 export const Normalize = () => {
-  return (
-    <Global
-      styles={css(emotionNormalize)}
-    />
-  )
-}
+  return <Global styles={css(emotionNormalize)} />;
+};

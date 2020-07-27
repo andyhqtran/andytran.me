@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import { Navigation } from 'components/Navigation'
+import { Navigation } from 'components/Navigation';
 
 export default {
   title: 'Components/Navigation',
-  component: Navigation
-}
+  component: Navigation,
+};
 
 export const preview = () => {
   return (
@@ -13,13 +13,13 @@ export const preview = () => {
       items={[
         {
           label: 'Email',
-          url: 'mailto:hello@andytran.me'
+          url: 'mailto:hello@andytran.me',
         },
         {
           label: 'LinkedIn',
-          url: 'https://www.linkedin.com/in/andyhqtran/'
-        }
+          url: 'https://www.linkedin.com/in/andyhqtran/',
+        },
       ]}
     />
-  )
-}
+  );
+};
