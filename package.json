@@ -58,7 +58,7 @@
     "@styled-system/theme-get": "^5.1.2",
     "@tryghost/content-api": "^1.4.1",
     "@types/styled-components": "^5.1.1",
-    "@types/styled-system": "^5.1.9",
+    "@types/styled-system": "^5.1.10",
     "dotenv": "^8.2.0",
     "emotion": "^10.0.27",
     "emotion-normalize": "^10.1.0",
