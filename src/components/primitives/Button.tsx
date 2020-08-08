@@ -22,7 +22,6 @@ export const Button = ({
       variant={variant}
       {...restOfProps}
       __css={{
-        outline: 'none',
         backgroundColor: 'transparent',
         height: 56,
         paddingRight: 8,
@@ -30,6 +29,7 @@ export const Button = ({
         border: '1px solid',
         borderColor: 'shade.1',
         borderRadius: 28,
+        boxShadow: '0 0 0 4px transparent',
         color: 'body',
         fontSize: 'body',
         letterSpacing: -0.2,
@@ -38,9 +38,12 @@ export const Button = ({
         '&:hover': {
           backgroundColor: 'shade.0',
         },
-        '&:focus': {
-          backgroundColor: 'shade.1',
+        '&.focus-visible': {
+          borderColor: 'transparent',
           boxShadow: ({ colors }) => `0 0 0 4px ${rgba(colors.primary, 0.36)}`,
+          '&:focus': {
+            outline: 'none',
+          },
         },
       }}
       __themeKey='buttons'

@@ -1,3 +1,4 @@
+import 'focus-visible';
 import { CacheProvider, ThemeProvider } from '@emotion/react';
 import { cache } from '@emotion/css';
 import { useRouter } from 'next/router';
