@@ -19,6 +19,7 @@
       "api/*": ["src/api/*"],
       "components": ["src/components/*"],
       "components/*": ["src/components/*"],
+      "primitives/*": ["src/components/primitives/*"],
       "design-system": ["src/design-system/*"],
       "design-system/*": ["src/design-system/*"],
       "pages": ["src/pages/*"],
