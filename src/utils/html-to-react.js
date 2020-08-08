@@ -2,7 +2,7 @@
 import { Parser, ProcessNodeDefinitions } from 'html-to-react';
 import React from 'react';
 
-import { Blockquote } from 'components/Core/Blockquote';
+import { Blockquote } from 'components/primitives/Blockquote';
 import { Heading } from 'design-system/Heading';
 import { Image } from 'design-system/Image';
 import { Link } from 'design-system/Link';

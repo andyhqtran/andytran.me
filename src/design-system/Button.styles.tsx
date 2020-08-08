@@ -25,6 +25,9 @@ export const StyledButton = styled('button', { shouldForwardProp })(
     cursor: 'pointer',
     '&:hover': {
       boxShadow: 'none',
+      '&:focus': {
+        background: 'red',
+      },
     },
   },
   transitions('background-color', '0.2s ease'),
