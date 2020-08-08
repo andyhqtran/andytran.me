@@ -18,7 +18,7 @@ export const Button = ({
   return (
     <Box
       as={motion.button}
-      whileTap={{ scale: 0.96 }}
+      whileTap={{ scale: 0.92 }}
       variant={variant}
       {...restOfProps}
       __css={{
@@ -38,12 +38,12 @@ export const Button = ({
         '&:hover': {
           backgroundColor: 'shade.0',
         },
+        '&:focus': {
+          outline: 'none',
+        },
         '&.focus-visible': {
           borderColor: 'transparent',
           boxShadow: ({ colors }) => `0 0 0 4px ${rgba(colors.primary, 0.36)}`,
-          '&:focus': {
-            outline: 'none',
-          },
         },
       }}
       __themeKey='buttons'

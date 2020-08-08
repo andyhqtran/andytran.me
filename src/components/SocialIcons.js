@@ -11,7 +11,7 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from 'design-system/Icon';
-import { IconButton } from 'design-system/IconButton';
+import { IconButton } from 'primitives/IconButton';
 
 const iconMap = {
   codepen: CodePenIcon,

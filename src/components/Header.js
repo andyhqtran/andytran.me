@@ -7,8 +7,8 @@ import { SocialIcons } from 'components/SocialIcons';
 import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
 import { ArrowLeftIcon, ArrowRightIcon } from 'design-system/Icon';
-import { IconButton } from 'design-system/IconButton';
 import { Logo } from 'design-system/Logo';
+import { IconButton } from 'primitives/IconButton';
 import { StyledHeader } from './Header.styles';
 
 export const Header = ({
