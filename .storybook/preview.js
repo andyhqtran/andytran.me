@@ -2,11 +2,11 @@ import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'emotion-theming';
 import React, { Fragment } from 'react';
 
-import { GlobalStyles } from 'components/GlobalStyles';
-import { Inter } from 'components/Inter';
-import { Normalize } from 'components/Normalize';
-import { common } from 'themes/common';
-import { light } from 'themes/light';
+import { GlobalStyles } from '../src/components/GlobalStyles';
+import { Inter } from '../src/components/Inter';
+import { Normalize } from '../src/components/Normalize';
+import { common } from '../src/themes/common';
+import { light } from '../src/themes/light';
 
 /**
  * Wraps stories in the Emotion theme wrapper
