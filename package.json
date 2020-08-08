@@ -57,7 +57,7 @@
     "@styled-system/should-forward-prop": "^5.1.5",
     "@styled-system/theme-get": "^5.1.2",
     "@tryghost/content-api": "^1.4.1",
-    "@types/styled-components": "^5.1.1",
+    "@types/styled-components": "^5.1.2",
     "@types/styled-system": "^5.1.10",
     "dotenv": "^8.2.0",
     "emotion": "^10.0.27",
