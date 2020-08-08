@@ -133,7 +133,19 @@ letterSpacings.h6alt = letterSpacings[8]; // 0.8px
 letterSpacings.h7 = letterSpacings[3] * -1; // -0.3px
 letterSpacings.h7alt = letterSpacings[8]; // 0.8px
 
-const radii = [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40];
+const radii = {
+  0: 0,
+  4: 4,
+  8: 8,
+  12: 12,
+  16: 16,
+  20: 20,
+  24: 24,
+  28: 28,
+  32: 32,
+  36: 36,
+  40: 40,
+};
 
 export const common = {
   space,

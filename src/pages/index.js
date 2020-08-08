@@ -17,8 +17,8 @@ const IndexPage = ({ description, navigation, posts, title }) => {
             <PostCard
               excerpt={post.excerpt}
               key={post.id}
-              mb={8}
               slug={post.slug}
+              sx={{ mb: 8 }}
               tags={post.tags}
               title={post.title}
             />

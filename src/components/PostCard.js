@@ -1,34 +1,35 @@
 import propTypes from '@styled-system/prop-types';
-import { pick } from '@styled-system/props';
 import PropTypes from 'prop-types';
 import Router from 'next/router';
 import React from 'react';
 
 import { Block } from 'design-system/Block';
-import { Card } from 'design-system/Card';
 import { Heading } from 'design-system/Heading';
 import { Image } from 'design-system/Image';
 import { Paragraph } from 'design-system/Paragraph';
 import { Tag } from 'design-system/Tag';
 import { Window } from 'design-system/Window';
 import { Button } from 'primitives/Button';
+import { Card } from 'primitives/Card';
 
 export const PostCard = ({
-  className,
   excerpt,
   image,
   slug,
+  sx,
   tags,
   title,
   ...restOfProps
 }) => {
   return (
     <Card
-      className={className}
-      display='flex'
-      justifyContent='space-between'
-      overflow='hidden'
-      {...pick(restOfProps)}
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        overflow: 'hidden',
+        ...sx,
+      }}
+      {...restOfProps}
     >
       <Block
         alignItems='flex-start'
