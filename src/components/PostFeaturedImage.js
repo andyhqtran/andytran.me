@@ -3,9 +3,9 @@ import { pick } from '@styled-system/props';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Card } from 'design-system/Card';
 import { Image } from 'design-system/Image';
 import { Window } from 'design-system/Window';
+import { Card } from 'primitives/Card';
 
 export const PostFeaturedImage = ({
   className,
@@ -15,6 +15,14 @@ export const PostFeaturedImage = ({
 }) => {
   return (
     <Card
+      sx={{
+        maxWidth: 1184,
+        mt: 64,
+        mx: 'auto',
+        pl: 56,
+        pr: 56,
+        pt: 56,
+      }}
       maxWidth={1184}
       mt={16}
       mx='auto'

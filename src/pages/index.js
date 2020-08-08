@@ -18,7 +18,7 @@ const IndexPage = ({ description, navigation, posts, title }) => {
               excerpt={post.excerpt}
               key={post.id}
               slug={post.slug}
-              sx={{ mb: 8 }}
+              sx={{ mb: 24 }}
               tags={post.tags}
               title={post.title}
             />
