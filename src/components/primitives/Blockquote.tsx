@@ -6,8 +6,8 @@ export type BlockquoteProps = HTMLProps<HTMLQuoteElement> & BoxProps;
 export const Blockquote = (props: BlockquoteProps) => {
   return (
     <Box
-      as='blockquote'
       {...props}
+      as='blockquote'
       __themeKey='blockquotes'
       __css={{
         margin: 0,
