@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
+import { MotionProps, motion } from 'framer-motion';
 import { rgba, transitions } from 'polished';
 import React from 'react';
 
 import { Box, BoxProps } from 'primitives/Box';
 
-export type IconButtonProps = BoxProps<HTMLButtonElement>;
+export type IconButtonProps = BoxProps<HTMLButtonElement> & MotionProps;
 
 export const IconButton = (props: IconButtonProps) => {
   return (
