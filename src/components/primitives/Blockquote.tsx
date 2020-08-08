@@ -1,7 +1,7 @@
 import React, { HTMLProps } from 'react';
-import { Box, BoxProps } from 'theme-ui';
+import { Box, BoxProps } from 'components/primitives/Box';
 
-export type BlockquoteProps = HTMLProps<HTMLQuoteElement> & BoxProps;
+export type BlockquoteProps = BoxProps<HTMLQuoteElement>;
 
 export const Blockquote = (props: BlockquoteProps) => {
   return (

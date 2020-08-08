@@ -1,14 +1,26 @@
+import { MotionProps, motion } from 'framer-motion';
 import { rgba, transitions } from 'polished';
 import React from 'react';
-import { Box, BoxProps } from 'theme-ui';
 
-export type ButtonProps = BoxProps;
+import { Box, BoxProps } from 'primitives/Box';
 
-export const Button = (props: ButtonProps) => {
+export type ButtonVariant = 'primary' | 'secondary';
+
+export type ButtonProps = BoxProps<HTMLButtonElement> &
+  MotionProps & {
+    variant?: ButtonVariant;
+  };
+
+export const Button = ({
+  variant = 'primary',
+  ...restOfProps
+}: ButtonProps) => {
   return (
     <Box
-      as='button'
-      {...props}
+      as={motion.button}
+      whileTap={{ scale: 0.96 }}
+      variant={variant}
+      {...restOfProps}
       __css={{
         outline: 'none',
         backgroundColor: 'transparent',
@@ -28,7 +40,7 @@ export const Button = (props: ButtonProps) => {
         },
         '&:focus': {
           backgroundColor: 'shade.1',
-          // boxShadow: ({ colors }) => `0 0 0 4px ${rgba(colors.primary, 0.36)}`,
+          boxShadow: ({ colors }) => `0 0 0 4px ${rgba(colors.primary, 0.36)}`,
         },
       }}
       __themeKey='buttons'
