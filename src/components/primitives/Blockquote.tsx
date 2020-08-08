@@ -13,9 +13,9 @@ export const Blockquote = (props: BlockquoteProps) => {
         margin: 0,
         borderLeft: '2px solid',
         borderColor: 'shade.1',
-        paddingTop: 4,
-        paddingBottom: 4,
-        paddingLeft: 4,
+        paddingTop: 16,
+        paddingBottom: 16,
+        paddingLeft: 16,
         color: 'shade.5',
         fontStyle: 'italic',
       }}

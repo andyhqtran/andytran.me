@@ -27,23 +27,23 @@ export const PostTitle = ({
       <Head>
         <title>{title}</title>
       </Head>
-      <Block display='flex' mb={6}>
+      <Block display='flex' mb={24}>
         {tags &&
           tags.map((tag, index) => (
             <Tag
               description={tag.description}
               image={tag.image}
               key={tag.id}
-              mr={tags.length !== index && 4}
+              mr={tags.length !== index && 16}
               name={tag.name}
               slug={tag.slug}
             />
           ))}
       </Block>
-      <Heading maxWidth={704} mb={4} variant='h1'>
+      <Heading maxWidth={704} mb={16} variant='h1'>
         {title}
       </Heading>
-      <Paragraph color='shade.5' fontSize={4} lineHeight={5} maxWidth={704}>
+      <Paragraph color='shade.5' fontSize={24} lineHeight='34px' maxWidth={704}>
         {excerpt}
       </Paragraph>
     </Block>

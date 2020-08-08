@@ -17,7 +17,8 @@ export const StyledNavigation = styled('nav')(
   },
   css({
     color: 'shade.7',
-    fontSize: 2,
+    fontSize: 18,
+    letterSpacing: '0.1',
   }),
   compose(color, flexbox, grid, layout, space, typography),
 );

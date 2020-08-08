@@ -1,3 +1,4 @@
+/** @todo remove this later */
 import { rem } from 'polished';
 
 const space = [

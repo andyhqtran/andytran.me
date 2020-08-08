@@ -110,7 +110,7 @@ const processingInstructions = [
       return node.name === 'blockquote';
     },
     processNode: (node, children) => {
-      return <Blockquote mb={6}>{children}</Blockquote>;
+      return <Blockquote mb={24}>{children}</Blockquote>;
     },
   },
   {

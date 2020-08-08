@@ -21,10 +21,10 @@ export const StyledLogo = styled('div')(
   },
   css({
     backgroundColor: 'shade.0',
-    fontSize: 2,
+    fontSize: 18,
     fontWeight: 'bold',
     letterSpacing: -0.3,
-    lineHeight: 3,
+    lineHeight: 28,
   }),
   compose(background, color, layout, position, space),
 );

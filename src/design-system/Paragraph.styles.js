@@ -16,7 +16,7 @@ export const StyledParagraph = styled('p', { shouldForwardProp })(
   css({
     margin: 0,
     color: 'shade.6',
-    fontSize: 'body',
+    fontSize: 18,
     fontWeight: 'regular',
   }),
   compose(color, flexbox, layout, position, shadow, space, typography),

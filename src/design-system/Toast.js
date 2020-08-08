@@ -114,7 +114,7 @@ export class ToastProvider extends Component {
                 return (
                   <Toast
                     key={toast.id}
-                    mb={toasts.length - 1 !== index && 6}
+                    mb={toasts.length - 1 !== index && 24}
                     variants={{
                       hidden: { x: '100%' },
                       show: {
@@ -125,7 +125,7 @@ export class ToastProvider extends Component {
                   >
                     {toast.content}
                     {toast.actions && (
-                      <Block ml={10} mr={2}>
+                      <Block ml={40} mr={8}>
                         {toast.actions.map((action, index) => {
                           return (
                             <Link
@@ -133,7 +133,7 @@ export class ToastProvider extends Component {
                               external={action.external}
                               href={action.url}
                               key={action.label}
-                              mr={toast.actions.length - 1 !== index && 6}
+                              mr={toast.actions.length - 1 !== index && 24}
                             >
                               {action.label}
                             </Link>

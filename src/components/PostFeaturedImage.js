@@ -22,14 +22,8 @@ export const PostFeaturedImage = ({
         pl: 56,
         pr: 56,
         pt: 56,
+        overflow: 'hidden',
       }}
-      maxWidth={1184}
-      mt={16}
-      mx='auto'
-      pl={14}
-      pr={14}
-      pt={14}
-      overflow='hidden'
       {...pick(restOfProps)}
     >
       <Window borderBottomLeftRadius={0} borderBottomRightRadius={0}>

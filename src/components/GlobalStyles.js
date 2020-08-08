@@ -9,9 +9,9 @@ export const GlobalStyles = () => {
         body: {
           backgroundColor: 'shade.inverse',
           color: 'shade.6',
-          fontFamily: 'body',
+          fontFamily: 'copy',
           fontWeight: 'regular',
-          lineHeight: 'body',
+          lineHeight: '28px',
           WebkitFontSmoothing: 'antialiased',
           MozOsxFontSmoothing: 'grayscale',
         },

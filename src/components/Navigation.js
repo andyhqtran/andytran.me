@@ -27,7 +27,7 @@ export const Navigation = ({ className, items, ...restOfProps }) => {
             }}
             href={item.url}
             key={item.label}
-            mr={items.length - 1 !== index ? 4 : 0}
+            mr={items.length - 1 !== index ? 16 : 0}
           >
             {item.label}
           </Link>

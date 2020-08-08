@@ -23,9 +23,9 @@ export const StyledToast = styled(motion.div)(
   }),
   css({
     backgroundColor: 'shade.inverse',
-    borderRadius: 2,
-    padding: 4,
-    fontSize: 1,
+    borderRadius: 8,
+    padding: 16,
+    fontSize: 14,
   }),
   compose(background, color, layout, position, space),
 );
@@ -43,6 +43,6 @@ export const StyledToastContainer = styled(motion.div)(
     overflow: 'hidden',
   },
   css({
-    padding: 6,
+    padding: 24,
   }),
 );

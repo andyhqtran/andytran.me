@@ -8,9 +8,9 @@ import { Block } from 'design-system/Block';
 
 export const Hero = ({ description, navigation, title, ...restOfProps }) => {
   return (
-    <Block px={14} py={16} {...pick(restOfProps)}>
+    <Block px={56} py={64} {...pick(restOfProps)}>
       <PageTitle description={description} maxWidth={526} title={title} />
-      {navigation && <Navigation items={navigation} mt={6} />}
+      {navigation && <Navigation items={navigation} mt={24} />}
     </Block>
   );
 };

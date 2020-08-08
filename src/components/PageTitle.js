@@ -19,10 +19,10 @@ export const PageTitle = ({
       <Head>
         <title>{title}</title>
       </Head>
-      <Heading mb={4} variant='h1'>
+      <Heading mb={16} variant='h1'>
         {title}
       </Heading>
-      <Paragraph color='shade.5' fontSize={4} lineHeight={5}>
+      <Paragraph color='shade.5' fontSize={24} lineHeight='34px'>
         {description}
       </Paragraph>
     </Block>

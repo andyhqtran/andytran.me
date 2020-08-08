@@ -17,8 +17,8 @@
     "paths": {
       "api": ["src/api/*"],
       "api/*": ["src/api/*"],
-      "components": ["src/components/*"],
       "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
       "primitives/*": ["src/components/primitives/*"],
       "design-system": ["src/design-system/*"],
       "design-system/*": ["src/design-system/*"],

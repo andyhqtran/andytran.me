@@ -17,8 +17,8 @@ export const StyledFooter = styled('footer')(
     boxShadow: `inset 0 1px 0 ${themeGet('colors.shade.1')(props)}`,
   }),
   css({
-    marginBottom: 24,
-    marginTop: 24,
+    marginBottom: 96,
+    marginTop: 96,
     color: 'shade.5',
     fontSize: 14,
   }),

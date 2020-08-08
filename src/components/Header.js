@@ -48,14 +48,13 @@ export const Header = ({
               exit={{ x: 28, opacity: 0 }}
               initial={{ x: 28, opacity: 0 }}
               key='previous-arrow'
-              left={-72}
               onClick={() => {
                 Router.push(
                   '/posts/[slug]',
                   `/posts/${prevPost.slug}`,
                 ).then(() => window.scrollTo(0, 0));
               }}
-              position='absolute'
+              sx={{ position: 'absolute', left: -72 }}
               transition={{ duration: 0.2 }}
             >
               <ArrowLeftIcon />
@@ -80,7 +79,7 @@ export const Header = ({
               >
                 <Heading
                   color='shade.4'
-                  mb={1}
+                  mb={16}
                   textAlign='center'
                   variant='h7-alt'
                 >
@@ -109,8 +108,7 @@ export const Header = ({
                   `/posts/${nextPost.slug}`,
                 ).then(() => window.scrollTo(0, 0));
               }}
-              position='absolute'
-              right={-72}
+              sx={{ position: 'absolute', right: -72 }}
               transition={{ duration: 0.2 }}
             >
               <ArrowRightIcon />

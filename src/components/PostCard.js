@@ -36,25 +36,25 @@ export const PostCard = ({
         display='flex'
         flexDirection='column'
         maxWidth={520}
-        p={14}
+        p={56}
       >
-        <Block display='flex' mb={6}>
+        <Block display='flex' mb={24}>
           {tags &&
             tags.map((tag, index) => (
               <Tag
                 description={tag.description}
                 image={tag.image}
                 key={tag.id}
-                mr={tags.length !== index && 4}
+                mr={tags.length !== index && 16}
                 name={tag.name}
                 slug={tag.slug}
               />
             ))}
         </Block>
-        <Heading mb={4} variant='h2'>
+        <Heading mb={16} variant='h2'>
           {title}
         </Heading>
-        <Paragraph color='shade.5' mb={10}>
+        <Paragraph color='shade.5' mb={32}>
           {excerpt}
         </Paragraph>
         <Button

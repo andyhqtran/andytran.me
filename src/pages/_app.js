@@ -10,6 +10,7 @@ import { Inter } from 'components/Inter';
 import { Layout } from 'components/Layout';
 import { Normalize } from 'components/Normalize';
 import { ToastProvider } from 'design-system/Toast';
+import { theme } from 'constants/theme';
 import { common } from 'themes/common';
 import { light } from 'themes/light';
 
@@ -20,9 +21,8 @@ const MyApp = ({ Component, pageProps }) => {
     <CacheProvider value={cache}>
       <ThemeProvider
         theme={{
-          ...common,
+          ...theme,
           ...light,
-          test: 'test',
         }}
       >
         <ToastProvider>

@@ -24,8 +24,8 @@ export const Button = ({
       __css={{
         backgroundColor: 'transparent',
         height: 56,
-        paddingRight: 8,
-        paddingLeft: 8,
+        paddingRight: 24,
+        paddingLeft: 24,
         border: '1px solid',
         borderColor: 'shade.1',
         borderRadius: 28,

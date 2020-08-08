@@ -17,9 +17,9 @@ export const StyledLink = styled('a')(
   transitions(['color', 'text-decoration-color'], '0.2s ease'),
   css({
     color: 'shade.7',
-    fontSize: 2,
-    letterSpacing: 1,
-    lineHeight: 3,
+    fontSize: 18,
+    letterSpacing: 0.1,
+    lineHeight: '28px',
     '&:focus, &:hover': {
       color: 'primary',
     },
