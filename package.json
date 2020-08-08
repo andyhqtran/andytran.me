@@ -28,6 +28,8 @@
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@emotion/babel-plugin": "^11.0.0-next.13",
+    "@emotion/babel-preset-css-prop": "^11.0.0-next.10",
     "@storybook/addon-essentials": "^6.0.0-rc.15",
     "@storybook/react": "^6.0.0-rc.15",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
@@ -44,10 +46,11 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "@emotion/babel-preset-css-prop": "^10.0.27",
-    "@emotion/cache": "^10.0.29",
     "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
+    "@emotion/css": "^11.0.0-next.14",
+    "@emotion/react": "^11.0.0-next.14",
+    "@emotion/server": "^11.0.0-next.14",
+    "@emotion/styled": "^11.0.0-next.14",
     "@segment/snippet": "^4.12.0",
     "@styled-system/css": "^5.1.5",
     "@styled-system/prop-types": "^5.1.5",

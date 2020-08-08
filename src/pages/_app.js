@@ -1,6 +1,5 @@
-import { CacheProvider } from '@emotion/core';
-import createCache from '@emotion/cache';
-import { ThemeProvider } from 'emotion-theming';
+import { CacheProvider, ThemeProvider } from '@emotion/react';
+import { cache } from '@emotion/css';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -13,8 +12,6 @@ import { ToastProvider } from 'design-system/Toast';
 import { common } from 'themes/common';
 import { light } from 'themes/light';
 
-const cache = createCache();
-
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
 
@@ -24,6 +21,7 @@ const MyApp = ({ Component, pageProps }) => {
         theme={{
           ...common,
           ...light,
+          test: 'test',
         }}
       >
         <ToastProvider>

@@ -28,7 +28,7 @@ export const Button = (props: ButtonProps) => {
         },
         '&:focus': {
           backgroundColor: 'shade.1',
-          boxShadow: ({ colors }) => `0 0 0 4px ${rgba(colors.primary, 0.36)}`,
+          // boxShadow: ({ colors }) => `0 0 0 4px ${rgba(colors.primary, 0.36)}`,
         },
       }}
       __themeKey='buttons'

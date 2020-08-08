@@ -1,5 +1,5 @@
+import { extractCritical } from '@emotion/server';
 import * as snippet from '@segment/snippet';
-import { extractCritical } from 'emotion-server';
 import Document, { Head, Main, NextScript } from 'next/document';
 import React, { Fragment } from 'react';
 
@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <html lang='en'>
         <Head>
           {GA_TRACKING_ID && (
             <Fragment>
@@ -68,7 +68,7 @@ export default class MyDocument extends Document {
         </Head>
         <body>
           <Main />
-          <div id="notifications" />
+          <div id='notifications' />
           <NextScript />
         </body>
       </html>

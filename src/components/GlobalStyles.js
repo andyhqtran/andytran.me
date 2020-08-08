@@ -1,4 +1,4 @@
-import { Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 import { css } from '@styled-system/css';
 import React from 'react';
 
