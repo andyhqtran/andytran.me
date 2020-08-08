@@ -32,14 +32,14 @@ export const Header = ({
     Object.keys(nextPost).length !== 0;
 
   return (
-    <StyledHeader key="header">
+    <StyledHeader key='header'>
       <Block
-        display="grid"
-        gridTemplateColumns="1fr 1fr 1fr"
-        position="relative"
+        display='grid'
+        gridTemplateColumns='1fr 1fr 1fr'
+        position='relative'
         maxWidth={1184}
-        mx="auto"
-        width="100%"
+        mx='auto'
+        width='100%'
       >
         <AnimatePresence>
           {hasPrevPost && isPostsPage && (
@@ -47,7 +47,7 @@ export const Header = ({
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 28, opacity: 0 }}
               initial={{ x: 28, opacity: 0 }}
-              key="previous-arrow"
+              key='previous-arrow'
               left={-72}
               onClick={() => {
                 Router.push(
@@ -55,7 +55,7 @@ export const Header = ({
                   `/posts/${prevPost.slug}`,
                 ).then(() => window.scrollTo(0, 0));
               }}
-              position="absolute"
+              position='absolute'
               transition={{ duration: 0.2 }}
             >
               <ArrowLeftIcon />
@@ -69,7 +69,7 @@ export const Header = ({
           onClick={() => Router.push('/').then(() => window.scrollTo(0, 0))}
           title={title}
         />
-        <Block alignItems="center" display="flex" justifyContent="center">
+        <Block alignItems='center' display='flex' justifyContent='center'>
           <AnimatePresence>
             {isPostsPage && (
               <Block
@@ -79,14 +79,14 @@ export const Header = ({
                 transition={{ duration: 0.2 }}
               >
                 <Heading
-                  color="shade.4"
+                  color='shade.4'
                   mb={1}
-                  textAlign="center"
-                  variant="h7-alt"
+                  textAlign='center'
+                  variant='h7-alt'
                 >
                   Case study
                 </Heading>
-                <Heading color="shade.5" textAlign="center" variant="h6-alt">
+                <Heading color='shade.5' textAlign='center' variant='h6-alt'>
                   {postTitle}
                 </Heading>
               </Block>
@@ -94,7 +94,7 @@ export const Header = ({
           </AnimatePresence>
         </Block>
         {!isPostsPage && (
-          <SocialIcons icons={socialIcons} justifyContent="flex-end" />
+          <SocialIcons icons={socialIcons} justifyContent='flex-end' />
         )}
         <AnimatePresence>
           {hasNextPost && isPostsPage && (
@@ -102,14 +102,14 @@ export const Header = ({
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -40, opacity: 0 }}
               initial={{ x: -40, opacity: 0 }}
-              key="next-arrow"
+              key='next-arrow'
               onClick={() => {
                 Router.push(
                   '/posts/[slug]',
                   `/posts/${nextPost.slug}`,
                 ).then(() => window.scrollTo(0, 0));
               }}
-              position="absolute"
+              position='absolute'
               right={-72}
               transition={{ duration: 0.2 }}
             >

@@ -107,8 +107,8 @@ export class ToastProvider extends Component {
                   },
                 },
               }}
-              initial="hidden"
-              animate="show"
+              initial='hidden'
+              animate='show'
             >
               {toasts.map((toast, index) => {
                 return (
@@ -129,7 +129,7 @@ export class ToastProvider extends Component {
                         {toast.actions.map((action, index) => {
                           return (
                             <Link
-                              fontSize="inherit"
+                              fontSize='inherit'
                               external={action.external}
                               href={action.url}
                               key={action.label}

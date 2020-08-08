@@ -10,8 +10,8 @@ export default {
 export const preview = () => {
   return (
     <Image
-      alt="Placeholder image"
-      src="https://via.placeholder.com/600x200/1A62CC/1A62CC"
+      alt='Placeholder image'
+      src='https://via.placeholder.com/600x200/1A62CC/1A62CC'
     />
   );
 };

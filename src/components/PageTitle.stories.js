@@ -8,5 +8,5 @@ export default {
 };
 
 export const preview = () => {
-  return <PageTitle description="Senior UI Engineer" title="Andy Tran" />;
+  return <PageTitle description='Senior UI Engineer' title='Andy Tran' />;
 };

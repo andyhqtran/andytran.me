@@ -17,15 +17,15 @@ export const PostFeaturedImage = ({
     <Card
       maxWidth={1184}
       mt={16}
-      mx="auto"
+      mx='auto'
       pl={14}
       pr={14}
       pt={14}
-      overflow="hidden"
+      overflow='hidden'
       {...pick(restOfProps)}
     >
       <Window borderBottomLeftRadius={0} borderBottomRightRadius={0}>
-        <Image title={title} src={image} width="100%" />
+        <Image title={title} src={image} width='100%' />
       </Window>
     </Card>
   );

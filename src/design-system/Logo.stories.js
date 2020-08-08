@@ -8,5 +8,5 @@ export default {
 };
 
 export const preview = () => {
-  return <Logo title="Andy Tran" />;
+  return <Logo title='Andy Tran' />;
 };

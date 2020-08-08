@@ -10,7 +10,7 @@ export default {
 
 export const preview = () => {
   return (
-    <IconButton name="Github">
+    <IconButton name='Github'>
       <GithubIcon />
     </IconButton>
   );

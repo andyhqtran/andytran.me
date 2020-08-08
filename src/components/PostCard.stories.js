@@ -17,8 +17,8 @@ export const preview = () => {
           title: 'Placeholder',
         },
       ]}
-      excerpt="Mixmax is the #1 sales engagement platform for the complete sales cycle"
-      title="Mixmax"
+      excerpt='Mixmax is the #1 sales engagement platform for the complete sales cycle'
+      title='Mixmax'
     />
   );
 };

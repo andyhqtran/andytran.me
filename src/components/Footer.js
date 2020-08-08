@@ -9,7 +9,7 @@ export const Footer = ({ navigation, title }) => {
   return (
     <StyledFooter>
       <Block>Copyright &copy; {title}</Block>
-      <Navigation color="inherit" fontSize={1} items={navigation} />
+      <Navigation color='inherit' fontSize={1} items={navigation} />
     </StyledFooter>
   );
 };

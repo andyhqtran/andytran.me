@@ -20,14 +20,14 @@ export const PostTitle = ({
     <Block
       className={className}
       maxWidth={1072}
-      mx="auto"
+      mx='auto'
       pt={20}
       {...pick(restOfProps)}
     >
       <Head>
         <title>{title}</title>
       </Head>
-      <Block display="flex" mb={6}>
+      <Block display='flex' mb={6}>
         {tags &&
           tags.map((tag, index) => (
             <Tag
@@ -40,10 +40,10 @@ export const PostTitle = ({
             />
           ))}
       </Block>
-      <Heading maxWidth={704} mb={4} variant="h1">
+      <Heading maxWidth={704} mb={4} variant='h1'>
         {title}
       </Heading>
-      <Paragraph color="shade.5" fontSize={4} lineHeight={5} maxWidth={704}>
+      <Paragraph color='shade.5' fontSize={4} lineHeight={5} maxWidth={704}>
         {excerpt}
       </Paragraph>
     </Block>

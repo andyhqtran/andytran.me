@@ -15,9 +15,9 @@ export const Navigation = ({ className, items, ...restOfProps }) => {
       {items &&
         items.map((item, index) => (
           <Link
-            color="inherit"
+            color='inherit'
             external
-            fontSize="inherit"
+            fontSize='inherit'
             onClick={() => {
               window.analytics.track('Navigation link clicked', {
                 pathname: router.pathname,

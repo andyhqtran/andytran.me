@@ -8,5 +8,5 @@ export default {
 };
 
 export const preview = () => {
-  return <Hero description="UI Engineer at Mixmax" title="Andy Tran" />;
+  return <Hero description='UI Engineer at Mixmax' title='Andy Tran' />;
 };

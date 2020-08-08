@@ -17,7 +17,7 @@ export const Tag = ({
   ...restOfProps
 }) => {
   return (
-    <Link as={`/tag/${slug}`} passHref href="/tag/[slug]">
+    <Link as={`/tag/${slug}`} passHref href='/tag/[slug]'>
       <StyledTag
         className={className}
         whileTap={{ scale: 0.92 }}

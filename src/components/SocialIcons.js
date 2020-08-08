@@ -24,7 +24,7 @@ export const SocialIcons = ({ className, icons, ...restOfProps }) => {
   const router = useRouter();
 
   return (
-    <Block className={className} display="flex" {...pick(restOfProps)}>
+    <Block className={className} display='flex' {...pick(restOfProps)}>
       {icons &&
         icons.map((icon) => {
           if (!icon.label || !(icon.label.toLowerCase() in iconMap)) return;
