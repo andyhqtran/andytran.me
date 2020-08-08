@@ -60,7 +60,6 @@
     "@tryghost/content-api": "^1.4.1",
     "@types/styled-components": "^5.1.2",
     "@types/styled-system": "^5.1.10",
-    "dotenv": "^8.2.0",
     "emotion-normalize": "^10.1.0",
     "focus-visible": "^5.1.0",
     "framer-motion": "^2.3.0",
