@@ -19,12 +19,12 @@ const PostsSlugPage = ({ post, title }) => {
       <PostTitle excerpt={post.excerpt} tags={post.tags} title={post.title} />
       <PostFeaturedImage image={post.image} title={post.title} />
       <Block
-        display="grid"
-        gridTemplateColumns="704px 1fr"
+        display='grid'
+        gridTemplateColumns='704px 1fr'
         maxWidth={1072}
         mt={20}
-        mx="auto"
-        width="100%"
+        mx='auto'
+        width='100%'
       >
         <article>{parseHTML(post.html)}</article>
       </Block>
@@ -100,6 +100,7 @@ export async function getStaticProps({ params }) {
         title: post.title,
       },
     },
+    revalidate: 1,
   };
 }
 

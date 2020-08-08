@@ -10,7 +10,7 @@ import { Block } from 'design-system/Block';
 const IndexPage = ({ description, navigation, posts, title }) => {
   return (
     <Fragment>
-      <Block maxWidth={1184} mx="auto" width="100%">
+      <Block maxWidth={1184} mx='auto' width='100%'>
         <Hero description={description} navigation={navigation} title={title} />
         {posts &&
           posts.map((post) => (
@@ -84,6 +84,7 @@ export async function getStaticProps() {
         title: post.title,
       })),
     },
+    revalidate: 1,
   };
 }
 
