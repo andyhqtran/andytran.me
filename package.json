@@ -64,7 +64,7 @@
     "focus-visible": "^5.1.0",
     "framer-motion": "^2.3.0",
     "html-to-react": "^1.4.3",
-    "next": "^9.5.1",
+    "next": "^9.5.2",
     "polished": "^3.6.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
