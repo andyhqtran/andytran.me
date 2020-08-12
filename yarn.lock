@@ -1732,10 +1732,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@segment/snippet@^4.12.0":
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/@segment/snippet/-/snippet-4.12.0.tgz#a31d1e31e9f7b78f805327a85474ce2a5973a922"
-  integrity sha512-9H+wgJAlbuTEKpDg1HUWeNEcSIQg+07M4PgI2FXe8qEiZ9KBDjd0ierm1EcBwmy7b9d8zvnRAvfEWBbQvAzimg==
+"@segment/snippet@^4.13.0":
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/@segment/snippet/-/snippet-4.13.0.tgz#4132bb88bde5bfb69f59db8975c1f28d28b11673"
+  integrity sha512-a/0QsvLTQbuMNg3KpodU4prO6j2yIkNhDoFDINYfAzBKVsYnc8t20CsPN6mFeffMXh27FjEOoVAVvN5nwxQOyw==
   dependencies:
     "@ndhoule/map" "^2.0.1"
 
