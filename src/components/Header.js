@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
 import { AnimatePresence } from 'framer-motion';
 import PropTypes from 'prop-types';
@@ -8,8 +10,8 @@ import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
 import { ArrowLeftIcon, ArrowRightIcon } from 'design-system/Icon';
 import { Logo } from 'design-system/Logo';
+import { Box } from 'primitives/Box';
 import { IconButton } from 'primitives/IconButton';
-import { StyledHeader } from './Header.styles';
 
 export const Header = ({
   nextPost,
@@ -32,33 +34,48 @@ export const Header = ({
     Object.keys(nextPost).length !== 0;
 
   return (
-    <StyledHeader key='header'>
-      <Block
-        display='grid'
-        gridTemplateColumns='1fr 1fr 1fr'
-        position='relative'
-        maxWidth={1184}
-        mx='auto'
-        width='100%'
+    <Box
+      key='header'
+      sx={{
+        zIndex: 1,
+        position: 'sticky',
+        top: 0,
+        left: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'shade.inverse',
+        height: 88,
+        boxShadow: ({ colors }) => `inset 0 -1px 0 ${colors.shade[1]}`,
+      }}
+    >
+      <Box
+        sx={{
+          position: 'relative',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr 1fr',
+          width: '100%',
+          maxWidth: 1184,
+          mx: 'auto',
+        }}
       >
         <AnimatePresence>
           {hasPrevPost && isPostsPage && (
-            <IconButton
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 28, opacity: 0 }}
-              initial={{ x: 28, opacity: 0 }}
-              key='previous-arrow'
-              onClick={() => {
-                Router.push(
-                  '/posts/[slug]',
-                  `/posts/${prevPost.slug}`,
-                ).then(() => window.scrollTo(0, 0));
-              }}
-              sx={{ position: 'absolute', left: -72 }}
-              transition={{ duration: 0.2 }}
-            >
-              <ArrowLeftIcon />
-            </IconButton>
+            <Link as={`/posts/${prevPost.slug}`} href='/posts/[slug]' passHref>
+              <IconButton
+                animate={{ x: 0, opacity: 1 }}
+                aria-label='Previous post'
+                as={motion.a}
+                exit={{ x: 28, opacity: 0 }}
+                initial={{ x: 28, opacity: 0 }}
+                key='previous-arrow'
+                role='button'
+                sx={{ position: 'absolute', right: 'calc(100% + 16px)' }}
+                transition={{ duration: 0.2 }}
+              >
+                <ArrowLeftIcon />
+              </IconButton>
+            </Link>
           )}
         </AnimatePresence>
         <Logo
@@ -79,7 +96,7 @@ export const Header = ({
               >
                 <Heading
                   color='shade.4'
-                  mb={16}
+                  mb={4}
                   textAlign='center'
                   variant='h7-alt'
                 >
@@ -97,26 +114,24 @@ export const Header = ({
         )}
         <AnimatePresence>
           {hasNextPost && isPostsPage && (
-            <IconButton
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -40, opacity: 0 }}
-              initial={{ x: -40, opacity: 0 }}
-              key='next-arrow'
-              onClick={() => {
-                Router.push(
-                  '/posts/[slug]',
-                  `/posts/${nextPost.slug}`,
-                ).then(() => window.scrollTo(0, 0));
-              }}
-              sx={{ position: 'absolute', right: -72 }}
-              transition={{ duration: 0.2 }}
-            >
-              <ArrowRightIcon />
-            </IconButton>
+            <Link as={`/posts/${nextPost.slug}`} href='/posts/[slug]' passHref>
+              <IconButton
+                animate={{ x: 0, opacity: 1 }}
+                aria-label='Next post'
+                as={motion.a}
+                exit={{ x: -28, opacity: 0 }}
+                initial={{ x: -28, opacity: 0 }}
+                key='next-arrow'
+                sx={{ position: 'absolute', left: 'calc(100% + 16px)' }}
+                transition={{ duration: 0.2 }}
+              >
+                <ArrowRightIcon />
+              </IconButton>
+            </Link>
           )}
         </AnimatePresence>
-      </Block>
-    </StyledHeader>
+      </Box>
+    </Box>
   );
 };
 
@@ -130,7 +145,7 @@ Header.propTypes = {
     slug: PropTypes.string,
     title: PropTypes.string,
   }),
-  socialIcons: PropTypes.arrayOf(
+  sociankcons: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.oneOf(['CodePen', 'Github', 'LinkedIn', 'Twitter']),
       url: PropTypes.string,
