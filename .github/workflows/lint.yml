@@ -10,9 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: npm ci
-        run: npm ci
-      - name: npm run lint
-        run: npm run lint
+      - name: yarn install
+        run: yarn install --frozen-lockfile
+      - name: yarn lint
+        run: yarn lint
         env:
           CI: true
