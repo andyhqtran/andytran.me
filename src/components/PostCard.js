@@ -7,8 +7,8 @@ import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
 import { Image } from 'design-system/Image';
 import { Paragraph } from 'design-system/Paragraph';
-import { Tag } from 'design-system/Tag';
 import { Window } from 'design-system/Window';
+import { Tag } from 'components/Tag';
 import { Button } from 'primitives/Button';
 import { Card } from 'primitives/Card';
 

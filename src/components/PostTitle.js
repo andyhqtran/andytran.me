@@ -7,7 +7,7 @@ import React from 'react';
 import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
 import { Paragraph } from 'design-system/Paragraph';
-import { Tag } from 'design-system/Tag';
+import { Tag } from 'components/Tag';
 
 export const PostTitle = ({
   className,
