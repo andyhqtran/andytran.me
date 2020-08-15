@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, BoxProps } from 'components/primitives/Box';
+import { Box, BoxProps } from 'primitives/Box';
 
 export type BlockquoteProps = BoxProps<HTMLQuoteElement>;
 

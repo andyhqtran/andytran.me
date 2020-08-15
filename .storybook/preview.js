@@ -1,5 +1,5 @@
+import { ThemeProvider } from '@emotion/react';
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from 'emotion-theming';
 import React, { Fragment } from 'react';
 
 import { GlobalStyles } from '../src/components/GlobalStyles';
