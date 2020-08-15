@@ -11,6 +11,7 @@ export const Image = (props: ImageProps) => {
       {...props}
       __css={{
         display: 'block',
+        maxWidth: '100%',
       }}
       __themeKey='images'
     />
