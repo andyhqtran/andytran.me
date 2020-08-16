@@ -6,11 +6,11 @@ import React from 'react';
 import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
 import { Image } from 'design-system/Image';
-import { Text } from 'primitives/Text';
-import { Window } from 'design-system/Window';
+import { Browser } from 'components/Browser';
 import { Tag } from 'components/Tag';
 import { Button } from 'primitives/Button';
 import { Card } from 'primitives/Card';
+import { Text } from 'primitives/Text';
 
 export const PostCard = ({
   excerpt,
@@ -65,9 +65,9 @@ export const PostCard = ({
           View project &#10230;
         </Button>
       </Block>
-      <Window position='relative' right={-20} top={56} width={620}>
+      <Browser sx={{ position: 'relative', right: -20, top: 56, width: 620 }}>
         {image && <Image alt={title} src={image} />}
-      </Window>
+      </Browser>
     </Card>
   );
 };
