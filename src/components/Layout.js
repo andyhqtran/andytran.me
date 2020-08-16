@@ -23,7 +23,7 @@ export const Layout = ({
   children,
   navigation,
   nextPost,
-  postTitle,
+  post,
   prevPost,
   socialIcons,
   title,
@@ -33,7 +33,7 @@ export const Layout = ({
       <Header
         nextPost={nextPost}
         prevPost={prevPost}
-        postTitle={postTitle}
+        postTitle={post?.title}
         socialIcons={socialIcons}
         title={title}
       />

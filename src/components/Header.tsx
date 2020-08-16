@@ -16,7 +16,7 @@ export type HeaderProps = BoxProps & {
   nextPost?: {
     slug: string;
   };
-  postTitle: string;
+  postTitle?: string;
   prevPost?: {
     slug: string;
   };

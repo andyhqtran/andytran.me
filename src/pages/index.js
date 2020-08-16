@@ -4,6 +4,7 @@ import { getPosts } from 'api/posts';
 import { getSettings } from 'api/settings';
 import { PostCard } from 'components/PostCard';
 import { Hero } from 'components/Hero';
+import { Layout } from 'components/Layout';
 import { Box } from 'primitives/Box';
 
 const IndexPage = ({ description, navigation, posts, title }) => {
@@ -26,6 +27,8 @@ const IndexPage = ({ description, navigation, posts, title }) => {
     </Fragment>
   );
 };
+
+IndexPage.layout = Layout;
 
 export async function getStaticProps() {
   const posts = await getPosts({ include: 'tags,author', limit: 'all' });

@@ -7,6 +7,7 @@ import {
   getNextPost,
 } from 'api/posts';
 import { getSettings } from 'api/settings';
+import { Layout } from 'components/Layout';
 import { PostFeaturedImage } from 'components/PostFeaturedImage';
 import { PostTitle } from 'components/PostTitle';
 import { Box } from 'primitives/Box';
@@ -32,6 +33,8 @@ const PostsSlugPage = ({ post, title }) => {
     </Fragment>
   );
 };
+
+PostsSlugPage.layout = Layout;
 
 export async function getStaticPaths() {
   const posts = await getPosts({ include: 'tags,author', limit: 'all' });

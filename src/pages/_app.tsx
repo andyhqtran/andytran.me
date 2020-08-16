@@ -4,19 +4,25 @@ import { cache } from '@emotion/css';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { ComponentType, HTMLProps, ReactNode } from 'react';
 
 import { GlobalStyles } from 'components/GlobalStyles';
 import { Inter } from 'components/Inter';
-import { Layout } from 'components/Layout';
+// import { Layout } from 'components/Layout';
 import { Normalize } from 'components/Normalize';
 import { theme } from 'constants/theme';
 import { ToastProvider } from 'primitives/Toast';
 import { common } from 'themes/common';
 import { light } from 'themes/light';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({
+  Component,
+  pageProps,
+}: AppProps & { Component: { layout: ComponentType } }) => {
   const router = useRouter();
+  const Layout =
+    Component.layout ??
+    ((props: HTMLProps<HTMLDivElement>) => <>{props.children}</>);
 
   return (
     <CacheProvider value={cache}>
@@ -30,14 +36,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           <Normalize />
           <GlobalStyles />
           <Inter />
-          <Layout
-            navigation={pageProps.navigation}
-            nextPost={pageProps.nextPost}
-            postTitle={pageProps.post && pageProps.post.title}
-            prevPost={pageProps.prevPost}
-            socialIcons={pageProps.socialIcons}
-            title={pageProps.title}
-          >
+          <Layout {...pageProps}>
             <Component {...pageProps} key={router.route} />
           </Layout>
         </ToastProvider>
