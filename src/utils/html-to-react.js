@@ -2,10 +2,10 @@
 import { Parser, ProcessNodeDefinitions } from 'html-to-react';
 import React from 'react';
 
-import { Blockquote } from 'components/primitives/Blockquote';
-import { Heading } from 'design-system/Heading';
-import { Image } from 'design-system/Image';
 import { Link } from 'design-system/Link';
+import { Blockquote } from 'primitives/Blockquote';
+import { Heading } from 'primitives/Heading';
+import { Image } from 'primitives/Image';
 import { Text } from 'primitives/Text';
 
 const isValidNode = function () {
@@ -22,7 +22,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as='h1' my={4} variant='h2'>
+        <Heading as='h1' sx={{ my: 16 }} variant='h2'>
           {children}
         </Heading>
       );
@@ -35,7 +35,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as='h2' my={4} variant='h3'>
+        <Heading as='h2' sx={{ my: 16 }} variant='h3'>
           {children}
         </Heading>
       );
@@ -48,7 +48,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as='h3' my={4} variant='h4'>
+        <Heading as='h3' sx={{ my: 16 }} variant='h4'>
           {children}
         </Heading>
       );
@@ -61,7 +61,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as='h4' my={4} variant='h5'>
+        <Heading as='h4' sx={{ my: 16 }} variant='h5'>
           {children}
         </Heading>
       );
@@ -74,7 +74,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as='h5' my={4} variant='h5'>
+        <Heading as='h5' sx={{ my: 16 }} variant='h5'>
           {children}
         </Heading>
       );
@@ -87,7 +87,7 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Heading as='h6' my={4} variant='h5'>
+        <Heading as='h6' sx={{ my: 16 }} variant='h5'>
           {children}
         </Heading>
       );
@@ -101,7 +101,7 @@ const processingInstructions = [
     processNode: (node, children) => {
       if (children.length < 1) return <br />;
 
-      return <Text tx={{ my: 24 }}>{children}</Text>;
+      return <Text tx={{ my: 16 }}>{children}</Text>;
     },
   },
   {
@@ -110,7 +110,7 @@ const processingInstructions = [
       return node.name === 'blockquote';
     },
     processNode: (node, children) => {
-      return <Blockquote mb={24}>{children}</Blockquote>;
+      return <Blockquote sx={{ mb: 24 }}>{children}</Blockquote>;
     },
   },
   {
