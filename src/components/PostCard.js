@@ -6,7 +6,7 @@ import React from 'react';
 import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
 import { Image } from 'design-system/Image';
-import { Paragraph } from 'design-system/Paragraph';
+import { Text } from 'primitives/Text';
 import { Window } from 'design-system/Window';
 import { Tag } from 'components/Tag';
 import { Button } from 'primitives/Button';
@@ -54,9 +54,7 @@ export const PostCard = ({
         <Heading mb={16} variant='h2'>
           {title}
         </Heading>
-        <Paragraph color='shade.5' mb={32}>
-          {excerpt}
-        </Paragraph>
+        <Text sx={{ mb: 32, color: 'shade.5' }}>{excerpt}</Text>
         <Button
           onClick={() => {
             Router.push('/posts/[slug]', `/posts/${slug}`).then(() =>

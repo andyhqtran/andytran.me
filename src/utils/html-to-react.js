@@ -6,7 +6,7 @@ import { Blockquote } from 'components/primitives/Blockquote';
 import { Heading } from 'design-system/Heading';
 import { Image } from 'design-system/Image';
 import { Link } from 'design-system/Link';
-import { Paragraph } from 'design-system/Paragraph';
+import { Text } from 'primitives/Text';
 
 const isValidNode = function () {
   return true;
@@ -101,7 +101,7 @@ const processingInstructions = [
     processNode: (node, children) => {
       if (children.length < 1) return <br />;
 
-      return <Paragraph my={6}>{children}</Paragraph>;
+      return <Text tx={{ my: 24 }}>{children}</Text>;
     },
   },
   {

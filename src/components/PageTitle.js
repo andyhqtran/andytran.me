@@ -6,7 +6,7 @@ import React from 'react';
 
 import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
-import { Paragraph } from 'design-system/Paragraph';
+import { Text } from 'primitives/Text';
 
 export const PageTitle = ({
   className,
@@ -22,9 +22,9 @@ export const PageTitle = ({
       <Heading mb={16} variant='h1'>
         {title}
       </Heading>
-      <Paragraph color='shade.5' fontSize={24} lineHeight='34px'>
+      <Text sx={{ color: 'shade.5', fontSize: 24, lineHeight: '34px' }}>
         {description}
-      </Paragraph>
+      </Text>
     </Block>
   );
 };

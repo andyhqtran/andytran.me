@@ -6,8 +6,8 @@ import React from 'react';
 
 import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
-import { Paragraph } from 'design-system/Paragraph';
 import { Tag } from 'components/Tag';
+import { Text } from 'primitives/Text';
 
 export const PostTitle = ({
   className,
@@ -43,9 +43,16 @@ export const PostTitle = ({
       <Heading maxWidth={704} mb={16} variant='h1'>
         {title}
       </Heading>
-      <Paragraph color='shade.5' fontSize={24} lineHeight='34px' maxWidth={704}>
+      <Text
+        sx={{
+          maxWidth: 704,
+          color: 'shade.5',
+          fontSize: 24,
+          lineHeight: '34px',
+        }}
+      >
         {excerpt}
-      </Paragraph>
+      </Text>
     </Block>
   );
 };
