@@ -26,7 +26,7 @@ export const Hero = ({
         sx={{ maxWidth: 526 }}
         title={title}
       />
-      {navigation && <Navigation items={navigation} mt={24} />}
+      {navigation && <Navigation items={navigation} sx={{ mt: 24 }} />}
     </Box>
   );
 };

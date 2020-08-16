@@ -1,9 +1,17 @@
 import React from 'react';
 
 import { Navigation } from 'components/Navigation';
-import { Box } from 'primitives/Box';
+import { Box, BoxProps } from 'primitives/Box';
 
-export const Footer = ({ navigation, title, ...restOfProps }) => {
+export type FooterProps = BoxProps & {
+  navigation: {
+    label: string;
+    url: string;
+  }[];
+  title: string;
+};
+
+export const Footer = ({ navigation, title, ...restOfProps }: FooterProps) => {
   return (
     <Box
       as='footer'
@@ -24,7 +32,7 @@ export const Footer = ({ navigation, title, ...restOfProps }) => {
       }}
     >
       <Box>Copyright &copy; {title}</Box>
-      <Navigation color='inherit' fontSize={14} items={navigation} />
+      <Navigation items={navigation} sx={{ color: 'inherit', fontSize: 14 }} />
     </Box>
   );
 };
