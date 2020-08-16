@@ -20,8 +20,6 @@
       "components/*": ["src/components/*"],
       "constants/*": ["src/constants/*"],
       "primitives/*": ["src/components/primitives/*"],
-      "design-system": ["src/design-system/*"],
-      "design-system/*": ["src/design-system/*"],
       "pages": ["src/pages/*"],
       "pages/*": ["src/pages/*"],
       "themes": ["src/themes/*"],
