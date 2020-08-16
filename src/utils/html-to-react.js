@@ -101,7 +101,7 @@ const processingInstructions = [
     processNode: (node, children) => {
       if (children.length < 1) return <br />;
 
-      return <Text tx={{ my: 16 }}>{children}</Text>;
+      return <Text sx={{ my: 16 }}>{children}</Text>;
     },
   },
   {
@@ -110,7 +110,7 @@ const processingInstructions = [
       return node.name === 'blockquote';
     },
     processNode: (node, children) => {
-      return <Blockquote sx={{ mb: 24 }}>{children}</Blockquote>;
+      return <Blockquote sx={{ my: 24 }}>{children}</Blockquote>;
     },
   },
   {
