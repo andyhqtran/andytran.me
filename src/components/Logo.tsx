@@ -17,7 +17,7 @@ export const Logo = ({ title, ...restOfProps }: LogoProps) => {
     <Link href='/' passHref>
       <Box
         as={motion.a}
-        whileTap={{ scale: 0.96 }}
+        whileTap={{ scale: 0.94 }}
         {...restOfProps}
         __css={{
           display: 'flex',

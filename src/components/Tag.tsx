@@ -43,7 +43,7 @@ export const Tag = ({
           },
         }}
         as={motion.a}
-        whileTap={{ scale: 0.96 }}
+        whileTap={{ scale: 0.94 }}
         {...restOfProps}
       >
         <Image alt={description} src={image} title={name} />
