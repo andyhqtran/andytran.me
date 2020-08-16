@@ -28,7 +28,7 @@ export const PostTitle = ({
   const numberOfTags = tags?.length ?? 0;
 
   return (
-    <Box sx={{ maxWidth: 1072, mx: 'auto', pt: 20 }} {...restOfProps}>
+    <Box sx={{ maxWidth: 1072, mx: 'auto', pt: 80 }} {...restOfProps}>
       <Head>
         <title>{title}</title>
       </Head>
