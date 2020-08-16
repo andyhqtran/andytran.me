@@ -3,6 +3,7 @@ import { Parser, ProcessNodeDefinitions } from 'html-to-react';
 import React from 'react';
 
 import { Anchor } from 'primitives/Anchor';
+import { Box } from 'primitives/Box';
 import { Blockquote } from 'primitives/Blockquote';
 import { Heading } from 'primitives/Heading';
 import { Image } from 'primitives/Image';
@@ -129,6 +130,29 @@ const processingInstructions = [
         >
           {children}
         </Anchor>
+      );
+    },
+  },
+  {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      return node.name === 'figure';
+    },
+    processNode: (node, children) => {
+      console.log(node);
+      return <Box as='figure'>{children}</Box>;
+    },
+  },
+  {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      return node.name === 'figcaption';
+    },
+    processNode: (node, children) => {
+      return (
+        <Box as='figcaption' sx={{ mt: 24, textAlign: 'center' }}>
+          {children}
+        </Box>
       );
     },
   },
