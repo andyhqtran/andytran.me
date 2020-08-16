@@ -1,5 +1,4 @@
 import Router from 'next/router';
-import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import { Footer } from 'components/Footer';
@@ -42,33 +41,4 @@ export const Layout = ({
       <Footer navigation={navigation} title={title} />
     </Fragment>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  navigation: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      url: PropTypes.string,
-    }),
-  ),
-  nextPost: PropTypes.shape({
-    slug: PropTypes.string,
-    title: PropTypes.string,
-  }),
-  postTitle: PropTypes.string,
-  prevPost: PropTypes.shape({
-    slug: PropTypes.string,
-    title: PropTypes.string,
-  }),
-  socialIcons: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.oneOf(['CodePen', 'Github', 'LinkedIn', 'Twitter']),
-      url: PropTypes.string,
-    }),
-  ),
-  title: PropTypes.string,
 };
