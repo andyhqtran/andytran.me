@@ -36,7 +36,8 @@ export const Header = ({
   socialIcons,
   title,
 }: HeaderProps) => {
-  const { percentage } = useScrollPercentage();
+  const { percentage, scrollPosition } = useScrollPercentage();
+  const hasScrolled = scrollPosition > 0;
   const router = useRouter();
 
   const isPostsPage = router && router.pathname === '/posts/[slug]';
@@ -55,7 +56,7 @@ export const Header = ({
       as='header'
       __css={{
         zIndex: 1,
-        position: isPostsPage ? 'sticky' : 'relative',
+        position: 'sticky',
         top: 0,
         left: 0,
         display: 'flex',
@@ -64,7 +65,7 @@ export const Header = ({
         backgroundColor: 'shade.inverse',
         height: 88,
         borderBottom: '1px solid',
-        borderColor: isPostsPage ? 'shade.1' : 'transparent',
+        borderColor: isPostsPage || hasScrolled ? 'shade.1' : 'transparent',
         ...transitions(['border-color', '0.2s ease']),
       }}
     >
