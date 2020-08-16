@@ -1,6 +1,7 @@
 import 'focus-visible';
 import { CacheProvider, ThemeProvider } from '@emotion/react';
 import { cache } from '@emotion/css';
+import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -14,7 +15,7 @@ import { ToastProvider } from 'primitives/Toast';
 import { common } from 'themes/common';
 import { light } from 'themes/light';
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
 
   return (
