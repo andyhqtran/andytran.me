@@ -29,7 +29,11 @@ export async function getSettings() {
       image: settings.og_image,
       title: settings.og_title,
     },
-    socialIcons: settings.secondary_navigation,
+    socialIcons:
+      settings?.secondary_navigation.map((socialIcon) => ({
+        ...socialIcon,
+        label: socialIcon?.label?.toLowerCase(),
+      })) ?? null,
     title: settings.title,
     twitter: {
       description: settings.twitter_description,

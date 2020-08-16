@@ -5,10 +5,10 @@ import { AnimatePresence } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { SocialIcons } from 'components/SocialIcons';
 import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
 import { Logo } from 'design-system/Logo';
+import { SocialIcons } from 'components/SocialIcons';
 import { Box } from 'primitives/Box';
 import { ArrowLeftIcon, ArrowRightIcon } from 'primitives/Icon';
 import { IconButton } from 'primitives/IconButton';
@@ -110,7 +110,10 @@ export const Header = ({
           </AnimatePresence>
         </Block>
         {!isPostsPage && (
-          <SocialIcons icons={socialIcons} justifyContent='flex-end' />
+          <SocialIcons
+            icons={socialIcons}
+            sx={{ justifyContent: 'flex-end' }}
+          />
         )}
         <AnimatePresence>
           {hasNextPost && isPostsPage && (
