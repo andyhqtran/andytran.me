@@ -9,8 +9,8 @@ import { GlobalStyles } from 'components/GlobalStyles';
 import { Inter } from 'components/Inter';
 import { Layout } from 'components/Layout';
 import { Normalize } from 'components/Normalize';
-import { ToastProvider } from 'design-system/Toast';
 import { theme } from 'constants/theme';
+import { ToastProvider } from 'primitives/Toast';
 import { common } from 'themes/common';
 import { light } from 'themes/light';
 
