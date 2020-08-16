@@ -7,7 +7,7 @@ import React from 'react';
 
 import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
-import { Logo } from 'design-system/Logo';
+import { Logo } from 'components/Logo';
 import { SocialIcons } from 'components/SocialIcons';
 import { Box } from 'primitives/Box';
 import { ArrowLeftIcon, ArrowRightIcon } from 'primitives/Icon';
