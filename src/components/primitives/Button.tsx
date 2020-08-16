@@ -18,7 +18,7 @@ export const Button = ({
   return (
     <Box
       as={motion.button}
-      whileTap={{ scale: 0.92 }}
+      whileTap={{ scale: 0.96 }}
       variant={variant}
       {...restOfProps}
       __css={{

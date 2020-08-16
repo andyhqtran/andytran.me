@@ -10,7 +10,7 @@ export const IconButton = (props: IconButtonProps) => {
   return (
     <Box
       as={motion.button}
-      whileTap={{ scale: 0.92 }}
+      whileTap={{ scale: 0.96 }}
       {...props}
       __css={{
         display: 'flex',
