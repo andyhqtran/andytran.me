@@ -4,16 +4,14 @@ import { cache } from '@emotion/css';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import React, { ComponentType, HTMLProps, ReactNode } from 'react';
+import React, { ComponentType, HTMLProps } from 'react';
 
 import { GlobalStyles } from 'components/GlobalStyles';
 import { Inter } from 'components/Inter';
-// import { Layout } from 'components/Layout';
 import { Normalize } from 'components/Normalize';
 import { theme } from 'constants/theme';
 import { ToastProvider } from 'primitives/Toast';
-import { common } from 'themes/common';
-import { light } from 'themes/light';
+import { dark } from 'themes/dark';
 
 const MyApp = ({
   Component,
@@ -29,7 +27,7 @@ const MyApp = ({
       <ThemeProvider
         theme={{
           ...theme,
-          ...light,
+          ...dark,
         }}
       >
         <ToastProvider>
