@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { transitions } from 'polished';
 import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
 import { AnimatePresence } from 'framer-motion';
@@ -11,6 +12,7 @@ import { Heading } from 'primitives/Heading';
 import { ArrowLeftIcon, ArrowRightIcon } from 'primitives/Icon';
 import { IconButton } from 'primitives/IconButton';
 import { Text } from 'primitives/Text';
+import { useScrollPercentage } from 'utils/useScrollPercentage';
 
 export type HeaderProps = BoxProps & {
   nextPost?: {
@@ -34,6 +36,7 @@ export const Header = ({
   socialIcons,
   title,
 }: HeaderProps) => {
+  const { percentage } = useScrollPercentage();
   const router = useRouter();
 
   const isPostsPage = router && router.pathname === '/posts/[slug]';
@@ -50,9 +53,9 @@ export const Header = ({
   return (
     <Box
       as='header'
-      sx={{
+      __css={{
         zIndex: 1,
-        position: 'sticky',
+        position: isPostsPage ? 'sticky' : 'relative',
         top: 0,
         left: 0,
         display: 'flex',
@@ -60,7 +63,9 @@ export const Header = ({
         justifyContent: 'center',
         backgroundColor: 'shade.inverse',
         height: 88,
-        boxShadow: ({ colors }) => `inset 0 -1px 0 ${colors.shade[1]}`,
+        borderBottom: '1px solid',
+        borderColor: isPostsPage ? 'shade.1' : 'transparent',
+        ...transitions(['border-color', '0.2s ease']),
       }}
     >
       <Box
@@ -167,6 +172,22 @@ export const Header = ({
           )}
         </AnimatePresence>
       </Box>
+      {isPostsPage && (
+        <Box
+          animate={{ width: `${percentage}%` }}
+          as={motion.div}
+          initial={{ width: 0 }}
+          transition={{ duration: 0.1, type: 'tween' }}
+          sx={{
+            position: 'absolute',
+            bottom: -4,
+            left: 0,
+            right: 0,
+            backgroundColor: 'primary',
+            height: 4,
+          }}
+        />
+      )}
     </Box>
   );
 };

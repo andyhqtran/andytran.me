@@ -36,6 +36,7 @@ export const Layout = ({
         postTitle={post?.title}
         socialIcons={socialIcons}
         title={title}
+        sx={{}}
       />
       {children}
       <Footer navigation={navigation} title={title} />
