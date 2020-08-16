@@ -20,7 +20,7 @@ export const Hero = ({
   ...restOfProps
 }: HeroProps) => {
   return (
-    <Box __css={{ px: 56, py: 64 }} {...restOfProps}>
+    <Box __css={{ px: 56, pt: 40, pb: 64 }} {...restOfProps}>
       <PageTitle
         description={description}
         sx={{ maxWidth: 526 }}
