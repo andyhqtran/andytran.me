@@ -33,7 +33,7 @@ export const Logo = ({ title, ...restOfProps }: LogoProps) => {
           fontSize: 18,
           fontWeight: 'bold',
           letterSpacing: -0.3,
-          lineHeight: 28,
+          lineHeight: '28px',
           textDecoration: 'none',
           overflow: 'hidden',
           ...transitions(['border-color', 'box-shadow', 'color'], '0.2s ease'),
