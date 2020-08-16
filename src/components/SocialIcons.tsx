@@ -43,10 +43,10 @@ export const SocialIcons = ({ icons, ...restOfProps }: SocialIconsProps) => {
 
         return (
           <IconButton
+            aria-label={icon.label}
             as={motion.a}
             href={icon.url}
             key={icon.label}
-            aria-label={icon.label}
             onClick={() => {
               window.analytics.track('Social button clicked', {
                 pathname: router.pathname,
