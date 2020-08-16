@@ -2,7 +2,7 @@
 import { Parser, ProcessNodeDefinitions } from 'html-to-react';
 import React from 'react';
 
-import { Link } from 'design-system/Link';
+import { Anchor } from 'primitives/Anchor';
 import { Blockquote } from 'primitives/Blockquote';
 import { Heading } from 'primitives/Heading';
 import { Image } from 'primitives/Image';
@@ -120,14 +120,15 @@ const processingInstructions = [
     },
     processNode: (node, children) => {
       return (
-        <Link
-          external
-          fontSize='inherit'
+        <Anchor
           href={node.attribs.href}
-          lineHeight='inherit'
+          sx={{
+            fontSize: 'inherit',
+            lineHeight: 'inherit',
+          }}
         >
           {children}
-        </Link>
+        </Anchor>
       );
     },
   },

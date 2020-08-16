@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import React, { Component, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
 
-import { Link } from 'design-system/Link';
+import { Anchor } from 'primitives/Anchor';
 import { Box } from 'primitives/Box';
 
 export const Toast = (props) => {
@@ -113,16 +113,18 @@ export class ToastProvider extends Component {
                     {toast.actions && (
                       <Box sx={{ ml: 40, mr: 8 }}>
                         {toast.actions.map((action, index) => {
+                          const isLastItem = toast.actions.length - 1 !== index;
                           return (
-                            <Link
-                              fontSize='inherit'
-                              external={action.external}
+                            <Anchor
                               href={action.url}
                               key={action.label}
-                              mr={toast.actions.length - 1 !== index && 24}
+                              sx={{
+                                mr: isLastItem ? 24 : 0,
+                                fontSize: 'inherit',
+                              }}
                             >
                               {action.label}
-                            </Link>
+                            </Anchor>
                           );
                         })}
                       </Box>
