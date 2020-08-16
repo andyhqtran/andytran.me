@@ -1,5 +1,6 @@
 import styled, { StyledComponent } from '@emotion/styled';
 import { SystemStyleObject, css, get } from '@styled-system/css';
+import { MotionProps } from 'framer-motion';
 import { ElementType, HTMLProps, SVGProps } from 'react';
 
 export type Attributes<Element> = Element extends
@@ -13,13 +14,14 @@ export type Attributes<Element> = Element extends
 export type BoxProps<Element = HTMLElement | SVGElement> = Omit<
   Attributes<Element>,
   'as'
-> & {
-  __css?: SystemStyleObject;
-  __themeKey?: string;
-  as?: ElementType;
-  sx?: SystemStyleObject;
-  variant?: string | string[];
-};
+> &
+  MotionProps & {
+    __css?: SystemStyleObject;
+    __themeKey?: string;
+    as?: ElementType;
+    sx?: SystemStyleObject;
+    variant?: string | string[];
+  };
 
 const sx = (props: BoxProps & { theme: any }) => css(props.sx)(props.theme);
 
