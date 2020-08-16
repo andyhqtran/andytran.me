@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import {
@@ -10,7 +9,7 @@ import {
 import { getSettings } from 'api/settings';
 import { PostFeaturedImage } from 'components/PostFeaturedImage';
 import { PostTitle } from 'components/PostTitle';
-import { Block } from 'design-system/Block';
+import { Box } from 'primitives/Box';
 import { parseHTML } from 'utils/html-to-react';
 
 const PostsSlugPage = ({ post, title }) => {
@@ -18,38 +17,20 @@ const PostsSlugPage = ({ post, title }) => {
     <Fragment>
       <PostTitle excerpt={post.excerpt} tags={post.tags} title={post.title} />
       <PostFeaturedImage image={post.image} title={post.title} />
-      <Block
-        display='grid'
-        gridTemplateColumns='704px 1fr'
-        maxWidth={1072}
-        mt={20}
-        mx='auto'
-        width='100%'
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: '704px 1fr',
+          width: '100%',
+          maxWidth: 1072,
+          mt: 20,
+          mx: 'auto',
+        }}
       >
-        <article>{parseHTML(post.html)}</article>
-      </Block>
+        <Box as='article'>{parseHTML(post.html)}</Box>
+      </Box>
     </Fragment>
   );
-};
-
-PostsSlugPage.propTypes = {
-  post: PropTypes.shape({
-    excerpt: PropTypes.string,
-    html: PropTypes.string,
-    image: PropTypes.string,
-    tags: PropTypes.arrayOf(
-      PropTypes.shape({
-        description: PropTypes.string,
-        id: PropTypes.string,
-        image: PropTypes.string,
-        name: PropTypes.string,
-        slug: PropTypes.string,
-        visibility: PropTypes.string,
-      }),
-    ),
-    title: PropTypes.string,
-  }),
-  title: PropTypes.string,
 };
 
 export async function getStaticPaths() {

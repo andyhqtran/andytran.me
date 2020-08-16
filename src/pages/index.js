@@ -1,16 +1,15 @@
-import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import { getPosts } from 'api/posts';
 import { getSettings } from 'api/settings';
 import { PostCard } from 'components/PostCard';
 import { Hero } from 'components/Hero';
-import { Block } from 'design-system/Block';
+import { Box } from 'primitives/Box';
 
 const IndexPage = ({ description, navigation, posts, title }) => {
   return (
     <Fragment>
-      <Block maxWidth={1184} mx='auto' width='100%'>
+      <Box sx={{ width: '100%', maxWidth: 1184, mx: 'auto' }}>
         <Hero description={description} navigation={navigation} title={title} />
         {posts &&
           posts.map((post) => (
@@ -23,38 +22,9 @@ const IndexPage = ({ description, navigation, posts, title }) => {
               title={post.title}
             />
           ))}
-      </Block>
+      </Box>
     </Fragment>
   );
-};
-
-IndexPage.propTypes = {
-  description: PropTypes.string,
-  navigation: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      url: PropTypes.string,
-    }),
-  ),
-  posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      excerpt: PropTypes.string,
-      image: PropTypes.string,
-      slug: PropTypes.string,
-      tags: PropTypes.arrayOf(
-        PropTypes.shape({
-          description: PropTypes.string,
-          id: PropTypes.string,
-          image: PropTypes.string,
-          name: PropTypes.string,
-          slug: PropTypes.string,
-          visibility: PropTypes.string,
-        }),
-      ),
-      title: PropTypes.string,
-    }),
-  ),
-  title: PropTypes.string,
 };
 
 export async function getStaticProps() {

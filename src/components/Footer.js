@@ -1,26 +1,30 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Navigation } from 'components/Navigation';
-import { Block } from 'design-system/Block';
-import { StyledFooter } from './Footer.styles';
+import { Box } from 'primitives/Box';
 
-export const Footer = ({ navigation, title }) => {
+export const Footer = ({ navigation, title, ...restOfProps }) => {
   return (
-    <StyledFooter>
-      <Block>Copyright &copy; {title}</Block>
+    <Box
+      as='footer'
+      {...restOfProps}
+      __css={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        width: '100%',
+        maxWidth: 1184,
+        height: 88,
+        mx: 'auto',
+        my: 96,
+        borderTop: '1px solid',
+        borderColor: 'shade.1',
+        color: 'shade.5',
+        fontSize: 14,
+      }}
+    >
+      <Box>Copyright &copy; {title}</Box>
       <Navigation color='inherit' fontSize={14} items={navigation} />
-    </StyledFooter>
+    </Box>
   );
-};
-
-Footer.propTypes = {
-  className: PropTypes.string,
-  navigation: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string,
-      url: PropTypes.string,
-    }),
-  ),
-  title: PropTypes.string,
 };

@@ -1,69 +1,55 @@
-import propTypes from '@styled-system/prop-types';
-import { pick } from '@styled-system/props';
+import { motion } from 'framer-motion';
 import React, { Component, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
-import PropTypes from 'prop-types';
 
-import { Block } from 'design-system/Block';
 import { Link } from 'design-system/Link';
-import { motionPick } from 'utils/motion-props';
-import { StyledToast, StyledToastContainer } from './Toast.styles';
+import { Box } from 'primitives/Box';
 
-export const Toast = ({ children, className, ...restOfProps }) => {
+export const Toast = (props) => {
   return (
-    <StyledToast
-      className={className}
-      {...motionPick(restOfProps)}
-      {...pick(restOfProps)}
-    >
-      {children}
-    </StyledToast>
+    <Box
+      as={motion.div}
+      __themeKey='toasts'
+      {...props}
+      __css={{
+        display: 'flex',
+        alignItems: 'center',
+        backgroundColor: 'shade.inverse',
+        border: '1px solid',
+        borderColor: 'shade.1',
+        borderRadius: 8,
+        p: 16,
+        boxShadow: ({ colors }) => `0 2px 8px ${colors.shade[0]}`,
+        fontSize: 14,
+      }}
+    />
   );
 };
 
-Toast.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  className: PropTypes.string,
-  ...propTypes.background,
-  ...propTypes.color,
-  ...propTypes.layout,
-  ...propTypes.position,
-  ...propTypes.space,
-};
-
-export const ToastContainer = ({ children, className, ...restOfProps }) => {
+export const ToastContainer = (props) => {
   return (
-    <StyledToastContainer
-      className={className}
-      {...motionPick(restOfProps)}
-      {...pick(restOfProps)}
-    >
-      {children}
-    </StyledToastContainer>
+    <Box
+      as={motion.div}
+      {...props}
+      __css={{
+        zIndex: 2,
+        position: 'fixed',
+        top: 88,
+        right: 0,
+        display: 'flex',
+        alignItems: 'flex-end',
+        flexDirection: 'column',
+        maxHeight: '100%',
+        p: 24,
+        overflow: 'hidden',
+      }}
+    />
   );
-};
-
-ToastContainer.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  className: PropTypes.string,
 };
 
 export const ToastContext = createContext(null);
 
 export class ToastProvider extends Component {
-  static propTypes = {
-    children: PropTypes.oneOfType([
-      PropTypes.arrayOf(PropTypes.node),
-      PropTypes.node,
-    ]),
-  };
-
   state = {
     mounted: false,
     toasts: [
@@ -125,7 +111,7 @@ export class ToastProvider extends Component {
                   >
                     {toast.content}
                     {toast.actions && (
-                      <Block ml={40} mr={8}>
+                      <Box sx={{ ml: 40, mr: 8 }}>
                         {toast.actions.map((action, index) => {
                           return (
                             <Link
@@ -139,7 +125,7 @@ export class ToastProvider extends Component {
                             </Link>
                           );
                         })}
-                      </Block>
+                      </Box>
                     )}
                   </Toast>
                 );

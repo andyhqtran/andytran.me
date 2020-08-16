@@ -34,7 +34,7 @@ export const Header = ({
 
   return (
     <Box
-      key='header'
+      as='header'
       sx={{
         zIndex: 1,
         position: 'sticky',
