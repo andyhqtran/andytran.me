@@ -35,7 +35,7 @@ export const PostCard = ({
   ...restOfProps
 }: PostCardProps) => {
   const router = useRouter();
-  const numberOfTags = tags.length;
+  const numberOfTags = tags?.length ?? 0;
 
   return (
     <Card

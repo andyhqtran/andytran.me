@@ -10,7 +10,7 @@ export type NavigationProps = BoxProps & {
 
 export const Navigation = ({ items, ...restOfProps }: NavigationProps) => {
   const router = useRouter();
-  const numberOfItems = items.length;
+  const numberOfItems = items?.length ?? 0;
 
   return (
     <Box

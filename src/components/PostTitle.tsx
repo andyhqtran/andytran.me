@@ -25,7 +25,7 @@ export const PostTitle = ({
   title,
   ...restOfProps
 }: PostTitleProps) => {
-  const numberOfTags = tags.length;
+  const numberOfTags = tags?.length ?? 0;
 
   return (
     <Box sx={{ maxWidth: 1072, mx: 'auto', pt: 20 }} {...restOfProps}>
