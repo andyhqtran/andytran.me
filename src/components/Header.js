@@ -2,16 +2,15 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
 import { AnimatePresence } from 'framer-motion';
-import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Block } from 'design-system/Block';
-import { Heading } from 'design-system/Heading';
 import { Logo } from 'components/Logo';
 import { SocialIcons } from 'components/SocialIcons';
 import { Box } from 'primitives/Box';
+import { Heading } from 'primitives/Heading';
 import { ArrowLeftIcon, ArrowRightIcon } from 'primitives/Icon';
 import { IconButton } from 'primitives/IconButton';
+import { Text } from 'primitives/Text';
 
 export const Header = ({
   nextPost,
@@ -85,30 +84,49 @@ export const Header = ({
           onClick={() => Router.push('/').then(() => window.scrollTo(0, 0))}
           title={title}
         />
-        <Block alignItems='center' display='flex' justifyContent='center'>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <AnimatePresence>
             {isPostsPage && (
-              <Block
+              <Box
+                as={motion.div}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -12, opacity: 0 }}
                 initial={{ y: 12, opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <Heading
-                  color='shade.4'
-                  mb={4}
-                  textAlign='center'
-                  variant='h7-alt'
+                <Text
+                  sx={{
+                    color: 'shade.4',
+                    fontSize: 12,
+                    fontWeight: 'bold',
+                    letterSpacing: 0.8,
+                    textAlign: 'center',
+                    textTransform: 'uppercase',
+                  }}
                 >
                   Case study
-                </Heading>
-                <Heading color='shade.5' textAlign='center' variant='h6-alt'>
+                </Text>
+                <Heading
+                  sx={{
+                    color: 'shade.5',
+                    letterSpacing: 0.8,
+                    textAlign: 'center',
+                    textTransform: 'uppercase',
+                  }}
+                  variant='h6'
+                >
                   {postTitle}
                 </Heading>
-              </Block>
+              </Box>
             )}
           </AnimatePresence>
-        </Block>
+        </Box>
         {!isPostsPage && (
           <SocialIcons
             icons={socialIcons}
@@ -136,23 +154,4 @@ export const Header = ({
       </Box>
     </Box>
   );
-};
-
-Header.propTypes = {
-  nextPost: PropTypes.shape({
-    slug: PropTypes.string,
-    title: PropTypes.string,
-  }),
-  postTitle: PropTypes.string,
-  prevPost: PropTypes.shape({
-    slug: PropTypes.string,
-    title: PropTypes.string,
-  }),
-  sociankcons: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.oneOf(['CodePen', 'Github', 'LinkedIn', 'Twitter']),
-      url: PropTypes.string,
-    }),
-  ),
-  title: PropTypes.string,
 };
