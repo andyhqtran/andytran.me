@@ -16,6 +16,7 @@ export const Logo = ({ title, ...restOfProps }: LogoProps) => {
   return (
     <Link href='/' passHref>
       <Box
+        aria-label={`${title} - Home`}
         as={motion.a}
         whileTap={{ scale: 0.94 }}
         {...restOfProps}
