@@ -10,7 +10,7 @@ import {
   GithubIcon,
   LinkedInIcon,
   TwitterIcon,
-} from 'design-system/Icon';
+} from 'primitives/Icon';
 import { IconButton } from 'primitives/IconButton';
 
 const iconMap = {

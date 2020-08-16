@@ -8,9 +8,9 @@ import React from 'react';
 import { SocialIcons } from 'components/SocialIcons';
 import { Block } from 'design-system/Block';
 import { Heading } from 'design-system/Heading';
-import { ArrowLeftIcon, ArrowRightIcon } from 'design-system/Icon';
 import { Logo } from 'design-system/Logo';
 import { Box } from 'primitives/Box';
+import { ArrowLeftIcon, ArrowRightIcon } from 'primitives/Icon';
 import { IconButton } from 'primitives/IconButton';
 
 export const Header = ({

@@ -2,7 +2,11 @@ import styled, { StyledComponent } from '@emotion/styled';
 import { SystemStyleObject, css, get } from '@styled-system/css';
 import { ElementType, HTMLProps, SVGProps } from 'react';
 
-export type Attributes<Element> = Element extends SVGElement | SVGSVGElement
+export type Attributes<Element> = Element extends
+  | SVGCircleElement
+  | SVGElement
+  | SVGPathElement
+  | SVGSVGElement
   ? SVGProps<Element>
   : HTMLProps<Element>;
 
