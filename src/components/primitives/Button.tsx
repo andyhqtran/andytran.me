@@ -22,6 +22,8 @@ export const Button = ({
       variant={variant}
       {...restOfProps}
       __css={{
+        display: 'flex',
+        alignItems: 'center',
         backgroundColor: 'transparent',
         height: 56,
         paddingRight: 24,
@@ -30,9 +32,11 @@ export const Button = ({
         borderColor: 'shade.1',
         borderRadius: 28,
         boxShadow: '0 0 0 4px transparent',
-        color: 'body',
-        fontSize: 'body',
+        color: 'shade.7',
+        fontSize: 18,
         letterSpacing: -0.2,
+        textAlign: 'center',
+        textDecoration: 'none',
         cursor: 'pointer',
         ...transitions(['background-color', 'box-shadow'], '0.2s ease'),
         '&:hover': {
