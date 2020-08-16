@@ -17,9 +17,6 @@ export const PageTitle = ({
 }: PageTitleProps) => {
   return (
     <Box {...restOfProps}>
-      <Head>
-        <title>{title}</title>
-      </Head>
       <Heading sx={{ mb: 16 }} variant='h1'>
         {title}
       </Heading>

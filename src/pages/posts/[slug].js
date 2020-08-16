@@ -13,7 +13,8 @@ import { PostTitle } from 'components/PostTitle';
 import { Box } from 'primitives/Box';
 import { parseHTML } from 'utils/html-to-react';
 
-const PostsSlugPage = ({ post, title }) => {
+const PostsSlugPage = ({ testPost, post, title }) => {
+  console.log(testPost);
   return (
     <Fragment>
       <PostTitle excerpt={post.excerpt} tags={post.tags} title={post.title} />
@@ -61,6 +62,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       ...settings,
+      testPost: post,
       prevPost,
       nextPost,
       post: {
@@ -68,6 +70,15 @@ export async function getStaticProps({ params }) {
         html: post.html,
         id: post.id,
         image: post.feature_image,
+        meta: {
+          description: post?.meta_description,
+          title: post?.meta_title,
+        },
+        openGraph: {
+          description: post?.og_description,
+          image: post?.og_image,
+          title: post?.og_title,
+        },
         slug: post.slug,
         tags:
           post.tags &&
@@ -82,6 +93,11 @@ export async function getStaticProps({ params }) {
               visibility: tag.visibility,
             })),
         title: post.title,
+        twitter: {
+          description: post?.twitter_description,
+          image: post?.twitter_image,
+          title: post?.twitter_title,
+        },
       },
     },
     revalidate: 1,
