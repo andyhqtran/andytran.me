@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { transitions } from 'polished';
 import React, { Component, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -21,6 +22,7 @@ export const Toast = (props) => {
         p: 16,
         boxShadow: ({ colors }) => `0 2px 8px ${colors.tint1}`,
         fontSize: 14,
+        ...transitions(['border-color', 'background-color'], '0.2s ease'),
       }}
     />
   );

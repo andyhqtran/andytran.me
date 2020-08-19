@@ -1,4 +1,4 @@
-import { rgba } from 'polished';
+import { rgba, transitions } from 'polished';
 import React from 'react';
 
 import { Box, BoxProps } from 'primitives/Box';
@@ -38,6 +38,7 @@ export const Browser = ({ children, ...restOfProps }) => {
           pr: 20,
           borderBottom: '1px solid',
           borderColor: 'tint1',
+          ...transitions(['background-color'], '0.2s ease'),
         }}
       >
         <BrowserButton sx={{ mr: 8 }} />

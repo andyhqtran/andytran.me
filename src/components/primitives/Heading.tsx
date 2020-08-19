@@ -1,4 +1,5 @@
-import { MotionProps, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { transitions } from 'polished';
 import React from 'react';
 
 import { Box, BoxProps } from 'primitives/Box';
@@ -19,6 +20,7 @@ export const Heading = ({ variant = 'h3', ...restOfProps }: HeadingProps) => {
       __css={{
         margin: 0,
         color: 'tint8',
+        ...transitions(['color'], '0.2s ease'),
       }}
     />
   );

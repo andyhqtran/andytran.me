@@ -1,4 +1,6 @@
+import { transitions } from 'polished';
 import React from 'react';
+
 import { Box, BoxProps } from 'primitives/Box';
 
 export type BlockquoteProps = BoxProps<HTMLQuoteElement>;
@@ -18,6 +20,7 @@ export const Blockquote = (props: BlockquoteProps) => {
         paddingLeft: 16,
         color: 'tint6',
         fontStyle: 'italic',
+        ...transitions(['border-color', 'color'], '0.2s ease'),
       }}
     />
   );

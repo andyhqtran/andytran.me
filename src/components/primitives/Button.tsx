@@ -37,7 +37,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           textAlign: 'center',
           textDecoration: 'none',
           cursor: 'pointer',
-          ...transitions(['background-color', 'box-shadow'], '0.2s ease'),
+          ...transitions(
+            ['background-color', 'border-color', 'box-shadow', 'color'],
+            '0.2s ease',
+          ),
           '&:hover': {
             backgroundColor: 'tint1',
           },
