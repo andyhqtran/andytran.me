@@ -43,6 +43,7 @@ export const Footer = ({ navigation, title, ...restOfProps }: FooterProps) => {
           sx={{ mr: 16, color: 'inherit', fontSize: 14 }}
         />
         <IconButton
+          aria-label='Switch between dark and light mode'
           onClick={darkMode.toggle}
           size='small'
           sx={{ color: 'inherit' }}
