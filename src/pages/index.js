@@ -2,15 +2,15 @@ import React, { Fragment } from 'react';
 
 import { getPosts } from 'api/posts';
 import { getSettings } from 'api/settings';
+import { Container } from 'components/Container';
 import { PostCard } from 'components/PostCard';
 import { Hero } from 'components/Hero';
 import { Layout } from 'components/Layout';
-import { Box } from 'primitives/Box';
 
 const IndexPage = ({ description, navigation, posts, title }) => {
   return (
     <Fragment>
-      <Box sx={{ width: '100%', maxWidth: 1184, mx: 'auto' }}>
+      <Container>
         <Hero description={description} navigation={navigation} title={title} />
         {posts &&
           posts.map((post) => (
@@ -24,7 +24,7 @@ const IndexPage = ({ description, navigation, posts, title }) => {
               title={post.title}
             />
           ))}
-      </Box>
+      </Container>
     </Fragment>
   );
 };

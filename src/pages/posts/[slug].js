@@ -7,6 +7,7 @@ import {
   getNextPost,
 } from 'api/posts';
 import { getSettings } from 'api/settings';
+import { Container } from 'components/Container';
 import { Layout } from 'components/Layout';
 import { PostFeaturedImage } from 'components/PostFeaturedImage';
 import { PostTitle } from 'components/PostTitle';
@@ -19,18 +20,15 @@ const PostsSlugPage = ({ testPost, post, title }) => {
     <Fragment>
       <PostTitle excerpt={post.excerpt} tags={post.tags} title={post.title} />
       <PostFeaturedImage image={post.image} title={post.title} />
-      <Box
+      <Container
         sx={{
           display: 'grid',
           gridTemplateColumns: '704px 1fr',
-          width: '100%',
-          maxWidth: 1072,
           mt: 20,
-          mx: 'auto',
         }}
       >
         <Box as='article'>{parseHTML(post.html)}</Box>
-      </Box>
+      </Container>
     </Fragment>
   );
 };

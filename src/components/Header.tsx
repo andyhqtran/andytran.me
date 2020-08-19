@@ -5,6 +5,7 @@ import Router, { useRouter } from 'next/router';
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 
+import { Container } from 'components/Container';
 import { Logo } from 'components/Logo';
 import { SocialIcons, SocialIconsNames } from 'components/SocialIcons';
 import { Box, BoxProps } from 'primitives/Box';
@@ -70,14 +71,11 @@ export const Header = ({
         ...transitions(['border-color'], '0.2s ease'),
       }}
     >
-      <Box
+      <Container
         sx={{
           position: 'relative',
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 1fr',
-          width: '100%',
-          maxWidth: 1184,
-          mx: 'auto',
         }}
       >
         <AnimatePresence>
@@ -173,7 +171,7 @@ export const Header = ({
             </Link>
           )}
         </AnimatePresence>
-      </Box>
+      </Container>
       {isPostsPage && (
         <Box
           animate={{ width: `${percentage}%` }}
