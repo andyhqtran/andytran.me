@@ -62,10 +62,10 @@ export const Header = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'shade.inverse',
+        backgroundColor: 'inverse',
         height: 88,
         borderBottom: '1px solid',
-        borderColor: isPostsPage || hasScrolled ? 'shade.1' : 'transparent',
+        borderColor: isPostsPage || hasScrolled ? 'tint2' : 'transparent',
         ...transitions(['border-color', '0.2s ease']),
       }}
     >
@@ -123,7 +123,7 @@ export const Header = ({
               >
                 <Text
                   sx={{
-                    color: 'shade.4',
+                    color: 'tint5',
                     fontSize: 12,
                     fontWeight: 'bold',
                     letterSpacing: 0.8,
@@ -135,7 +135,7 @@ export const Header = ({
                 </Text>
                 <Heading
                   sx={{
-                    color: 'shade.5',
+                    color: 'tint6',
                     letterSpacing: 0.8,
                     textAlign: 'center',
                     textTransform: 'uppercase',

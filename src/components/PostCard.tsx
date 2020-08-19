@@ -75,7 +75,7 @@ export const PostCard = ({
         <Heading sx={{ mb: 16 }} variant='h2'>
           {title}
         </Heading>
-        <Text sx={{ mb: 32, color: 'shade.5' }}>{excerpt}</Text>
+        <Text sx={{ mb: 32, color: 'tint6' }}>{excerpt}</Text>
         <Link as={`/posts/${slug}`} href='/posts/[slug]' passHref>
           <Button
             as={motion.a}

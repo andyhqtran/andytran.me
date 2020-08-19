@@ -8,7 +8,7 @@ const BrowserButton = (props: BoxProps) => {
     <Box
       {...props}
       __css={{
-        backgroundColor: 'shade.0',
+        backgroundColor: 'tint1',
         width: 8,
         height: 8,
         borderRadius: 4,
@@ -24,7 +24,7 @@ export const Browser = ({ children, ...restOfProps }) => {
     <Box
       {...restOfProps}
       __css={{
-        backgroundColor: 'shade.inverse',
+        backgroundColor: 'inverse',
         borderRadius: 12,
         boxShadow: ({ colors }) => `0 12px 24px ${rgba(colors.black, 0.04)}`,
       }}
@@ -37,7 +37,7 @@ export const Browser = ({ children, ...restOfProps }) => {
           pl: 20,
           pr: 20,
           borderBottom: '1px solid',
-          borderColor: 'shade.0',
+          borderColor: 'tint1',
         }}
       >
         <BrowserButton sx={{ mr: 8 }} />

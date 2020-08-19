@@ -12,11 +12,11 @@ export const Blockquote = (props: BlockquoteProps) => {
       __css={{
         margin: 0,
         borderLeft: '2px solid',
-        borderColor: 'shade.1',
+        borderColor: 'tint2',
         paddingTop: 16,
         paddingBottom: 16,
         paddingLeft: 16,
-        color: 'shade.5',
+        color: 'tint6',
         fontStyle: 'italic',
       }}
     />

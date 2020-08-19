@@ -18,7 +18,7 @@ export const Navigation = ({ items, ...restOfProps }: NavigationProps) => {
       __css={{
         display: 'flex',
         alignItems: 'center',
-        color: 'shade.7',
+        color: 'tint8',
         fontSize: 18,
       }}
     >

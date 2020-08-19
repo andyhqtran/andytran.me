@@ -18,7 +18,7 @@ export const Heading = ({ variant = 'h3', ...restOfProps }: HeadingProps) => {
       {...restOfProps}
       __css={{
         margin: 0,
-        color: 'shade.7',
+        color: 'tint8',
       }}
     />
   );

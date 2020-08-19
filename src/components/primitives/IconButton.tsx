@@ -1,50 +1,59 @@
 import { MotionProps, motion } from 'framer-motion';
 import { rgba, transitions } from 'polished';
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import { Box, BoxProps } from 'primitives/Box';
 
-export type IconButtonProps = BoxProps<HTMLButtonElement> & MotionProps;
+export type IconButtonSize = 'small' | 'regular';
 
-export const IconButton = (props: IconButtonProps) => {
-  return (
-    <Box
-      as={motion.button}
-      whileTap={{ scale: 0.94 }}
-      {...props}
-      __css={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'transparent',
-        width: 56,
-        height: 56,
-        border: '1px solid',
-        borderColor: 'transparent',
-        borderRadius: '100%',
-        color: 'shade.4',
-        textDecoration: 'none',
-        cursor: 'pointer',
-        ...transitions(
-          ['background-color', 'border-color', 'box-shadow', 'color'],
-          '0.2s ease',
-        ),
-        '&:hover': {
-          backgroundColor: 'shade.0',
-          color: 'shade.7',
-        },
-        '&:active': {
-          borderColor: 'shade.1',
-        },
-        '&:focus': {
-          outline: 'none',
-        },
-        '&.focus-visible': {
+export type IconButtonProps = BoxProps<HTMLButtonElement> &
+  MotionProps & { size?: IconButtonSize };
+
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
+  ({ size = 'regular', ...restOfProps }, ref) => {
+    const isSmallButton = size === 'small';
+
+    return (
+      <Box
+        as={motion.button}
+        ref={ref}
+        whileTap={{ scale: 0.94 }}
+        {...restOfProps}
+        __css={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: 'transparent',
+          width: isSmallButton ? 40 : 56,
+          height: isSmallButton ? 40 : 56,
+          border: '1px solid',
           borderColor: 'transparent',
-          boxShadow: ({ colors }) => `0 0 0 2px ${rgba(colors.primary, 0.36)}`,
-        },
-      }}
-      __themeKey='iconButtons'
-    />
-  );
-};
+          borderRadius: '100%',
+          color: 'tint5',
+          textDecoration: 'none',
+          cursor: 'pointer',
+          ...transitions(
+            ['background-color', 'border-color', 'box-shadow', 'color'],
+            '0.2s ease',
+          ),
+          '&:hover': {
+            backgroundColor: 'tint1',
+            color: 'tint8',
+          },
+          '&:active': {
+            borderColor: 'tint2',
+          },
+          '&:focus': {
+            outline: 'none',
+          },
+          '&.focus-visible': {
+            borderColor: 'transparent',
+            boxShadow: ({ colors }) =>
+              `0 0 0 2px ${rgba(colors.primary, 0.36)}`,
+          },
+        }}
+        __themeKey='iconButtons'
+      />
+    );
+  },
+);

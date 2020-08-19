@@ -2,17 +2,17 @@ import React from 'react';
 
 import { Circle, Path, SVG, SVGProps } from 'primitives/SVG';
 
-export type IconProps = SVGProps;
+export type IconProps = SVGProps & { size?: number };
 
-export const Icon = (props: IconProps) => {
+export const Icon = ({ size = 24, ...restOfProps }: IconProps) => {
   return (
     <SVG
       viewBox='0 0 24 24'
-      {...props}
+      {...restOfProps}
       __css={{
         display: 'block',
-        width: 24,
-        height: 24,
+        width: size,
+        height: size,
         fill: 'currentColor',
       }}
     />

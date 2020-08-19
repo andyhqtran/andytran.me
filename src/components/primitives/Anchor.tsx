@@ -13,7 +13,7 @@ export const Anchor = (props: AnchorProps) => {
       {...props}
       __css={{
         borderRadius: 4,
-        color: 'shade.7',
+        color: 'tint8',
         fontSize: 18,
         letterSpacing: 0.1,
         lineHeight: '28px',

@@ -11,7 +11,6 @@ import { Inter } from 'components/Inter';
 import { Normalize } from 'components/Normalize';
 import { theme } from 'constants/theme';
 import { ToastProvider } from 'primitives/Toast';
-import { dark } from 'themes/dark';
 
 const MyApp = ({
   Component,
@@ -24,12 +23,7 @@ const MyApp = ({
 
   return (
     <CacheProvider value={cache}>
-      <ThemeProvider
-        theme={{
-          ...theme,
-          ...dark,
-        }}
-      >
+      <ThemeProvider theme={theme}>
         <ToastProvider>
           <Normalize />
           <GlobalStyles />

@@ -26,7 +26,7 @@ export const Tag = ({
       <Box
         __css={{
           display: 'block',
-          backgroundColor: 'shade.0',
+          backgroundColor: 'tint1',
           width: 56,
           height: 56,
           borderRadius: 28,

@@ -13,7 +13,7 @@ export const Text = (props: TextProps) => {
       {...props}
       __css={{
         margin: 0,
-        color: 'shade.6',
+        color: 'tint7',
         fontSize: 18,
         fontWeight: 'regular',
       }}

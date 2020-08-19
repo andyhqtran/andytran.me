@@ -9,7 +9,7 @@ export const Card = (props: CardProps) => {
       {...props}
       __themeKey='cards'
       __css={{
-        backgroundColor: 'shade.0',
+        backgroundColor: 'tint1',
         borderRadius: 20,
       }}
     />

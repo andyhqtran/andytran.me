@@ -70,6 +70,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-use": "^15.3.3",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "use-dark-mode": "^2.3.1"
   }
 }

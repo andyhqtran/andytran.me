@@ -54,7 +54,7 @@ export const PostTitle = ({
       <Text
         sx={{
           maxWidth: 704,
-          color: 'shade.5',
+          color: 'tint6',
           fontSize: 24,
           lineHeight: '34px',
         }}

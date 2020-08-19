@@ -7,8 +7,8 @@ export const GlobalStyles = () => {
     <Global
       styles={css({
         body: {
-          backgroundColor: 'shade.inverse',
-          color: 'shade.6',
+          backgroundColor: 'inverse',
+          color: 'tint7',
           fontFamily: 'copy',
           fontWeight: 'regular',
           lineHeight: '28px',

@@ -14,12 +14,12 @@ export const Toast = (props) => {
       __css={{
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: 'shade.inverse',
+        backgroundColor: 'inverse',
         border: '1px solid',
-        borderColor: 'shade.1',
+        borderColor: 'tint2',
         borderRadius: 8,
         p: 16,
-        boxShadow: ({ colors }) => `0 2px 8px ${colors.shade[0]}`,
+        boxShadow: ({ colors }) => `0 2px 8px ${colors.tint1}`,
         fontSize: 14,
       }}
     />

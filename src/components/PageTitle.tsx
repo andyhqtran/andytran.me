@@ -20,7 +20,7 @@ export const PageTitle = ({
       <Heading sx={{ mb: 16 }} variant='h1'>
         {title}
       </Heading>
-      <Text sx={{ color: 'shade.5', fontSize: 24, lineHeight: '34px' }}>
+      <Text sx={{ color: 'tint6', fontSize: 24, lineHeight: '34px' }}>
         {description}
       </Text>
     </Box>
