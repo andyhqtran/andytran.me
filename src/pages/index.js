@@ -16,6 +16,7 @@ const IndexPage = ({ description, navigation, posts, title }) => {
           posts.map((post) => (
             <PostCard
               excerpt={post.excerpt}
+              image={post.image}
               key={post.id}
               slug={post.slug}
               sx={{ mb: 24 }}
