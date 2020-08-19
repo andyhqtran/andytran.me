@@ -36,7 +36,7 @@ export const Header = ({
   socialIcons,
   title,
 }: HeaderProps) => {
-  const { percentage, scrollPosition } = useScrollPercentage();
+  const { hasMounted, percentage, scrollPosition } = useScrollPercentage();
   const hasScrolled = scrollPosition > 0;
   const router = useRouter();
 
@@ -65,7 +65,8 @@ export const Header = ({
         backgroundColor: 'inverse',
         height: 88,
         borderBottom: '1px solid',
-        borderColor: isPostsPage || hasScrolled ? 'tint2' : 'transparent',
+        borderColor:
+          isPostsPage || (hasMounted && hasScrolled) ? 'tint2' : 'transparent',
         ...transitions(['border-color', '0.2s ease']),
       }}
     >

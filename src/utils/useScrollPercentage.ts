@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRafState, useWindowScroll } from 'react-use';
 
 const isClient = typeof window === 'object';
 
 export type ScrollPercentageState = {
+  hasMounted: boolean;
   scrollHeight: number;
   scrollPosition: number;
   percentage: number;
@@ -12,7 +13,7 @@ export type ScrollPercentageState = {
 
 export const useScrollPercentage = (): ScrollPercentageState => {
   const router = useRouter();
-
+  const [hasMounted, setHasMounted] = useState<boolean>(false);
   const [scrollHeight, setScrollHeight] = useRafState<number>(
     isClient ? document.body.scrollHeight - window.innerHeight : 0,
   );
@@ -48,6 +49,8 @@ export const useScrollPercentage = (): ScrollPercentageState => {
 
     router.events.on('routeChangeStart', routerHandler);
 
+    setHasMounted(true);
+
     () => {
       window.removeEventListener('resize', scrollHeightHandler);
       window.removeEventListener('scroll', scrollPositionHandler);
@@ -56,6 +59,7 @@ export const useScrollPercentage = (): ScrollPercentageState => {
   }, []);
 
   return {
+    hasMounted,
     scrollHeight,
     scrollPosition,
     percentage: Math.ceil((scrollPosition / scrollHeight) * 100),
