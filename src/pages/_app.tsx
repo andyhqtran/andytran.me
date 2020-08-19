@@ -3,7 +3,6 @@ import { CacheProvider, ThemeProvider } from '@emotion/react';
 import { cache } from '@emotion/css';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
 import React, { ComponentType, HTMLProps } from 'react';
 
 import { GlobalStyles } from 'components/GlobalStyles';
@@ -35,11 +34,6 @@ const MyApp = ({
       </ThemeProvider>
     </CacheProvider>
   );
-};
-
-MyApp.propTypes = {
-  Component: PropTypes.func,
-  pageProps: PropTypes.object,
 };
 
 export default MyApp;
