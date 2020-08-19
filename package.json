@@ -64,7 +64,7 @@
     "polished": "^3.6.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-intersection-observer": "^8.26.2",
+    "react-intersection-observer": "^8.27.0",
     "react-use": "^15.3.3",
     "styled-system": "^5.1.5",
     "use-dark-mode": "^2.3.1"
