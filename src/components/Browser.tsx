@@ -27,6 +27,7 @@ export const Browser = ({ children, ...restOfProps }) => {
         backgroundColor: 'inverse',
         borderRadius: 12,
         boxShadow: ({ colors }) => `0 12px 24px ${rgba(colors.black, 0.04)}`,
+        ...transitions(['background-color'], '0.2s ease'
       }}
     >
       <Box
@@ -38,7 +39,7 @@ export const Browser = ({ children, ...restOfProps }) => {
           pr: 20,
           borderBottom: '1px solid',
           borderColor: 'tint1',
-          ...transitions(['background-color'], '0.2s ease'),
+          ...transitions(['border-color'], '0.2s ease'),
         }}
       >
         <BrowserButton sx={{ mr: 8 }} />
