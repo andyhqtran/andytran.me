@@ -1541,15 +1541,15 @@
     "@emotion/styled-base" "^10.0.27"
     babel-plugin-emotion "^10.0.27"
 
-"@emotion/styled@^11.0.0-next.14":
-  version "11.0.0-next.14"
-  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.0.0-next.14.tgz#296735ccd9e96e37ac66d60367315a0441335325"
-  integrity sha512-VllPdNqJyQKVMAYZ/2mrRa67HAYh7713ij+S2hrV4et8RwOYl7n4mfCfBEgrKk6fwm715gHhL4FpYFd7oLnfGw==
+"@emotion/styled@^11.0.0-next.15":
+  version "11.0.0-next.15"
+  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.0.0-next.15.tgz#c636f45850acf4738f96fda111d3739f668ec1e2"
+  integrity sha512-fGgFnaaemquA4GAit5C4ZqTU9dtL0DMblfUkOhsadOamLwOImDPDnLDZ+uRvgoW/i8FCr5W5euGNO4NmIJbDzQ==
   dependencies:
     "@babel/runtime" "^7.7.2"
-    "@emotion/babel-plugin" "^11.0.0-next.13"
+    "@emotion/babel-plugin" "^11.0.0-next.15"
     "@emotion/is-prop-valid" "0.9.0-next.1"
-    "@emotion/serialize" "^0.11.15-next.2"
+    "@emotion/serialize" "^1.0.0-next.3"
     "@emotion/utils" "1.0.0-next.0"
 
 "@emotion/stylis@0.8.5":
@@ -10904,7 +10904,7 @@ stylis@3.5.4:
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.5.4.tgz#f665f25f5e299cf3d64654ab949a57c768b73fbe"
   integrity sha512-8/3pSmthWM7lsPBKv7NXkzn2Uc9W7NotcwGNpJaa3k7WMM1XDCA4MgT5k/8BIexd5ydZdboXtU90XH9Ec4Bv/Q==
 
-stylis@^4.0.1, stylis@^4.0.2:
+stylis@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.0.2.tgz#84247b15c20688604b7a77db02b7fc071a127194"
   integrity sha512-2RR3o86K1CSrJjigElyNC9dSR7KyINLP68gauaBQn6j2zfJ/7gb0nD6FGXSCsklVM0V6fsoYA8qEXhhZGjkdww==
