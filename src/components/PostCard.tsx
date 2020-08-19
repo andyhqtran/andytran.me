@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import { Browser } from 'components/Browser';
 import { Tag } from 'components/Tag';
@@ -35,10 +36,15 @@ export const PostCard = ({
   ...restOfProps
 }: PostCardProps) => {
   const router = useRouter();
+  const [ref, inView] = useInView({ triggerOnce: true });
   const numberOfTags = tags?.length ?? 0;
 
   return (
     <Card
+      animate={{ opacity: inView ? 1 : 0 }}
+      as={motion.div}
+      initial={{ opacity: 0 }}
+      ref={ref}
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -92,7 +98,7 @@ export const PostCard = ({
         </Link>
       </Box>
       <Browser sx={{ position: 'relative', right: -20, top: 56, width: 620 }}>
-        {image && (
+        {image && inView && (
           <Image
             alt={title}
             src={image}
