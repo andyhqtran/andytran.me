@@ -42,7 +42,11 @@ export const Footer = ({ navigation, title, ...restOfProps }: FooterProps) => {
           items={navigation}
           sx={{ mr: 16, color: 'inherit', fontSize: 14 }}
         />
-        <IconButton onClick={darkMode.toggle} size='small'>
+        <IconButton
+          onClick={darkMode.toggle}
+          size='small'
+          sx={{ color: 'inherit' }}
+        >
           {/** Use this instead of darkMode.value to prevent SSR issues */}
           <MoonIcon size={16} sx={{ '.dark-mode &': { display: 'none' } }} />
           <SunIcon size={16} sx={{ '.light-mode &': { display: 'none' } }} />
