@@ -27,7 +27,7 @@ export const Browser = ({ children, ...restOfProps }) => {
         backgroundColor: 'inverse',
         borderRadius: 12,
         boxShadow: ({ colors }) => `0 12px 24px ${rgba(colors.black, 0.04)}`,
-        ...transitions(['background-color'], '0.2s ease'
+        ...transitions(['background-color'], '0.2s ease'),
       }}
     >
       <Box
