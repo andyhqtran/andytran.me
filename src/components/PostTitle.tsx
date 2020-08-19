@@ -2,6 +2,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { Container } from 'components/Container';
 import { Tag } from 'components/Tag';
 import { Box, BoxProps } from 'primitives/Box';
 import { Heading } from 'primitives/Heading';
@@ -28,7 +29,10 @@ export const PostTitle = ({
   const numberOfTags = tags?.length ?? 0;
 
   return (
-    <Box sx={{ maxWidth: 1072, mx: 'auto', pt: 80 }} {...restOfProps}>
+    <Container
+      sx={{ maxWidth: 1072, mx: 'auto', pt: 80, px: 56 }}
+      {...restOfProps}
+    >
       <Head>
         <title>{title}</title>
       </Head>
@@ -61,6 +65,6 @@ export const PostTitle = ({
       >
         {excerpt}
       </Text>
-    </Box>
+    </Container>
   );
 };

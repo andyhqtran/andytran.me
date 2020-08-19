@@ -23,11 +23,16 @@ const PostsSlugPage = ({ testPost, post, title }) => {
       <Container
         sx={{
           display: 'grid',
-          gridTemplateColumns: '704px 1fr',
+          gridTemplateColumns: ['1fr', '1fr', '704px 1fr', '704px 1fr'],
           mt: 20,
         }}
       >
-        <Box as='article'>{parseHTML(post.html)}</Box>
+        <Box
+          as='article'
+          sx={{ maxWidth: 704, mx: ['auto', 'auto', '0', '0'] }}
+        >
+          {parseHTML(post.html)}
+        </Box>
       </Container>
     </Fragment>
   );

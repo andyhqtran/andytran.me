@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Browser } from 'components/Browser';
+import { Container } from 'components/Container';
 import { Card, CardProps } from 'primitives/Card';
 import { Image } from 'primitives/Image';
 
@@ -16,23 +17,22 @@ export const PostFeaturedImage = ({
   ...restOfProps
 }: PostFeaturedImageProps) => {
   return (
-    <Card
+    <Container
+      {...restOfProps}
       sx={{
-        maxWidth: 1184,
+        backgroundColor: 'tint1',
+        borderRadius: [0, 0, 0, 16],
         mt: 64,
         mb: 80,
-        mx: 'auto',
-        pl: 56,
-        pr: 56,
         pt: 56,
         overflow: 'hidden',
-        ...sx,
       }}
-      {...restOfProps}
     >
-      <Browser sx={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}>
-        <Image title={title} src={image} width='100%' />
-      </Browser>
-    </Card>
+      <Card>
+        <Browser sx={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}>
+          <Image title={title} src={image} width='100%' />
+        </Browser>
+      </Card>
+    </Container>
   );
 };

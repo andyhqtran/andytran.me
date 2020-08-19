@@ -8,7 +8,7 @@ const BrowserButton = (props: BoxProps) => {
     <Box
       {...props}
       __css={{
-        backgroundColor: 'tint1',
+        backgroundColor: 'tint2',
         width: 8,
         height: 8,
         borderRadius: 4,
