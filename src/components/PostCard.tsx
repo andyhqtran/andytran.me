@@ -92,7 +92,20 @@ export const PostCard = ({
         </Link>
       </Box>
       <Browser sx={{ position: 'relative', right: -20, top: 56, width: 620 }}>
-        {image && <Image alt={title} src={image} />}
+        {image && (
+          <Image
+            alt={title}
+            src={image}
+            sx={{
+              position: 'absolute',
+              top: 0,
+              left: '50%',
+              maxWidth: 'unset',
+              height: '100%',
+              transform: 'translateX(-50%)',
+            }}
+          />
+        )}
       </Browser>
     </Card>
   );

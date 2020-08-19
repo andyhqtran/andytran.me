@@ -24,6 +24,8 @@ export const Browser = ({ children, ...restOfProps }) => {
     <Box
       {...restOfProps}
       __css={{
+        display: 'flex',
+        flexDirection: 'column',
         backgroundColor: 'inverse',
         borderRadius: 12,
         boxShadow: ({ colors }) => `0 12px 24px ${rgba(colors.black, 0.04)}`,
@@ -46,7 +48,9 @@ export const Browser = ({ children, ...restOfProps }) => {
         <BrowserButton sx={{ mr: 8 }} />
         <BrowserButton />
       </Box>
-      {children}
+      <Box sx={{ position: 'relative', flexGrow: 1, overflow: 'hidden' }}>
+        {children}
+      </Box>
     </Box>
   );
 };
