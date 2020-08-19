@@ -68,7 +68,7 @@ export const Header = ({
         borderBottom: '1px solid',
         borderColor:
           isPostsPage || (hasMounted && hasScrolled) ? 'tint2' : 'transparent',
-        ...transitions(['border-color'], '0.2s ease'),
+        ...transitions(['background-color', 'border-color'], '0.2s ease'),
       }}
     >
       <Container
