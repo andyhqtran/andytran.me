@@ -21,9 +21,9 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'h1';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       return (
-        <Heading as='h1' sx={{ my: 16 }} variant='h2'>
+        <Heading as='h1' key={index} sx={{ my: 16 }} variant='h2'>
           {children}
         </Heading>
       );
@@ -34,9 +34,9 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'h2';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       return (
-        <Heading as='h2' sx={{ my: 16 }} variant='h3'>
+        <Heading as='h2' key={index} sx={{ my: 16 }} variant='h3'>
           {children}
         </Heading>
       );
@@ -47,9 +47,9 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'h3';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       return (
-        <Heading as='h3' sx={{ my: 16 }} variant='h4'>
+        <Heading as='h3' key={index} sx={{ my: 16 }} variant='h4'>
           {children}
         </Heading>
       );
@@ -60,9 +60,9 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'h4';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       return (
-        <Heading as='h4' sx={{ my: 16 }} variant='h5'>
+        <Heading as='h4' key={index} sx={{ my: 16 }} variant='h5'>
           {children}
         </Heading>
       );
@@ -73,9 +73,9 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'h5';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       return (
-        <Heading as='h5' sx={{ my: 16 }} variant='h5'>
+        <Heading as='h5' key={index} sx={{ my: 16 }} variant='h5'>
           {children}
         </Heading>
       );
@@ -86,9 +86,9 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'h6';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       return (
-        <Heading as='h6' sx={{ my: 16 }} variant='h5'>
+        <Heading as='h6' key={index} sx={{ my: 16 }} variant='h5'>
           {children}
         </Heading>
       );
@@ -99,10 +99,14 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'p';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       if (children.length < 1) return <br />;
 
-      return <Text sx={{ my: 16 }}>{children}</Text>;
+      return (
+        <Text key={index} sx={{ my: 16 }}>
+          {children}
+        </Text>
+      );
     },
   },
   {
@@ -110,8 +114,12 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'blockquote';
     },
-    processNode: (node, children) => {
-      return <Blockquote sx={{ my: 24 }}>{children}</Blockquote>;
+    processNode: (node, children, index) => {
+      return (
+        <Blockquote key={index} sx={{ my: 24 }}>
+          {children}
+        </Blockquote>
+      );
     },
   },
   {
@@ -119,10 +127,11 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'a';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       return (
         <Anchor
           href={node.attribs.href}
+          key={index}
           sx={{
             fontSize: 'inherit',
             lineHeight: 'inherit',
@@ -138,9 +147,13 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'figure';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       console.log(node);
-      return <Box as='figure'>{children}</Box>;
+      return (
+        <Box as='figure' key={index}>
+          {children}
+        </Box>
+      );
     },
   },
   {
@@ -148,9 +161,9 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'figcaption';
     },
-    processNode: (node, children) => {
+    processNode: (node, children, index) => {
       return (
-        <Box as='figcaption' sx={{ mt: 24, textAlign: 'center' }}>
+        <Box as='figcaption' key={index} sx={{ mt: 24, textAlign: 'center' }}>
           {children}
         </Box>
       );
@@ -161,8 +174,8 @@ const processingInstructions = [
     shouldProcessNode: (node) => {
       return node.name === 'img';
     },
-    processNode: (node, children) => {
-      return <Image src={node.attribs.src} />;
+    processNode: (node, children, index) => {
+      return <Image key={index} src={node.attribs.src} />;
     },
   },
   {
