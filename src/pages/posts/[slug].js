@@ -14,8 +14,7 @@ import { PostTitle } from 'components/PostTitle';
 import { Box } from 'primitives/Box';
 import { parseHTML } from 'utils/html-to-react';
 
-const PostsSlugPage = ({ testPost, post, title }) => {
-  console.log(testPost);
+const PostsSlugPage = ({ post, title }) => {
   return (
     <Fragment>
       <PostTitle excerpt={post.excerpt} tags={post.tags} title={post.title} />
@@ -65,7 +64,6 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       ...settings,
-      testPost: post,
       prevPost,
       nextPost,
       post: {
