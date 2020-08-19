@@ -89,6 +89,10 @@ export default class MyDocument extends Document {
                   --color-tint-7: rgba(255, 255, 255, 0.84);
                   --color-tint-8: rgba(255, 255, 255, 1);
                 }
+
+                body {
+                  background-color: var(--color-inverse);
+                }
               `,
             }}
           />
