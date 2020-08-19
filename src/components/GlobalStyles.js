@@ -1,5 +1,6 @@
 import { Global } from '@emotion/react';
 import { css } from '@styled-system/css';
+import { transitions } from 'polished';
 import React from 'react';
 
 export const GlobalStyles = () => {
@@ -14,6 +15,7 @@ export const GlobalStyles = () => {
           lineHeight: '28px',
           WebkitFontSmoothing: 'antialiased',
           MozOsxFontSmoothing: 'grayscale',
+          ...transitions(['background-color', 'color'], '0.2s ease'),
         },
       })}
     />
