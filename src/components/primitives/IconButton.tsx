@@ -6,7 +6,7 @@ import { Box, BoxProps } from 'primitives/Box';
 
 export type IconButtonSize = 'small' | 'regular';
 
-export type IconButtonProps = BoxProps<HTMLButtonElement> &
+export type IconButtonProps = Omit<BoxProps<HTMLButtonElement>, 'size'> &
   MotionProps & { size?: IconButtonSize };
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(

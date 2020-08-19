@@ -7,7 +7,9 @@ export default {
   component: IconButton,
 };
 
-export const Example = (args: IconButtonProps) => <IconButton {...args} />;
+export const Example = (args: Omit<IconButtonProps, 'ref'>) => (
+  <IconButton {...args} />
+);
 
 Example.args = {
   children: 'Label',

@@ -7,7 +7,7 @@ export default {
   component: Button,
 };
 
-export const Example = (args: ButtonProps) => <Button {...args} />;
+export const Example = (args: Omit<ButtonProps, 'ref'>) => <Button {...args} />;
 
 Example.args = {
   children: 'Label',
