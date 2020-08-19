@@ -62,10 +62,6 @@ export default class MyDocument extends Document {
             />
           )}
           <style
-            data-emotion-css={this.props.ids.join(' ')}
-            dangerouslySetInnerHTML={{ __html: this.props.css }}
-          />
-          <style
             dangerouslySetInnerHTML={{
               __html: `
                 body.light-mode {
@@ -95,6 +91,10 @@ export default class MyDocument extends Document {
                 }
               `,
             }}
+          />
+          <style
+            data-emotion-css={this.props.ids.join(' ')}
+            dangerouslySetInnerHTML={{ __html: this.props.css }}
           />
         </Head>
         <body>
