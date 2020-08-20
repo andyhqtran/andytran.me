@@ -8,7 +8,6 @@ export const GlobalStyles = () => {
     <Global
       styles={css({
         body: {
-          backgroundColor: 'inverse',
           color: 'tint7',
           fontFamily: 'copy',
           fontWeight: 'regular',
