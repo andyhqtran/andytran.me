@@ -8,13 +8,16 @@ export const GlobalStyles = () => {
     <Global
       styles={css({
         body: {
+          backgroundColor: 'inverse',
           color: 'tint7',
           fontFamily: 'copy',
           fontWeight: 'regular',
           lineHeight: '28px',
           WebkitFontSmoothing: 'antialiased',
           MozOsxFontSmoothing: 'grayscale',
-          ...transitions(['background-color', 'color'], '0.2s ease'),
+          '&.light-mode': {
+            ...transitions(['background-color', 'color'], '0.2s ease'),
+          },
         },
       })}
     />
