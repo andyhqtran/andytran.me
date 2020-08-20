@@ -54,6 +54,8 @@ export const SocialIcons = ({ icons, ...restOfProps }: SocialIconsProps) => {
                 url: icon.url,
               });
             }}
+            rel='noreferrer noopener'
+            target='_blank'
           >
             {iconRenderer(icon.label)}
           </IconButton>
