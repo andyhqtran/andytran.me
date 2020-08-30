@@ -23,7 +23,7 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h1' key={index} sx={{ my: 16 }} variant='h2'>
+        <Heading as='h1' key={index} sx={{ mt: 40, mb: 16 }} variant='h2'>
           {children}
         </Heading>
       );
@@ -36,7 +36,7 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h2' key={index} sx={{ my: 16 }} variant='h3'>
+        <Heading as='h2' key={index} sx={{ mt: 40, mb: 16 }} variant='h3'>
           {children}
         </Heading>
       );
@@ -49,7 +49,7 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h3' key={index} sx={{ my: 16 }} variant='h4'>
+        <Heading as='h3' key={index} sx={{ mt: 40, mb: 16 }} variant='h4'>
           {children}
         </Heading>
       );
@@ -62,7 +62,7 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h4' key={index} sx={{ my: 16 }} variant='h5'>
+        <Heading as='h4' key={index} sx={{ mt: 40, mb: 16 }} variant='h5'>
           {children}
         </Heading>
       );
@@ -75,7 +75,7 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h5' key={index} sx={{ my: 16 }} variant='h5'>
+        <Heading as='h5' key={index} sx={{ mt: 40, mb: 16 }} variant='h5'>
           {children}
         </Heading>
       );
@@ -88,7 +88,7 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h6' key={index} sx={{ my: 16 }} variant='h5'>
+        <Heading as='h6' key={index} sx={{ mt: 40, mb: 16 }} variant='h5'>
           {children}
         </Heading>
       );
@@ -103,7 +103,7 @@ const processingInstructions = [
       if (children.length < 1) return <br />;
 
       return (
-        <Text key={index} sx={{ my: 16 }}>
+        <Text key={index} sx={{ mb: 24 }}>
           {children}
         </Text>
       );
