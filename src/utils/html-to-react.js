@@ -1,12 +1,14 @@
 /* eslint-disable react/display-name */
 import { Parser, ProcessNodeDefinitions } from 'html-to-react';
-import React from 'react';
+import React, { Fragment } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 
 import { Anchor } from 'primitives/Anchor';
 import { Box } from 'primitives/Box';
 import { Blockquote } from 'primitives/Blockquote';
 import { Heading } from 'primitives/Heading';
 import { Image } from 'primitives/Image';
+import { PreformattedText } from 'primitives/PreformattedText';
 import { Text } from 'primitives/Text';
 
 const isValidNode = function () {
@@ -148,7 +150,6 @@ const processingInstructions = [
       return node.name === 'figure';
     },
     processNode: (node, children, index) => {
-      console.log(node);
       return (
         <Box as='figure' key={index}>
           {children}
@@ -176,6 +177,53 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return <Image key={index} src={node.attribs.src} />;
+    },
+  },
+  {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      const nodeClass = node?.attribs?.class;
+      const containsLanguageClass = nodeClass?.includes('language-');
+      const language =
+        containsLanguageClass && nodeClass.replace('language-', '');
+      const isValidLanguage = [
+        ...SyntaxHighlighter.supportedLanguages,
+        'html',
+      ].includes(language);
+      const hasParent = node?.hasParent;
+
+      return (
+        node.name === 'code' &&
+        containsLanguageClass &&
+        isValidLanguage &&
+        !hasParent
+      );
+    },
+    processNode: (node, children, index) => {
+      const language = node?.attribs?.class.replace('language-', '');
+      const isValidLanguage = [
+        ...SyntaxHighlighter.supportedLanguages,
+        'html',
+      ].includes(language);
+
+      return (
+        <PreformattedText
+          key={index}
+          sx={{ mb: 48 }}
+          language={isValidLanguage && language}
+        >
+          {children}
+        </PreformattedText>
+      );
+    },
+  },
+  {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      return node.name === 'pre';
+    },
+    processNode: (node, children, index) => {
+      return <Fragment key={index}>{children}</Fragment>;
     },
   },
   {
