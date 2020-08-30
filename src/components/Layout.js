@@ -24,6 +24,7 @@ Router.events.on('routeChangeComplete', (url) => {
 export const Layout = ({
   children,
   description,
+  icon,
   meta,
   navigation,
   nextPost,
@@ -35,7 +36,6 @@ export const Layout = ({
   twitterCard,
 }) => {
   const theme = useTheme();
-
   return (
     <Fragment>
       <Head>
@@ -87,6 +87,7 @@ export const Layout = ({
           key='theme-color'
           content={theme.colors.primary}
         />
+        <link rel='shortcut icon' href={icon} key='favicon' />
       </Head>
       <Header
         nextPost={nextPost}

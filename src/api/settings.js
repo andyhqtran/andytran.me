@@ -18,6 +18,7 @@ export async function getSettings() {
   return {
     coverImage: settings.cover_image,
     description: settings.description,
+    icon: settings.icon,
     logo: settings.logo,
     meta: {
       description: settings.meta_description,
