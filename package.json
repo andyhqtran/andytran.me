@@ -30,7 +30,7 @@
     "@babel/plugin-proposal-export-default-from": "^7.10.4",
     "@emotion/babel-plugin": "^11.0.0-next.15",
     "@emotion/babel-preset-css-prop": "^11.0.0-next.10",
-    "@storybook/addon-essentials": "^6.0.16",
+    "@storybook/addon-essentials": "^6.0.20",
     "@storybook/react": "^6.0.17",
     "@types/styled-system__css": "^5.0.13",
     "@typescript-eslint/eslint-plugin": "^3.10.0",
