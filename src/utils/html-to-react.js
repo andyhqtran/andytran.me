@@ -6,10 +6,13 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { Anchor } from 'primitives/Anchor';
 import { Box } from 'primitives/Box';
 import { Blockquote } from 'primitives/Blockquote';
+import { Bold } from 'primitives/Bold';
 import { Heading } from 'primitives/Heading';
 import { Image } from 'primitives/Image';
+import { Italic } from 'primitives/Italic';
 import { PreformattedText } from 'primitives/PreformattedText';
 import { Text } from 'primitives/Text';
+import { Underline } from 'primitives/Underline';
 
 const isValidNode = function () {
   return true;
@@ -94,6 +97,33 @@ const processingInstructions = [
           {children}
         </Heading>
       );
+    },
+  },
+  {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      return node.name === 'u';
+    },
+    processNode: (node, children, index) => {
+      return <Underline>{children}</Underline>;
+    },
+  },
+  {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      return node.name === 'strong';
+    },
+    processNode: (node, children, index) => {
+      return <Bold>{children}</Bold>;
+    },
+  },
+  {
+    replaceChildren: false,
+    shouldProcessNode: (node) => {
+      return node.name === 'em';
+    },
+    processNode: (node, children, index) => {
+      return <Italic>{children}</Italic>;
     },
   },
   {
