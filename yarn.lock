@@ -1201,17 +1201,17 @@
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
 
-"@emotion/babel-plugin@^11.0.0-next.10", "@emotion/babel-plugin@^11.0.0-next.15":
-  version "11.0.0-next.15"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.0.0-next.15.tgz#a40ab47ce479760d152f48250573477db5162cc7"
-  integrity sha512-DfcKqdLYA9XI6prKPTN+sdi9WMESWheJjjjvfmZfByaHb1wolYxVRCXVQ6kKKESPSoYUC9CS/TRAwo5yUZRzbw==
+"@emotion/babel-plugin@^11.0.0-next.10", "@emotion/babel-plugin@^11.0.0-next.15", "@emotion/babel-plugin@^11.0.0-next.17":
+  version "11.0.0-next.17"
+  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.0.0-next.17.tgz#221020f82cb553416d352f6f5f565fe1e6fd5a9d"
+  integrity sha512-KbjU0kmuwhNBWOa3aSwLdi99fVzhEMnqoNI4/fx5yr+GuF5VxRedQbnT1c+oOGzks7GPkPDdE4kPcnsP2mUGDA==
   dependencies:
     "@babel/helper-module-imports" "^7.7.0"
     "@babel/plugin-syntax-jsx" "^7.2.0"
     "@babel/runtime" "^7.7.2"
     "@emotion/hash" "0.8.0"
     "@emotion/memoize" "0.7.4"
-    "@emotion/serialize" "^1.0.0-next.3"
+    "@emotion/serialize" "^1.0.0-next.5"
     babel-plugin-macros "^2.6.1"
     convert-source-map "^1.5.0"
     escape-string-regexp "^1.0.5"
@@ -1334,15 +1334,15 @@
     "@emotion/utils" "0.11.3"
     csstype "^2.5.7"
 
-"@emotion/serialize@^1.0.0-next.3":
-  version "1.0.0-next.3"
-  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.0.0-next.3.tgz#88a854140504de62caf337bc82e2f3944eed7ce3"
-  integrity sha512-WfFdxoAgWwzLuzLRKQH4PmsodL4gLtN/Sa1w59gXHxQ8YL7FXTi9X7oDyoX4c0nfBqc+GcgFEkyznwLctoAo3Q==
+"@emotion/serialize@^1.0.0-next.3", "@emotion/serialize@^1.0.0-next.5":
+  version "1.0.0-next.5"
+  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.0.0-next.5.tgz#ef4ad18bc52c0f0189f16139dd3db6392af7183b"
+  integrity sha512-9mRUdbnMMzJBJfjJAbsksv72B95X88EOqGLeb97lRntuYNEmxSEOTTjO/muIUEm2rqW03Z2hy6wt0oXKVMdyiQ==
   dependencies:
     "@emotion/hash" "0.8.0"
     "@emotion/memoize" "0.7.4"
     "@emotion/unitless" "0.7.5"
-    "@emotion/utils" "1.0.0-next.0"
+    "@emotion/utils" "1.0.0-next.1"
     csstype "^3.0.2"
 
 "@emotion/server@^11.0.0-next.15":
@@ -1413,6 +1413,11 @@
   version "1.0.0-next.0"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-1.0.0-next.0.tgz#1da2f62dcaeb0c811ab43d81fa69242ea4662366"
   integrity sha512-qqaJxqxV5KwOMv+3ZW1c+UzLT/4X4vNybMg2Y0jLIjpZZRT7YJEqtezpwE3j6t/osslKDVz6hPrjunkD7ZWMLw==
+
+"@emotion/utils@1.0.0-next.1":
+  version "1.0.0-next.1"
+  resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-1.0.0-next.1.tgz#e325d72d323e1e432fb0ac04f2dc5dc210db2d09"
+  integrity sha512-97S/bm1MrczzvUVMGCO/uRT5fTHAycDMXHwrwL7kW/ClQwjYaT291C0e1Cggp1mZx+0f0Rpi8BulPrhv0bu4vQ==
 
 "@emotion/weak-memoize@0.2.5":
   version "0.2.5"
