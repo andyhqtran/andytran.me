@@ -1201,17 +1201,17 @@
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
 
-"@emotion/babel-plugin@^11.0.0-next.10", "@emotion/babel-plugin@^11.0.0-next.15":
-  version "11.0.0-next.15"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.0.0-next.15.tgz#a40ab47ce479760d152f48250573477db5162cc7"
-  integrity sha512-DfcKqdLYA9XI6prKPTN+sdi9WMESWheJjjjvfmZfByaHb1wolYxVRCXVQ6kKKESPSoYUC9CS/TRAwo5yUZRzbw==
+"@emotion/babel-plugin@^11.0.0-next.10", "@emotion/babel-plugin@^11.0.0-next.15", "@emotion/babel-plugin@^11.0.0-next.17":
+  version "11.0.0-next.17"
+  resolved "https://registry.yarnpkg.com/@emotion/babel-plugin/-/babel-plugin-11.0.0-next.17.tgz#221020f82cb553416d352f6f5f565fe1e6fd5a9d"
+  integrity sha512-KbjU0kmuwhNBWOa3aSwLdi99fVzhEMnqoNI4/fx5yr+GuF5VxRedQbnT1c+oOGzks7GPkPDdE4kPcnsP2mUGDA==
   dependencies:
     "@babel/helper-module-imports" "^7.7.0"
     "@babel/plugin-syntax-jsx" "^7.2.0"
     "@babel/runtime" "^7.7.2"
     "@emotion/hash" "0.8.0"
     "@emotion/memoize" "0.7.4"
-    "@emotion/serialize" "^1.0.0-next.3"
+    "@emotion/serialize" "^1.0.0-next.5"
     babel-plugin-macros "^2.6.1"
     convert-source-map "^1.5.0"
     escape-string-regexp "^1.0.5"
