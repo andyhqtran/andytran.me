@@ -58,7 +58,7 @@
     "@types/styled-system": "^5.1.10",
     "emotion-normalize": "^10.1.0",
     "focus-visible": "^5.1.0",
-    "framer-motion": "^2.6.9",
+    "framer-motion": "^2.7.5",
     "html-to-react": "^1.4.3",
     "next": "^9.5.3",
     "polished": "^3.6.6",
