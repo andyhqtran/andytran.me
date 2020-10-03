@@ -47,7 +47,7 @@
     "typescript": "^4.0.3"
   },
   "dependencies": {
-    "@emotion/css": "^11.0.0-next.17",
+    "@emotion/css": "^11.0.0-next.19",
     "@emotion/react": "^11.0.0-next.17",
     "@emotion/server": "^11.0.0-next.17",
     "@emotion/styled": "^11.0.0-next.17",
