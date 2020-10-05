@@ -31,7 +31,7 @@
     "@emotion/babel-plugin": "^11.0.0-next.17",
     "@emotion/babel-preset-css-prop": "^11.0.0-next.10",
     "@storybook/addon-essentials": "^6.0.26",
-    "@storybook/react": "^6.0.25",
+    "@storybook/react": "^6.0.26",
     "@types/styled-system__css": "^5.0.14",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^3.10.1",
