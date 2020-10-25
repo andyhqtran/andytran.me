@@ -59,7 +59,7 @@
     "emotion-normalize": "^10.1.0",
     "focus-visible": "^5.2.0",
     "framer-motion": "^2.9.4",
-    "html-to-react": "^1.4.4",
+    "html-to-react": "^1.4.5",
     "next": "^9.5.5",
     "polished": "^3.6.7",
     "react": "^16.14.0",
