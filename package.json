@@ -28,7 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-export-default-from": "^7.12.1",
-    "@emotion/babel-plugin": "^11.0.0-next.17",
+    "@emotion/babel-plugin": "^11.0.0-rc.0",
     "@emotion/babel-preset-css-prop": "^11.0.0-next.10",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/react": "^6.0.28",
