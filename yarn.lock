@@ -2511,12 +2511,12 @@
     "@svgr/plugin-svgo" "^5.4.0"
     loader-utils "^2.0.0"
 
-"@tryghost/content-api@^1.4.8":
-  version "1.4.8"
-  resolved "https://registry.yarnpkg.com/@tryghost/content-api/-/content-api-1.4.8.tgz#99549bbf4e9a887becb20fa3912a8fd3b99520c2"
-  integrity sha512-bQAOiT6x6XtFlBHak90Ur4Zbov7zTQW8w8joUjavWdq7VS+6zJuDSlicBtgPj2Xms86DbajNiy1jMMk8TbgPgQ==
+"@tryghost/content-api@^1.4.10":
+  version "1.4.10"
+  resolved "https://registry.yarnpkg.com/@tryghost/content-api/-/content-api-1.4.10.tgz#97a5c1a17246ec62f2efd7da303e55f0acf38186"
+  integrity sha512-EuqNx3wJ8TWsUcTssDGlmILZ3Bhs+XruF8R8Rjsj2IytZujQUt1n1a7xoMufT/yX0wqXcUjYCKL540Cux1IJbw==
   dependencies:
-    axios "0.20.0"
+    axios "0.21.0"
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -3532,10 +3532,10 @@ autoprefixer@^9.7.2:
     postcss "^7.0.32"
     postcss-value-parser "^4.1.0"
 
-axios@0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.20.0.tgz#057ba30f04884694993a8cd07fa394cff11c50bd"
-  integrity sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
+axios@0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.0.tgz#26df088803a2350dff2c27f96fef99fe49442aca"
+  integrity sha512-fmkJBknJKoZwem3/IKSSLpkdNXZeBu5Q7GA/aRsr2btgrptmSCxi2oFjZHqGdK9DoTil9PIHlPIZw2EcRJXRvw==
   dependencies:
     follow-redirects "^1.10.0"
 
