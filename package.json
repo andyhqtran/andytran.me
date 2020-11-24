@@ -61,7 +61,7 @@
     "framer-motion": "^2.9.4",
     "html-to-react": "^1.4.5",
     "next": "^9.5.5",
-    "polished": "^3.6.7",
+    "polished": "^4.0.4",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-intersection-observer": "^8.31.0",
