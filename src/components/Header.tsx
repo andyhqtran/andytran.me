@@ -187,7 +187,7 @@ export const Header = ({
             bottom: -4,
             left: 0,
             right: 0,
-            backgroundColor: 'primary',
+            backgroundColor: '$blue800',
             height: 4,
           }}
           initial={{ width: 0 }}
