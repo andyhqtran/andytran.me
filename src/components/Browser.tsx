@@ -39,7 +39,7 @@ export const Browser = ({ children, ...restOfProps }) => {
           pl: 20,
           pr: 20,
           borderBottom: '1px solid',
-          borderColor: 'tint1',
+          borderColor: '$gray100',
         }}
       >
         <BrowserButton css={{ mr: 8 }} />

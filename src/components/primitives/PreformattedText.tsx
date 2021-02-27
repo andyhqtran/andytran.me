@@ -30,7 +30,7 @@ export const PreformattedText = ({
       style={!isMounted && !darkMode.value ? a11yLight : a11yDark}
       {...restOfProps}
       css={{
-        backgroundColor: 'tint1',
+        backgroundColor: '$gray100',
         borderRadius: 4,
         fontFamily: 'Courier, monospace',
         fontSize: 18,
