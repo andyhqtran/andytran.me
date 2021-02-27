@@ -187,7 +187,7 @@ const processingInstructions = [
     processNode: (node, children, index) => {
       return (
         <Box as='figcaption' key={index} css={{ mt: 24, textAlign: 'center' }}>
-          <Text css={{ color: '$gray700' }} variant='body-14'>
+          <Text css={{ color: '$gray600' }} variant='body-14'>
             {children}
           </Text>
         </Box>
