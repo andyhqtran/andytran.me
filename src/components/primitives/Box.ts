@@ -7,6 +7,4 @@ export const Box = styled('div', {
   boxSizing: 'border-box',
 });
 
-export type BoxProps = ComponentProps<typeof Box> & {
-  children: ReactNode;
-};
+export type BoxProps = ComponentProps<typeof Box>;
