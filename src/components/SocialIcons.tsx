@@ -10,6 +10,7 @@ import {
   TwitterIcon,
 } from 'primitives/Icon';
 import { IconButton } from 'primitives/IconButton';
+import VisuallyHidden from '@reach/visually-hidden';
 
 export type SocialIconsNames = 'codepen' | 'github' | 'linkedin' | 'twitter';
 
@@ -54,7 +55,6 @@ export const SocialIcons = ({
 
         return (
           <IconButton
-            aria-label={icon.label}
             as='a'
             href={icon.url}
             key={icon.label}
@@ -69,6 +69,7 @@ export const SocialIcons = ({
             size='large'
             target='_blank'
           >
+            <VisuallyHidden>{icon.label}</VisuallyHidden>
             {iconRenderer(icon.label)}
           </IconButton>
         );
