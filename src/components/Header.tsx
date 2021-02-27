@@ -12,6 +12,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from 'primitives/Icon';
 import { IconButton } from 'primitives/IconButton';
 import { Text } from 'primitives/Text';
 import { useScrollPercentage } from 'utils/useScrollPercentage';
+import VisuallyHidden from '@reach/visually-hidden';
 
 export type HeaderProps = BoxProps & {
   nextPost?: {
@@ -82,7 +83,6 @@ export const Header = ({
             <Link href={`/posts/${prevPost.slug}`} passHref>
               <IconButton
                 animate={{ x: 0, opacity: 1 }}
-                aria-label='Previous post'
                 as={motion.a}
                 css={{
                   position: 'absolute',
@@ -100,6 +100,7 @@ export const Header = ({
                 size='large'
                 transition={{ duration: 0.2 }}
               >
+                <VisuallyHidden>Previous post</VisuallyHidden>
                 <ArrowLeftIcon />
               </IconButton>
             </Link>
@@ -175,6 +176,7 @@ export const Header = ({
                 size='large'
                 transition={{ duration: 0.2 }}
               >
+                <VisuallyHidden>Next post</VisuallyHidden>
                 <ArrowRightIcon />
               </IconButton>
             </Link>

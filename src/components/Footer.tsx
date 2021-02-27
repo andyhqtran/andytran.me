@@ -6,6 +6,7 @@ import { Navigation } from 'components/Navigation';
 import { Box } from 'primitives/Box';
 import { MoonIcon, SunIcon } from 'primitives/Icon';
 import { IconButton } from 'primitives/IconButton';
+import VisuallyHidden from '@reach/visually-hidden';
 
 export type FooterProps = ContainerProps & {
   navigation: {
@@ -41,11 +42,13 @@ export const Footer = ({ navigation, title, ...restOfProps }: FooterProps) => {
               css={{ mr: 16, color: 'inherit', fontSize: 14 }}
             />
             <IconButton
-              aria-label='Switch between dark and light mode'
               css={{ color: 'inherit' }}
               onClick={darkMode.toggle}
               size='small'
             >
+              <VisuallyHidden>
+                Switch between dark and light mode
+              </VisuallyHidden>
               {/** Use this instead of darkMode.value to prevent SSR issues */}
               <MoonIcon
                 size='small'
