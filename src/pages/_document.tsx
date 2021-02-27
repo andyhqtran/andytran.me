@@ -26,7 +26,26 @@ export default class MyDocument extends Document {
         styles: (
           <>
             {initialProps.styles}
-            <style id='stitches'>{getCssString()}</style>
+
+            {/* Temporary fix for FOUC - https://github.com/modulz/stitches/issues/404#issuecomment-783400106 */}
+            <style
+              dangerouslySetInnerHTML={{
+                __html: 'body { opacity: 0; visibility: hidden; }',
+              }}
+            />
+            <noscript>
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: 'body { opacity: 1; visibility: visible; }',
+                }}
+              />
+            </noscript>
+
+            {/* Stitches CSS */}
+            <style
+              id='stitches'
+              dangerouslySetInnerHTML={{ __html: getCssString() }}
+            />
           </>
         ),
       };
