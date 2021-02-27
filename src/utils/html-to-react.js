@@ -7,7 +7,6 @@ import { Anchor } from 'primitives/Anchor';
 import { Box } from 'primitives/Box';
 import { Blockquote } from 'primitives/Blockquote';
 import { Bold } from 'primitives/Bold';
-import { Heading } from 'primitives/Heading';
 import { Image } from 'primitives/Image';
 import { Italic } from 'primitives/Italic';
 import { PreformattedText } from 'primitives/PreformattedText';
@@ -28,9 +27,9 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h1' key={index} sx={{ mt: 40, mb: 16 }} variant='h2'>
+        <Text as='h1' css={{ mt: 40, mb: 16 }} key={index} variant='heading-50'>
           {children}
-        </Heading>
+        </Text>
       );
     },
   },
@@ -41,9 +40,9 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h2' key={index} sx={{ mt: 40, mb: 16 }} variant='h3'>
+        <Text as='h2' css={{ mt: 40, mb: 16 }} key={index} variant='heading-32'>
           {children}
-        </Heading>
+        </Text>
       );
     },
   },
@@ -54,9 +53,9 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h3' key={index} sx={{ mt: 40, mb: 16 }} variant='h4'>
+        <Text as='h3' css={{ mt: 40, mb: 16 }} key={index} variant='heading-24'>
           {children}
-        </Heading>
+        </Text>
       );
     },
   },
@@ -67,9 +66,9 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h4' key={index} sx={{ mt: 40, mb: 16 }} variant='h5'>
+        <Text as='h4' css={{ mt: 40, mb: 16 }} key={index} variant='heading-18'>
           {children}
-        </Heading>
+        </Text>
       );
     },
   },
@@ -80,9 +79,9 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h5' key={index} sx={{ mt: 40, mb: 16 }} variant='h5'>
+        <Text as='h5' css={{ mt: 40, mb: 16 }} key={index} variant='heading-14'>
           {children}
-        </Heading>
+        </Text>
       );
     },
   },
@@ -93,9 +92,9 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Heading as='h6' key={index} sx={{ mt: 40, mb: 16 }} variant='h5'>
+        <Text as='h6' css={{ mt: 40, mb: 16 }} key={index} variant='heading-12'>
           {children}
-        </Heading>
+        </Text>
       );
     },
   },
@@ -135,7 +134,7 @@ const processingInstructions = [
       if (children.length < 1) return <br />;
 
       return (
-        <Text as='p' key={index} css={{ mb: 24 }}>
+        <Text as='p' css={{ mb: 24 }} key={index}>
           {children}
         </Text>
       );

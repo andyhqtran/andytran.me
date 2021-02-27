@@ -17,10 +17,10 @@ export const PageTitle = ({
 }: PageTitleProps) => {
   return (
     <Box {...restOfProps}>
-      <Heading sx={{ mb: 16 }} variant='h1'>
+      <Text as='h1' css={{ mb: 16 }} variant='heading-70'>
         {title}
-      </Heading>
-      <Text css={{ color: '$gray600' }} variant='body-24'>
+      </Text>
+      <Text as='p' css={{ color: '$gray600' }} variant='body-24'>
         {description}
       </Text>
     </Box>
