@@ -87,7 +87,7 @@ export const PostCard = ({
           <Button
             as={motion.a}
             onClick={() => {
-              window.analytics.track('Post card button clicked', {
+              window?.analytics?.track('Post card button clicked', {
                 pathname: router.pathname,
                 name: title,
                 url: slug,
