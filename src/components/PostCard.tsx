@@ -84,6 +84,7 @@ export const PostCard = ({
         </Text>
         <Link as={`/posts/${slug}`} href='/posts/[slug]' passHref>
           <Button
+            as='a'
             onClick={() => {
               window?.analytics?.track('Post card button clicked', {
                 pathname: router.pathname,
