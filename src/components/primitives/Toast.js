@@ -118,12 +118,11 @@ export class ToastProvider extends Component {
                           const isLastItem = toast.actions.length - 1 !== index;
                           return (
                             <Anchor
+                              css={{
+                                mr: isLastItem ? 24 : 0,
+                              }}
                               href={action.url}
                               key={action.label}
-                              sx={{
-                                mr: isLastItem ? 24 : 0,
-                                fontSize: 'inherit',
-                              }}
                             >
                               {action.label}
                             </Anchor>
