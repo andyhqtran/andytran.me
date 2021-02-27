@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 
 import { Anchor } from 'primitives/Anchor';
 import { Box } from 'primitives/Box';
+import { Text } from '~/components/primitives/Text';
 
 export const Toast = (props) => {
   return (
@@ -12,7 +13,7 @@ export const Toast = (props) => {
       css={{
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: 'inverse',
+        backgroundColor: '$background',
         border: '1px solid',
         borderColor: '$gray200',
         borderRadius: 8,
@@ -106,7 +107,7 @@ export class ToastProvider extends Component {
                       },
                     }}
                   >
-                    {toast.content}
+                    <Text variant='body-14'>{toast.content}</Text>
                     {toast.actions && (
                       <Box css={{ ml: 40, mr: 8 }}>
                         {toast.actions.map((action, index) => {

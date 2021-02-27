@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import React, { Fragment } from 'react';
 
-import { global } from '~/stitches.config';
+import { global, darkTheme } from '~/stitches.config';
 import { Footer } from 'components/Footer';
 import { Header } from 'components/Header';
 
@@ -23,6 +23,7 @@ Router.events.on('routeChangeComplete', (url) => {
 
 const globalStyles = global({
   body: {
+    backgroundColor: '$background',
     fontFamily: '$inter',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
@@ -44,6 +45,8 @@ export const Layout = ({
   twitterCard,
 }) => {
   globalStyles();
+  darkTheme();
+
   return (
     <Fragment>
       <Head>
