@@ -51,17 +51,10 @@ export const PostTitle = ({
           );
         })}
       </Box>
-      <Heading sx={{ maxWidth: 704, mb: 16 }} variant='h1'>
+      <Text as='h1' css={{ maxWidth: 704, mb: 16 }} variant='heading-70'>
         {title}
-      </Heading>
-      <Text
-        sx={{
-          maxWidth: 704,
-          color: 'tint6',
-          fontSize: 24,
-          lineHeight: '34px',
-        }}
-      >
+      </Text>
+      <Text as='p' css={{ maxWidth: 704, color: '$gray600' }} variant='body-24'>
         {excerpt}
       </Text>
     </Container>

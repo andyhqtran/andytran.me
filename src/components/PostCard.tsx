@@ -78,9 +78,9 @@ export const PostCard = ({
             );
           })}
         </Box>
-        <Heading sx={{ mb: 16 }} variant='h2'>
+        <Text as='h2' css={{ mb: 16 }} variant='heading-50'>
           {title}
-        </Heading>
+        </Text>
         <Text as='p' css={{ mb: 32, color: '$gray600' }}>
           {excerpt}
         </Text>

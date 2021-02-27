@@ -135,17 +135,13 @@ export const Header = ({
                 >
                   Case study
                 </Text>
-                <Heading
-                  sx={{
-                    color: 'tint6',
-                    letterSpacing: 0.8,
-                    textAlign: 'center',
-                    textTransform: 'uppercase',
-                  }}
-                  variant='h6'
+                <Text
+                  as='h6'
+                  css={{ color: '$gray600', textTransform: 'uppercase' }}
+                  variant='heading-14-uppercase'
                 >
                   {postTitle}
-                </Heading>
+                </Text>
               </Box>
             )}
           </AnimatePresence>
