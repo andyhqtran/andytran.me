@@ -53,7 +53,7 @@ export const PostCard = ({
       {...restOfProps}
     >
       <Box
-        sx={{
+        css={{
           alignItems: 'flex-start',
           display: 'flex',
           flexDirection: 'column',
@@ -61,7 +61,7 @@ export const PostCard = ({
           p: 56,
         }}
       >
-        <Box sx={{ display: 'flex', mb: 24 }}>
+        <Box css={{ display: 'flex', mb: 24 }}>
           {tags?.map((tag, index) => {
             const isLastTag = numberOfTags === index + 1;
 

@@ -54,7 +54,7 @@ export const Header = ({
   return (
     <Box
       as='header'
-      __css={{
+      css={{
         zIndex: 1,
         position: 'sticky',
         top: 0,
@@ -62,16 +62,17 @@ export const Header = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: 'inverse',
+        backgroundColor: '$inverse',
         height: 88,
         borderBottom: '1px solid',
         borderColor:
-          isPostsPage || (hasMounted && hasScrolled) ? 'tint2' : 'transparent',
-        ...transitions(['background-color', 'border-color'], '0.2s ease'),
+          isPostsPage || (hasMounted && hasScrolled)
+            ? '$gray200'
+            : 'transparent',
       }}
     >
       <Container
-        sx={{
+        css={{
           position: 'relative',
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 1fr',
@@ -112,7 +113,7 @@ export const Header = ({
           title={title}
         />
         <Box
-          sx={{
+          css={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -147,8 +148,8 @@ export const Header = ({
         </Box>
         {!isPostsPage && (
           <SocialIcons
+            css={{ justifyContent: 'flex-end' }}
             icons={socialIcons}
-            sx={{ justifyContent: 'flex-end' }}
           />
         )}
         <AnimatePresence>
@@ -182,9 +183,7 @@ export const Header = ({
         <Box
           animate={{ width: `${percentage}%` }}
           as={motion.div}
-          initial={{ width: 0 }}
-          transition={{ duration: 0.1, type: 'tween' }}
-          sx={{
+          css={{
             position: 'absolute',
             bottom: -4,
             left: 0,
@@ -192,6 +191,8 @@ export const Header = ({
             backgroundColor: 'primary',
             height: 4,
           }}
+          initial={{ width: 0 }}
+          transition={{ duration: 0.1, type: 'tween' }}
         />
       )}
     </Box>

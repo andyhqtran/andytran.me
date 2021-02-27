@@ -8,18 +8,19 @@ export type NavigationProps = BoxProps & {
   items: { label: string; url: string }[];
 };
 
-export const Navigation = ({ items, ...restOfProps }: NavigationProps) => {
+export const Navigation = ({ css, items, ...restOfProps }: NavigationProps) => {
   const router = useRouter();
   const numberOfItems = items?.length ?? 0;
 
   return (
     <Box
       {...restOfProps}
-      __css={{
+      css={{
         display: 'flex',
         alignItems: 'center',
-        color: 'tint8',
+        color: '$gray800',
         fontSize: 18,
+        ...css,
       }}
     >
       {items?.map((item, index) => {

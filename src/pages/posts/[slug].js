@@ -20,7 +20,7 @@ const PostsSlugPage = ({ post, title }) => {
       <PostTitle excerpt={post.excerpt} tags={post.tags} title={post.title} />
       <PostFeaturedImage image={post.image} title={post.title} />
       <Container
-        sx={{
+        css={{
           display: 'grid',
           gridTemplateColumns: ['1fr', '1fr', '704px 1fr', '704px 1fr'],
           mt: 20,
@@ -28,7 +28,7 @@ const PostsSlugPage = ({ post, title }) => {
       >
         <Box
           as='article'
-          sx={{ maxWidth: 704, mx: ['auto', 'auto', '0', '0'] }}
+          css={{ maxWidth: 704, mx: ['auto', 'auto', '0', '0'] }}
         >
           {parseHTML(post.html)}
         </Box>

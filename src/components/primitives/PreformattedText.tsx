@@ -15,7 +15,7 @@ import { Box, BoxProps } from 'primitives/Box';
 export type PreformattedTextProps = BoxProps<HTMLPreElement> &
   SyntaxHighlighterProps;
 
-export const PreformattedText = (props: PreformattedTextProps) => {
+export const PreformattedText = ({ ...restOfProps }: PreformattedTextProps) => {
   const darkMode = useDarkMode(true);
   const isMounted = useMountedState();
 
@@ -26,8 +26,8 @@ export const PreformattedText = (props: PreformattedTextProps) => {
       as={SyntaxHighlighter}
       customStyle={{ background: null, padding: 32 }}
       style={!isMounted && !darkMode.value ? a11yLight : a11yDark}
-      {...props}
-      __css={{
+      {...restOfProps}
+      css={{
         backgroundColor: 'tint1',
         borderRadius: 4,
         fontFamily: 'Courier, monospace',
@@ -36,6 +36,7 @@ export const PreformattedText = (props: PreformattedTextProps) => {
         code: {
           fontFamily: 'Courier, monospace',
         },
+        ...css,
       }}
     />
   );

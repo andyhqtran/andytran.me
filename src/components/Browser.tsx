@@ -7,8 +7,8 @@ const BrowserButton = (props: BoxProps) => {
   return (
     <Box
       {...props}
-      __css={{
-        backgroundColor: 'tint2',
+      css={{
+        backgroundColor: '$gray200',
         width: 8,
         height: 8,
         borderRadius: 4,
@@ -23,17 +23,16 @@ export const Browser = ({ children, ...restOfProps }) => {
   return (
     <Box
       {...restOfProps}
-      __css={{
+      css={{
         display: 'flex',
         flexDirection: 'column',
         backgroundColor: 'inverse',
         borderRadius: 12,
-        boxShadow: ({ colors }) => `0 12px 24px ${rgba(colors.black, 0.04)}`,
-        ...transitions(['background-color'], '0.2s ease'),
+        boxShadow: `0 12px 24px $colors$gray100`,
       }}
     >
       <Box
-        sx={{
+        css={{
           display: 'flex',
           alignItems: 'center',
           height: 48,
@@ -41,14 +40,13 @@ export const Browser = ({ children, ...restOfProps }) => {
           pr: 20,
           borderBottom: '1px solid',
           borderColor: 'tint1',
-          ...transitions(['border-color'], '0.2s ease'),
         }}
       >
-        <BrowserButton sx={{ mr: 8 }} />
-        <BrowserButton sx={{ mr: 8 }} />
+        <BrowserButton css={{ mr: 8 }} />
+        <BrowserButton css={{ mr: 8 }} />
         <BrowserButton />
       </Box>
-      <Box sx={{ position: 'relative', flexGrow: 1, overflow: 'hidden' }}>
+      <Box css={{ position: 'relative', flexGrow: 1, overflow: 'hidden' }}>
         {children}
       </Box>
     </Box>

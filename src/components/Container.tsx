@@ -1,19 +1,13 @@
-import React from 'react';
+import { ComponentProps } from 'react';
 
-import { Box, BoxProps } from 'primitives/Box';
+import { styled } from '~/stitches.config';
 
-export type ContainerProps = BoxProps;
+export const Container = styled('div', {
+  width: '100%',
+  maxWidth: 1296,
+  mx: 'auto',
+  px: 56,
+  boxSizing: 'border-box',
+});
 
-export const Container = (props: ContainerProps) => {
-  return (
-    <Box
-      {...props}
-      __css={{
-        width: '100%',
-        maxWidth: 1296,
-        mx: 'auto',
-        px: 56,
-      }}
-    />
-  );
-};
+export type ContainerProps = ComponentProps<typeof Box>;
