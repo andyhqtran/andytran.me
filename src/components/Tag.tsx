@@ -14,7 +14,7 @@ export type TagProps = BoxProps & {
 
 export const Tag = ({ description, css, image, name, slug }: TagProps) => {
   return (
-    <Link as={`/tag/${slug}`} href='/tag/[slug]' passHref>
+    <Link href={`/tag/${slug}`} passHref>
       <Box
         css={{
           display: 'block',
