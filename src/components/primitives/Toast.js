@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-import { transitions } from 'polished';
 import React, { Component, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
 
