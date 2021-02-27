@@ -1,19 +1,10 @@
-import React from 'react';
-import { MotionProps, motion } from 'framer-motion';
-import { Box, BoxProps } from './Box';
+import { ComponentProps } from 'react';
 
-export type ImageProps = BoxProps<HTMLImageElement> & MotionProps;
+import { styled } from '~/stitches.config';
 
-export const Image = (props: ImageProps) => {
-  return (
-    <Box
-      as={motion.img}
-      {...props}
-      __css={{
-        display: 'block',
-        maxWidth: '100%',
-      }}
-      __themeKey='images'
-    />
-  );
-};
+export const Image = styled('img', {
+  display: 'block',
+  maxWidth: '100%',
+});
+
+export type ImageProps = ComponentProps<typeof Image>;
