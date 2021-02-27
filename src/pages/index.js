@@ -19,7 +19,7 @@ const IndexPage = ({ description, navigation, posts, title }) => {
               image={post.image}
               key={post.id}
               slug={post.slug}
-              sx={{ mb: 24 }}
+              css={{ mb: 24 }}
               tags={post.tags}
               title={post.title}
             />
