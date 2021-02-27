@@ -33,7 +33,7 @@ export const Logo = ({ css, title, ...restOfProps }: LogoProps) => {
           textDecoration: 'none',
           overflow: 'hidden',
           '&:active': {
-            borderColor: 'tint2',
+            borderColor: '$gray200',
           },
 
           '&:focus': {

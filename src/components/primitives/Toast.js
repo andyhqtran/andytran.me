@@ -9,7 +9,6 @@ import { Box } from 'primitives/Box';
 export const Toast = (props) => {
   return (
     <Box
-      as={motion.div}
       __themeKey='toasts'
       {...props}
       css={{
@@ -17,12 +16,11 @@ export const Toast = (props) => {
         alignItems: 'center',
         backgroundColor: 'inverse',
         border: '1px solid',
-        borderColor: 'tint2',
+        borderColor: '$gray200',
         borderRadius: 8,
         p: 16,
-        boxShadow: ({ colors }) => `0 2px 8px ${colors.tint1}`,
+        boxShadow: '0 2px 8px $colors$gray100',
         fontSize: 14,
-        ...transitions(['border-color', 'background-color'], '0.2s ease'),
       }}
     />
   );
@@ -31,7 +29,6 @@ export const Toast = (props) => {
 export const ToastContainer = (props) => {
   return (
     <Box
-      as={motion.div}
       {...props}
       css={{
         zIndex: 2,
