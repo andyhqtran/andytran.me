@@ -148,7 +148,7 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Blockquote key={index} sx={{ my: 24 }}>
+        <Blockquote css={{ my: 24 }} key={index}>
           {children}
         </Blockquote>
       );
