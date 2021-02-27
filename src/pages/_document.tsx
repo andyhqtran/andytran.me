@@ -2,6 +2,7 @@ import * as snippet from '@segment/snippet';
 import Document, {
   DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
 } from 'next/document';
@@ -48,7 +49,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang='en'>
+      <Html lang='en'>
         <Head>
           <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link href='/css/normalize.css' rel='stylesheet' />
@@ -89,7 +90,7 @@ export default class MyDocument extends Document {
           <div id='notifications' />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
