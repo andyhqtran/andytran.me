@@ -1,4 +1,4 @@
-import { ComponentType } from 'react';
+import { ComponentProps } from 'react';
 
 import { styled } from '~/stitches.config';
 
@@ -13,4 +13,4 @@ export const Blockquote = styled('blockquote', {
   fontStyle: 'italic',
 });
 
-export type BlockquoteProps = ComponentType<typeof Blockquote>;
+export type BlockquoteProps = ComponentProps<typeof Blockquote>;

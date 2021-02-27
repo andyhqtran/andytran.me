@@ -24,13 +24,14 @@ export type PostCardProps = CardProps & {
     name: string;
     slug: string;
   }[];
+  title: string;
 };
 
 export const PostCard = ({
+  css,
   excerpt,
   image,
   slug,
-  sx,
   tags,
   title,
   ...restOfProps
@@ -42,15 +43,14 @@ export const PostCard = ({
   return (
     <Card
       animate={{ opacity: inView ? 1 : 0 }}
-      as={motion.div}
-      initial={{ opacity: 0 }}
-      ref={ref}
-      sx={{
+      css={{
         display: 'flex',
         justifyContent: 'space-between',
         overflow: 'hidden',
-        ...sx,
+        ...css,
       }}
+      initial={{ opacity: 0 }}
+      ref={ref}
       {...restOfProps}
     >
       <Box
