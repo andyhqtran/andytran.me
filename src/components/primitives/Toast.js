@@ -74,7 +74,7 @@ export class ToastProvider extends Component {
     const { mounted, toasts } = this.state;
 
     return (
-      <ToastContext.Provider>
+      <ToastContext.Provider value={this.state}>
         {children}
         {mounted &&
           createPortal(
