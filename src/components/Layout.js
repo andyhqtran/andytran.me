@@ -25,6 +25,8 @@ const globalStyles = global({
     fontFamily: '$inter',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
+    opacity: 1,
+    visibility: 'visible',
   },
 });
 
