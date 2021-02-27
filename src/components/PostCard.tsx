@@ -82,7 +82,7 @@ export const PostCard = ({
         <Text as='p' css={{ mb: 32, color: '$gray600' }}>
           {excerpt}
         </Text>
-        <Link as={`/posts/${slug}`} href='/posts/[slug]' passHref>
+        <Link href={`/posts/${slug}`} passHref>
           <Button
             as='a'
             onClick={() => {

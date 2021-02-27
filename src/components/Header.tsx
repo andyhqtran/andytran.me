@@ -79,7 +79,7 @@ export const Header = ({
       >
         <AnimatePresence>
           {hasPrevPost && isPostsPage && (
-            <Link as={`/posts/${prevPost.slug}`} href='/posts/[slug]' passHref>
+            <Link href={`/posts/${prevPost.slug}`} passHref>
               <IconButton
                 animate={{ x: 0, opacity: 1 }}
                 aria-label='Previous post'
@@ -104,6 +104,7 @@ export const Header = ({
               </IconButton>
             </Link>
           )}
+          yarn
         </AnimatePresence>
         <Logo
           css={{
@@ -154,7 +155,7 @@ export const Header = ({
         )}
         <AnimatePresence>
           {hasNextPost && isPostsPage && (
-            <Link as={`/posts/${nextPost.slug}`} href='/posts/[slug]' passHref>
+            <Link href={`/posts/${nextPost.slug}`} passHref>
               <IconButton
                 animate={{ x: 0, opacity: 1 }}
                 aria-label='Next post'
