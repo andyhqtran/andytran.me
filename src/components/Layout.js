@@ -16,9 +16,7 @@ Router.events.on('routeChangeComplete', (url) => {
     });
   }
 
-  if (window.analytics) {
-    window.analytics.page(url);
-  }
+  window?.analytics?.page(url);
 });
 
 const globalStyles = global({

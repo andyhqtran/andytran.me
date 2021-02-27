@@ -37,7 +37,7 @@ export const Navigation = ({ css, items, ...restOfProps }: NavigationProps) => {
             href={item.url}
             key={item.label}
             onClick={() => {
-              window.analytics.track('Navigation link clicked', {
+              window?.analytics?.track('Navigation link clicked', {
                 pathname: router.pathname,
                 name: item.label,
                 url: item.url,
