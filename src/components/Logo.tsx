@@ -1,6 +1,5 @@
 import VisuallyHidden from '@reach/visually-hidden';
 import Link from 'next/link';
-import { rgba, transitions } from 'polished';
 import React from 'react';
 
 import { Box, BoxProps } from 'primitives/Box';
