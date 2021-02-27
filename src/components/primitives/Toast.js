@@ -5,11 +5,9 @@ import { Anchor } from 'primitives/Anchor';
 import { Box } from 'primitives/Box';
 import { Text } from '~/components/primitives/Text';
 
-export const Toast = (props) => {
+export const Toast = ({ css, ...restOfProps }) => {
   return (
     <Box
-      __themeKey='toasts'
-      {...props}
       css={{
         display: 'flex',
         alignItems: 'center',
@@ -20,7 +18,9 @@ export const Toast = (props) => {
         p: 16,
         boxShadow: '0 2px 8px $colors$gray100',
         fontSize: 14,
+        ...css,
       }}
+      {...restOfProps}
     />
   );
 };
@@ -98,7 +98,9 @@ export class ToastProvider extends Component {
                 return (
                   <Toast
                     key={toast.id}
-                    mb={toasts.length - 1 !== index && 24}
+                    css={{
+                      mb: toasts.length - 1 !== index && 24,
+                    }}
                     variants={{
                       hidden: { x: '100%' },
                       show: {
