@@ -20,7 +20,9 @@ export const Navigation = ({ css, items, ...restOfProps }: NavigationProps) => {
         alignItems: 'center',
         color: '$gray800',
         fontSize: 18,
-        ...css,
+
+        /** @todo remove this typecasting */
+        ...(css as {}),
       }}
     >
       {items?.map((item, index) => {

@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Box, BoxProps } from 'primitives/Box';
 import { Image } from 'primitives/Image';
+import VisuallyHidden from '@reach/visually-hidden';
 
 export type TagProps = BoxProps & {
   description: string;
@@ -34,9 +35,11 @@ export const Tag = ({ description, css, image, name, slug }: TagProps) => {
             boxShadow: '0 0 0 2px $colors$blue500',
           },
 
-          ...css,
+          /** @todo remove this typecasting */
+          ...(css as {}),
         }}
       >
+        <VisuallyHidden>{name}</VisuallyHidden>
         <Image alt={description} src={image} title={name} />
       </Box>
     </Link>
