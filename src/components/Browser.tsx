@@ -18,16 +18,17 @@ const BrowserButton = (props: BoxProps) => {
 
 export type BrowserProps = BoxProps;
 
-export const Browser = ({ children, ...restOfProps }) => {
+export const Browser = ({ children, css, ...restOfProps }) => {
   return (
     <Box
       {...restOfProps}
       css={{
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: 'inverse',
+        backgroundColor: '$background',
         borderRadius: 12,
         boxShadow: `0 12px 24px $colors$gray100`,
+        ...css,
       }}
     >
       <Box

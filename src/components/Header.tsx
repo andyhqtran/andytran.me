@@ -61,7 +61,7 @@ export const Header = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '$inverse',
+        backgroundColor: '$background',
         height: 88,
         borderBottom: '1px solid',
         borderColor:
