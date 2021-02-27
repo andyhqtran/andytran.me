@@ -135,7 +135,7 @@ const processingInstructions = [
       if (children.length < 1) return <br />;
 
       return (
-        <Text key={index} sx={{ mb: 24 }}>
+        <Text as='p' key={index} css={{ mb: 24 }}>
           {children}
         </Text>
       );
@@ -161,14 +161,7 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Anchor
-          href={node.attribs.href}
-          key={index}
-          sx={{
-            fontSize: 'inherit',
-            lineHeight: 'inherit',
-          }}
-        >
+        <Anchor href={node.attribs.href} key={index}>
           {children}
         </Anchor>
       );

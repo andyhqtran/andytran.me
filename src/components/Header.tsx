@@ -129,14 +129,9 @@ export const Header = ({
                 transition={{ duration: 0.2 }}
               >
                 <Text
-                  sx={{
-                    color: 'tint5',
-                    fontSize: 12,
-                    fontWeight: 'bold',
-                    letterSpacing: 0.8,
-                    textAlign: 'center',
-                    textTransform: 'uppercase',
-                  }}
+                  as='p'
+                  css={{ color: '$gray500', textAlign: 'center' }}
+                  variant='heading-12-uppercase'
                 >
                   Case study
                 </Text>

@@ -27,6 +27,10 @@ export const Navigation = ({ items, ...restOfProps }: NavigationProps) => {
 
         return (
           <Anchor
+            css={{
+              mr: isLastItem ? 0 : 16,
+              color: 'inherit',
+            }}
             href={item.url}
             key={item.label}
             onClick={() => {
@@ -35,11 +39,6 @@ export const Navigation = ({ items, ...restOfProps }: NavigationProps) => {
                 name: item.label,
                 url: item.url,
               });
-            }}
-            sx={{
-              mr: isLastItem ? 0 : 16,
-              color: 'inherit',
-              fontSize: 'inherit',
             }}
           >
             {item.label}
