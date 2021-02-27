@@ -10,4 +10,4 @@ export const Container = styled('div', {
   boxSizing: 'border-box',
 });
 
-export type ContainerProps = ComponentProps<typeof Box>;
+export type ContainerProps = ComponentProps<typeof Container>;
