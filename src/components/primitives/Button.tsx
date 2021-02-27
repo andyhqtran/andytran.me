@@ -1,60 +1,65 @@
-import { MotionProps, motion } from 'framer-motion';
-import { rgba, transitions } from 'polished';
-import React, { forwardRef } from 'react';
+import { StitchesVariants } from '@stitches/react';
+import { ComponentProps } from 'react';
 
-import { Box, BoxProps } from 'primitives/Box';
+import { styled } from '~/stitches.config';
 
-export type ButtonVariant = 'primary' | 'secondary';
+export const Button = styled('button', {
+  display: 'flex',
+  alignItems: 'center',
+  backgroundColor: 'transparent',
+  borderWidth: 1,
+  borderStyle: 'solid',
+  borderColor: '$gray200',
+  color: '$gray800',
+  fontFamily: '$inter',
+  fontWeight: '$regular',
+  letterSpacing: -0.2,
+  textDecoration: 'none',
+  cursor: 'pointer',
 
-export type ButtonProps = BoxProps<HTMLButtonElement> &
-  MotionProps & {
-    variant?: ButtonVariant;
-  };
-
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = 'primary', ...restOfProps }, ref) => {
-    return (
-      <Box
-        as={motion.button}
-        ref={ref}
-        whileTap={{ scale: 0.96 }}
-        variant={variant}
-        {...restOfProps}
-        __css={{
-          display: 'flex',
-          alignItems: 'center',
-          backgroundColor: 'transparent',
-          height: 56,
-          paddingRight: 24,
-          paddingLeft: 24,
-          border: '1px solid',
-          borderColor: 'tint2',
-          borderRadius: 28,
-          boxShadow: '0 0 0 4px transparent',
-          color: 'tint8',
-          fontSize: 18,
-          letterSpacing: -0.2,
-          textAlign: 'center',
-          textDecoration: 'none',
-          cursor: 'pointer',
-          ...transitions(
-            ['background-color', 'border-color', 'box-shadow', 'color'],
-            '0.2s ease',
-          ),
-          '&:hover': {
-            backgroundColor: 'tint1',
-          },
-          '&:focus': {
-            outline: 'none',
-          },
-          '&.focus-visible': {
-            borderColor: 'transparent',
-            boxShadow: ({ colors }) =>
-              `0 0 0 4px ${rgba(colors.primary, 0.36)}`,
-          },
-        }}
-        __themeKey='buttons'
-      />
-    );
+  '&:hover': {
+    backgroundColor: '$gray100',
   },
-);
+
+  '&:focus': {
+    outline: 'none',
+  },
+
+  '&:focus-visible': {
+    boxShadow: '0 0 0 2px $colors$blue800',
+  },
+
+  variants: {
+    size: {
+      large: {
+        height: 56,
+        borderRadius: 28,
+        paddingLeft: 24,
+        paddingRight: 24,
+        fontSize: 18,
+      },
+      medium: {
+        height: 48,
+        borderRadius: 24,
+        paddingLeft: 24,
+        paddingRight: 24,
+        fontSize: 18,
+      },
+      small: {
+        height: 40,
+        borderRadius: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        fontSize: 16,
+      },
+    },
+  },
+
+  defaultVariants: {
+    size: 'small',
+  },
+});
+
+export type ButtonProps = ComponentProps<typeof Button>;
+
+export type ButtonVariant = StitchesVariants<typeof Button>;
