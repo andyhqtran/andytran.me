@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 
 import { styled } from '~/stitches.config';
 
@@ -7,4 +7,6 @@ export const Box = styled('div', {
   boxSizing: 'border-box',
 });
 
-export type BoxProps = ComponentProps<typeof Box>;
+export type BoxProps = ComponentProps<typeof Box> & {
+  children: ReactNode;
+};
