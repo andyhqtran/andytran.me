@@ -131,7 +131,7 @@ const processingInstructions = [
       return node.name === 'p';
     },
     processNode: (node, children, index) => {
-      if (children.length < 1) return <br />;
+      if (children.length < 1) return <br key={index} />;
 
       return (
         <Text as='p' css={{ mb: 24, color: '$gray700' }} key={index}>
