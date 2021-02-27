@@ -7,8 +7,7 @@
     "build": "next build",
     "dev": "next",
     "lint": "eslint .",
-    "start": "next start",
-    "storybook": "start-storybook -s ./public -p 3001"
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -28,8 +27,6 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-export-default-from": "^7.12.1",
-    "@storybook/addon-essentials": "^6.1.14",
-    "@storybook/react": "^6.1.10",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^3.10.1",
     "babel-eslint": "^10.1.0",
