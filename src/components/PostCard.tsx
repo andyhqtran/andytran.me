@@ -94,6 +94,7 @@ export const PostCard = ({
                 url: slug,
               });
             }}
+            size='large'
           >
             View project &#10230;
           </Button>
