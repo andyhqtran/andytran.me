@@ -1,21 +1,12 @@
-import { transitions } from 'polished';
-import React, { forwardRef } from 'react';
+import { ComponentProps, ReactNode } from 'react';
 
-import { Box, BoxProps } from 'primitives/Box';
+import { styled } from '~/stitches.config';
 
-export type CardProps = Omit<BoxProps<HTMLDivElement>, 'ref'>;
-
-export const Card = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
-  return (
-    <Box
-      {...props}
-      ref={ref}
-      __themeKey='cards'
-      __css={{
-        backgroundColor: 'tint1',
-        borderRadius: 20,
-        ...transitions(['background-color'], '0.2s ease'),
-      }}
-    />
-  );
+export const Card = styled('div', {
+  backgroundColor: '$gray100',
+  borderRadius: 20,
 });
+
+export type CardProps = ComponentProps<typeof Card> & {
+  children: ReactNode;
+};
