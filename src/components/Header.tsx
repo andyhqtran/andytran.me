@@ -87,12 +87,12 @@ export const Header = ({
                 as={motion.a}
                 css={{
                   position: 'absolute',
-                  right: [
-                    'calc(100% - 56px)',
-                    'calc(100% - 56px)',
-                    'calc(100% - 56px)',
-                    'calc(100% + 16px - 56px)',
-                  ],
+                  right: 'calc(100% - 56px)',
+                  when: {
+                    desktop: {
+                      right: 'calc(100% + 16px - 56px)',
+                    },
+                  },
                 }}
                 exit={{ x: 28, opacity: 0 }}
                 initial={{ x: 28, opacity: 0 }}
@@ -161,12 +161,12 @@ export const Header = ({
                 as={motion.a}
                 css={{
                   position: 'absolute',
-                  left: [
-                    'calc(100% - 56px)',
-                    'calc(100% - 56px)',
-                    'calc(100% - 56px)',
-                    'calc(100% + 16px - 56px)',
-                  ],
+                  left: 'calc(100% - 56px)',
+                  when: {
+                    desktop: {
+                      left: 'calc(100% + 16px - 56px)',
+                    },
+                  },
                 }}
                 exit={{ x: -28, opacity: 0 }}
                 initial={{ x: -28, opacity: 0 }}

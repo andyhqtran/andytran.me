@@ -37,7 +37,11 @@ export const stitchesConfig = createCss({
       regular: '400',
     },
   },
-  conditions: {},
+  conditions: {
+    largeDesktop: '@media(min-width: 1296px)',
+    tablet: '@media (min-width: 768px)',
+    desktop: '@media (min-width: 1024px)',
+  },
   utils: {
     m: () => (value) => ({
       marginTop: value,
