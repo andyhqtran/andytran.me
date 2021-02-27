@@ -19,12 +19,9 @@
       "api": ["src/api/*"],
       "api/*": ["src/api/*"],
       "components/*": ["src/components/*"],
-      "constants/*": ["src/constants/*"],
       "primitives/*": ["src/components/primitives/*"],
       "pages": ["src/pages/*"],
       "pages/*": ["src/pages/*"],
-      "themes": ["src/themes/*"],
-      "themes/*": ["src/themes/*"],
       "utils": ["src/utils/*"],
       "utils/*": ["src/utils/*"]
     }
