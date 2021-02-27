@@ -97,6 +97,7 @@ export const Header = ({
                 initial={{ x: 28, opacity: 0 }}
                 key='previous-arrow'
                 role='button'
+                size='large'
                 transition={{ duration: 0.2 }}
               >
                 <ArrowLeftIcon />
@@ -170,6 +171,7 @@ export const Header = ({
                 exit={{ x: -28, opacity: 0 }}
                 initial={{ x: -28, opacity: 0 }}
                 key='next-arrow'
+                size='large'
                 transition={{ duration: 0.2 }}
               >
                 <ArrowRightIcon />
