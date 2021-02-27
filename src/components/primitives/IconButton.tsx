@@ -1,59 +1,67 @@
-import { MotionProps, motion } from 'framer-motion';
-import { rgba, transitions } from 'polished';
-import React, { forwardRef } from 'react';
+import { StitchesVariants } from '@stitches/react';
+import { ComponentProps } from 'react';
 
-import { Box, BoxProps } from 'primitives/Box';
+import { styled } from '~/stitches.config';
 
-export type IconButtonSize = 'small' | 'regular';
+export const IconButton = styled('button', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundColor: 'transparent',
+  borderWidth: 1,
+  borderStyle: 'sold',
+  borderColor: 'transparent',
+  color: '$gray500',
+  textDecoration: 'none',
+  cursor: 'pointer',
 
-export type IconButtonProps = Omit<BoxProps<HTMLButtonElement>, 'size'> &
-  MotionProps & { size?: IconButtonSize };
-
-export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ size = 'regular', ...restOfProps }, ref) => {
-    const isSmallButton = size === 'small';
-
-    return (
-      <Box
-        as={motion.button}
-        ref={ref}
-        whileTap={{ scale: 0.94 }}
-        {...restOfProps}
-        __css={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: 'transparent',
-          width: isSmallButton ? 40 : 56,
-          height: isSmallButton ? 40 : 56,
-          border: '1px solid',
-          borderColor: 'transparent',
-          borderRadius: '100%',
-          color: 'tint5',
-          textDecoration: 'none',
-          cursor: 'pointer',
-          ...transitions(
-            ['background-color', 'border-color', 'box-shadow', 'color'],
-            '0.2s ease',
-          ),
-          '&:hover': {
-            backgroundColor: 'tint1',
-            color: 'tint8',
-          },
-          '&:active': {
-            borderColor: 'tint2',
-          },
-          '&:focus': {
-            outline: 'none',
-          },
-          '&.focus-visible': {
-            borderColor: 'transparent',
-            boxShadow: ({ colors }) =>
-              `0 0 0 2px ${rgba(colors.primary, 0.36)}`,
-          },
-        }}
-        __themeKey='iconButtons'
-      />
-    );
+  '&:hover': {
+    backgroundColor: '$gray100',
+    color: '$gray800',
   },
-);
+
+  '&:active': {
+    borderColor: '$gray200',
+  },
+
+  '&:focus': {
+    outline: 'none',
+  },
+
+  '&:focus-visible': {
+    borderColor: 'transparent',
+    boxShadow: '0 0 0 2px $colors$blue800',
+    color: '$gray800',
+  },
+
+  variants: {
+    size: {
+      large: {
+        width: 56,
+        height: 56,
+        borderRadius: 28,
+        fontSize: 18,
+      },
+      medium: {
+        width: 48,
+        height: 48,
+        borderRadius: 24,
+        fontSize: 18,
+      },
+      small: {
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        fontSize: 16,
+      },
+    },
+  },
+
+  defaultVariants: {
+    size: 'small',
+  },
+});
+
+export type IconButtonProps = ComponentProps<typeof IconButton>;
+
+export type IconButtonVariants = StitchesVariants<typeof IconButton>;

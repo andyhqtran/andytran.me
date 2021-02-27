@@ -85,11 +85,7 @@ export const Header = ({
                 animate={{ x: 0, opacity: 1 }}
                 aria-label='Previous post'
                 as={motion.a}
-                exit={{ x: 28, opacity: 0 }}
-                initial={{ x: 28, opacity: 0 }}
-                key='previous-arrow'
-                role='button'
-                sx={{
+                css={{
                   position: 'absolute',
                   right: [
                     'calc(100% - 56px)',
@@ -98,6 +94,10 @@ export const Header = ({
                     'calc(100% + 16px - 56px)',
                   ],
                 }}
+                exit={{ x: 28, opacity: 0 }}
+                initial={{ x: 28, opacity: 0 }}
+                key='previous-arrow'
+                role='button'
                 transition={{ duration: 0.2 }}
               >
                 <ArrowLeftIcon />
@@ -159,10 +159,7 @@ export const Header = ({
                 animate={{ x: 0, opacity: 1 }}
                 aria-label='Next post'
                 as={motion.a}
-                exit={{ x: -28, opacity: 0 }}
-                initial={{ x: -28, opacity: 0 }}
-                key='next-arrow'
-                sx={{
+                css={{
                   position: 'absolute',
                   left: [
                     'calc(100% - 56px)',
@@ -171,6 +168,9 @@ export const Header = ({
                     'calc(100% + 16px - 56px)',
                   ],
                 }}
+                exit={{ x: -28, opacity: 0 }}
+                initial={{ x: -28, opacity: 0 }}
+                key='next-arrow'
                 transition={{ duration: 0.2 }}
               >
                 <ArrowRightIcon />
