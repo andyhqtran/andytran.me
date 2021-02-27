@@ -1,29 +1,19 @@
-import { MotionProps, motion } from 'framer-motion';
 import Link from 'next/link';
-import { rgba } from 'polished';
 import React from 'react';
 
 import { Box, BoxProps } from 'primitives/Box';
 import { Image } from 'primitives/Image';
 
-export type TagProps = BoxProps<HTMLAnchorElement> &
-  MotionProps & {
-    description: string;
-    image: string;
-    name: string;
-    slug: string;
-  };
+export type TagProps = BoxProps & {
+  description: string;
+  image: string;
+  name: string;
+  slug: string;
+};
 
-export const Tag = ({
-  description,
-  css,
-  image,
-  name,
-  slug,
-  ...restOfProps
-}: TagProps) => {
+export const Tag = ({ description, css, image, name, slug }: TagProps) => {
   return (
-    <Link as={`/tag/${slug}`} passHref href='/tag/[slug]'>
+    <Link as={`/tag/${slug}`} href='/tag/[slug]' passHref>
       <Box
         css={{
           display: 'block',
@@ -34,19 +24,18 @@ export const Tag = ({
           overflow: 'hidden',
           cursor: 'pointer',
           userSelect: 'none',
+
           '&:focus': {
             outline: 'none',
           },
+
           '&:focus-visible': {
             borderColor: 'transparent',
-            boxShadow: ({ colors }) =>
-              `0 0 0 2px ${rgba(colors.primary, 0.36)}`,
+            boxShadow: '0 0 0 2px $colors$blue500',
           },
+
           ...css,
         }}
-        as={motion.a}
-        whileTap={{ scale: 0.94 }}
-        {...restOfProps}
       >
         <Image alt={description} src={image} title={name} />
       </Box>
