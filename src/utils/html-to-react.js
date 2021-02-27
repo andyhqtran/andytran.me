@@ -186,7 +186,7 @@ const processingInstructions = [
     },
     processNode: (node, children, index) => {
       return (
-        <Box as='figcaption' key={index} sx={{ mt: 24, textAlign: 'center' }}>
+        <Box as='figcaption' key={index} css={{ mt: 24, textAlign: 'center' }}>
           {children}
         </Box>
       );
@@ -231,7 +231,7 @@ const processingInstructions = [
       return (
         <PreformattedText
           key={index}
-          sx={{ mb: 48 }}
+          css={{ mb: 48 }}
           language={isValidLanguage && language}
         >
           {children}

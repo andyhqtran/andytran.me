@@ -16,6 +16,7 @@ export type TagProps = BoxProps<HTMLAnchorElement> &
 
 export const Tag = ({
   description,
+  css,
   image,
   name,
   slug,
@@ -24,7 +25,7 @@ export const Tag = ({
   return (
     <Link as={`/tag/${slug}`} passHref href='/tag/[slug]'>
       <Box
-        __css={{
+        css={{
           display: 'block',
           backgroundColor: 'tint1',
           width: 56,
@@ -36,11 +37,12 @@ export const Tag = ({
           '&:focus': {
             outline: 'none',
           },
-          '&.focus-visible': {
+          '&:focus-visible': {
             borderColor: 'transparent',
             boxShadow: ({ colors }) =>
               `0 0 0 2px ${rgba(colors.primary, 0.36)}`,
           },
+          ...css,
         }}
         as={motion.a}
         whileTap={{ scale: 0.94 }}

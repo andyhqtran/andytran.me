@@ -14,13 +14,14 @@ export type HeroProps = BoxProps & {
 };
 
 export const Hero = ({
+  css,
   description,
   navigation,
   title,
   ...restOfProps
 }: HeroProps) => {
   return (
-    <Box __css={{ px: 56, pt: 40, pb: 64 }} {...restOfProps}>
+    <Box css={{ px: 56, pt: 40, pb: 64, ...css }} {...restOfProps}>
       <PageTitle
         description={description}
         sx={{ maxWidth: 526 }}

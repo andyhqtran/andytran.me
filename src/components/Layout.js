@@ -1,4 +1,3 @@
-import { useTheme } from '@emotion/react';
 import Head from 'next/head';
 import Router from 'next/router';
 import React, { Fragment } from 'react';
@@ -35,7 +34,6 @@ export const Layout = ({
   title,
   twitterCard,
 }) => {
-  const theme = useTheme();
   return (
     <Fragment>
       <Head>
@@ -81,11 +79,6 @@ export const Layout = ({
           name='twitter:title'
           key='twitter:title'
           content={twitterCard?.title ?? openGraph?.title ?? title}
-        />
-        <meta
-          name='theme-color'
-          key='theme-color'
-          content={theme.colors.primary}
         />
         <link rel='shortcut icon' href={icon} key='favicon' />
       </Head>

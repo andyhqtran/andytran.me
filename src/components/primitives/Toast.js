@@ -12,7 +12,7 @@ export const Toast = (props) => {
       as={motion.div}
       __themeKey='toasts'
       {...props}
-      __css={{
+      css={{
         display: 'flex',
         alignItems: 'center',
         backgroundColor: 'inverse',
@@ -33,7 +33,7 @@ export const ToastContainer = (props) => {
     <Box
       as={motion.div}
       {...props}
-      __css={{
+      css={{
         zIndex: 2,
         position: 'fixed',
         top: 88,
@@ -113,7 +113,7 @@ export class ToastProvider extends Component {
                   >
                     {toast.content}
                     {toast.actions && (
-                      <Box sx={{ ml: 40, mr: 8 }}>
+                      <Box css={{ ml: 40, mr: 8 }}>
                         {toast.actions.map((action, index) => {
                           const isLastItem = toast.actions.length - 1 !== index;
                           return (

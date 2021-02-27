@@ -28,13 +28,13 @@ export const PostTitle = ({
 
   return (
     <Container
-      sx={{ maxWidth: 1072, mx: 'auto', pt: 80, px: 56 }}
+      css={{ maxWidth: 1072, mx: 'auto', pt: 80, px: 56 }}
       {...restOfProps}
     >
       <Head>
         <title>{title}</title>
       </Head>
-      <Box sx={{ display: 'flex', mb: 24 }}>
+      <Box css={{ display: 'flex', mb: 24 }}>
         {tags?.map((tag, index) => {
           const isLastTag = numberOfTags === index + 1;
 

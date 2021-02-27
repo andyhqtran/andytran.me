@@ -20,17 +20,17 @@ export const Logo = ({ title, ...restOfProps }: LogoProps) => {
         as={motion.a}
         whileTap={{ scale: 0.94 }}
         {...restOfProps}
-        __css={{
+        css={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: 'tint1',
+          backgroundColor: '$gray100',
           width: 56,
           height: 56,
           border: '1px solid',
           borderColor: 'transparent',
           borderRadius: 28,
-          color: 'tint8',
+          color: '$gray800',
           fontSize: 18,
           fontWeight: 'bold',
           letterSpacing: -0.3,

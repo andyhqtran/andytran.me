@@ -20,7 +20,11 @@ export type SocialIconsProps = BoxProps & {
   }[];
 };
 
-export const SocialIcons = ({ icons, ...restOfProps }: SocialIconsProps) => {
+export const SocialIcons = ({
+  css,
+  icons,
+  ...restOfProps
+}: SocialIconsProps) => {
   const router = useRouter();
 
   const iconRenderer = (name: SocialIconsNames) => {
@@ -37,7 +41,7 @@ export const SocialIcons = ({ icons, ...restOfProps }: SocialIconsProps) => {
   };
 
   return (
-    <Box {...restOfProps} __css={{ display: 'flex' }}>
+    <Box {...restOfProps} css={{ display: 'flex', ...css }}>
       {icons?.map((icon) => {
         if (!icon.label) return;
 
