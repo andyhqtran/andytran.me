@@ -42,9 +42,9 @@ export const Footer = ({ navigation, title, ...restOfProps }: FooterProps) => {
             />
             <IconButton
               aria-label='Switch between dark and light mode'
+              css={{ color: 'inherit' }}
               onClick={darkMode.toggle}
               size='small'
-              sx={{ color: 'inherit' }}
             >
               {/** Use this instead of darkMode.value to prevent SSR issues */}
               <MoonIcon
