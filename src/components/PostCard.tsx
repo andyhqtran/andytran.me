@@ -103,8 +103,7 @@ export const PostCard = ({
         {image && inView && (
           <Image
             alt={title}
-            src={image}
-            sx={{
+            css={{
               position: 'absolute',
               top: 0,
               left: '50%',
@@ -112,6 +111,7 @@ export const PostCard = ({
               height: '100%',
               transform: 'translateX(-50%)',
             }}
+            src={image}
           />
         )}
       </Browser>
