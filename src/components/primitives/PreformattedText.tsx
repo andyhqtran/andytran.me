@@ -12,10 +12,12 @@ import useDarkMode from 'use-dark-mode';
 
 import { Box, BoxProps } from 'primitives/Box';
 
-export type PreformattedTextProps = BoxProps<HTMLPreElement> &
-  SyntaxHighlighterProps;
+export type PreformattedTextProps = BoxProps & SyntaxHighlighterProps;
 
-export const PreformattedText = ({ ...restOfProps }: PreformattedTextProps) => {
+export const PreformattedText = ({
+  css,
+  ...restOfProps
+}: PreformattedTextProps) => {
   const darkMode = useDarkMode(true);
   const isMounted = useMountedState();
 
@@ -33,10 +35,13 @@ export const PreformattedText = ({ ...restOfProps }: PreformattedTextProps) => {
         fontFamily: 'Courier, monospace',
         fontSize: 18,
         lineHeight: '20px',
+
         code: {
           fontFamily: 'Courier, monospace',
         },
-        ...css,
+
+        /** @todo remove this typecasting */
+        ...(css as {}),
       }}
     />
   );

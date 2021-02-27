@@ -41,7 +41,14 @@ export const SocialIcons = ({
   };
 
   return (
-    <Box {...restOfProps} css={{ display: 'flex', ...css }}>
+    <Box
+      css={{
+        display: 'flex',
+        /** @todo remove this typecasting */
+        ...(css as {}),
+      }}
+      {...restOfProps}
+    >
       {icons?.map((icon) => {
         if (!icon.label) return;
 

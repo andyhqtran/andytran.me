@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -41,14 +40,14 @@ export const PostCard = ({
 
   return (
     <Card
-      animate={{ opacity: inView ? 1 : 0 }}
       css={{
         display: 'flex',
         justifyContent: 'space-between',
         overflow: 'hidden',
-        ...css,
+
+        /** @todo remove this typecasting */
+        ...(css as {}),
       }}
-      initial={{ opacity: 0 }}
       ref={ref}
       {...restOfProps}
     >
@@ -85,7 +84,6 @@ export const PostCard = ({
         </Text>
         <Link as={`/posts/${slug}`} href='/posts/[slug]' passHref>
           <Button
-            as={motion.a}
             onClick={() => {
               window?.analytics?.track('Post card button clicked', {
                 pathname: router.pathname,

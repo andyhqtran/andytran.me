@@ -11,22 +11,31 @@ export type PostFeaturedImageProps = CardProps & {
 };
 
 export const PostFeaturedImage = ({
+  css,
   image,
-  sx,
   title,
   ...restOfProps
 }: PostFeaturedImageProps) => {
   return (
     <Container
-      {...restOfProps}
       css={{
-        backgroundColor: 'tint1',
-        borderRadius: [0, 0, 0, 16],
+        backgroundColor: '$gray100',
+        borderRadius: 0,
         mt: 64,
         mb: 80,
         pt: 56,
         overflow: 'hidden',
+
+        when: {
+          largeDesktop: {
+            borderRadius: 16,
+          },
+        },
+
+        /** @todo remove this typecasting */
+        ...(css as {}),
       }}
+      {...restOfProps}
     >
       <Card>
         <Browser

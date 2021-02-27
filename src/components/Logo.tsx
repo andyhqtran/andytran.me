@@ -45,7 +45,8 @@ export const Logo = ({ css, title, ...restOfProps }: LogoProps) => {
             boxShadow: '0 0 0 2px $colors$blue500',
           },
 
-          ...css,
+          /** @todo remove this typecasting */
+          ...(css as {}),
         }}
         {...restOfProps}
       >
