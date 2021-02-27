@@ -134,7 +134,7 @@ const processingInstructions = [
       if (children.length < 1) return <br />;
 
       return (
-        <Text as='p' css={{ mb: 24 }} key={index}>
+        <Text as='p' css={{ mb: 24, color: '$gray700' }} key={index}>
           {children}
         </Text>
       );
@@ -187,7 +187,9 @@ const processingInstructions = [
     processNode: (node, children, index) => {
       return (
         <Box as='figcaption' key={index} css={{ mt: 24, textAlign: 'center' }}>
-          {children}
+          <Text css={{ color: '$gray700' }} variant='body-14'>
+            {children}
+          </Text>
         </Box>
       );
     },
