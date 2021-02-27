@@ -72,7 +72,7 @@ export const PostCard = ({
                 key={tag.id}
                 name={tag.name}
                 slug={tag.slug}
-                sx={{ mr: isLastTag ? 0 : 16 }}
+                css={{ mr: isLastTag ? 0 : 16 }}
               />
             );
           })}
@@ -99,7 +99,7 @@ export const PostCard = ({
           </Button>
         </Link>
       </Box>
-      <Browser sx={{ position: 'relative', right: -20, top: 56, width: 620 }}>
+      <Browser css={{ position: 'relative', right: -20, top: 56, width: 620 }}>
         {image && inView && (
           <Image
             alt={title}

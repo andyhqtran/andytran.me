@@ -19,7 +19,7 @@ export const PostFeaturedImage = ({
   return (
     <Container
       {...restOfProps}
-      sx={{
+      css={{
         backgroundColor: 'tint1',
         borderRadius: [0, 0, 0, 16],
         mt: 64,
@@ -29,7 +29,9 @@ export const PostFeaturedImage = ({
       }}
     >
       <Card>
-        <Browser sx={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}>
+        <Browser
+          css={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
+        >
           <Image css={{ width: '100% ' }} title={title} src={image} />
         </Browser>
       </Card>

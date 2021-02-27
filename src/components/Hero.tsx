@@ -24,10 +24,10 @@ export const Hero = ({
     <Box css={{ px: 56, pt: 40, pb: 64, ...css }} {...restOfProps}>
       <PageTitle
         description={description}
-        sx={{ maxWidth: 526 }}
+        css={{ maxWidth: 526 }}
         title={title}
       />
-      {navigation && <Navigation items={navigation} sx={{ mt: 24 }} />}
+      {navigation && <Navigation items={navigation} css={{ mt: 24 }} />}
     </Box>
   );
 };

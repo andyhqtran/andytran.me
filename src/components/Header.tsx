@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { transitions } from 'polished';
 import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
 import { AnimatePresence } from 'framer-motion';

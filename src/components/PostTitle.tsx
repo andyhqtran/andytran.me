@@ -45,7 +45,7 @@ export const PostTitle = ({
               key={tag.id}
               name={tag.name}
               slug={tag.slug}
-              sx={{ mr: isLastTag ? 0 : 16 }}
+              css={{ mr: isLastTag ? 0 : 16 }}
             />
           );
         })}
