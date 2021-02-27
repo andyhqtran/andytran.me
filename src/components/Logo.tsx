@@ -26,7 +26,7 @@ export const Logo = ({ css, title, ...restOfProps }: LogoProps) => {
           borderRadius: 28,
           color: '$gray800',
           fontSize: 18,
-          fontWeight: 'bold',
+          fontWeight: '$bold',
           letterSpacing: -0.3,
           lineHeight: '28px',
           textDecoration: 'none',

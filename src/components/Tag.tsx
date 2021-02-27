@@ -18,7 +18,7 @@ export const Tag = ({ description, css, image, name, slug }: TagProps) => {
       <Box
         css={{
           display: 'block',
-          backgroundColor: 'tint1',
+          backgroundColor: '$gray100',
           width: 56,
           height: 56,
           borderRadius: 28,
