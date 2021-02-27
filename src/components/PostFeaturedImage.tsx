@@ -30,7 +30,7 @@ export const PostFeaturedImage = ({
     >
       <Card>
         <Browser sx={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}>
-          <Image title={title} src={image} width='100%' />
+          <Image css={{ width: '100% ' }} title={title} src={image} />
         </Browser>
       </Card>
     </Container>
