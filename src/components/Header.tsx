@@ -9,7 +9,6 @@ import { Container } from 'components/Container';
 import { Logo } from 'components/Logo';
 import { SocialIcons, SocialIconsNames } from 'components/SocialIcons';
 import { Box, BoxProps } from 'primitives/Box';
-import { Heading } from 'primitives/Heading';
 import { ArrowLeftIcon, ArrowRightIcon } from 'primitives/Icon';
 import { IconButton } from 'primitives/IconButton';
 import { Text } from 'primitives/Text';

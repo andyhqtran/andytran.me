@@ -2,7 +2,6 @@ import Head from 'next/head';
 import React from 'react';
 
 import { Box, BoxProps } from 'primitives/Box';
-import { Heading } from 'primitives/Heading';
 import { Text } from 'primitives/Text';
 
 export type PageTitleProps = BoxProps & {
