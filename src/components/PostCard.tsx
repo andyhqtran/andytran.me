@@ -9,7 +9,6 @@ import { Tag } from 'components/Tag';
 import { Box } from 'primitives/Box';
 import { Button } from 'primitives/Button';
 import { Card, CardProps } from 'primitives/Card';
-import { Heading } from 'primitives/Heading';
 import { Image } from 'primitives/Image';
 import { Text } from 'primitives/Text';
 
