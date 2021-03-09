@@ -440,17 +440,17 @@
   dependencies:
     "@ndhoule/map" "^2.0.1"
 
-"@stitches/core@^0.1.0-canary.12":
-  version "0.1.0-canary.12"
-  resolved "https://registry.yarnpkg.com/@stitches/core/-/core-0.1.0-canary.12.tgz#9254f5372607e57c2563d813907b972c5c411dcd"
-  integrity sha512-JP2OVj1yU3TijCkOr9pg0lHeLzJd7LnOeUsSOmp+H9R/LTFCrYKDuFufI71S7zlupJNBQnq76SrJXdov0pdPNA==
+"@stitches/core@^0.1.0-canary.16":
+  version "0.1.0-canary.16"
+  resolved "https://registry.yarnpkg.com/@stitches/core/-/core-0.1.0-canary.16.tgz#4bc396b475fc36ab356fc23f97e6ab91e41f26eb"
+  integrity sha512-FFovImjSMlg+0kXuhXifDebUuy6AhuIbF7Vi7AYSpgvnNsQrZjOwnVsTseQAs41IVvWMD3uj6yggXBPQ2S1fNQ==
 
-"@stitches/react@0.1.0-canary.12":
-  version "0.1.0-canary.12"
-  resolved "https://registry.yarnpkg.com/@stitches/react/-/react-0.1.0-canary.12.tgz#ef38e0ecfa037ff7d7f3f21d5cdbbdd87ad6044a"
-  integrity sha512-E6VsTJ2rKW89MTcfV0+PdzdFjA8GGjZ0sYFtG9f+IAXP73MGsNaHYKuulfMDDzCByFFMW9PkcDMH65xAMlyMvA==
+"@stitches/react@0.1.0-canary.16":
+  version "0.1.0-canary.16"
+  resolved "https://registry.yarnpkg.com/@stitches/react/-/react-0.1.0-canary.16.tgz#48856154cf5a61fe49925bc685944979d8e473f8"
+  integrity sha512-z23HyEQlcI2Sb4EPOCdtVX4Z2ZKDoC9sJFS8+iXImtk3qvm/uEjErlqd2/wgiznNxxuoIL4WtEJYptpq8ud3+g==
   dependencies:
-    "@stitches/core" "^0.1.0-canary.12"
+    "@stitches/core" "^0.1.0-canary.16"
 
 "@tryghost/content-api@^1.5.0":
   version "1.5.0"
