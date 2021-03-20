@@ -45,7 +45,7 @@
   "dependencies": {
     "@reach/visually-hidden": "^0.13.2",
     "@segment/snippet": "^4.13.1",
-    "@stitches/react": "0.1.0-canary.12",
+    "@stitches/react": "0.1.0-canary.21",
     "@tryghost/content-api": "^1.5.1",
     "focus-visible": "^5.2.0",
     "framer-motion": "^2.9.5",
