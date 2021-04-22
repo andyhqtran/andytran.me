@@ -422,10 +422,10 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-base/-/context-base-0.14.0.tgz#c67fc20a4d891447ca1a855d7d70fa79a3533001"
   integrity sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
 
-"@reach/visually-hidden@^0.13.2":
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.13.2.tgz#ee21de376a7e57e60dc92d95a671073796caa17e"
-  integrity sha512-sPZwNS0/duOuG0mYwE5DmgEAzW9VhgU3aIt1+mrfT/xiT9Cdncqke+kRBQgU708q/Ttm9tWsoHni03nn/SuPTQ==
+"@reach/visually-hidden@^0.15.0":
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.15.0.tgz#70ae561c33af709769df05a796ddb998c3a1ee20"
+  integrity sha512-ZRRBOaRrvSM6iCk+R2/8txFfXLY2DsnZQuaHNqOuSvz8vN2+syUnni1T+hpC93rvBRXtqD36kqdTsu5qihGnFw==
   dependencies:
     prop-types "^15.7.2"
     tslib "^2.1.0"
