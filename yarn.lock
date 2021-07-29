@@ -453,10 +453,10 @@
   dependencies:
     "@stitches/core" "^0.1.0-canary.12"
 
-"@tryghost/content-api@^1.5.4":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@tryghost/content-api/-/content-api-1.5.4.tgz#be47a99fc7d7ba47ac8ef0607342432ab9707012"
-  integrity sha512-whR5X/8nz2gnsM6/F+sM3/89oB9XQqemFKmKVkm7TvxOemosEnLoL1HjSB/mXaTZHamKERUdm5nhhk56ADtsvg==
+"@tryghost/content-api@^1.5.11":
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/@tryghost/content-api/-/content-api-1.5.11.tgz#63cf19f52284555857aee3b97c7cb8b9d89a98aa"
+  integrity sha512-VsVr9YvKnLzGsCGkQHtlgzB1kd6GR21iwt9b/fhzIHOfq7dXt/8o7eDhKZRMriwvBLmMqCRC9Bdrr2zh8EIUQA==
   dependencies:
     axios "^0.21.1"
 
