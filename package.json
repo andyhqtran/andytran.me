@@ -46,7 +46,7 @@
     "@reach/visually-hidden": "^0.13.2",
     "@segment/snippet": "^4.13.1",
     "@stitches/react": "0.1.0-canary.12",
-    "@tryghost/content-api": "^1.5.4",
+    "@tryghost/content-api": "^1.5.13",
     "focus-visible": "^5.2.0",
     "framer-motion": "^2.9.5",
     "html-to-react": "^1.4.5",
