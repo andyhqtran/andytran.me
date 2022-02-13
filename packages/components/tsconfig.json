@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "lib": ["dom", "ES2015"],
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES6"
+  },
+  "exclude": ["dist", "build", "node_modules"]
+}
