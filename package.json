@@ -1,61 +1,19 @@
 {
-  "name": "andytran.me",
-  "version": "1.0.0",
-  "description": "Next.js + Ghost API",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
-    "build": "next build",
-    "dev": "next",
-    "lint": "eslint .",
-    "start": "next start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andyhqtran/andytran.me.git"
-  },
-  "author": "Andy Tran <hello@andytran.me> (https://andytran.me)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/andyhqtran/andytran.me/issues"
-  },
-  "homepage": "https://github.com/andyhqtran/andytran.me#readme",
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@babel/core": "^7.14.0",
-    "@babel/plugin-proposal-export-default-from": "^7.12.13",
-    "@types/node": "^14.14.41",
-    "@types/react": "^17.0.5",
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
-    "@typescript-eslint/parser": "^4.22.1",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.25.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
     "prettier": "2.2.1",
-    "react-is": "^16.13.1",
-    "typescript": "^4.2.4"
-  },
-  "dependencies": {
-    "@reach/visually-hidden": "^0.13.2",
-    "@segment/snippet": "^4.13.1",
-    "@stitches/react": "0.1.0-canary.12",
-    "@tryghost/content-api": "^1.5.4",
-    "focus-visible": "^5.2.0",
-    "framer-motion": "^2.9.5",
-    "html-to-react": "^1.4.5",
-    "next": "^10.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-intersection-observer": "^8.31.1",
-    "react-syntax-highlighter": "^13.5.3",
-    "react-use": "^17.2.4",
-    "use-dark-mode": "^2.3.1"
+    "turbo": "latest"
   }
 }
