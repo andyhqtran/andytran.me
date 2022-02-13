@@ -27,7 +27,7 @@ export const PostFeaturedImage = ({
         overflow: 'hidden',
 
         when: {
-          largeDesktop: {
+          desktopLarge: {
             borderRadius: 16,
           },
         },

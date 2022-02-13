@@ -43,7 +43,7 @@ export const PreformattedText = ({
           fontFamily: 'Courier, monospace',
         },
 
-        ...css,
+        ...(css as {}),
       }}
     />
   );

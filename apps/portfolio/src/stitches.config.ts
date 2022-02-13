@@ -37,10 +37,10 @@ export const stitchesConfig = createCss({
       regular: '400',
     },
   },
-  conditions: {
-    largeDesktop: '@media(min-width: 1296px)',
-    tablet: '@media (min-width: 768px)',
-    desktop: '@media (min-width: 1024px)',
+  media: {
+    desktop: '(min-width: 1024px)',
+    desktopLarge: '(min-width: 1296px)',
+    tablet: '(min-width: 768px)',
   },
   utils: {
     m: () => (value) => ({
@@ -100,14 +100,8 @@ export const stitchesConfig = createCss({
 
 export type CSS = StitchesCss<typeof stitchesConfig>;
 
-export const {
-  css,
-  styled,
-  global,
-  theme,
-  keyframes,
-  getCssString,
-} = stitchesConfig;
+export const { css, styled, global, theme, keyframes, getCssString } =
+  stitchesConfig;
 
 export const globalStyles = global({
   body: {
