@@ -1,4 +1,3 @@
-import { IconButton } from '~/components/IconButton';
 import { ThemeSwitcher } from '~/components/ThemeSwitcher';
 
 export const Footer = () => {

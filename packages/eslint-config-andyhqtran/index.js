@@ -1,7 +1,9 @@
 module.exports = {
-  extends: ['next', 'turbo', 'prettier'],
+  extends: ['next', 'turbo', 'prettier', 'eslint:recommended', 'plugin:@typescript-eslint/recommended'],
 
-  plugins: ['simple-import-sort'],
+  parser: '@typescript-eslint/parser',
+
+  plugins: ['@typescript-eslint', 'simple-import-sort'],
 
   rules: {
     '@next/next/no-html-link-for-pages': 'off',

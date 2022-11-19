@@ -5,9 +5,9 @@ import { NextSeo } from 'next-seo';
 import { ThemeProvider } from 'next-themes';
 import type { ReactNode } from 'react';
 
+import { AnalyticsWrapper } from '~/components/AnalyticsWrapper';
 import { Footer } from '~/components/Footer';
 import { NEXT_SEO_DEFAULTS } from '~/constants/seo';
-import { AnalyticsWrapper } from '~/components/AnalyticsWrapper';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
