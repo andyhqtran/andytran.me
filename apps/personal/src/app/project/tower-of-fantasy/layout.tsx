@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
-import { ProjectHeader } from '~/components/project/ProjectHeader';
+import { ProjectNavigation } from '~/components/project/ProjectNavigation';
 import { TowerOfFantasyRoutes } from '~/constants/routes';
 
 export default function TowerOfFantasyLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <ProjectHeader
+      <ProjectNavigation
         navigation={[
           {
             label: 'Simulacra',

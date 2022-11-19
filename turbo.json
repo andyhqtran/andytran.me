@@ -2,7 +2,8 @@
   "pipeline": {
     "build": {
       "outputs": ["dist/**", ".next/**"],
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "env": ["SITE_URL"]
     },
     "test": {
       "outputs": ["coverage/**"],

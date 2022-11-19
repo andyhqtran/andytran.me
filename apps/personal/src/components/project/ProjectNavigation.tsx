@@ -1,11 +1,11 @@
 'use client';
+
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import type { ReactNode } from 'react';
 
 import { Separator } from '~/components/Separator';
 
-export type ProjectHeaderProps = {
+export type ProjectNavigationProps = {
   title?: ReactNode | string;
   navigation?: {
     href: string;
@@ -14,11 +14,9 @@ export type ProjectHeaderProps = {
   }[];
 };
 
-export const ProjectHeader = ({ navigation, title }: ProjectHeaderProps) => {
-  const router = useRouter();
-
+export const ProjectNavigation = ({ navigation, title }: ProjectNavigationProps) => {
   return (
-    <header className='sticky top-0 flex items-center border-b border-slate-4 bg-slate-1'>
+    <nav className='sticky top-0 flex items-center border-b border-slate-4 bg-slate-1'>
       <div className='container relative mx-auto flex h-14 items-center'>
         {title ? (
           <>
@@ -43,6 +41,6 @@ export const ProjectHeader = ({ navigation, title }: ProjectHeaderProps) => {
           </div>
         ) : null}
       </div>
-    </header>
+    </nav>
   );
 };
