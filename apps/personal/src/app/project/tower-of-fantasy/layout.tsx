@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
-import { ProjectHeader } from '~/components/ProjectHeader';
+import { ProjectHeader } from '~/components/project/ProjectHeader';
 import { TowerOfFantasyRoutes } from '~/constants/routes';
 
 export default function TowerOfFantasyLayout({ children }: { children: ReactNode }) {
