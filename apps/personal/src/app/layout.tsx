@@ -11,7 +11,7 @@ import { AnalyticsWrapper } from '~/components/AnalyticsWrapper';
 import { Footer } from '~/components/Footer';
 import { NEXT_SEO_DEFAULTS } from '~/constants/seo';
 
-const inter = Inter();
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
