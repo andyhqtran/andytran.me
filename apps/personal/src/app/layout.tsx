@@ -7,6 +7,7 @@ import type { ReactNode } from 'react';
 
 import { Footer } from '~/components/Footer';
 import { NEXT_SEO_DEFAULTS } from '~/constants/seo';
+import { AnalyticsWrapper } from '~/components/AnalyticsWrapper';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -20,6 +21,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
           <Footer />
         </ThemeProvider>
+
+        <AnalyticsWrapper />
       </body>
     </html>
   );
