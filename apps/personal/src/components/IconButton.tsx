@@ -43,7 +43,8 @@ export const IconButton = ({
   return (
     <button
       className={classNames(
-        'flex cursor-pointer items-center justify-center rounded-full text-slate-12 outline-none focus-visible:ring-2 focus-visible:ring-blue-7',
+        'flex cursor-pointer items-center justify-center rounded-full text-slate-12 outline-none',
+        'focus-visible:ring-2 focus-visible:ring-blue-7',
         BUTTON_APPEARANCE_CLASS_NAMES[appearance],
         BUTTON_SIZE_CLASS_NAMES[size],
         className,

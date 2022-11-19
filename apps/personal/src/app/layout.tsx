@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <NextSeo {...NEXT_SEO_DEFAULTS} themeColor='#0091FF' useAppDir={true} />
       </head>
-      <body className='bg-slate-1'>
+      <body className='bg-slate-1 selection:bg-blue-9'>
         <ThemeProvider attribute='data-theme'>
           {children}
           <Footer />
