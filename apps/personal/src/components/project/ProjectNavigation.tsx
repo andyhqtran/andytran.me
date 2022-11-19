@@ -32,7 +32,7 @@ export const ProjectNavigation = ({ navigation, title }: ProjectNavigationProps)
                 <Link
                   className='text-sm text-slate-11 hover:text-slate-12 hover:underline'
                   href={navigationItem.href}
-                  key={navigationItem.id ?? index}
+                  key={navigationItem?.id ?? index}
                 >
                   {navigationItem.label}
                 </Link>
