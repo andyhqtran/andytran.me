@@ -1,12 +1,11 @@
 import { Separator } from '@several/primitives';
-import { gql, GraphQLClient } from 'graphql-request';
+import { gql } from 'graphql-request';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BiArrowBack } from 'react-icons/bi';
 
 import { Routes } from '~/constants/routes';
-
-const hygraph = new GraphQLClient(process.env.HYGRAPH_CONTENT_API);
+import { Hygraph } from '~/lib/hygraph/Hygraph';
 
 async function getSimulacra(slug: string) {
   const query = gql`
@@ -37,7 +36,7 @@ async function getSimulacra(slug: string) {
     }
   `;
 
-  const data = await hygraph.request(query, { slug });
+  const data = await Hygraph.request(query, { slug });
 
   return data.simulacras[0];
 }
