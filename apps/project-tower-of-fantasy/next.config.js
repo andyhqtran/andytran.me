@@ -10,7 +10,16 @@ const nextConfig = {
         },
       },
     ],
+
     transpilePackages: ['@several/components', '@several/hooks', '@several/primitives'],
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.graphassets.com',
+      },
+    ],
   },
   reactStrictMode: true,
   swcMinify: true,

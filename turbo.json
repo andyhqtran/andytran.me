@@ -3,7 +3,7 @@
     "build": {
       "outputs": ["dist/**", ".next/**"],
       "dependsOn": ["^build"],
-      "env": ["SITE_URL"]
+      "env": ["SITE_URL", "HYGRAPH_CONTENT_API"]
     },
     "test": {
       "outputs": ["coverage/**"],

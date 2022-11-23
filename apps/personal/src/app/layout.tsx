@@ -1,14 +1,12 @@
-'use client';
 import './globals.css';
 
 import { Inter } from '@next/font/google';
+import { Footer, ThemeProviderWrapper } from '@several/components';
 import classNames from 'classnames';
 import { NextSeo } from 'next-seo';
-import { ThemeProvider } from 'next-themes';
 import type { ReactNode } from 'react';
 
 import { AnalyticsWrapper } from '~/components/AnalyticsWrapper';
-import { Footer } from '~/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,10 +18,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <NextSeo themeColor='#0091FF' useAppDir={true} />
       </head>
       <body className='bg-slate-1 selection:bg-blue-9'>
-        <ThemeProvider attribute='data-theme'>
+        <ThemeProviderWrapper>
           {children}
           <Footer />
-        </ThemeProvider>
+        </ThemeProviderWrapper>
 
         <AnalyticsWrapper />
       </body>

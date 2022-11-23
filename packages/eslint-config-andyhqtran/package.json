@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-andyhqtran",
+  "name": "eslint-config-several",
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -14,8 +14,8 @@
     "access": "public"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.43.0",
-    "@typescript-eslint/parser": "^5.43.0",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
     "typescript": "^4.9.3"
   }
 }

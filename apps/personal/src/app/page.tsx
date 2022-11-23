@@ -1,4 +1,5 @@
-import { Header } from '~/components/Header';
+import { Header } from '@several/components';
+
 import { Hero } from '~/components/Hero';
 
 export default function RootPage() {

@@ -1,9 +1,9 @@
 {
-  "name": "personal",
+  "name": "@project/tower-of-fantasy",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3001",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
@@ -15,6 +15,8 @@
     "@several/primitives": "*",
     "@vercel/analytics": "^0.1.5",
     "classnames": "^2.3.2",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
     "next": "13.0.4",
     "next-seo": "^5.14.1",
     "next-sitemap": "^3.1.32",
