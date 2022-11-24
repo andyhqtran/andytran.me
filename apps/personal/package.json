@@ -15,7 +15,7 @@
     "@several/primitives": "*",
     "@vercel/analytics": "^0.1.5",
     "classnames": "^2.3.2",
-    "next": "13.0.4",
+    "next": "13.0.5",
     "next-seo": "^5.14.1",
     "next-sitemap": "^3.1.32",
     "next-themes": "^0.2.1",
