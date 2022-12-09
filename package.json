@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "prettier": "2.8.0",
-    "prettier-plugin-tailwindcss": "^0.1.13",
+    "prettier-plugin-tailwindcss": "^0.2.1",
     "turbo": "1.6.3"
   },
   "dependencies": {}
