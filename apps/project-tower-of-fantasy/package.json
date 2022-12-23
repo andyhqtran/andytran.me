@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.0.4",
+    "@next/font": "^13.1.0",
     "@several/components": "*",
     "@several/primitives": "*",
     "@vercel/analytics": "^0.1.5",
