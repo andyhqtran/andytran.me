@@ -11,7 +11,7 @@ const nextConfig = {
       },
     ],
 
-    transpilePackages: ['@several/components', '@several/hooks', '@several/primitives'],
+    transpilePackages: ['@several/hooks'],
   },
   images: {
     remotePatterns: [

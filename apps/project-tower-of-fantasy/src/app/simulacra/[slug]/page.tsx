@@ -1,9 +1,10 @@
-import { Separator } from '@several/primitives';
+import { Collapsible, Separator } from '@several/primitives';
 import { gql } from 'graphql-request';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BiArrowBack } from 'react-icons/bi';
 
+import { SimulacraSkills } from '~/components/SimulacraSkills';
 import { Routes } from '~/constants/routes';
 import { Hygraph } from '~/lib/hygraph/Hygraph';
 
@@ -82,31 +83,7 @@ export default async function Page({ params: { slug } }) {
         </div>
       </section>
 
-      <section className='rounded bg-slate-2 p-6'>
-        <h3 className='text-lg font-semibold text-slate-12'>Skills</h3>
-        <Separator />
-        {simulacra.weapon.skills.map((skill) => (
-          <div key={skill.id}>
-            <h4 className='text-base text-slate-12'>{skill.name}</h4>
-
-            <div className='flex flex-col gap-2'></div>
-
-            <div className='flex flex-col gap-2'>
-              <h5 className='text-sm font-semibold text-slate-12'>Activation sequence</h5>
-              <div className='flex gap-2'>
-                {skill.activationSequence.map((step, index) => (
-                  <div
-                    className='flex h-6 items-center rounded border border-slate-7 bg-slate-3 px-2 text-xs font-semibold text-slate-11'
-                    key={index}
-                  >
-                    {step}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
-      </section>
+      <SimulacraSkills skills={simulacra.weapon.skills} />
     </div>
   );
 }

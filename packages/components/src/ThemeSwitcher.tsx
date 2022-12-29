@@ -15,11 +15,9 @@ export const ThemeSwitcher = () => {
     setIsMounted(true);
   }, []);
 
+  if (!isMounted) return null;
+
   return (
-    <IconButton
-      appearance='ghost'
-      icon={isMounted ? (isDark ? BiSun : BiMoon) : BiSun}
-      onClick={() => setTheme(isDark ? 'light' : 'dark')}
-    />
+    <IconButton appearance='ghost' icon={isDark ? BiSun : BiMoon} onClick={() => setTheme(isDark ? 'light' : 'dark')} />
   );
 };

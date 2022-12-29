@@ -10,7 +10,7 @@ const nextConfig = {
         },
       },
     ],
-    transpilePackages: ['@several/components', '@several/hooks', '@several/primitives'],
+    transpilePackages: ['@several/hooks'],
   },
   reactStrictMode: true,
   swcMinify: true,
