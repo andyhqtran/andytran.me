@@ -91,8 +91,7 @@ module.exports = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
-    '../../packages/components/**/*.{js,ts,jsx,tsx}',
-    '../../packages/primitives/**/*.{js,ts,jsx,tsx}',
+    '../../packages/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
   theme: {
@@ -113,10 +112,19 @@ module.exports = {
     extend: {
       animation: {
         enter: 'enter 200ms ease-out',
+        'collapsible-slide-up': 'collapsible-slide-up 300ms ease-out',
+        'collapsible-slide-down': 'collapsible-slide-down 300ms ease-out',
         'slide-in': 'slide-in 1.2s cubic-bezier(.41,.73,.51,1.02)',
-        leave: 'leave 150ms ease-in forwards',
       },
       keyframes: {
+        'collapsible-slide-down': {
+          '0%': { height: 0 },
+          '100%': { height: 'var(--radix-collapsible-content-height)' },
+        },
+        'collapsible-slide-up': {
+          '0%': { height: 'var(--radix-collapsible-content-height)' },
+          '100%': { height: 0 },
+        },
         enter: {
           '0%': { transform: 'scale(0.9)', opacity: 0 },
           '100%': { transform: 'scale(1)', opacity: 1 },
