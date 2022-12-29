@@ -1,6 +1,5 @@
 'use client';
-
-// import { ThemeProvider } from 'next-themes';
+import { ThemeProvider } from 'next-themes';
 import type { ReactNode } from 'react';
 
 export type ThemeProviderWrapperProps = {
@@ -8,6 +7,5 @@ export type ThemeProviderWrapperProps = {
 };
 
 export const ThemeProviderWrapper = ({ children }: ThemeProviderWrapperProps) => {
-  return children;
-  // return <ThemeProvider attribute='data-theme'>{children}</ThemeProvider>;
+  return <ThemeProvider attribute='data-theme'>{children}</ThemeProvider>;
 };

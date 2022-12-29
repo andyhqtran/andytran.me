@@ -1,5 +1,4 @@
 'use client';
-
 import { usePageScrollPercentage } from '@several/hooks';
 import { Progress, ProgressProps } from '@several/primitives';
 import classNames from 'classnames';

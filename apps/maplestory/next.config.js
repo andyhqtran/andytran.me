@@ -11,9 +11,17 @@ const nextConfig = {
       },
     ],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
   reactStrictMode: true,
   swcMinify: true,
-  transpilePackages: ['@several/hooks'],
+  transpilePackages: ['@several/components', '@several/hooks', '@several/primitives'],
 };
 
 module.exports = nextConfig;

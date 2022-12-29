@@ -10,7 +10,7 @@ export type HeaderProps = {
 
 export const Header = ({ isSticky = false }: HeaderProps) => {
   const { ref, inView, entry } = useInView();
-  const isStickied = !inView && entry?.boundingClientRect.top < 0;
+  const isStickied = !inView && (entry?.boundingClientRect?.top ?? 0) < 0;
 
   return (
     <>
