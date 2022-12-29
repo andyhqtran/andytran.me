@@ -10,14 +10,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.0.5",
+    "@next/font": "^13.1.1",
     "@several/components": "*",
     "@several/primitives": "*",
-    "@vercel/analytics": "^0.1.5",
+    "@vercel/analytics": "^0.1.6",
     "classnames": "^2.3.2",
-    "next": "13.0.5",
-    "next-seo": "^5.14.1",
-    "next-sitemap": "^3.1.32",
+    "next": "13.1.1",
+    "next-seo": "^5.15.0",
+    "next-sitemap": "^3.1.43",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -25,13 +25,13 @@
   "devDependencies": {
     "@several/tailwind-config": "*",
     "@several/tsconfig": "*",
-    "@types/node": "^18.11.9",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
     "autoprefixer": "^10.4.13",
     "eslint-config-several": "*",
-    "postcss": "^8.4.19",
+    "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.4"
   }
 }
