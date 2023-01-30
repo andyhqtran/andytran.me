@@ -19,7 +19,7 @@
     "graphql-request": "^5.0.0",
     "next": "13.1.1",
     "next-seo": "^5.15.0",
-    "next-sitemap": "^3.1.43",
+    "next-sitemap": "^3.1.48",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
