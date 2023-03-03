@@ -29,6 +29,6 @@
     "@radix-ui/react-progress": "^1.0.1",
     "@radix-ui/react-separator": "^1.0.1",
     "classnames": "^2.3.2",
-    "react-icons": "^4.6.0"
+    "react-icons": "^4.8.0"
   }
 }
