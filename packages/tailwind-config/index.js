@@ -115,6 +115,27 @@ module.exports = {
         'collapsible-slide-up': 'collapsible-slide-up 300ms ease-out',
         'collapsible-slide-down': 'collapsible-slide-down 300ms ease-out',
         'slide-in': 'slide-in 1.2s cubic-bezier(.41,.73,.51,1.02)',
+        'spinner-rotate': {
+          from: {
+            transform: 'rotate(0deg)',
+          },
+          to: {
+            transform: 'rotate(270deg)',
+          },
+        },
+        'spinner-dash': {
+          '0%': {
+            strokeDashoffset: '187px',
+          },
+          '50%': {
+            strokeDashoffset: '46.75px',
+            transform: 'rotate(135deg)',
+          },
+          '100%': {
+            strokeDashoffset: '187px',
+            transform: 'rotate(450deg)',
+          },
+        },
       },
       keyframes: {
         'collapsible-slide-down': {
@@ -137,6 +158,8 @@ module.exports = {
           '0%': { transform: 'translateY(-100%)' },
           '100%': { transform: 'translateY(0)' },
         },
+        'spinner-rotate': 'spinner-rotate 1.4s linear infinite',
+        'spinner-dash': 'spinner-dash 1.4s ease-in-out infinite',
       },
       colors: {
         ...classes,
