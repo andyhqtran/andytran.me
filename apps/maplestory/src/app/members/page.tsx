@@ -1,3 +1,31 @@
+import { Table } from '@several/primitives';
+
+const TEMP_MEMBERS = [
+  {
+    name: 'Player #1',
+    culvert: [10000, 8000, 6000, 7000],
+  },
+  {
+    name: 'Player #2',
+    culvert: [10000, 8000, 6000, 7000],
+  },
+  {
+    name: 'Player #3',
+    culvert: [10000, 8000, 6000, 7000],
+  },
+];
+
+const COLUMNS = [
+  {
+    header: 'Name',
+    accessorKey: 'name',
+  },
+  {
+    header: 'Culvert',
+    accessorKey: 'culvert',
+  },
+];
+
 export default function Page() {
   return (
     <>
@@ -9,6 +37,7 @@ export default function Page() {
           specimen book.
         </p>
       </div>
+      <Table columns={COLUMNS} data={TEMP_MEMBERS} />
     </>
   );
 }
