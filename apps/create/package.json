@@ -1,0 +1,31 @@
+{
+  "name": "@project/create",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3003",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "devDependencies": {
+    "@several/tailwind-config": "*",
+    "@several/tsconfig": "*",
+    "@types/node": "18.15.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint-config-several": "*",
+    "typescript": "4.9.5"
+  },
+  "dependencies": {
+    "@several/components": "*",
+    "@several/primitives": "*",
+    "@vercel/analytics": "^0.1.11",
+    "classnames": "^2.3.2",
+    "next": "13.2.4",
+    "next-seo": "^5.15.0",
+    "next-sitemap": "^3.1.43",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}

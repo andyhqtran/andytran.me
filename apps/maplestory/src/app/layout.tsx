@@ -1,8 +1,8 @@
 import './globals.css';
 
-import { Inter } from '@next/font/google';
 import { Footer, Header, ProjectNavigation, ThemeProviderWrapper } from '@several/components';
 import classNames from 'classnames';
+import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import type { ReactNode } from 'react';
