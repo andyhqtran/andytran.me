@@ -13,17 +13,22 @@ export const Resizer = memo(
   ({ className, initialSize, onMouseDown, onMouseMove, onMouseUp, onSizeChange, position = 'right' }: ResizerProps) => {
     const [canResize, setCanResize] = useState(false);
     const [initialPosition, setInitialPosition] = useState(0);
-    const isVertical = position === 'left' || position === 'right';
+    const isBottom = position === 'bottom';
+    const isLeft = position === 'left';
+    const isRight = position === 'right';
+    const isTop = position === 'top';
+    const isVertical = isLeft || isRight;
 
     return (
       <div
         className={classNames(
-          'group absolute flex select-none items-center',
-          isVertical ? 'h-full w-2 cursor-col-resize flex-col' : 'h-2 w-full cursor-row-resize flex-row',
-          position === 'bottom' ? '-bottom-2' : undefined,
-          position === 'left' ? '-left-2' : undefined,
-          position === 'right' ? '-right-2' : undefined,
-          position === 'top' ? '-top-2' : undefined,
+          'group absolute flex select-none',
+          isVertical ? 'h-full w-3 cursor-col-resize flex-col' : 'h-3 w-full cursor-row-resize flex-row',
+          isLeft || isTop ? 'items-end' : 'items-start',
+          isBottom ? '-bottom-3' : undefined,
+          isLeft ? '-left-3' : undefined,
+          isRight ? '-right-3' : undefined,
+          isTop ? '-top-3' : undefined,
           className,
         )}
         onMouseDown={(event) => {
