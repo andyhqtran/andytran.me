@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  svg {
+    @apply block;
+  }
+}
+
+@layer utilities {
+  .project-panel-size-left {
+    width: var(--project-panel-size-left);
+  }
+
+  .project-panel-size-right {
+    width: var(--project-panel-size-right);
+  }
+}
