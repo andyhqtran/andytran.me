@@ -1,6 +1,6 @@
 'use client';
 import { Resizer } from '~/components/Resizer';
-import { useProjectContext } from '~/context/ProjectContext';
+import { useProjectContext } from '~/hooks/useProjectContext';
 import { ProjectTypes } from '~/hooks/useProjectReducer';
 
 const MIN_PANEL_SIZE = 120;

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { useProjectContext } from '~/context/ProjectContext';
+import { useProjectContext } from '~/hooks/useProjectContext';
 
 export const ProjectCSSVariables = memo(() => {
   const { projectState } = useProjectContext();

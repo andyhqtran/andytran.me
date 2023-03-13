@@ -1,8 +1,8 @@
+import { ProjectContextProvider } from '~/components/project/ProjectContextProvider';
 import { ProjectHeader } from '~/components/project/ProjectHeader';
 import { ProjectNavigation } from '~/components/project/ProjectNavigation';
 import { ProjectPanelLeft } from '~/components/project/ProjectPanelLeft';
 import { ProjectPanelRight } from '~/components/project/ProjectPanelRight';
-import { ProjectContextProvider } from '~/context/ProjectContext';
 
 export default function Layout() {
   return (
