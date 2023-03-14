@@ -32,7 +32,9 @@ export const Resizer = memo(
       <div
         className={classNames(
           'group absolute flex select-none',
-          isVertical ? 'h-full w-3 cursor-col-resize flex-col' : 'h-3 w-full cursor-row-resize flex-row',
+          isVertical
+            ? 'top-0 bottom-0 h-full w-3 cursor-col-resize flex-col'
+            : 'right-0 left-0 h-3 w-full cursor-row-resize flex-row',
           isLeft || isTop ? 'items-end' : 'items-start',
           isBottom ? '-bottom-3' : undefined,
           isLeft ? '-left-3' : undefined,
