@@ -10,7 +10,16 @@ export type ResizerProps = ComponentProps<'div'> & {
 };
 
 export const Resizer = memo(
-  ({ className, initialSize, onMouseDown, onMouseMove, onMouseUp, onSizeChange, position = 'right' }: ResizerProps) => {
+  ({
+    className,
+    initialSize,
+    onMouseDown,
+    onMouseMove,
+    onMouseUp,
+    onSizeChange,
+    position = 'right',
+    ...restOfProps
+  }: ResizerProps) => {
     const [canResize, setCanResize] = useState(false);
     const [initialPosition, setInitialPosition] = useState(0);
     const isBottom = position === 'bottom';
@@ -71,6 +80,7 @@ export const Resizer = memo(
           setCanResize(false);
           onMouseUp?.(event);
         }}
+        {...restOfProps}
       >
         <div
           className={classNames(
