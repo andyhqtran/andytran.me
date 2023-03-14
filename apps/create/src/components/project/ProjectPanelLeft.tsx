@@ -3,15 +3,19 @@ import { Resizer } from '~/components/Resizer';
 import { useProjectContext } from '~/hooks/useProjectContext';
 import { ProjectTypes } from '~/hooks/useProjectReducer';
 
-const MIN_PANEL_SIZE = 120;
+const MIN_PANEL_SIZE = 160;
 
-const MAX_PANEL_SIZE = 480;
+const MAX_PANEL_SIZE = 360;
 
 export const ProjectPanelLeft = () => {
   const { projectDispatch, projectState } = useProjectContext();
 
+  if (projectState.activePanel === null) return null;
+
   return (
     <div className='project-panel-size-left relative shrink-0 border-r border-r-slate-4 bg-slate-1'>
+      <h2 className='p-4 text-sm'>{projectState.activePanel}</h2>
+
       <Resizer
         initialSize={projectState.panelSizeLeft}
         onSizeChange={(value) => {

@@ -1,17 +1,29 @@
 'use client';
 import { useReducer } from 'react';
 
+export enum ProjectPanels {
+  Assets = 'Assets',
+  Components = 'Components',
+  Layers = 'Layers',
+  Pages = 'Pages',
+  Settings = 'Settings',
+  Tokens = 'Tokens',
+}
+
 export type ProjectState = {
+  activePanel: ProjectPanels | null;
   panelSizeLeft: number;
   panelSizeRight: number;
 };
 
 export const PROJECT_INITIAL_STATE: ProjectState = {
+  activePanel: null,
   panelSizeLeft: 256,
   panelSizeRight: 256,
 };
 
 export enum ProjectTypes {
+  SetActivePanel = 'SET_ACTIVE_PANEL',
   SetPanelSizeLeft = 'SET_PANEL_SIZE_LEFT',
   SetPanelSizeRight = 'SET_PANEL_SIZE_RIGHT',
   UpdatePanelSizeLeft = 'UPDATE_PANEL_SIZE_LEFT',
@@ -19,6 +31,9 @@ export enum ProjectTypes {
 }
 
 export type ProjectPayload = {
+  [ProjectTypes.SetActivePanel]: {
+    value: ProjectPanels | null;
+  };
   [ProjectTypes.SetPanelSizeLeft]: {
     value: number;
   };
@@ -37,6 +52,8 @@ export type ProjectActions = ActionMap<ProjectPayload>[keyof ActionMap<ProjectPa
 
 export const projectReducer = (state: ProjectState, action: ProjectActions) => {
   switch (action.type) {
+    case ProjectTypes.SetActivePanel:
+      return { ...state, activePanel: action.payload.value };
     case ProjectTypes.SetPanelSizeLeft:
       return { ...state, panelSizeLeft: action.payload.value };
     case ProjectTypes.SetPanelSizeRight:
