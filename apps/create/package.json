@@ -28,6 +28,9 @@
     "next-sitemap": "^3.1.43",
     "next-themes": "0.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dnd": "16.0.1",
+    "react-dnd-html5-backend": "16.0.1",
+    "react-dom": "18.2.0",
+    "react-frame-component": "5.2.6"
   }
 }
