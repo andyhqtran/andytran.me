@@ -31,7 +31,7 @@ export const Article = ({ className, description, href = '/', thumbnail, title }
               className='outline-none hover:underline focus-visible:underline focus-visible:ring-2 focus-visible:ring-blue-7'
               href={href}
             >
-              <h2 className='text-md font-semibold text-slate-12'>{title}</h2>
+              <h2 className='text-base font-semibold text-slate-12'>{title}</h2>
             </Link>
           )}
 

@@ -8,7 +8,7 @@ export const Spinner = ({ className, ...restOfProps }: SpinnerProps) => {
     <svg
       aria-label='Loading'
       aria-live='polite'
-      className={classNames('animate-spinnerRotate block origin-center motion-reduce:animate-none', className)}
+      className={classNames('block origin-center animate-spinner-rotate motion-reduce:animate-none', className)}
       height={24}
       role='alert'
       width={24}
@@ -17,7 +17,7 @@ export const Spinner = ({ className, ...restOfProps }: SpinnerProps) => {
       {...restOfProps}
     >
       <circle
-        className='animate-spinnerDash origin-center motion-reduce:animate-none'
+        className='origin-center animate-spinner-dash motion-reduce:animate-none'
         cx={33}
         cy={33}
         fill='none'

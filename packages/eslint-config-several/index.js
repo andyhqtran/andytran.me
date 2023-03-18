@@ -1,5 +1,13 @@
 module.exports = {
-  extends: ['next', 'turbo', 'prettier', 'eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  extends: [
+    'next',
+    'turbo',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:tailwindcss/recommended',
+    'prettier',
+  ],
 
   parser: '@typescript-eslint/parser',
 
