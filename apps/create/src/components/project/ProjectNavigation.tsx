@@ -1,57 +1,67 @@
 'use client';
 import { Component1Icon, FileIcon, GearIcon, ImageIcon, LayersIcon, TokensIcon } from '@radix-ui/react-icons';
+import { ReactNode } from 'react';
 
 import { ProjectNavigationItem } from '~/components/project/ProjectNavigationItem';
-import { useProjectContext } from '~/hooks/useProjectContext';
-import { ProjectPanels, ProjectTypes } from '~/hooks/useProjectReducer';
+import { useProjectPanelActiveValue } from '~/hooks/useProjectPanelActiveValue';
+import { ProjectPanels } from '~/recoil/atoms/projectPanelState';
 
-const PROJECT_NAVIGATION = [
+const PROJECT_NAVIGATION: {
+  id: ProjectPanels;
+  icon: ReactNode;
+  label: string;
+}[] = [
   {
-    name: ProjectPanels.Layers,
+    id: 'layers',
     icon: <LayersIcon />,
+    label: 'Layers',
   },
   {
-    name: ProjectPanels.Pages,
+    id: 'pages',
     icon: <FileIcon />,
+    label: 'Pages',
   },
   {
-    name: ProjectPanels.Components,
+    id: 'components',
     icon: <Component1Icon />,
+    label: 'Components',
   },
   {
-    name: ProjectPanels.Tokens,
+    id: 'tokens',
     icon: <TokensIcon />,
+    label: 'Tokens',
   },
   {
-    name: ProjectPanels.Assets,
+    id: 'assets',
     icon: <ImageIcon />,
+    label: 'Assets',
   },
   {
-    name: ProjectPanels.Settings,
+    id: 'settings',
     icon: <GearIcon />,
+    label: 'Settings',
   },
 ];
 
 export const ProjectNavigation = () => {
-  const { projectDispatch, projectState } = useProjectContext();
+  const { projectPanelActiveValue, setProjectPanelActiveValue } = useProjectPanelActiveValue();
 
   return (
     <nav className='flex h-full w-16 shrink-0 flex-col gap-3 border-r border-r-slate-4 bg-slate-1 p-3'>
       {PROJECT_NAVIGATION.map((panel) => {
-        const isActive = projectState.activePanel === panel.name;
+        const isActive = projectPanelActiveValue === panel.id;
 
         return (
           <ProjectNavigationItem
             isActive={isActive}
-            key={panel.name}
-            onClick={() =>
-              projectDispatch({
-                type: ProjectTypes.SetActivePanel,
-                payload: {
-                  value: isActive ? null : panel.name,
-                },
-              })
-            }
+            key={panel.id}
+            onClick={() => {
+              if (panel.id === projectPanelActiveValue) {
+                setProjectPanelActiveValue(null);
+              } else {
+                setProjectPanelActiveValue(panel.id);
+              }
+            }}
           >
             {panel.icon}
           </ProjectNavigationItem>

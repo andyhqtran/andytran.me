@@ -1,30 +1,40 @@
 'use client';
+
+import { ProjectPanelLeftHeader } from '~/components/project/ProjectPanelLeftHeader';
 import { Resizer } from '~/components/Resizer';
-import { useProjectContext } from '~/hooks/useProjectContext';
-import { ProjectTypes } from '~/hooks/useProjectReducer';
+import { useProjectPanelActiveValue } from '~/hooks/useProjectPanelActiveValue';
+import { useProjectPanelSizeValue } from '~/hooks/useProjectPanelSizeValue';
 
 const MIN_PANEL_SIZE = 160;
 
 const MAX_PANEL_SIZE = 360;
 
 export const ProjectPanelLeft = () => {
-  const { projectDispatch, projectState } = useProjectContext();
+  const { projectPanelSizeValue, setProjectPanelSizeValue } = useProjectPanelSizeValue();
 
-  if (projectState.activePanel === null) return null;
+  const { projectPanelActiveValue } = useProjectPanelActiveValue();
+
+  if (projectPanelActiveValue === null) {
+    return null;
+  }
 
   return (
-    <div className='project-panel-size-left relative shrink-0 border-r border-r-slate-4 bg-slate-1'>
-      <h2 className='p-4 text-sm'>{projectState.activePanel}</h2>
-
+    <div
+      className='relative shrink-0 border-r border-r-slate-4 bg-slate-1'
+      style={{
+        width: projectPanelSizeValue,
+      }}
+    >
+      <ProjectPanelLeftHeader />
       <Resizer
-        initialSize={projectState.panelSizeLeft}
+        initialSize={projectPanelSizeValue}
         onSizeChange={(value) => {
           if (value <= MIN_PANEL_SIZE) {
-            projectDispatch({ type: ProjectTypes.SetPanelSizeLeft, payload: { value: MIN_PANEL_SIZE } });
+            setProjectPanelSizeValue(MIN_PANEL_SIZE);
           } else if (value >= MAX_PANEL_SIZE) {
-            projectDispatch({ type: ProjectTypes.SetPanelSizeLeft, payload: { value: MAX_PANEL_SIZE } });
+            setProjectPanelSizeValue(MAX_PANEL_SIZE);
           } else {
-            projectDispatch({ type: ProjectTypes.SetPanelSizeLeft, payload: { value } });
+            setProjectPanelSizeValue(value);
           }
         }}
         position='right'
