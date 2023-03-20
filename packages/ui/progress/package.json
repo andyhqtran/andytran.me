@@ -1,9 +1,9 @@
 {
   "name": "@several-ui/progress",
   "version": "1.0.0",
-  "main": "./src/Progress.ts",
-  "module": "./src/Progress.ts",
-  "types": "./src/Progress.ts",
+  "main": "./src/Progress.tsx",
+  "module": "./src/Progress.tsx",
+  "types": "./src/Progress.tsx",
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist ",
     "lint": "eslint .",

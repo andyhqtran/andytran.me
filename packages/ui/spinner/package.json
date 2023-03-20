@@ -1,9 +1,9 @@
 {
   "name": "@several-ui/spinner",
   "version": "1.0.0",
-  "main": "./src/Spinner.ts",
-  "module": "./src/Spinner.ts",
-  "types": "./src/Spinner.ts",
+  "main": "./src/Spinner.tsx",
+  "module": "./src/Spinner.tsx",
+  "types": "./src/Spinner.tsx",
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist ",
     "lint": "eslint .",
