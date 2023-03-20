@@ -1,4 +1,3 @@
-'use client';
 import { Component1Icon, FileIcon, GearIcon, ImageIcon, LayersIcon, TokensIcon } from '@radix-ui/react-icons';
 import { ReactNode } from 'react';
 

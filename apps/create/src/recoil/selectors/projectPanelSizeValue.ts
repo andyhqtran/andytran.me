@@ -1,4 +1,3 @@
-'use client';
 import { DefaultValue, selector } from 'recoil';
 
 import { projectPanelState } from '~/recoil/atoms/projectPanelState';

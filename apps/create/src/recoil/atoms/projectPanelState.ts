@@ -1,7 +1,6 @@
-'use client';
 import { atom } from 'recoil';
 
-import { localStorageEffect } from '~/recoil/effects/localStorageEffects';
+import { localForageEffect } from '~/recoil/effects/localForageEffect';
 
 export type ProjectPanels = 'assets' | 'components' | 'layers' | 'pages' | 'settings' | 'tokens';
 
@@ -15,8 +14,8 @@ export const PROJECT_PANEL_STATE_KEY = 'projectPanelState';
 export const projectPanelState = atom<ProjectPanelState>({
   key: PROJECT_PANEL_STATE_KEY,
   default: {
-    active: 'layers',
+    active: null,
     size: 256,
   },
-  effects: [localStorageEffect(PROJECT_PANEL_STATE_KEY)],
+  effects: [localForageEffect(PROJECT_PANEL_STATE_KEY)],
 });

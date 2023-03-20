@@ -1,5 +1,3 @@
-'use client';
-
 import { ProjectPanelLeftHeader } from '~/components/project/ProjectPanelLeftHeader';
 import { Resizer } from '~/components/Resizer';
 import { useProjectPanelActiveValue } from '~/hooks/useProjectPanelActiveValue';
@@ -11,7 +9,6 @@ const MAX_PANEL_SIZE = 360;
 
 export const ProjectPanelLeft = () => {
   const { projectPanelSizeValue, setProjectPanelSizeValue } = useProjectPanelSizeValue();
-
   const { projectPanelActiveValue } = useProjectPanelActiveValue();
 
   if (projectPanelActiveValue === null) {

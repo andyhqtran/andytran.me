@@ -1,8 +1,7 @@
-'use client';
 import { Resizer } from '~/components/Resizer';
 import { useProjectPropertiesPanelSizeValue } from '~/hooks/useProjectPropertiesPanelSizeValue';
 
-const MIN_PANEL_SIZE = 200;
+const MIN_PANEL_SIZE = 256;
 
 const MAX_PANEL_SIZE = 360;
 

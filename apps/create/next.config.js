@@ -3,7 +3,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  transpilePackages: ['@several/primitives'],
+  transpilePackages: ['@several-ui/spinner', '@several/primitives'],
 };
 
 module.exports = nextConfig;
