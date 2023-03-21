@@ -20,7 +20,7 @@
     "typescript": "5.0.2"
   },
   "dependencies": {
-    "@radix-ui/react-icons": "1.2.0",
+    "@radix-ui/react-icons": "1.3.0",
     "@several/components": "*",
     "@several/primitives": "*",
     "@several-ui/spinner": "*",
