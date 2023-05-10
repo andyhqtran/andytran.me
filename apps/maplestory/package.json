@@ -24,7 +24,7 @@
   "devDependencies": {
     "@several/tailwind-config": "*",
     "@several/tsconfig": "*",
-    "@types/node": "^18.15.0",
+    "@types/node": "^20.1.2",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "autoprefixer": "^10.4.14",
