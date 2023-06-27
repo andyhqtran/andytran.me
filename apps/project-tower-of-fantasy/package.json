@@ -12,13 +12,13 @@
   },
   "dependencies": {
     "@several/components": "workspace:*",
+    "@several/hooks": "workspace:*",
     "@several/primitives": "workspace:*",
     "@vercel/analytics": "^1.0.1",
     "classnames": "^2.3.2",
     "graphql": "^16.7.1",
     "graphql-request": "^6.1.0",
     "next": "13.4.7",
-    "next-seo": "^6.1.0",
     "next-sitemap": "^4.1.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"

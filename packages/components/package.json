@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@several/tailwind-config": "workspace:*",
+    "@several/tsconfig": "workspace:*",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "eslint": "^8.43.0",
@@ -27,6 +28,8 @@
     "react-intersection-observer": "^9.4.3"
   },
   "peerDependencies": {
-    "next": "^13.0.4"
+    "next": "^13.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

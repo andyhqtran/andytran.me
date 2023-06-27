@@ -1,4 +1,3 @@
-'use client';
 export * from './Collapsible';
 export * from './IconButton';
 export * from './Progress';

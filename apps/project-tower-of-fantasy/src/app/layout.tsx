@@ -4,7 +4,6 @@ import { Footer, Header, ProjectNavigation, ThemeProviderWrapper } from '@severa
 import classNames from 'classnames';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
-import { NextSeo } from 'next-seo';
 import type { ReactNode } from 'react';
 
 import { AnalyticsWrapper } from '~/components/AnalyticsWrapper';
@@ -17,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html className={classNames('antialiased', inter.className)} lang='en'>
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <NextSeo themeColor='#0091FF' useAppDir={true} />
+        <NextSeo themeColor='#0091FF' seAppDir={true} />
       </head>
       <body className='bg-slate-1 selection:bg-blue-9'>
         <ThemeProviderWrapper>

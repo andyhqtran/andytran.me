@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-  transpilePackages: ['@several/hooks'],
+  transpilePackages: ['@several/hooks', '@several/components', '@several/primitives'],
 };
 
 module.exports = nextConfig;
