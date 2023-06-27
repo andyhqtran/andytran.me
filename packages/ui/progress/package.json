@@ -10,11 +10,11 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@several/tailwind-config": "*",
-    "@several/tsconfig": "*",
+    "@several/tailwind-config": "workspace:*",
+    "@several/tsconfig": "workspace:*",
     "@storybook/react": "6.5.16",
     "eslint": "8.36.0",
-    "eslint-config-several": "*",
+    "eslint-config-several": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.2"

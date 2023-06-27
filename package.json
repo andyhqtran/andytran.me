@@ -1,24 +1,21 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/**",
-    "apps/*"
-  ],
   "scripts": {
     "build": "turbo run build",
     "clean": "turbo run clean && rm -rf node_modules",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "preinstall": "npx only-allow pnpm",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "start": "turbo run start",
     "test": "turbo run test"
   },
   "devDependencies": {
-    "eslint-config-several": "*",
+    "eslint-config-several": "workspace:*",
     "prettier": "2.8.5",
     "prettier-plugin-tailwindcss": "^0.2.5",
     "turbo": "1.8.3"
   },
-  "dependencies": {}
+  "packageManager": "pnpm@8.6.1"
 }

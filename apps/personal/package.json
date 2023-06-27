@@ -11,8 +11,8 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@several/components": "*",
-    "@several/primitives": "*",
+    "@several/components": "workspace:*",
+    "@several/primitives": "workspace:*",
     "@vercel/analytics": "^0.1.11",
     "classnames": "^2.3.2",
     "next": "13.2.4",
@@ -22,13 +22,13 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@several/tailwind-config": "*",
-    "@several/tsconfig": "*",
+    "@several/tailwind-config": "workspace:*",
+    "@several/tsconfig": "workspace:*",
     "@types/node": "^18.15.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "autoprefixer": "^10.4.14",
-    "eslint-config-several": "*",
+    "eslint-config-several": "workspace:*",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7",
     "typescript": "^5.0.2"

@@ -10,20 +10,20 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@several/tailwind-config": "*",
-    "@several/tsconfig": "*",
+    "@several/tailwind-config": "workspace:*",
+    "@several/tsconfig": "workspace:*",
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "eslint": "8.36.0",
-    "eslint-config-several": "*",
+    "eslint-config-several": "workspace:*",
     "typescript": "5.0.2"
   },
   "dependencies": {
     "@radix-ui/react-icons": "1.2.0",
-    "@several-ui/spinner": "*",
-    "@several/components": "*",
-    "@several/primitives": "*",
+    "@several-ui/spinner": "workspace:*",
+    "@several/components": "workspace:*",
+    "@several/primitives": "workspace:*",
     "@vercel/analytics": "^0.1.11",
     "classnames": "^2.3.2",
     "cookies-next": "2.1.1",
