@@ -1,4 +1,3 @@
-import { Collapsible, Separator } from '@several/primitives';
 import { gql } from 'graphql-request';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -51,7 +50,7 @@ export default async function Page({ params: { slug } }) {
         className='flex items-center gap-2 text-sm text-slate-11 hover:text-slate-12 hover:underline'
         href={Routes.Simulacra}
       >
-        <BiArrowBack className='block h-4 w-4' />
+        {/* <BiArrowBack className='block h-4 w-4' /> */}
         All simulacras
       </Link>
 
