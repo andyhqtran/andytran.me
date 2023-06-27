@@ -4,15 +4,13 @@
     "build": {
       "dependsOn": ["^build"],
       "env": ["SITE_URL", "HYGRAPH_CONTENT_API"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**", "storybook-static/**", "dist/**"]
     },
     "test": {
       "outputs": ["coverage/**"],
       "dependsOn": []
     },
-    "lint": {
-      "outputs": []
-    },
+    "lint": {},
     "lint:fix": {
       "cache": false
     },

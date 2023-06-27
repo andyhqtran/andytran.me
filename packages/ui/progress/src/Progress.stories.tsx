@@ -11,6 +11,6 @@ export default meta;
 
 export const Example: StoryObj<typeof Progress> = {
   args: {
-    className: 'w-8 h-8',
+    value: 20,
   },
 };
