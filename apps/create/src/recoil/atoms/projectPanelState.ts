@@ -1,6 +1,6 @@
 import { atom } from 'recoil';
 
-import { localForageEffect } from '~/recoil/effects/localForageEffect';
+import { nextCookieEffect } from '~/recoil/effects/nextCookieEffect';
 
 export type ProjectPanels = 'assets' | 'components' | 'layers' | 'pages' | 'settings' | 'tokens';
 
@@ -17,5 +17,5 @@ export const projectPanelState = atom<ProjectPanelState>({
     active: null,
     size: 256,
   },
-  effects: [localForageEffect(PROJECT_PANEL_STATE_KEY)],
+  effects: [nextCookieEffect(PROJECT_PANEL_STATE_KEY)],
 });
