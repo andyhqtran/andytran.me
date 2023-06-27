@@ -17,7 +17,7 @@ const NAVIGATION = [
 
 export const Hero = () => {
   return (
-    <section className='flex flex-col gap-6 px-14 pt-10 pb-16'>
+    <section className='flex flex-col gap-6 px-14 pb-16 pt-10'>
       <div className='flex flex-col gap-4'>
         <h1 className='text-7xl font-black tracking-tight text-slate-12'>Andy Tran</h1>
         <p className='text-2xl text-slate-11'>

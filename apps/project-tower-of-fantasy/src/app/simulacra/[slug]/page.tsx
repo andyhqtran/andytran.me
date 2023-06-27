@@ -58,7 +58,7 @@ export default async function Page({ params: { slug } }) {
         {simulacra.image ? (
           <Image
             alt={simulacra.name}
-            className='top pointer-events-none absolute top-0 left-0 w-80 select-none opacity-10'
+            className='top pointer-events-none absolute left-0 top-0 w-80 select-none opacity-10'
             height={simulacra.image.height}
             src={simulacra.image.url}
             width={simulacra.image.width}
