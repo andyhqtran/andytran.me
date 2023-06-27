@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001",
     "build": "next build",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
+    "dev": "next dev --port 3001",
     "postbuild": "next-sitemap",
-    "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "start": "next start"
   },
   "dependencies": {
     "@several/components": "workspace:*",
