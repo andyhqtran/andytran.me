@@ -13,26 +13,26 @@
   "dependencies": {
     "@several/components": "workspace:*",
     "@several/primitives": "workspace:*",
-    "@vercel/analytics": "^0.1.11",
+    "@vercel/analytics": "^1.0.1",
     "classnames": "^2.3.2",
-    "graphql": "^16.6.0",
-    "graphql-request": "^5.2.0",
-    "next": "13.2.4",
-    "next-seo": "^5.15.0",
-    "next-sitemap": "^4.0.6",
+    "graphql": "^16.7.1",
+    "graphql-request": "^6.1.0",
+    "next": "13.4.7",
+    "next-seo": "^6.1.0",
+    "next-sitemap": "^4.1.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@several/tailwind-config": "workspace:*",
     "@several/tsconfig": "workspace:*",
-    "@types/node": "^18.15.3",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
+    "@types/node": "^20.3.2",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
     "autoprefixer": "^10.4.14",
     "eslint-config-several": "workspace:*",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^5.0.2"
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.1.3"
   }
 }

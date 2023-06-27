@@ -1,8 +1,8 @@
 'use client';
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { IconButton } from '@several/primitives';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
-import { BiMoon, BiSun } from 'react-icons/bi';
 
 export const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
@@ -17,6 +17,10 @@ export const ThemeSwitcher = () => {
   if (!isMounted) return null;
 
   return (
-    <IconButton appearance='ghost' icon={isDark ? BiSun : BiMoon} onClick={() => setTheme(isDark ? 'light' : 'dark')} />
+    <IconButton
+      appearance='ghost'
+      icon={isDark ? SunIcon : MoonIcon}
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+    />
   );
 };

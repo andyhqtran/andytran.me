@@ -2,7 +2,6 @@ import { Collapsible, Separator } from '@several/primitives';
 import { gql } from 'graphql-request';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BiArrowBack } from 'react-icons/bi';
 
 import { SimulacraSkills } from '~/components/SimulacraSkills';
 import { Routes } from '~/constants/routes';

@@ -4,16 +4,16 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf .turbo",
+    "clean": "rm -rf .turbo && rm -rf node_modules",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@mertasan/tailwindcss-variables": "^2.6.0",
     "@tailwindcss/forms": "^0.5.3",
-    "eslint": "^8.36.0",
+    "eslint": "^8.43.0",
     "eslint-config-several": "workspace:*",
-    "tailwindcss": "^3.2.7",
+    "tailwindcss": "^3.3.2",
     "tailwindcss-radix": "^2.8.0"
   },
   "dependencies": {

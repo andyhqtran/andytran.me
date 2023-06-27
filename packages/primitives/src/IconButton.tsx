@@ -1,7 +1,7 @@
+import { StarIcon } from '@radix-ui/react-icons';
+import { IconProps } from '@radix-ui/react-icons/dist/types';
 import classNames from 'classnames';
-import type { ComponentProps } from 'react';
-import type { IconType } from 'react-icons';
-import { BiSmile } from 'react-icons/bi';
+import type { ComponentProps, ForwardRefExoticComponent, RefAttributes } from 'react';
 
 export type IconButtonAppearance = 'fill' | 'ghost' | 'outline';
 
@@ -29,14 +29,14 @@ const ICON_SIZE_CLASS_NAMES: { [key in IconButtonSize]: string } = {
 
 export type IconButtonProps = Pick<ComponentProps<'button'>, 'className' | 'onClick'> & {
   appearance?: IconButtonAppearance;
-  icon: IconType;
+  icon: ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>;
   size?: IconButtonSize;
 };
 
 export const IconButton = ({
   appearance = 'fill',
   className,
-  icon: Icon = BiSmile,
+  icon: Icon = StarIcon,
   onClick,
   size = 'sm',
 }: IconButtonProps) => {

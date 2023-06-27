@@ -1,9 +1,10 @@
 {
+  "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "outputs": ["dist/**", ".next/**"],
       "dependsOn": ["^build"],
-      "env": ["SITE_URL", "HYGRAPH_CONTENT_API"]
+      "env": ["SITE_URL", "HYGRAPH_CONTENT_API"],
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "test": {
       "outputs": ["coverage/**"],
@@ -19,7 +20,8 @@
       "cache": false
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "clean": {
       "cache": false
