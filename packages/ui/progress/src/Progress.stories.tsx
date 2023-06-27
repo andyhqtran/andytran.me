@@ -1,16 +1,16 @@
-import type { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import { Progress } from './Progress';
 
-export default {
+const meta: Meta<typeof Progress> = {
   title: 'Progress',
   component: Progress,
-} as ComponentMeta<typeof Progress>;
-
-export const Example: ComponentStory<typeof Progress> = (args) => {
-  return <Progress {...args} />;
 };
 
-Example.args = {
-  className: 'w-8 h-8',
+export default meta;
+
+export const Example: StoryObj<typeof Progress> = {
+  args: {
+    className: 'w-8 h-8',
+  },
 };
