@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <Header />
 
-          <main className='mx-auto max-w-3xl px-8'>{children}</main>
+          <main className='mx-auto max-w-3xl px-6'>{children}</main>
         </Providers>
       </body>
     </html>

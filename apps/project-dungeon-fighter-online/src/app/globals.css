@@ -3,6 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-slate-1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold;
+  }
+
+  a,
+  button {
+    @apply outline-none focus:ring-2 focus:ring-blue-7;
+  }
+
+  b {
+    @apply font-semibold;
+  }
+
   svg {
     @apply block;
   }
