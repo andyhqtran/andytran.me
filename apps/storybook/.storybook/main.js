@@ -1,6 +1,9 @@
 /** @type { import('@storybook/nextjs').StorybookConfig } */
 const config = {
-  stories: ['../../../packages/**/src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: [
+    // '../../../apps/**/src/components/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../../packages/**/src/**/*.stories.@(js|jsx|ts|tsx)',
+  ],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -8,9 +11,9 @@ const config = {
     {
       name: '@storybook/addon-styling',
       options: {
-        // Check out https://github.com/storybookjs/addon-styling/blob/main/docs/api.md
-        // For more details on this addon's options.
-        postCss: true,
+        postCss: {
+          implementation: require('postcss'),
+        },
       },
     },
   ],

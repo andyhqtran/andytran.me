@@ -91,6 +91,7 @@ module.exports = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
+    '../../apps/**/src/**/*.{js,ts,jsx,tsx}',
     '../../packages/**/src/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',

@@ -9,7 +9,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className='h-full antialiased'>
         <Providers>
           <Header />
-          {children}
+
+          <main className='mx-auto max-w-3xl px-8'>{children}</main>
         </Providers>
       </body>
     </html>

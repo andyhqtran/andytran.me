@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Progress } from './Progress';
 
 const meta: Meta<typeof Progress> = {
-  title: 'Progress',
+  title: 'UI/Progress',
   component: Progress,
 };
 
