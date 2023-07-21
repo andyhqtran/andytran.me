@@ -22,7 +22,7 @@ const NAVIGATION_ITEM = [
 
 export const Navigation = () => {
   return (
-    <nav className='flex items-center gap-4'>
+    <nav className='flex items-center gap-8'>
       {NAVIGATION_ITEM.map((navigationItem) => {
         return (
           <Link
