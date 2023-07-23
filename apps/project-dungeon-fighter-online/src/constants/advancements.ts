@@ -1,10 +1,10 @@
-export type SubAdvancement = {
+export type Advancement = {
   characterId: string;
   id: string;
   name: string;
 };
 
-export const SUB_ADVANCEMENTS: SubAdvancement[] = [
+export const ADVANCEMENTS: Advancement[] = [
   {
     characterId: 'male-slayer',
     id: 'blade-master',

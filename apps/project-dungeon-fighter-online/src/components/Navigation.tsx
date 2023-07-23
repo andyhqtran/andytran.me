@@ -26,7 +26,7 @@ export const Navigation = () => {
       {NAVIGATION_ITEM.map((navigationItem) => {
         return (
           <Link
-            className='text-sm font-medium text-slate-11 hover:text-slate-12 hover:underline'
+            className='text-sm text-slate-11 hover:text-slate-12 hover:underline'
             href={navigationItem.href}
             key={navigationItem.id}
           >

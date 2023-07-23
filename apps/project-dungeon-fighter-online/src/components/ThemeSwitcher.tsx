@@ -12,10 +12,15 @@ export const ThemeSwitcher = () => {
 
   const isDarkMode = theme === 'dark';
 
-  if (!isMounted) return <IconButton appearance='secondary' disabled size='md' />;
+  if (!isMounted) return <IconButton appearance='outline' color='slate' disabled size='md' />;
 
   return (
-    <IconButton appearance='secondary' onClick={() => (isDarkMode ? setTheme('light') : setTheme('dark'))} size='md'>
+    <IconButton
+      appearance='outline'
+      color='slate'
+      onClick={() => (isDarkMode ? setTheme('light') : setTheme('dark'))}
+      size='md'
+    >
       {isDarkMode ? <MoonIcon className='h-3 w-3' /> : <SunIcon className='h-3 w-3' />}
     </IconButton>
   );
