@@ -172,12 +172,18 @@ importers:
       '@several-ui/button':
         specifier: workspace:*
         version: link:../../packages/ui/button
+      '@several-ui/dialog':
+        specifier: workspace:*
+        version: link:../../packages/ui/dialog
       '@several-ui/icon-button':
         specifier: workspace:*
         version: link:../../packages/ui/icon-button
       '@several-ui/spinner':
         specifier: workspace:*
         version: link:../../packages/ui/spinner
+      '@several-ui/tooltip':
+        specifier: workspace:*
+        version: link:../../packages/ui/tooltip
       '@vercel/analytics':
         specifier: ^1.0.1
         version: 1.0.1
@@ -208,6 +214,9 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      react-intersection-observer:
+        specifier: ^9.4.3
+        version: 9.4.3(react@18.2.0)
       react-use:
         specifier: 17.4.0
         version: 17.4.0(react-dom@18.2.0)(react@18.2.0)
