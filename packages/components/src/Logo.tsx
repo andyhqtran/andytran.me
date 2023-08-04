@@ -10,6 +10,7 @@ export const Logo = ({ label }: LogoProps) => {
 
   return (
     <Link
+      aria-label='Logo for DFO.gg'
       className={classNames(
         'flex h-14 w-14 select-none items-center justify-center rounded-full border border-transparent bg-slate-2 font-bold text-slate-12 outline-none',
         'hover:bg-slate-3',
