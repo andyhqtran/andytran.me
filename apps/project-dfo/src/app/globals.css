@@ -22,7 +22,7 @@
   }
 
   b {
-    @apply font-semibold;
+    @apply font-medium;
   }
 
   svg {
