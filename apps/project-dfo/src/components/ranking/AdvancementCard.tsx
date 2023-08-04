@@ -7,6 +7,7 @@ import { twMerge } from 'tailwind-merge';
 
 import { Advancement, ADVANCEMENTS } from '~/constants/advancements';
 import { Routes } from '~/constants/Routes';
+import { useFlags } from '~/flags/client';
 
 export type AdvancementCardProps = {
   id: Advancement['id'];
@@ -15,6 +16,8 @@ export type AdvancementCardProps = {
 export const AdvancementCard = ({ id }: AdvancementCardProps) => {
   const advancement = ADVANCEMENTS.find((advancement) => advancement.id === id);
   const isFavorited = false;
+
+  const { flags } = useFlags();
 
   if (!advancement) return null;
 
@@ -50,17 +53,19 @@ export const AdvancementCard = ({ id }: AdvancementCardProps) => {
         </div>
       </Link>
 
-      <IconButton
-        appearance='outline'
-        className={twMerge(
-          'absolute right-2 top-2 transition-opacity group-focus-within/advancement:opacity-100 group-hover/advancement:opacity-100',
-          isFavorited ? 'opacity-100' : 'opacity-0',
-        )}
-        color='slate'
-        size='sm'
-      >
-        {isFavorited ? <StarFilledIcon className='h-3 w-3' /> : <StarIcon className='h-3 w-3' />}
-      </IconButton>
+      {flags?.rankingFavorites && (
+        <IconButton
+          appearance='outline'
+          className={twMerge(
+            'absolute right-2 top-2 transition-opacity group-focus-within/advancement:opacity-100 group-hover/advancement:opacity-100',
+            isFavorited ? 'opacity-100' : 'opacity-0',
+          )}
+          color='slate'
+          size='sm'
+        >
+          {isFavorited ? <StarFilledIcon className='h-3 w-3' /> : <StarIcon className='h-3 w-3' />}
+        </IconButton>
+      )}
     </div>
   );
 };

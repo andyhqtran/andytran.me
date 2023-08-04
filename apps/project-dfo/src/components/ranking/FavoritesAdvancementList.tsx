@@ -1,6 +1,15 @@
+'use client';
 // import { FavoritesAdvancementCard } from '~/components/ranking/FavoritesAdvancementCard';
 
+import { useFlags } from '~/flags/client';
+
 export const FavoritesAdvancementList = () => {
+  const { flags } = useFlags();
+
+  if (!flags?.rankingFavorites) {
+    return null;
+  }
+
   return (
     <section className='flex flex-col gap-4'>
       <h2 className='text-sm text-slate-12'>Favorites</h2>
