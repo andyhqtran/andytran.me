@@ -3,7 +3,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "env": ["SITE_URL", "HYGRAPH_CONTENT_API"],
+      "env": ["NEXT_PUBLIC_FLAGS_ENV_KEY"],
       "outputs": [".next/**", "!.next/cache/**", "storybook-static/**", "dist/**"]
     },
     "test": {
