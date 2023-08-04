@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
+import { trackedClickedFavoriteAdvancementCard } from '~/analytics/trackedClickedFavoriteAdvancementCard';
 import { Advancement, ADVANCEMENTS } from '~/constants/advancements';
 import { Routes } from '~/constants/Routes';
 
@@ -27,6 +28,7 @@ export const FavoritesAdvancementCard = ({ id = 'berserker' }) => {
         className='group/favorite-advancement-link block h-full w-full'
         data-testid='FAVORITE_ADVANCEMENT_CARD_LINK'
         href={`${Routes.Ranking}/${id}`}
+        onClick={() => trackedClickedFavoriteAdvancementCard({ id })}
       >
         <Image
           alt={`Image of ${advancement.name}`}
