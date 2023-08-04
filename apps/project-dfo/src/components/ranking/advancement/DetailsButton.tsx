@@ -4,6 +4,8 @@ import { IconButton } from '@several-ui/icon-button';
 import { Tooltip } from '@several-ui/tooltip';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
+import { trackClickedRankingDetailsButton } from '~/analytics/trackClickedRankingShowDetails';
+
 export const DetailsButton = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -16,8 +18,10 @@ export const DetailsButton = () => {
 
     if (hasDetails) {
       currentSearchParams.delete('showDetails');
+      trackClickedRankingDetailsButton({ showDetails: false });
     } else {
       currentSearchParams.set('showDetails', 'true');
+      trackClickedRankingDetailsButton({ showDetails: true });
     }
 
     router.push(`${pathname}${currentSearchParams ? `?${currentSearchParams.toString()}` : ''}`);

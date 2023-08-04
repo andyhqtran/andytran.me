@@ -6,6 +6,7 @@ import { Tooltip } from '@several-ui/tooltip';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
+import { trackClickedRankingFiltersButton } from '~/analytics/trackClickedRankingFiltersButton';
 import { Filters } from '~/components/ranking/advancement/Filters';
 
 export const FiltersButton = () => {
@@ -23,7 +24,10 @@ export const FiltersButton = () => {
           appearance='outline'
           className='relative'
           color={hasFilters ? 'blue' : 'slate'}
-          onClick={() => setIsDialogOpen(true)}
+          onClick={() => {
+            setIsDialogOpen(true);
+            trackClickedRankingFiltersButton();
+          }}
         >
           {hasFilters && (
             <div className='absolute -right-2 -top-2 flex h-4 min-w-[16px] items-center justify-center rounded-full border border-blue-6 bg-blue-3 px-1 text-[8px] font-bold'>
