@@ -1,7 +1,7 @@
 import { StarIcon } from '@radix-ui/react-icons';
 import { IconProps } from '@radix-ui/react-icons/dist/types';
 import classNames from 'classnames';
-import type { ComponentProps, ForwardRefExoticComponent, RefAttributes } from 'react';
+import { type ComponentProps, forwardRef, type ForwardRefExoticComponent, type RefAttributes } from 'react';
 
 export type IconButtonAppearance = 'fill' | 'ghost' | 'outline';
 
@@ -33,25 +33,24 @@ export type IconButtonProps = Pick<ComponentProps<'button'>, 'className' | 'onCl
   size?: IconButtonSize;
 };
 
-export const IconButton = ({
-  appearance = 'fill',
-  className,
-  icon: Icon = StarIcon,
-  onClick,
-  size = 'sm',
-}: IconButtonProps) => {
-  return (
-    <button
-      className={classNames(
-        'flex cursor-pointer items-center justify-center rounded-full text-slate-12 outline-none',
-        'focus-visible:ring-2 focus-visible:ring-blue-7',
-        BUTTON_APPEARANCE_CLASS_NAMES[appearance],
-        BUTTON_SIZE_CLASS_NAMES[size],
-        className,
-      )}
-      onClick={onClick}
-    >
-      <Icon className={classNames('block text-current', ICON_SIZE_CLASS_NAMES[size])} />
-    </button>
-  );
-};
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
+  ({ appearance = 'fill', className, icon: Icon = StarIcon, onClick, size = 'sm' }, forwardedRef) => {
+    return (
+      <button
+        className={classNames(
+          'flex cursor-pointer items-center justify-center rounded-full text-slate-12 outline-none',
+          'focus-visible:ring-2 focus-visible:ring-blue-7',
+          BUTTON_APPEARANCE_CLASS_NAMES[appearance],
+          BUTTON_SIZE_CLASS_NAMES[size],
+          className,
+        )}
+        onClick={onClick}
+        ref={forwardedRef}
+      >
+        <Icon className={classNames('block text-current', ICON_SIZE_CLASS_NAMES[size])} />
+      </button>
+    );
+  },
+);
+
+IconButton.displayName = 'IconButton';

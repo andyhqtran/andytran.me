@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
 import { tv } from 'tailwind-variants';
 
 import { PlayerAvatar } from '~/components/player/PlayerAvatar';
@@ -6,7 +6,7 @@ import { PlayerEquipment } from '~/components/player/PlayerEquipment';
 import { Routes } from '~/constants/Routes';
 
 const player = tv({
-  base: 'flex items-center justify-between gap-4 rounded border py-4 pr-4 text-slate-11 transition-colors',
+  base: 'flex min-h-[96px] items-center justify-between gap-4 rounded border py-4 pr-4 text-slate-11 transition-colors',
   variants: {
     appearance: {
       default: 'border-slate-5 bg-slate-2 hover:bg-slate-3',
@@ -31,7 +31,7 @@ const playerRank = tv({
   },
 });
 
-export type PlayerProps = {
+export type PlayerProps = Omit<LinkProps, 'href' | 'id'> & {
   fame: number;
   guild?: string;
   id: string;
@@ -39,11 +39,11 @@ export type PlayerProps = {
   rank: number;
 };
 
-export const Player = ({ fame = 0, guild, id, name = 'Untitled', rank = 0 }: PlayerProps) => {
+export const Player = ({ fame = 0, guild, id, name = 'Untitled', rank = 0, ...restOfProps }: PlayerProps) => {
   const appearance = rank === 1 ? 'featured' : 'default';
 
   return (
-    <Link className={player({ appearance })} href={`${Routes.Character}/${id}`}>
+    <Link className={player({ appearance })} href={`${Routes.Character}/${id}`} {...restOfProps}>
       <div className='flex gap-4'>
         <div className='flex min-w-[96px] flex-col items-center justify-center border-r border-slate-5'>
           <span className='text-xs'>Rank</span>

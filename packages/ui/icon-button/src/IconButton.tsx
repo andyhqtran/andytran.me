@@ -1,4 +1,4 @@
-import { type ComponentPropsWithoutRef } from 'react';
+import { type ComponentPropsWithoutRef, forwardRef } from 'react';
 import { tv, type VariantProps } from 'tailwind-variants';
 
 export const iconButton = tv(
@@ -145,10 +145,19 @@ export type IconButtonVariants = VariantProps<typeof iconButton>;
 
 export type IconButtonProps = IconButtonVariants & Omit<ComponentPropsWithoutRef<'button'>, 'prefix'>;
 
-export const IconButton = ({ appearance, children, className, color, size, ...restOfProps }: IconButtonProps) => {
-  return (
-    <button className={iconButton({ appearance, color, size, className })} data-testid='ICON_BUTTON' {...restOfProps}>
-      {children}
-    </button>
-  );
-};
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
+  ({ appearance, children, className, color, size, ...restOfProps }, forwardedRef) => {
+    return (
+      <button
+        className={iconButton({ appearance, color, size, className })}
+        data-testid='ICON_BUTTON'
+        {...restOfProps}
+        ref={forwardedRef}
+      >
+        {children}
+      </button>
+    );
+  },
+);
+
+IconButton.displayName = 'IconButton';
