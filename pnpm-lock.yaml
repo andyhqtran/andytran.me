@@ -199,6 +199,9 @@ importers:
       cookies-next:
         specifier: 2.1.1
         version: 2.1.1
+      i:
+        specifier: 0.3.7
+        version: 0.3.7
       next:
         specifier: 13.4.7
         version: 13.4.7(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
@@ -208,6 +211,9 @@ importers:
       next-themes:
         specifier: 0.2.1
         version: 0.2.1(next@13.4.7)(react-dom@18.2.0)(react@18.2.0)
+      pnpm:
+        specifier: 8.6.11
+        version: 8.6.11
       postcss:
         specifier: ^8.4.24
         version: 8.4.24
@@ -9035,6 +9041,11 @@ packages:
     resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
     dev: false
 
+  /i@0.3.7:
+    resolution: {integrity: sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==}
+    engines: {node: '>=0.4'}
+    dev: false
+
   /iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -10722,6 +10733,12 @@ packages:
     transitivePeerDependencies:
       - typescript
     dev: true
+
+  /pnpm@8.6.11:
+    resolution: {integrity: sha512-jqknppuj45tDzJsLcLqkAxytBHZXIx9JTYkGNq0/7pSRggpio9wRxTDj4NA2ilOHPlJ5BVjB5Ij5dx65woMi5A==}
+    engines: {node: '>=16.14'}
+    hasBin: true
+    dev: false
 
   /polished@4.2.2:
     resolution: {integrity: sha512-Sz2Lkdxz6F2Pgnpi9U5Ng/WdWAUZxmHrNPoVlm3aAemxoy2Qy7LGjQg4uf8qKelDAUW94F4np3iH2YPf2qefcQ==}
