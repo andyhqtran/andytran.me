@@ -10,9 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: yarn install
-        run: yarn install --frozen-lockfile
-      - name: yarn lint
-        run: yarn lint
+      - name: pnpm install
+        run: pnpm install --frozen-lockfile
+      - name: pnpm lint
+        run: pnpm lint
         env:
           CI: true
