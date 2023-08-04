@@ -4,7 +4,7 @@ import { IconButton } from '@several-ui/icon-button';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-import { trackedClickedThemeSwitcher } from '~/analytics/trackClickedThemeSwitcher';
+import { trackClickedThemeSwitcher } from '~/analytics/trackClickedThemeSwitcher';
 
 export const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
@@ -23,7 +23,7 @@ export const ThemeSwitcher = () => {
       onClick={() => {
         setTheme(isDarkMode ? 'light' : 'dark');
 
-        trackedClickedThemeSwitcher({
+        trackClickedThemeSwitcher({
           currentTheme: theme,
           newTheme: isDarkMode ? 'light' : 'dark',
         });

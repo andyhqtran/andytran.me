@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
-import { trackedClickedAdvancementCard } from '~/analytics/trackedClickedAdvancementCard';
+import { trackClickedAdvancementCard } from '~/analytics/trackClickedAdvancementCard';
 import { Advancement, ADVANCEMENTS } from '~/constants/advancements';
 import { Routes } from '~/constants/Routes';
 import { useFlags } from '~/flags/client';
@@ -33,7 +33,7 @@ export const AdvancementCard = ({ id }: AdvancementCardProps) => {
         className='group/advancement-link relative block h-full w-full'
         data-testid='ADVANCEMENT_CARD_LINK'
         href={`${Routes.Ranking}/${id}`}
-        onClick={() => trackedClickedAdvancementCard({ id })}
+        onClick={() => trackClickedAdvancementCard({ id })}
       >
         <Image
           alt={`Image of ${advancement.name}`}
