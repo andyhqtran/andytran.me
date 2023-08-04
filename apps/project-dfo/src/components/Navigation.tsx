@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useMemo } from 'react';
 
+import { trackedClickedNavigationItem } from '~/analytics/trackClickedNavigationItem';
 import { Routes } from '~/constants/Routes';
 import { useFlags } from '~/flags/client';
 
@@ -45,6 +46,7 @@ export const Navigation = () => {
             className='text-sm text-slate-11 hover:text-slate-12 hover:underline'
             href={navigationItem.href}
             key={navigationItem.id}
+            onClick={() => trackedClickedNavigationItem(navigationItem)}
           >
             {navigationItem.label}
           </Link>
