@@ -3,7 +3,7 @@ import { tv, type VariantProps } from 'tailwind-variants';
 
 export const button = tv(
   {
-    base: 'inline-flex cursor-pointer items-center justify-center rounded border-0 bg-transparent text-center font-medium text-slate-12 outline-none transition-colors disabled:cursor-not-allowed disabled:opacity-60 disabled:grayscale',
+    base: 'inline-flex shrink-0 cursor-pointer items-center justify-center rounded border-0 bg-transparent text-center font-medium text-slate-12 outline-none transition-colors disabled:cursor-not-allowed disabled:opacity-40',
     variants: {
       appearance: {
         default: '',
@@ -149,9 +149,18 @@ export type ButtonProps = ButtonVariants &
     suffix?: ReactNode;
   };
 
-export const Button = ({ appearance, children, className, prefix, size, suffix, ...restOfProps }: ButtonProps) => {
+export const Button = ({
+  appearance,
+  children,
+  className,
+  color,
+  prefix,
+  size,
+  suffix,
+  ...restOfProps
+}: ButtonProps) => {
   return (
-    <button className={button({ appearance, size, className })} data-testid='BUTTON' {...restOfProps}>
+    <button className={button({ appearance, color, size, className })} data-testid='BUTTON' {...restOfProps}>
       {!!prefix && <div className='shrink-0'>{prefix}</div>}
 
       {children}

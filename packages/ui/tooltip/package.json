@@ -1,8 +1,8 @@
 {
-  "name": "@several-ui/progress",
+  "name": "@several-ui/tooltip",
   "version": "1.0.0",
-  "main": "./src/Progress.tsx",
-  "types": "./src/Progress.tsx",
+  "main": "./src/Tooltip.tsx",
+  "types": "./src/Tooltip.tsx",
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist ",
     "lint": "eslint .",
@@ -21,8 +21,8 @@
     "typescript": "5.1.6"
   },
   "dependencies": {
-    "@radix-ui/react-progress": "^1.0.3",
-    "classnames": "2.3.2"
+    "@radix-ui/react-tooltip": "1.0.6",
+    "tailwind-merge": "1.14.0"
   },
   "peerDependencies": {
     "react": "18.2.0",

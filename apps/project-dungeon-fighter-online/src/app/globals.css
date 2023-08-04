@@ -7,6 +7,10 @@
     @apply bg-slate-1;
   }
 
+  * {
+    @apply box-border;
+  }
+
   h1,
   h2,
   h3,
@@ -22,7 +26,7 @@
   }
 
   b {
-    @apply font-semibold;
+    @apply font-medium;
   }
 
   svg {

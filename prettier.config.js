@@ -6,6 +6,6 @@ module.exports = {
   singleQuote: true,
   jsxSingleQuote: true,
   trailingComma: 'all',
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: ['prettier-plugin-tailwindcss'],
   tailwindConfig: './packages/tailwind-config/index.js',
 };
