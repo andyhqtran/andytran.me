@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Player } from '~/components/ranking/advancement/Player';
+import { Player } from '~/components/player/Player';
 import { Toolbar } from '~/components/ranking/advancement/Toolbar';
 import { Advancement, ADVANCEMENTS } from '~/constants/advancements';
 

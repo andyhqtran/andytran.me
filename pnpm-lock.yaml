@@ -199,9 +199,6 @@ importers:
       cookies-next:
         specifier: 2.1.1
         version: 2.1.1
-      i:
-        specifier: 0.3.7
-        version: 0.3.7
       next:
         specifier: 13.4.7
         version: 13.4.7(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
@@ -211,9 +208,6 @@ importers:
       next-themes:
         specifier: 0.2.1
         version: 0.2.1(next@13.4.7)(react-dom@18.2.0)(react@18.2.0)
-      pnpm:
-        specifier: 8.6.11
-        version: 8.6.11
       postcss:
         specifier: ^8.4.24
         version: 8.4.24
@@ -229,6 +223,9 @@ importers:
       react-use:
         specifier: 17.4.0
         version: 17.4.0(react-dom@18.2.0)(react@18.2.0)
+      react-window:
+        specifier: 1.8.9
+        version: 1.8.9(react-dom@18.2.0)(react@18.2.0)
       recoil:
         specifier: 0.7.7
         version: 0.7.7(react-dom@18.2.0)(react@18.2.0)
@@ -238,6 +235,9 @@ importers:
       tailwind-merge:
         specifier: 1.14.0
         version: 1.14.0
+      tailwind-variants:
+        specifier: 0.1.13
+        version: 0.1.13(tailwindcss@3.3.2)
       tailwindcss:
         specifier: ^3.3.2
         version: 3.3.2
@@ -257,6 +257,9 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
+      '@types/react-window':
+        specifier: 1.8.5
+        version: 1.8.5
       eslint:
         specifier: 8.43.0
         version: 8.43.0
@@ -5693,6 +5696,12 @@ packages:
     dependencies:
       '@types/react': 18.2.16
 
+  /@types/react-window@1.8.5:
+    resolution: {integrity: sha512-V9q3CvhC9Jk9bWBOysPGaWy/Z0lxYcTXLtLipkt2cnRj1JOSFNF7wqGpkScSXMgBwC+fnVRg/7shwgddBG5ICw==}
+    dependencies:
+      '@types/react': 18.2.16
+    dev: true
+
   /@types/react@18.2.14:
     resolution: {integrity: sha512-A0zjq+QN/O0Kpe30hA1GidzyFjatVvrpIvWLxD+xv67Vt91TWWgco9IvrJBkeyHm1trGaFS/FSGqPlhyeZRm0g==}
     dependencies:
@@ -9041,11 +9050,6 @@ packages:
     resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
     dev: false
 
-  /i@0.3.7:
-    resolution: {integrity: sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==}
-    engines: {node: '>=0.4'}
-    dev: false
-
   /iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -9887,6 +9891,10 @@ packages:
     dependencies:
       fs-monkey: 1.0.4
     dev: true
+
+  /memoize-one@5.2.1:
+    resolution: {integrity: sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q==}
+    dev: false
 
   /memoizerific@1.11.3:
     resolution: {integrity: sha512-/EuHYwAPdLtXwAwSZkh/Gutery6pD2KYd44oQLhAvQp/50mpyduZh8Q7PYHXTCJ+wuXxt7oij2LXyIJOOYFPog==}
@@ -10734,12 +10742,6 @@ packages:
       - typescript
     dev: true
 
-  /pnpm@8.6.11:
-    resolution: {integrity: sha512-jqknppuj45tDzJsLcLqkAxytBHZXIx9JTYkGNq0/7pSRggpio9wRxTDj4NA2ilOHPlJ5BVjB5Ij5dx65woMi5A==}
-    engines: {node: '>=16.14'}
-    hasBin: true
-    dev: false
-
   /polished@4.2.2:
     resolution: {integrity: sha512-Sz2Lkdxz6F2Pgnpi9U5Ng/WdWAUZxmHrNPoVlm3aAemxoy2Qy7LGjQg4uf8qKelDAUW94F4np3iH2YPf2qefcQ==}
     engines: {node: '>=10'}
@@ -11371,6 +11373,19 @@ packages:
       throttle-debounce: 3.0.1
       ts-easing: 0.2.0
       tslib: 2.6.0
+    dev: false
+
+  /react-window@1.8.9(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-+Eqx/fj1Aa5WnhRfj9dJg4VYATGwIUP2ItwItiJ6zboKWA6EX3lYDAXfGF2hyNqplEprhbtjbipiADEcwQ823Q==}
+    engines: {node: '>8.0.0'}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@babel/runtime': 7.22.5
+      memoize-one: 5.2.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react@18.2.0:
