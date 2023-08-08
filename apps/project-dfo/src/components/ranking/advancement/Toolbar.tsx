@@ -1,5 +1,5 @@
 'use client';
-import { ArrowLeftIcon, BarChartIcon } from '@radix-ui/react-icons';
+import { ArrowLeftIcon } from '@radix-ui/react-icons';
 import { IconButton } from '@several-ui/icon-button';
 import { Tooltip } from '@several-ui/tooltip';
 import { useRouter } from 'next/navigation';

@@ -4,12 +4,6 @@ import { PlayerList } from '~/components/player/PlayerList';
 import { Toolbar } from '~/components/ranking/advancement/Toolbar';
 import { Advancement, ADVANCEMENTS } from '~/constants/advancements';
 
-export async function generateStaticParams() {
-  return ADVANCEMENTS.map((advancement) => ({
-    id: advancement.id,
-  }));
-}
-
 type PageProps = {
   params: {
     id: Advancement['id'];
@@ -44,4 +38,20 @@ export default function Page({ params }: PageProps) {
       />
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  return ADVANCEMENTS.map((advancement) => ({
+    id: advancement.id,
+  }));
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { id } = params;
+
+  const advancement = ADVANCEMENTS.find((advancement) => id === advancement.id);
+
+  return {
+    title: `${advancement.name} ranking | Dungeon Fighter Online Resources`,
+  };
 }

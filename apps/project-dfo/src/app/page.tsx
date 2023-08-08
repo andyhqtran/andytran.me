@@ -1,3 +1,5 @@
+import { type Metadata } from 'next';
+
 export default function Page() {
   return (
     <div className='flex flex-col gap-8'>
@@ -8,3 +10,7 @@ export default function Page() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Home | Dungeon Fighter Online Resources',
+};

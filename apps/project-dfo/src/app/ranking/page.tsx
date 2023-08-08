@@ -1,3 +1,5 @@
+import { type Metadata } from 'next';
+
 import { AdvancementList } from '~/components/ranking/AdvancementList';
 import { FavoritesAdvancementList } from '~/components/ranking/FavoritesAdvancementList';
 
@@ -15,3 +17,7 @@ export default function Page() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Rankings | Dungeon Fighter Online Resources',
+};

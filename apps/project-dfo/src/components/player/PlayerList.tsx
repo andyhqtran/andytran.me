@@ -30,31 +30,33 @@ export const PlayerList = () => {
       {({ width }) => {
         return (
           <WindowScroller serverHeight={720} serverWidth={720}>
-            {({ height, isScrolling, onChildScroll, scrollTop }) => {
+            {({ height, isScrolling, onChildScroll, registerChild, scrollTop }) => {
               return (
-                <InfiniteLoader
-                  isRowLoaded={({ index }) => !!players[index]}
-                  loadMoreRows={async () => setSize(size + 1)}
-                  rowCount={totalResults}
-                  minimumBatchSize={20}
-                >
-                  {({ onRowsRendered, registerChild }) => (
-                    <List
-                      autoHeight
-                      className='z-[-1]'
-                      height={height}
-                      isScrolling={isScrolling}
-                      onChildScroll={onChildScroll}
-                      onRowsRendered={onRowsRendered}
-                      ref={registerChild}
-                      rowCount={players.length}
-                      rowHeight={() => 96 + 16}
-                      rowRenderer={PlayerListRow}
-                      scrollTop={isScrolling ? scrollTop : undefined}
-                      width={width}
-                    />
-                  )}
-                </InfiniteLoader>
+                <div ref={registerChild}>
+                  <InfiniteLoader
+                    isRowLoaded={({ index }) => !!players[index]}
+                    loadMoreRows={async () => setSize(size + 1)}
+                    rowCount={totalResults}
+                    minimumBatchSize={20}
+                  >
+                    {({ onRowsRendered, registerChild }) => (
+                      <List
+                        autoHeight
+                        className='z-[-1]'
+                        height={height}
+                        isScrolling={isScrolling}
+                        onChildScroll={onChildScroll}
+                        onRowsRendered={onRowsRendered}
+                        ref={registerChild}
+                        rowCount={players.length}
+                        rowHeight={() => 96 + 16}
+                        rowRenderer={PlayerListRow}
+                        scrollTop={isScrolling ? scrollTop : undefined}
+                        width={width}
+                      />
+                    )}
+                  </InfiniteLoader>
+                </div>
               );
             }}
           </WindowScroller>
