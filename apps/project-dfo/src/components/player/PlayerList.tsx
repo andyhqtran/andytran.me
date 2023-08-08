@@ -1,8 +1,10 @@
 'use client';
-import { useState } from 'react';
+import { flatten } from 'lodash';
+import { useMemo } from 'react';
 import { AutoSizer, InfiniteLoader, List, WindowScroller } from 'react-virtualized';
 
 import { Player } from '~/components/player/Player';
+import { usePlayers } from '~/swr/usePlayers';
 
 const PlayerListRow = ({ index, style }) => {
   return (
@@ -13,30 +15,39 @@ const PlayerListRow = ({ index, style }) => {
 };
 
 export const PlayerList = () => {
-  const [page, setPage] = useState(1);
-  const TEMP_DATA = Array.from({ length: page * 12 }, (_, i) => i + 1);
+  const { data, setSize, size } = usePlayers();
+
+  const players = useMemo(() => {
+    return flatten(data?.map((data) => data.results));
+  }, [data]);
+
+  const totalResults = useMemo(() => {
+    return data?.[size - 1]?.total_results;
+  }, [data, size]);
 
   return (
-    <AutoSizer>
+    <AutoSizer defaultWidth={720} disableHeight>
       {({ width }) => {
         return (
-          <WindowScroller serverHeight={0} serverWidth={0}>
+          <WindowScroller serverHeight={720} serverWidth={720}>
             {({ height, isScrolling, onChildScroll, scrollTop }) => {
               return (
                 <InfiniteLoader
-                  isRowLoaded={({ index }) => !!TEMP_DATA[index]}
-                  loadMoreRows={async () => setPage((page) => page + 1)}
-                  rowCount={300}
+                  isRowLoaded={({ index }) => !!players[index]}
+                  loadMoreRows={async () => setSize(size + 1)}
+                  rowCount={totalResults}
+                  minimumBatchSize={20}
                 >
                   {({ onRowsRendered, registerChild }) => (
                     <List
                       autoHeight
+                      className='z-[-1]'
                       height={height}
                       isScrolling={isScrolling}
                       onChildScroll={onChildScroll}
                       onRowsRendered={onRowsRendered}
                       ref={registerChild}
-                      rowCount={TEMP_DATA.length}
+                      rowCount={players.length}
                       rowHeight={() => 96 + 16}
                       rowRenderer={PlayerListRow}
                       scrollTop={isScrolling ? scrollTop : undefined}

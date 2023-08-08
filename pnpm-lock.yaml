@@ -199,6 +199,9 @@ importers:
       cookies-next:
         specifier: 2.1.1
         version: 2.1.1
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
       next:
         specifier: 13.4.7
         version: 13.4.7(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
@@ -217,6 +220,9 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      react-fast-compare:
+        specifier: 3.2.2
+        version: 3.2.2
       react-intersection-observer:
         specifier: ^9.4.3
         version: 9.4.3(react@18.2.0)
@@ -232,6 +238,9 @@ importers:
       slugify:
         specifier: 1.6.6
         version: 1.6.6
+      swr:
+        specifier: 2.2.0
+        version: 2.2.0(react@18.2.0)
       tailwind-merge:
         specifier: 1.14.0
         version: 1.14.0
@@ -248,6 +257,9 @@ importers:
       '@several/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
+      '@types/lodash':
+        specifier: 4.14.196
+        version: 4.14.196
       '@types/node':
         specifier: 20.3.2
         version: 20.3.2
@@ -4270,7 +4282,7 @@ packages:
       '@storybook/preview-api': 7.1.0
       '@storybook/theming': 7.1.0(react-dom@18.2.0)(react@18.2.0)
       '@storybook/types': 7.1.0
-      '@types/lodash': 4.14.195
+      '@types/lodash': 4.14.196
       color-convert: 2.0.1
       dequal: 2.0.3
       lodash: 4.17.21
@@ -5622,8 +5634,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
 
-  /@types/lodash@4.14.195:
-    resolution: {integrity: sha512-Hwx9EUgdwf2GLarOjQp5ZH8ZmblzcbTBC2wtQWNKARBSxM9ezRIAUpeDTgoQRAFB0+8CNWXVA9+MaSOzOF3nPg==}
+  /@types/lodash@4.14.196:
+    resolution: {integrity: sha512-22y3o88f4a94mKljsZcanlNWPzO0uBsBdzLAngf2tp533LzZcQzb6+eZPJ+vCTt+bqF2XnvT9gejTLsAcJAJyQ==}
     dev: true
 
   /@types/mdx@2.0.5:
@@ -9794,7 +9806,6 @@ packages:
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -11254,6 +11265,10 @@ packages:
       react-is: 18.1.0
     dev: true
 
+  /react-fast-compare@3.2.2:
+    resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
+    dev: false
+
   /react-frame-component@5.2.6(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-CwkEM5VSt6nFwZ1Op8hi3JB5rPseZlmnp5CGiismVTauE6S4Jsc4TNMlT0O7Cts4WgIC3ZBAQ2p1Mm9XgLbj+w==}
     peerDependencies:
@@ -12311,6 +12326,15 @@ packages:
       webpack: 5.88.0(@swc/core@1.3.70)(esbuild@0.18.15)
     dev: true
 
+  /swr@2.2.0(react@18.2.0):
+    resolution: {integrity: sha512-AjqHOv2lAhkuUdIiBu9xbuettzAzWXmCEcLONNKJRba87WAefz8Ca9d6ds/SzrPc235n1IxWYdhJ2zF3MNUaoQ==}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
+
   /synchronous-promise@2.0.17:
     resolution: {integrity: sha512-AsS729u2RHUfEra9xJrE39peJcc2stq2+poBXX8bcM08Y6g9j/i/PUzwNQqkaJde7Ntg1TO7bSREbR5sdosQ+g==}
     dev: true
@@ -12940,6 +12964,14 @@ packages:
       detect-node-es: 1.1.0
       react: 18.2.0
       tslib: 2.6.0
+    dev: false
+
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /util-deprecate@1.0.2:

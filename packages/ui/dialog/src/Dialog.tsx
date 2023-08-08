@@ -32,9 +32,9 @@ export const Dialog = ({
         >
           {(!!title || !!description) && (
             <div className='flex justify-between gap-8 border-b border-slate-4 px-6 py-4'>
-              <div className='flex min-w-0 flex-col gap-1'>
+              <div className='flex flex-col gap-1'>
                 {!!title && (
-                  <RadixDialog.Title className='min-w-0 truncate text-base font-semibold text-slate-12'>
+                  <RadixDialog.Title className='truncate text-base font-semibold text-slate-12'>
                     {title}
                   </RadixDialog.Title>
                 )}

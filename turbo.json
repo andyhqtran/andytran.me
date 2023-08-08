@@ -3,7 +3,7 @@
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
-      "env": ["NEXT_PUBLIC_FLAGS_ENV_KEY"],
+      "env": ["NEXT_PUBLIC_API_ACCESS_TOKEN", "NEXT_PUBLIC_API_URL", "NEXT_PUBLIC_FLAGS_ENV_KEY"],
       "outputs": [".next/**", "!.next/cache/**", "storybook-static/**", "dist/**"]
     },
     "test": {

@@ -1,19 +1,8 @@
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
+import { PlayerList } from '~/components/player/PlayerList';
 import { Toolbar } from '~/components/ranking/advancement/Toolbar';
 import { Advancement, ADVANCEMENTS } from '~/constants/advancements';
-
-const PlayerList = dynamic(
-  async () => {
-    const { PlayerList: Component } = await import('~/components/player/PlayerList');
-
-    return { default: Component };
-  },
-  {
-    ssr: false,
-  },
-);
 
 export async function generateStaticParams() {
   return ADVANCEMENTS.map((advancement) => ({
@@ -33,7 +22,7 @@ export default function Page({ params }: PageProps) {
   if (!advancement) return null;
 
   return (
-    <div className='flex flex-col'>
+    <div className='relative z-0 flex flex-col'>
       <div className='mb-8 flex flex-col gap-3 pb-6 pt-10'>
         <div className='flex flex-col gap-1'>
           <h1 className='text-2xl text-slate-12'>{advancement.name} ranking</h1>
@@ -44,12 +33,6 @@ export default function Page({ params }: PageProps) {
       <Toolbar className='mb-8' />
 
       <PlayerList />
-
-      {/* <div className='flex flex-col gap-4'>
-        {fakeArray.map((_, i) => (
-          <Player fame={50000 - i * 100} id={`${i + 1}`} key={i} name={`Player ${i + 1}`} rank={i + 1} />
-        ))}
-      </div> */}
 
       <Image
         alt={`Image of ${advancement.name}`}

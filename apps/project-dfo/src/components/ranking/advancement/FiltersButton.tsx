@@ -7,7 +7,7 @@ import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
 import { trackClickedRankingFiltersButton } from '~/analytics/trackClickedRankingFiltersButton';
-import { Filters } from '~/components/ranking/advancement/Filters';
+import { EquipmentFilters } from '~/components/equipment-filters/EquipmentFilters';
 
 export const FiltersButton = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -45,7 +45,7 @@ export const FiltersButton = () => {
         onOpenChange={setIsDialogOpen}
         title='Filters'
       >
-        <Filters onApplyFilters={() => setIsDialogOpen(false)} />
+        <EquipmentFilters onApplyFilters={() => setIsDialogOpen(false)} />
       </Dialog>
     </>
   );

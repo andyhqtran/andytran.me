@@ -1,7 +1,7 @@
 import { tv, VariantProps } from 'tailwind-variants';
 
 const playerEquipment = tv({
-  base: 'h-6 w-6 rounded border transition-colors',
+  base: 'h-7 w-7 rounded border',
   variants: {
     appearance: {
       default: 'border-slate-5 bg-slate-2',

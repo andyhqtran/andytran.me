@@ -11,7 +11,7 @@ export const Logo = ({ className, href = Routes.Root, ...restOfProps }: LogoProp
     <Link
       aria-label='Go to home'
       className={twMerge(
-        'flex h-10 w-10 items-center justify-center rounded-full bg-slate-2 text-xs font-semibold text-slate-12 transition-colors hover:bg-slate-3',
+        'flex h-10 w-10 items-center justify-center rounded-full bg-slate-2 text-xs font-semibold text-slate-12 hover:bg-slate-3',
         className,
       )}
       href={href}

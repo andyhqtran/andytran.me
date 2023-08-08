@@ -3,7 +3,7 @@ import { tv, type VariantProps } from 'tailwind-variants';
 
 export const iconButton = tv(
   {
-    base: 'inline-flex cursor-pointer items-center justify-center rounded border-0 bg-transparent text-center font-medium text-slate-12 outline-none transition-colors disabled:cursor-not-allowed disabled:opacity-60 disabled:grayscale',
+    base: 'inline-flex cursor-pointer items-center justify-center rounded border-0 bg-transparent text-center font-medium text-slate-12 outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:grayscale',
     variants: {
       appearance: {
         default: '',

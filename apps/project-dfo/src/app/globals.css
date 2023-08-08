@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-slate-1 transition-colors;
+    @apply bg-slate-1;
   }
 
   h1,
@@ -27,5 +27,9 @@
 
   svg {
     @apply block;
+  }
+
+  * {
+    @apply box-border min-w-0 transition-colors;
   }
 }

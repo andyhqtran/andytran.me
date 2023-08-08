@@ -3,7 +3,7 @@ import { tv, type VariantProps } from 'tailwind-variants';
 
 export const button = tv(
   {
-    base: 'inline-flex shrink-0 cursor-pointer items-center justify-center rounded border-0 bg-transparent text-center font-medium text-slate-12 outline-none transition-colors disabled:cursor-not-allowed disabled:opacity-60',
+    base: 'inline-flex shrink-0 cursor-pointer items-center justify-center rounded border-0 bg-transparent text-center font-medium text-slate-12 outline-none disabled:cursor-not-allowed disabled:opacity-60',
     variants: {
       appearance: {
         default: '',
