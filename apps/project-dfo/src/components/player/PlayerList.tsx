@@ -30,9 +30,12 @@ export const PlayerList = () => {
       {({ width }) => {
         return (
           <WindowScroller serverHeight={720} serverWidth={720}>
-            {({ height, isScrolling, onChildScroll, registerChild, scrollTop }) => {
+            {({ height, isScrolling, registerChild, scrollTop }) => {
               return (
-                <div ref={registerChild}>
+                <div
+                  // @ts-expect-error - Look at this later
+                  ref={registerChild}
+                >
                   <InfiniteLoader
                     isRowLoaded={({ index }) => !!players[index]}
                     loadMoreRows={async () => setSize(size + 1)}
@@ -45,13 +48,12 @@ export const PlayerList = () => {
                         className='z-[-1]'
                         height={height}
                         isScrolling={isScrolling}
-                        onChildScroll={onChildScroll}
                         onRowsRendered={onRowsRendered}
                         ref={registerChild}
                         rowCount={players.length}
                         rowHeight={() => 96 + 16}
                         rowRenderer={PlayerListRow}
-                        scrollTop={isScrolling ? scrollTop : undefined}
+                        scrollTop={scrollTop}
                         width={width}
                       />
                     )}
