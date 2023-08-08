@@ -172,6 +172,9 @@ importers:
       '@radix-ui/react-icons':
         specifier: 1.3.0
         version: 1.3.0(react@18.2.0)
+      '@several-ui/badge':
+        specifier: workspace:*
+        version: link:../../packages/ui/badge
       '@several-ui/button':
         specifier: workspace:*
         version: link:../../packages/ui/button
@@ -513,6 +516,43 @@ importers:
 
   packages/tsconfig: {}
 
+  packages/ui/badge:
+    dependencies:
+      tailwind-variants:
+        specifier: 0.1.13
+        version: 0.1.13(tailwindcss@3.3.2)
+    devDependencies:
+      '@several/tailwind-config':
+        specifier: workspace:*
+        version: link:../../tailwind-config
+      '@several/tsconfig':
+        specifier: workspace:*
+        version: link:../../tsconfig
+      '@storybook/react':
+        specifier: 7.0.23
+        version: 7.0.23(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3)
+      '@types/react':
+        specifier: 18.2.14
+        version: 18.2.14
+      '@types/react-dom':
+        specifier: 18.2.6
+        version: 18.2.6
+      eslint:
+        specifier: 8.43.0
+        version: 8.43.0
+      eslint-config-several:
+        specifier: workspace:*
+        version: link:../../eslint-config-several
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: 5.1.3
+        version: 5.1.3
+
   packages/ui/button:
     dependencies:
       tailwind-variants:
@@ -780,11 +820,6 @@ packages:
     dependencies:
       '@babel/highlight': 7.22.5
 
-  /@babel/compat-data@7.22.5:
-    resolution: {integrity: sha512-4Jc/YuIaYqKnDDz892kPIledykKg12Aw1PYX5i/TY28anJtacvM1Rrr8wbieB9GfEJwlzqT0hUEao0CxEebiDA==}
-    engines: {node: '>=6.9.0'}
-    dev: true
-
   /@babel/compat-data@7.22.9:
     resolution: {integrity: sha512-5UamI7xkUcJ3i9qVDS+KFDEK8/7oJ55/sJMB1Ge7IEapr7KfdfV/HErR+koZwOfd+SgtFKOKRhRakdg++DcJpQ==}
     engines: {node: '>=6.9.0'}
@@ -1040,13 +1075,6 @@ packages:
       chalk: 2.4.2
       js-tokens: 4.0.0
 
-  /@babel/parser@7.22.5:
-    resolution: {integrity: sha512-DFZMC9LJUG9PLOclRC32G63UXwzqS2koQC8dkx+PLdmt1xSePYpbT/NbsrJy8Q/muXz7o/h/d4A7Fuyixm559Q==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.22.5
-
   /@babel/parser@7.22.7:
     resolution: {integrity: sha512-7NF8pOkHP5o2vpmGgNGcfAeCvOYhGLyA3Z4eBQkT1RJlWu47n63bCs93QfJ2hIAFCil7L5P2IWhs1oToVgrL0Q==}
     engines: {node: '>=6.0.0'}
@@ -1128,7 +1156,7 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/compat-data': 7.22.5
+      '@babel/compat-data': 7.22.9
       '@babel/core': 7.22.9
       '@babel/helper-compilation-targets': 7.22.9(@babel/core@7.22.9)
       '@babel/helper-plugin-utils': 7.22.5
@@ -2018,7 +2046,7 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
-      '@babel/compat-data': 7.22.5
+      '@babel/compat-data': 7.22.9
       '@babel/core': 7.22.9
       '@babel/helper-compilation-targets': 7.22.9(@babel/core@7.22.9)
       '@babel/helper-plugin-utils': 7.22.5
@@ -2196,7 +2224,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/code-frame': 7.22.5
-      '@babel/parser': 7.22.5
+      '@babel/parser': 7.22.7
       '@babel/types': 7.22.5
 
   /@babel/traverse@7.22.8:
@@ -5701,7 +5729,7 @@ packages:
   /@types/react-dom@18.2.6:
     resolution: {integrity: sha512-2et4PDvg6PVCyS7fuTc4gPoksV58bW0RwSxWKcPRcHZf0PRUGq03TKcD/rUHe3azfV6/5/biUBJw+HhCQjaP0A==}
     dependencies:
-      '@types/react': 18.2.14
+      '@types/react': 18.2.16
 
   /@types/react-dom@18.2.7:
     resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}

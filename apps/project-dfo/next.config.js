@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: [
+    '@several-ui/badge',
     '@several-ui/button',
     '@several-ui/dialog',
     '@several-ui/icon-button',

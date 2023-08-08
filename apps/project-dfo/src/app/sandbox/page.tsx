@@ -1,9 +1,34 @@
 import { RocketIcon } from '@radix-ui/react-icons';
+import { Badge } from '@several-ui/badge';
 import { IconButton } from '@several-ui/icon-button';
 
 export default function Page() {
   return (
     <div className='flex flex-col gap-8'>
+      <div className='flex gap-4'>
+        <Badge size='sm'>Badge</Badge>
+        <Badge size='md'>Badge</Badge>
+        <Badge size='lg'>Badge</Badge>
+      </div>
+
+      <div className='flex gap-4'>
+        <Badge color='default' size='sm'>
+          Badge
+        </Badge>
+        <Badge color='blue' size='sm'>
+          Badge
+        </Badge>
+        <Badge color='green' size='sm'>
+          Badge
+        </Badge>
+        <Badge color='red' size='sm'>
+          Badge
+        </Badge>
+        <Badge color='yellow' size='sm'>
+          Badge
+        </Badge>
+      </div>
+
       <div className='flex gap-4'>
         <IconButton appearance='default' color='blue'>
           <RocketIcon />

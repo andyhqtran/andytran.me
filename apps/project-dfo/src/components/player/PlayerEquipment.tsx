@@ -1,7 +1,9 @@
+import { Badge } from '@several-ui/badge';
+import { useSearchParams } from 'next/navigation';
 import { tv, VariantProps } from 'tailwind-variants';
 
 const playerEquipment = tv({
-  base: 'h-7 w-7 rounded border',
+  base: 'relative h-7 w-7 rounded border',
   variants: {
     appearance: {
       default: 'border-slate-5 bg-slate-2',
@@ -18,5 +20,16 @@ export type PlayerEquipmentVariants = VariantProps<typeof playerEquipment>;
 export type PlayerEquipmentProps = PlayerEquipmentVariants;
 
 export const PlayerEquipment = ({ appearance }: PlayerEquipmentProps) => {
-  return <div className={playerEquipment({ appearance })} />;
+  const searchParams = useSearchParams();
+
+  const hasDetails = searchParams.has('showDetails');
+  return (
+    <div className={playerEquipment({ appearance })}>
+      {hasDetails && (
+        <Badge className='absolute -right-1 -top-1' size='sm'>
+          +12
+        </Badge>
+      )}
+    </div>
+  );
 };
