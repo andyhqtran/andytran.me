@@ -30,6 +30,7 @@
     "@several-ui/button": "workspace:*",
     "@several-ui/dialog": "workspace:*",
     "@several-ui/icon-button": "workspace:*",
+    "@several-ui/progress": "workspace:*",
     "@several-ui/spinner": "workspace:*",
     "@several-ui/tooltip": "workspace:*",
     "@vercel/analytics": "^1.0.1",

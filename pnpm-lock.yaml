@@ -184,6 +184,9 @@ importers:
       '@several-ui/icon-button':
         specifier: workspace:*
         version: link:../../packages/ui/icon-button
+      '@several-ui/progress':
+        specifier: workspace:*
+        version: link:../../packages/ui/progress
       '@several-ui/spinner':
         specifier: workspace:*
         version: link:../../packages/ui/spinner
@@ -678,9 +681,9 @@ importers:
       '@radix-ui/react-progress':
         specifier: ^1.0.3
         version: 1.0.3(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
-      classnames:
-        specifier: 2.3.2
-        version: 2.3.2
+      tailwind-variants:
+        specifier: 0.1.13
+        version: 0.1.13(tailwindcss@3.3.2)
     devDependencies:
       '@several/tailwind-config':
         specifier: workspace:*

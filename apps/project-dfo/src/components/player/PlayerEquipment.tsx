@@ -23,10 +23,12 @@ export const PlayerEquipment = ({ appearance }: PlayerEquipmentProps) => {
   const searchParams = useSearchParams();
 
   const hasDetails = searchParams.has('showDetails');
+  const isFeatured = appearance === 'featured';
+
   return (
     <div className={playerEquipment({ appearance })}>
       {hasDetails && (
-        <Badge className='absolute -right-1 -top-1' size='sm'>
+        <Badge className='absolute -right-1 -top-1' color={isFeatured ? 'blue' : 'default'} size='sm'>
           +12
         </Badge>
       )}

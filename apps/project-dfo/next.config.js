@@ -6,6 +6,7 @@ const nextConfig = {
     '@several-ui/button',
     '@several-ui/dialog',
     '@several-ui/icon-button',
+    '@several-ui/progress',
     '@several-ui/spinner',
     '@several-ui/tooltip',
   ],

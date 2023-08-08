@@ -5,6 +5,7 @@ import { Tooltip } from '@several-ui/tooltip';
 import { useState } from 'react';
 
 import { trackClickedRankingStatisticsButton } from '~/analytics/trackClickedRankingStatisticsButton';
+import { EquipmentStatistics } from '~/components/equipment-statistics/EquipmentStatistics';
 import { useFlags } from '~/flags/client';
 
 export const StatisticsButton = () => {
@@ -27,7 +28,7 @@ export const StatisticsButton = () => {
       </Tooltip>
 
       <Dialog onOpenChange={setIsDialogOpen} open={isDialogOpen} title='Statistics'>
-        {flags?.rankingStatistics ? null : <p className='text-sm text-slate-11'>Coming soon</p>}
+        {flags?.rankingStatistics ? <EquipmentStatistics /> : <p className='text-sm text-slate-11'>Coming soon</p>}
       </Dialog>
     </>
   );

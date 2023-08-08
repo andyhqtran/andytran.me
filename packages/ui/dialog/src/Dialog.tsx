@@ -27,7 +27,7 @@ export const Dialog = ({
       <RadixDialog.Portal>
         <RadixDialog.Overlay className='fixed inset-0 bg-slate-1 opacity-80' />
         <RadixDialog.Content
-          className='fixed left-1/2 top-1/2 flex w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 flex-col rounded border border-slate-4 bg-slate-1 shadow-lg'
+          className='fixed left-1/2 top-1/2 flex max-h-[80vh] w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 flex-col rounded border border-slate-4 bg-slate-1 shadow-lg'
           {...restOfProps}
         >
           {(!!title || !!description) && (
@@ -52,7 +52,7 @@ export const Dialog = ({
             </div>
           )}
 
-          <div className='p-6'>{children}</div>
+          <div className='overflow-y-auto p-6'>{children}</div>
         </RadixDialog.Content>
       </RadixDialog.Portal>
     </RadixDialog.Root>
