@@ -13,7 +13,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <Providers>
           <Header />
 
-          <main className='mx-auto max-w-3xl px-6'>{children}</main>
+          <main className='mx-auto max-w-3xl px-6 py-8'>{children}</main>
 
           <Footer />
           <Analytics />
