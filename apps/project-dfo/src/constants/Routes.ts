@@ -1,4 +1,5 @@
 export enum Routes {
+  Auction = '/auction',
   Character = '/character',
   Database = '/database',
   Guides = '/Guides',

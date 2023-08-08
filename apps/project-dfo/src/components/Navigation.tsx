@@ -4,39 +4,37 @@ import { useMemo } from 'react';
 
 import { trackClickedNavigationItem } from '~/analytics/trackClickedNavigationItem';
 import { Routes } from '~/constants/Routes';
-import { useFlags } from '~/flags/client';
 
 export const Navigation = () => {
-  const { flags } = useFlags();
-
   const navigationItems = useMemo(() => {
     const items = [];
-    if (flags?.ranking) {
-      items.push({
-        href: Routes.Ranking,
-        id: 'ranking',
-        label: 'Ranking',
-      });
-    }
 
-    if (flags?.statistics) {
-      items.push({
-        href: Routes.Statistics,
-        id: 'statistics',
-        label: 'Statistics',
-      });
-    }
+    items.push({
+      href: Routes.Ranking,
+      id: 'ranking',
+      label: 'Ranking',
+    });
 
-    if (flags?.database) {
-      items.push({
-        href: Routes.Database,
-        id: 'database',
-        label: 'Database',
-      });
-    }
+    items.push({
+      href: Routes.Auction,
+      id: 'auction',
+      label: 'Auction',
+    });
+
+    items.push({
+      href: Routes.Statistics,
+      id: 'statistics',
+      label: 'Statistics',
+    });
+
+    items.push({
+      href: Routes.Database,
+      id: 'database',
+      label: 'Database',
+    });
 
     return items;
-  }, [flags]);
+  }, []);
 
   return (
     <nav className='flex items-center gap-8'>
