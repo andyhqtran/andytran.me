@@ -8,8 +8,10 @@ import { useState } from 'react';
 
 import { trackClickedRankingFiltersButton } from '~/analytics/trackClickedRankingFiltersButton';
 import { EquipmentFilters } from '~/components/equipment-filters/EquipmentFilters';
+import { useFlags } from '~/flags/client';
 
 export const FiltersButton = () => {
+  const { flags } = useFlags();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const searchParams = useSearchParams();
 
@@ -39,13 +41,12 @@ export const FiltersButton = () => {
         </IconButton>
       </Tooltip>
 
-      <Dialog
-        description='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        open={isDialogOpen}
-        onOpenChange={setIsDialogOpen}
-        title='Filters'
-      >
-        <EquipmentFilters onApplyFilters={() => setIsDialogOpen(false)} />
+      <Dialog onOpenChange={setIsDialogOpen} open={isDialogOpen} title='Filters'>
+        {flags?.rankingFilters ? (
+          <EquipmentFilters onApplyFilters={() => setIsDialogOpen(false)} />
+        ) : (
+          <p className='text-sm text-slate-11'>Coming soon</p>
+        )}
       </Dialog>
     </>
   );

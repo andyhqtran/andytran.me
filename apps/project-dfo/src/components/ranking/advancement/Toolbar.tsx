@@ -9,6 +9,7 @@ import { twMerge } from 'tailwind-merge';
 
 import { DetailsButton } from '~/components/ranking/advancement/DetailsButton';
 import { FiltersButton } from '~/components/ranking/advancement/FiltersButton';
+import { StatisticsButton } from '~/components/ranking/advancement/StatisticsButton';
 import { Routes } from '~/constants/Routes';
 
 export type ToolbarProps = Pick<ComponentProps<'div'>, 'className'>;
@@ -35,11 +36,7 @@ export const Toolbar = ({ className }: ToolbarProps) => {
             </IconButton>
           </Tooltip>
 
-          <Tooltip label='View gear statistics'>
-            <IconButton appearance='outline' color='slate'>
-              <BarChartIcon className='h-3 w-3' />
-            </IconButton>
-          </Tooltip>
+          <StatisticsButton />
 
           <FiltersButton />
 

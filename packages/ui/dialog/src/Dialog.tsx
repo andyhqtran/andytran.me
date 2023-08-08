@@ -4,7 +4,7 @@ import { IconButton } from '@several-ui/icon-button';
 
 export type DialogProps = Pick<RadixDialog.DialogProps, 'defaultOpen' | 'modal' | 'onOpenChange' | 'open'> &
   RadixDialog.DialogContentProps & {
-    description: string;
+    description?: string;
     title: string;
     trigger?: RadixDialog.DialogTriggerProps['children'];
   };
