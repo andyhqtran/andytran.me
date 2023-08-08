@@ -1,6 +1,7 @@
 'use client';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { IconButton } from '@several-ui/icon-button';
+import { Tooltip } from '@several-ui/tooltip';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
@@ -14,23 +15,25 @@ export const ThemeSwitcher = () => {
 
   const isDarkMode = theme === 'dark';
 
-  if (!isMounted) return <IconButton appearance='outline' color='slate' disabled size='md' />;
+  if (!isMounted) return <IconButton appearance='outline' color='slate' disabled size='sm' />;
 
   return (
-    <IconButton
-      appearance='outline'
-      color='slate'
-      onClick={() => {
-        setTheme(isDarkMode ? 'light' : 'dark');
+    <Tooltip label={`Switch to ${isDarkMode ? 'Light' : 'Dark'} mode`}>
+      <IconButton
+        appearance='outline'
+        color='slate'
+        onClick={() => {
+          setTheme(isDarkMode ? 'light' : 'dark');
 
-        trackClickedThemeSwitcher({
-          currentTheme: theme,
-          newTheme: isDarkMode ? 'light' : 'dark',
-        });
-      }}
-      size='md'
-    >
-      {isDarkMode ? <MoonIcon className='h-3 w-3' /> : <SunIcon className='h-3 w-3' />}
-    </IconButton>
+          trackClickedThemeSwitcher({
+            currentTheme: theme,
+            newTheme: isDarkMode ? 'light' : 'dark',
+          });
+        }}
+        size='sm'
+      >
+        {isDarkMode ? <SunIcon className='h-2 w-2' /> : <MoonIcon className='h-2 w-2' />}
+      </IconButton>
+    </Tooltip>
   );
 };

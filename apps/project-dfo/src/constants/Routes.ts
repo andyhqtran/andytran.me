@@ -6,3 +6,7 @@ export enum Routes {
   Root = '/',
   Statistics = '/statistics',
 }
+
+export enum ExternalRoutes {
+  Discord = 'https://discord.gg/AmtqjPxMas',
+}
