@@ -1,6 +1,7 @@
 import { type Metadata } from 'next';
 
 import { Changelog } from '~/components/changelog/Changelog';
+import { Roadmap } from '~/components/roadmap/Roadmap';
 
 export default function Page() {
   return (
@@ -9,6 +10,9 @@ export default function Page() {
         <h1 className='text-2xl text-slate-12'>DFO.gg</h1>
         <p className='text-base text-slate-11'>This tool is coming soon.</p>
       </div>
+
+      <Roadmap />
+
       <Changelog />
     </div>
   );

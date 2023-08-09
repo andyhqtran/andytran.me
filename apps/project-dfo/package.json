@@ -28,6 +28,7 @@
     "@radix-ui/react-icons": "1.3.0",
     "@several-ui/badge": "workspace:*",
     "@several-ui/button": "workspace:*",
+    "@several-ui/collapsible-card": "workspace:*",
     "@several-ui/dialog": "workspace:*",
     "@several-ui/icon-button": "workspace:*",
     "@several-ui/progress": "workspace:*",

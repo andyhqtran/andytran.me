@@ -1,9 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img-api.dfoneople.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
   reactStrictMode: true,
   transpilePackages: [
     '@several-ui/badge',
     '@several-ui/button',
+    '@several-ui/collapsible-card',
     '@several-ui/dialog',
     '@several-ui/icon-button',
     '@several-ui/progress',

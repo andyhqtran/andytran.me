@@ -178,6 +178,9 @@ importers:
       '@several-ui/button':
         specifier: workspace:*
         version: link:../../packages/ui/button
+      '@several-ui/collapsible-card':
+        specifier: workspace:*
+        version: link:../../packages/ui/collapsible-card
       '@several-ui/dialog':
         specifier: workspace:*
         version: link:../../packages/ui/dialog
@@ -561,6 +564,49 @@ importers:
       tailwind-variants:
         specifier: 0.1.13
         version: 0.1.13(tailwindcss@3.3.2)
+    devDependencies:
+      '@several/tailwind-config':
+        specifier: workspace:*
+        version: link:../../tailwind-config
+      '@several/tsconfig':
+        specifier: workspace:*
+        version: link:../../tsconfig
+      '@storybook/react':
+        specifier: 7.0.23
+        version: 7.0.23(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3)
+      '@types/react':
+        specifier: 18.2.14
+        version: 18.2.14
+      '@types/react-dom':
+        specifier: 18.2.6
+        version: 18.2.6
+      eslint:
+        specifier: 8.43.0
+        version: 8.43.0
+      eslint-config-several:
+        specifier: workspace:*
+        version: link:../../eslint-config-several
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: 5.1.3
+        version: 5.1.3
+
+  packages/ui/collapsible-card:
+    dependencies:
+      '@radix-ui/react-collapsible':
+        specifier: 1.0.3
+        version: 1.0.3(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-icons':
+        specifier: 1.3.0
+        version: 1.3.0(react@18.2.0)
+      tailwind-merge:
+        specifier: 1.14.0
+        version: 1.14.0
     devDependencies:
       '@several/tailwind-config':
         specifier: workspace:*

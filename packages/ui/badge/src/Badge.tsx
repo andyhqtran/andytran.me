@@ -12,13 +12,13 @@ export const badge = tv({
       yellow: 'bg-yellow-5 text-yellow-11',
     },
     size: {
-      sm: 'h-4 px-1 text-[8px]',
+      sm: 'h-4 px-2 text-[8px]',
       md: 'h-5 px-2 text-[10px]',
       lg: 'h-6 px-2 text-xs',
     },
   },
   defaultVariants: {
-    color: 'blue',
+    color: 'default',
     size: 'md',
   },
 });
