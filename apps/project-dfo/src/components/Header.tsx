@@ -4,6 +4,7 @@ import { IconButton } from '@several-ui/icon-button';
 import { Tooltip } from '@several-ui/tooltip';
 import { useRouter } from 'next/navigation';
 
+import { trackedClickedDiscordButton } from '~/analytics/trackClickedDiscordButton';
 import { trackedClickedLogo } from '~/analytics/trackClickedLogo';
 import { Logo } from '~/components/Logo';
 import { Navigation } from '~/components/Navigation';
@@ -24,7 +25,10 @@ export const Header = () => {
             <IconButton
               appearance='outline'
               color='slate'
-              onClick={() => router.push(ExternalRoutes.Discord)}
+              onClick={() => {
+                router.push(ExternalRoutes.Discord);
+                trackedClickedDiscordButton();
+              }}
               size='md'
             >
               <DiscordLogoIcon className='h-3 w-3' />
