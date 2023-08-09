@@ -20,7 +20,7 @@ export default async function Page({ params }: PageProps) {
 
   if (!advancement) return null;
 
-  if (flags?.ranking) {
+  if (!flags?.ranking) {
     return (
       <div className='relative z-0 flex flex-col'>
         <div className='mb-8 flex flex-col gap-3 pb-6 pt-10'>
