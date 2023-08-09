@@ -15,17 +15,17 @@ export const Navigation = () => {
       label: 'Ranking',
     });
 
-    items.push({
-      href: Routes.Auction,
-      id: 'auction',
-      label: 'Auction',
-    });
+    // items.push({
+    //   href: Routes.Auction,
+    //   id: 'auction',
+    //   label: 'Auction',
+    // });
 
-    items.push({
-      href: Routes.Statistics,
-      id: 'statistics',
-      label: 'Statistics',
-    });
+    // items.push({
+    //   href: Routes.Statistics,
+    //   id: 'statistics',
+    //   label: 'Statistics',
+    // });
 
     items.push({
       href: Routes.Database,
