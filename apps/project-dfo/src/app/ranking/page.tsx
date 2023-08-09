@@ -18,7 +18,7 @@ export default async function Page() {
 
       {flags?.rankingFavorites && <FavoritesAdvancementList />}
 
-      {flags?.ranking && <AdvancementList />}
+      <AdvancementList />
     </div>
   );
 }

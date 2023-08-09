@@ -1,8 +1,10 @@
+import { cookies } from 'next/headers';
 import Image from 'next/image';
 
 import { PlayerList } from '~/components/player/PlayerList';
 import { Toolbar } from '~/components/ranking/advancement/Toolbar';
 import { Advancement, ADVANCEMENTS } from '~/constants/advancements';
+import { getFlags } from '~/flags/server';
 
 type PageProps = {
   params: {
@@ -10,10 +12,28 @@ type PageProps = {
   };
 };
 
-export default function Page({ params }: PageProps) {
+export default async function Page({ params }: PageProps) {
+  const visitorKey = cookies().get('hkvk')?.value;
+  const { flags } = await getFlags({ visitorKey });
+
   const advancement = ADVANCEMENTS.find((advancement) => params.id === advancement.id);
 
   if (!advancement) return null;
+
+  if (flags?.ranking) {
+    return (
+      <div className='relative z-0 flex flex-col'>
+        <div className='mb-8 flex flex-col gap-3 pb-6 pt-10'>
+          <div className='flex flex-col gap-1'>
+            <h1 className='text-2xl text-slate-12'>Coming soon</h1>
+            <p className='text-base text-slate-11'>
+              We&apos; currently working on a solution to display the top 200 per advancement.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className='relative z-0 flex flex-col'>
@@ -38,12 +58,6 @@ export default function Page({ params }: PageProps) {
       />
     </div>
   );
-}
-
-export async function generateStaticParams() {
-  return ADVANCEMENTS.map((advancement) => ({
-    id: advancement.id,
-  }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
