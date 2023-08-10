@@ -5,6 +5,8 @@ import { useState } from 'react';
 
 import { EquipmentCardBakalFusionOptions } from '~/components/character/equipment-card/EquipmentCardBakalFusionOptions';
 import { EquipmentCardEnchant } from '~/components/character/equipment-card/EquipmentCardEnchant';
+import { EquipmentCardIspinsOptions } from '~/components/character/equipment-card/EquipmentCardIspinsOptions';
+import { EquipmentCardMachineRevolutionOptions } from '~/components/character/equipment-card/EquipmentCardMachineRevolutionOptions';
 import { EquipmentCardOptions } from '~/components/character/equipment-card/EquipmentCardOptions';
 import { EquipmentImage } from '~/components/EquipmentImage';
 import { CharacterEquipment } from '~/data/getCharactersEquipment';
@@ -66,7 +68,11 @@ export const EquipmentCardItem = ({ equip }: EquipmentCardItemProps) => {
             )}
 
             {equip?.enchant && <EquipmentCardEnchant details={equip.enchant.explain} enchants={equip.enchant.status} />}
-            {equip.bakalInfo && <EquipmentCardBakalFusionOptions options={equip.bakalInfo.options} />}
+            {equip?.bakalInfo && <EquipmentCardBakalFusionOptions options={equip.bakalInfo.options} />}
+            {equip?.machineRevolutionInfo && (
+              <EquipmentCardMachineRevolutionOptions options={equip.machineRevolutionInfo.options} />
+            )}
+            {equip?.ispinsInfo && <EquipmentCardIspinsOptions options={equip.ispinsInfo.options} />}
           </div>
 
           <div className='flex flex-col gap-6'>
