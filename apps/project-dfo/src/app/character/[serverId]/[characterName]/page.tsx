@@ -53,7 +53,10 @@ export default async function Page({ params }: PageProps) {
       </div>
 
       <div className='flex flex-col gap-6'>
-        <EquipmentCard characterId={character.characterId} serverId={params.serverId} />
+        <EquipmentCard
+          characterId={character.characterId}
+          serverId={params.serverId === 'sirocco' ? 'siroco' : 'cain'}
+        />
 
         <CollapsibleCard title='Buff'>No buff entries.</CollapsibleCard>
 
