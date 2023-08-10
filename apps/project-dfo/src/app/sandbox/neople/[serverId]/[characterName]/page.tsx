@@ -7,7 +7,7 @@ import { getCharactersEquipment } from '~/data/getCharactersEquipment';
 export default async function Page({ params }) {
   const characters = await getCharacters({
     characterName: params.characterName,
-    serverId: 'cain',
+    serverId: params.serverId,
   });
 
   const character = characters.rows?.[0];

@@ -8,6 +8,7 @@
     "dev": "next dev --port 3004",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "test": "yarn tsc"
   },
