@@ -11,9 +11,9 @@ export default function Page() {
         <p className='text-base text-slate-11'>This tool is coming soon.</p>
       </div>
 
-      <Roadmap />
-
       <Changelog />
+
+      <Roadmap />
     </div>
   );
 }

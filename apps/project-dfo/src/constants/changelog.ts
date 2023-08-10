@@ -6,4 +6,11 @@ export type Changelog = {
   type: ChangelogType;
 };
 
-export const CHANGELOG: Changelog[] = [];
+export const CHANGELOG: Changelog[] = [
+  {
+    title: 'Character search',
+    description:
+      "We've released an early version of the characters page. This page currently lets you search for a character and view their equipment only.",
+    type: 'feature',
+  },
+];
