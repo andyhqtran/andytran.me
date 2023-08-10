@@ -43,6 +43,14 @@ export type CharacterEquipment = {
       explainDetail: string;
     }[];
   };
+  ispinsInfo?: {
+    options: {
+      damage?: number;
+      buff: number;
+      explain: string;
+      explainDetail: string;
+    }[];
+  };
   upgradeInfo?: {
     itemId: string;
     itemName: string;

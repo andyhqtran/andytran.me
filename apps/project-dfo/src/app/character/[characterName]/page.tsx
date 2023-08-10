@@ -1,3 +1,4 @@
+import { RocketIcon } from '@radix-ui/react-icons';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
 import { EquipmentCard } from '~/components/character/EquipmentCard';
@@ -19,6 +20,11 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <div className='relative z-0 flex flex-col gap-8'>
+      <div className='flex items-center gap-3 rounded border border-blue-6 bg-blue-3 p-4 text-sm text-blue-11'>
+        <RocketIcon className='h-3 w-3' />
+        This page is currently a work-in-progress and contains a limited amount of information.
+      </div>
+
       <div className='flex flex-col gap-1'>
         <h1 className='text-xl text-slate-12'>{character.characterName}</h1>
         <div className='flex gap-2 text-sm text-slate-11'>

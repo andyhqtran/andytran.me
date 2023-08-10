@@ -10,6 +10,12 @@ export const Navigation = () => {
     const items = [];
 
     items.push({
+      href: Routes.Character,
+      id: 'Character',
+      label: 'Character',
+    });
+
+    items.push({
       href: Routes.Ranking,
       id: 'ranking',
       label: 'Ranking',
