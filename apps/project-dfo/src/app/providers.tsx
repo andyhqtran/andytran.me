@@ -10,7 +10,7 @@ export const Providers = ({ children }: { children: ReactNode }) => {
     <RecoilRoot>
       <SWRConfig>
         <TooltipProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider defaultTheme='dark'>{children}</ThemeProvider>
         </TooltipProvider>
       </SWRConfig>
     </RecoilRoot>
