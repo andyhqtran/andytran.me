@@ -1,4 +1,4 @@
-import { RocketIcon } from '@radix-ui/react-icons';
+import { ExclamationTriangleIcon, RocketIcon } from '@radix-ui/react-icons';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
 import { EquipmentCard } from '~/components/character/equipment-card/EquipmentCard';
@@ -39,9 +39,16 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <div className='relative z-0 flex flex-col gap-8'>
-      <div className='flex items-center gap-3 rounded border border-blue-6 bg-blue-3 p-4 text-sm text-blue-11'>
-        <RocketIcon className='h-3 w-3' />
-        This page is currently a work-in-progress and contains a limited amount of information.
+      <div className='flex flex-col gap-2'>
+        <div className='flex items-center gap-3 rounded border border-blue-6 bg-blue-3 p-4 text-sm text-blue-11'>
+          <RocketIcon className='h-3 w-3' />
+          This page is currently a work-in-progress and contains a limited amount of information.
+        </div>
+
+        <div className='flex items-center gap-3 rounded border border-yellow-6 bg-yellow-3 p-4 text-sm text-yellow-11'>
+          <ExclamationTriangleIcon className='h-3 w-3' />
+          Hall of Dimensions fusions currently aren&apos;t showing because Neople doesn&apos;t return it from their API.
+        </div>
       </div>
 
       <div className='flex flex-col gap-1'>
@@ -51,7 +58,6 @@ export default async function Page({ params }: PageProps) {
           <div>Job: {character.jobGrowName}</div>
         </div>
       </div>
-
       <div className='flex flex-col gap-6'>
         <EquipmentCard
           characterId={character.characterId}
