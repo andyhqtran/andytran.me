@@ -4,6 +4,8 @@ import { API_KEY, API_URL } from '~/constants/env';
 import { Character } from '~/data/getCharacters';
 import { Server } from '~/fetchers/fetchServers';
 
+export const revalidate = 3600;
+
 export type CharacterEquipment = {
   slotId: string;
   slotName: string;
@@ -90,9 +92,8 @@ export const getCharactersEquipment = cache(async (params): Promise<GetCharacter
   return await fetch(
     `${API_URL}/servers/${params.serverId}/characters/${params.characterId}/equip/equipment?${searchParams.toString()}`,
     {
-      method: 'GET',
-      headers: {
-        accept: 'application/json',
+      next: {
+        revalidate: 3600,
       },
     },
   )

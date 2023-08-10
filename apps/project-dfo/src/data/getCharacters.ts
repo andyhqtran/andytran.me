@@ -43,9 +43,8 @@ export const getCharacters = cache(async (params: GetCharactersParams): Promise<
   if (params.wordType) searchParams.append('wordType', params.wordType);
 
   return await fetch(`${API_URL}/servers/${params.serverId}/characters?${searchParams.toString()}`, {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
+    next: {
+      revalidate: 3600,
     },
   }).then((res) => res.json());
 });
