@@ -1,6 +1,7 @@
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 import Image from 'next/image';
 
+import { EquipmentCardOptions } from '~/components/character/EquipmentCardOptions';
 import { getCharactersEquipment } from '~/data/getCharactersEquipment';
 
 export const EquipmentCard = async ({ characterId, serverId }) => {
@@ -66,28 +67,13 @@ export const EquipmentCard = async ({ characterId, serverId }) => {
                 </div>
 
                 <div>
-                  {equip.growInfo && (
-                    <div className='flex flex-col gap-2'>
-                      <div className='flex flex-col gap-1'>
-                        <div className='text-sm text-slate-12'>Growth options</div>
-                        <div>
-                          Total damage value: <span className='text-blue-9'>{equip.growInfo.total.damage}</span>
-                        </div>
-                        <div>
-                          Total growth option levels: <span className='text-blue-9'>{equip.growInfo.total.level}</span>
-                        </div>
-                      </div>
-                      {equip.growInfo?.options?.map((option, index) => (
-                        <div className='flex flex-col gap-1' key={index}>
-                          <div className='text-xs font-medium text-slate-12'>
-                            Option {index + 1} - Lv{option.level} ({option.expRate}%)
-                          </div>
-                          <div className='text-slate-11' key={index}>
-                            {option.explainDetail}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                  {equip?.growInfo && (
+                    <EquipmentCardOptions
+                      buff={equip.growInfo.total.buff}
+                      damage={equip.growInfo.total.damage}
+                      level={equip.growInfo.total.level}
+                      options={equip.growInfo.options}
+                    />
                   )}
                 </div>
               </div>
