@@ -2,6 +2,7 @@ import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
+import Script from 'next/script';
 
 import { Providers } from '~/app/providers';
 import { Footer } from '~/components/Footer';
@@ -11,6 +12,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang='en' suppressHydrationWarning>
       <body className='antialiased'>
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
+        <Script id='google-analytics'>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+        `}
+        </Script>
+
         <Providers>
           <Header />
 
