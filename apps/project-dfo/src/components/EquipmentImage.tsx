@@ -15,7 +15,7 @@ export const EquipmentImage = ({ alt, className, itemId, ...restOfProps }: Equip
       className={twMerge('relative h-8 w-8 overflow-hidden rounded border border-slate-5 bg-slate-2', className)}
       {...restOfProps}
     >
-      <Image alt={alt} fill src={`https://img-api.dfoneople.com/df/items/${itemId}`} />
+      <Image alt={alt} fill src={`https://img-api.dfoneople.com/df/items/${itemId}`} unoptimized />
     </div>
   );
 };
