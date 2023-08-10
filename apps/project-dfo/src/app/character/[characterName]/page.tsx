@@ -3,7 +3,13 @@ import { CollapsibleCard } from '@several-ui/collapsible-card';
 import { EquipmentCard } from '~/components/character/EquipmentCard';
 import { getCharacters } from '~/data/getCharacters';
 
-export default async function Page({ params }) {
+export type PageProps = {
+  params: {
+    characterName: string;
+  };
+};
+
+export default async function Page({ params }: PageProps) {
   const characters = await getCharacters({
     characterName: params.characterName,
     serverId: 'cain',
@@ -35,3 +41,19 @@ export default async function Page({ params }) {
     </div>
   );
 }
+
+export const generateMetadata = async ({ params }: PageProps) => {
+  const characterName = params.characterName;
+
+  const characters = await getCharacters({
+    characterName,
+    serverId: 'cain',
+  });
+
+  const character = characters.rows?.[0];
+
+  return {
+    description: `Character information for ${character.characterName}`,
+    title: `${character.characterName} (${character.jobGrowName}) - ${character.fame} - Dungeon Fighter Online Resources`,
+  };
+};

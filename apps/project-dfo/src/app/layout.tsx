@@ -27,5 +27,5 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 export const metadata: Metadata = {
   title: 'Dungeon Fighter Online Resources',
   description:
-    'Unlock the ultimate Dungeon Fighter Online advantage with our extensive resources, detailed stats, and current rankings. Master the art of gameplay with strategic insights and guides. Rise to the top of the DFO world – start your journey now!',
+    "Discover the ultimate Dungeon Fighter Online resource hub! Explore comprehensive rankings, in-depth guides, and an extensive database search to enhance your gaming experience. Whether you're a seasoned adventurer or just starting your journey, our website is your one-stop destination for mastering the game.",
 };
