@@ -19,6 +19,6 @@
       "~/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "src"],
+  "include": ["src", "next-env.d.ts"],
   "exclude": ["node_modules"]
 }

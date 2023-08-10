@@ -10,9 +10,9 @@ export const CharacterSearch = () => {
 
   return (
     <Formik
-      initialValues={{ name: '' }}
-      onSubmit={({ name }) => {
-        router.push(`/character/${name}`);
+      initialValues={{ name: '', server: 'cain' }}
+      onSubmit={({ name, server }) => {
+        router.push(`/character/${server}/${name}`);
         trackClickedCharacterSearchButton({ name });
       }}
     >
@@ -21,8 +21,19 @@ export const CharacterSearch = () => {
           className='h-8 gap-2 rounded border border-slate-6 bg-slate-3 px-3 text-sm text-slate-12'
           name='name'
           placeholder='Enter character name'
+          required
           type='text'
         />
+
+        <Field
+          className='h-8 gap-2 rounded border border-slate-6 bg-slate-3 px-3 py-0 text-sm text-slate-12'
+          component='select'
+          required
+          name='server'
+        >
+          <option value='cain'>Cain</option>
+          <option value='sirocco'>Sirocco</option>
+        </Field>
 
         <Button type='submit'>Search</Button>
       </Form>

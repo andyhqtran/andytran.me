@@ -7,16 +7,35 @@ import { getCharacters } from '~/data/getCharacters';
 export type PageProps = {
   params: {
     characterName: string;
+    serverId: string;
   };
 };
 
 export default async function Page({ params }: PageProps) {
   const characters = await getCharacters({
     characterName: params.characterName,
-    serverId: 'cain',
+    serverId: params.serverId === 'sirocco' ? 'siroco' : 'cain',
   });
 
   const character = characters.rows?.[0];
+
+  if (!character) {
+    return (
+      <div className='flex flex-col gap-8'>
+        <div className='flex items-center gap-3 rounded border border-blue-6 bg-blue-3 p-4 text-sm text-blue-11'>
+          <RocketIcon className='h-3 w-3' />
+          This page is currently a work-in-progress and contains a limited amount of information.
+        </div>
+
+        <div className='flex flex-col gap-1'>
+          <h1 className='text-xl text-slate-12'>Character not found</h1>
+          <div className='text-sm text-slate-11'>
+            The character <b>{params.characterName}</b> could not be found on the <b>{params.serverId}</b> server.
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className='relative z-0 flex flex-col gap-8'>
@@ -57,6 +76,13 @@ export const generateMetadata = async ({ params }: PageProps) => {
   });
 
   const character = characters.rows?.[0];
+
+  if (!character) {
+    return {
+      description: `Character information for ${characterName}`,
+      title: `${characterName} - Dungeon Fighter Online Resources`,
+    };
+  }
 
   return {
     description: `Character information for ${character.characterName}`,

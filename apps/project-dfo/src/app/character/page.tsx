@@ -1,8 +1,9 @@
 import { type Metadata } from 'next';
 
 import { CharacterSearch } from '~/components/character/CharacterSearch';
+import { CharacterSearchList } from '~/components/character/CharacterSearchList';
 
-export default function Page() {
+export default async function Page() {
   return (
     <div className='flex flex-col gap-8'>
       <div className='flex flex-col gap-1 pb-6 pt-10'>
@@ -13,6 +14,7 @@ export default function Page() {
       </div>
 
       <CharacterSearch />
+      <CharacterSearchList />
     </div>
   );
 }
