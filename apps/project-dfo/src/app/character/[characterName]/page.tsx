@@ -1,10 +1,11 @@
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
+import { EquipmentCard } from '~/components/character/EquipmentCard';
 import { getCharacters } from '~/data/getCharacters';
 
-export default async function Page() {
+export default async function Page({ params }) {
   const characters = await getCharacters({
-    characterName: 'Navigated',
+    characterName: params.characterName,
     serverId: 'cain',
   });
 
@@ -16,16 +17,20 @@ export default async function Page() {
         <h1 className='text-xl text-slate-12'>{character.characterName}</h1>
         <div className='flex gap-2 text-sm text-slate-11'>
           <div>Fame: {character.fame}</div>
-          <div>Job: {character.jobName}</div>
+          <div>Job: {character.jobGrowName}</div>
         </div>
       </div>
 
       <div className='flex flex-col gap-6'>
-        <CollapsibleCard title='Equipment'>equips</CollapsibleCard>
-        <CollapsibleCard title='Buff'>equips</CollapsibleCard>
-        <CollapsibleCard title='Avatar'>equips</CollapsibleCard>
-        <CollapsibleCard title='Statistics'>equips</CollapsibleCard>
-        <CollapsibleCard title='Skill'>equips</CollapsibleCard>
+        <EquipmentCard characterId={character.characterId} serverId='cain' />
+
+        <CollapsibleCard title='Buff'>No buff entries.</CollapsibleCard>
+
+        <CollapsibleCard title='Avatar'>No avatar entries.</CollapsibleCard>
+
+        <CollapsibleCard title='Statistics'>No statistics entries.</CollapsibleCard>
+
+        <CollapsibleCard title='Skill'>No skill entries.</CollapsibleCard>
       </div>
     </div>
   );
