@@ -39,7 +39,7 @@ export const AdvancementCard = ({ id }: AdvancementCardProps) => {
           alt={`Image of ${advancement.name}`}
           className='pointer-events-none object-cover transition-transform group-hover/advancement:scale-125 group-focus-visible/advancement-link:scale-125'
           fill
-          id={id}
+          id={`${advancement.characterId}-${advancement.id}`}
           priority
           sizes='200px'
           src={`/assets/characters/${advancement.characterId}-${advancement.id}.jpeg`}

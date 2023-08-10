@@ -53,7 +53,7 @@ export default async function Page({ params }: PageProps) {
         className='pointer-events-none fixed bottom-0 right-0 -z-10 max-w-[400px] object-cover opacity-5 grayscale'
         height={1200}
         priority
-        src={`/assets/characters/${advancement.characterId}-${advancement.id}.jpeg`}
+        src={`/assets/characters/${advancement.characterId}-${advancement.id}.png`}
         width={1200}
       />
     </div>

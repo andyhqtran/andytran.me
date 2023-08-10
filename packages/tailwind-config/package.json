@@ -17,6 +17,6 @@
     "tailwindcss-radix": "^2.8.0"
   },
   "dependencies": {
-    "@radix-ui/colors": "^0.1.8"
+    "@radix-ui/colors": "^2.0.1"
   }
 }
