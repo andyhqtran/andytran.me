@@ -3,9 +3,9 @@ import { Button } from '@several-ui/button';
 import { Dialog } from '@several-ui/dialog';
 import { useState } from 'react';
 
-import { EquipmentCardBakalFusionOptions } from '~/components/character/EquipmentCardBakalFusionOptions';
-import { EquipmentCardEnchant } from '~/components/character/EquipmentCardEnchant';
-import { EquipmentCardOptions } from '~/components/character/EquipmentCardOptions';
+import { EquipmentCardBakalFusionOptions } from '~/components/character/equipment-card/EquipmentCardBakalFusionOptions';
+import { EquipmentCardEnchant } from '~/components/character/equipment-card/EquipmentCardEnchant';
+import { EquipmentCardOptions } from '~/components/character/equipment-card/EquipmentCardOptions';
 import { EquipmentImage } from '~/components/EquipmentImage';
 import { CharacterEquipment } from '~/data/getCharactersEquipment';
 

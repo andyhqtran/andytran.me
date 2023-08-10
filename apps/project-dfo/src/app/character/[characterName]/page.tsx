@@ -1,7 +1,7 @@
 import { RocketIcon } from '@radix-ui/react-icons';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
-import { EquipmentCard } from '~/components/character/EquipmentCard';
+import { EquipmentCard } from '~/components/character/equipment-card/EquipmentCard';
 import { getCharacters } from '~/data/getCharacters';
 
 export type PageProps = {

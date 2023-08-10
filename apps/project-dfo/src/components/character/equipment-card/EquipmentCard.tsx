@@ -1,6 +1,6 @@
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
-import { EquipmentCardItem } from '~/components/character/EquipmentCardItem';
+import { EquipmentCardItem } from '~/components/character/equipment-card/EquipmentCardItem';
 import { getCharactersEquipment } from '~/data/getCharactersEquipment';
 
 export const EquipmentCard = async ({ characterId, serverId }) => {
