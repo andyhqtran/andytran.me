@@ -40,7 +40,10 @@ export const CharacterCard = ({
       data-character-id={id}
       {...restOfProps}
     >
-      <Link className='absolute inset-0 rounded' href={`${Routes.Character}/${serverId}/${name}`} />
+      <Link
+        className='absolute inset-0 rounded'
+        href={`${Routes.Character}/${serverId === 'siroco' ? 'sirocco' : serverId}/${name}`}
+      />
       <div className='flex shrink-0 gap-4'>
         {label && (
           <div className='flex min-w-[80px] flex-col items-center justify-center border-r border-slate-7'>
@@ -80,6 +83,9 @@ export const CharacterCard = ({
           </div>
         </div>
       </div>
+      <p className='flex h-6 items-center gap-1 rounded border border-slate-7 bg-slate-3 px-2 text-xs capitalize text-slate-11'>
+        Server: <span className='text-slate-12'>{serverId}</span>
+      </p>
     </div>
   );
 };
