@@ -1,6 +1,7 @@
 import { RocketIcon } from '@radix-ui/react-icons';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
+import { AvatarCard } from '~/components/character/avatar-card/AvatarCard';
 import { BuffEquipmentCard } from '~/components/character/buff-equipment-card/BuffEquipmentCard';
 import { EquipmentCard } from '~/components/character/equipment-card/EquipmentCard';
 import { getCharacters } from '~/data/getCharacters';
@@ -65,7 +66,7 @@ export default async function Page({ params }: PageProps) {
           serverId={params.serverId === 'sirocco' ? 'siroco' : 'cain'}
         />
 
-        <CollapsibleCard title='Buff'>No buff entries.</CollapsibleCard>
+        <AvatarCard characterId={character.characterId} serverId={params.serverId === 'sirocco' ? 'siroco' : 'cain'} />
 
         <CollapsibleCard title='Avatar'>No avatar entries.</CollapsibleCard>
 

@@ -10,10 +10,11 @@ import { EquipmentCardIspinsOptions } from '~/components/character/equipment-car
 import { EquipmentCardMachineRevolutionOptions } from '~/components/character/equipment-card/EquipmentCardMachineRevolutionOptions';
 import { EquipmentCardOptions } from '~/components/character/equipment-card/EquipmentCardOptions';
 import { EquipmentImage } from '~/components/EquipmentImage';
-import { type CharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
+import { ITEM_RARITY } from '~/constants/itemRarity';
+import { type Equipment } from '~/types/neople';
 
 export type EquipmentCardItemProps = {
-  equip: CharacterEquipment;
+  equip: Equipment;
 };
 
 export const EquipmentCardItem = ({ equip }: EquipmentCardItemProps) => {
@@ -23,7 +24,7 @@ export const EquipmentCardItem = ({ equip }: EquipmentCardItemProps) => {
     <>
       <div className='flex items-center gap-8 border-b border-slate-5 py-4 first-of-type:pt-0 last-of-type:border-b-0 last-of-type:pb-0'>
         <div className='flex min-w-[72px] gap-2'>
-          <EquipmentImage alt={equip.itemName} className='border-yellow-9 bg-yellow-2' itemId={equip.itemId} />
+          <EquipmentImage alt={equip.itemName} itemId={equip.itemId} rarity={ITEM_RARITY[equip.itemRarity]} />
 
           {equip?.upgradeInfo && (
             <EquipmentImage

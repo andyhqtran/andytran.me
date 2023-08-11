@@ -1,7 +1,7 @@
-import { type CharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
+import { type Option } from '~/types/neople';
 
 export type EquipmentCardBakalFusionOptionsProps = {
-  options: CharacterEquipment['bakalInfo']['options'];
+  options: Option[];
 };
 
 export const EquipmentCardBakalFusionOptions = ({ options }: EquipmentCardBakalFusionOptionsProps) => {

@@ -1,10 +1,10 @@
-import { type CharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
+import { type Equipment } from '~/types/neople';
 
 export type EquipmentCardOptionsProps = {
   buff?: number;
   damage?: number;
   level: number;
-  options: CharacterEquipment['growInfo']['options'];
+  options: Equipment['growInfo']['options'];
 };
 
 export const EquipmentCardOptions = ({ buff, damage, level, options }: EquipmentCardOptionsProps) => {

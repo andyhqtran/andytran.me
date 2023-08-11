@@ -5,15 +5,15 @@ import { useState } from 'react';
 
 import { EquipmentImage } from '~/components/EquipmentImage';
 import { ITEM_RARITY } from '~/constants/itemRarity';
-import { BuffAvatar } from '~/fetchers/fetchCharacterBuffAvatar';
-import { ItemInformation } from '~/fetchers/fetchItemInformation';
+import { type ItemInformation } from '~/fetchers/fetchItemInformation';
+import { type Avatar } from '~/types/neople';
 
-export type BuffEquipmentCardAvatarItemProps = {
-  avatar: BuffAvatar;
-  itemInformation: ItemInformation;
+export type AvatarCardItemProps = {
+  avatar: Avatar;
+  itemInformation?: ItemInformation;
 };
 
-export const BuffEquipmentCardAvatarItem = ({ avatar, itemInformation }: BuffEquipmentCardAvatarItemProps) => {
+export const AvatarCardItem = ({ avatar, itemInformation }: AvatarCardItemProps) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
@@ -28,6 +28,7 @@ export const BuffEquipmentCardAvatarItem = ({ avatar, itemInformation }: BuffEqu
             itemId={avatar.itemId}
             rarity={ITEM_RARITY[avatar.itemRarity]}
           />
+          <EquipmentImage alt={`Image for ${avatar.clone.itemName}`} itemId={avatar.clone.itemId} />
         </div>
 
         <div className='min-w-[48px]' />
@@ -36,7 +37,7 @@ export const BuffEquipmentCardAvatarItem = ({ avatar, itemInformation }: BuffEqu
           <div className='flex items-baseline gap-1 text-sm font-medium text-slate-12'>
             {avatar.itemName} <span className='text-xs text-slate-11'>{avatar.slotName}</span>
           </div>
-          <div className='text-xs text-green-11'>{itemInformation.setItemName}</div>
+          {itemInformation?.setItemName && <div className='text-xs text-green-11'>{itemInformation.setItemName}</div>}
 
           {/* {avatar.emblems && (
             <div className='flex flex-col gap-1'>
@@ -72,11 +73,13 @@ export const BuffEquipmentCardAvatarItem = ({ avatar, itemInformation }: BuffEqu
               )}
             </div>
 
-            <div className='flex flex-col gap-2'>
-              <div className='text-sm font-medium text-slate-12'>Item details</div>
+            {itemInformation && (
+              <div className='flex flex-col gap-2'>
+                <div className='text-sm font-medium text-slate-12'>Item details</div>
 
-              <p className='text-xs text-slate-11'>{itemInformation.itemExplainDetail}</p>
-            </div>
+                <p className='text-xs text-slate-11'>{itemInformation.itemExplainDetail}</p>
+              </div>
+            )}
           </div>
 
           <div />

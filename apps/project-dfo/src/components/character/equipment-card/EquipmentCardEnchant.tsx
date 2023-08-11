@@ -1,8 +1,8 @@
-import { type CharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
+import { type Enchant } from '~/types/neople';
 
 export type EquipmentCardEnchantProps = {
-  details?: CharacterEquipment['enchant']['explain'];
-  enchants: CharacterEquipment['enchant']['status'];
+  details?: Enchant['explain'];
+  enchants: Enchant['status'];
 };
 
 export const EquipmentCardEnchant = ({ details, enchants }: EquipmentCardEnchantProps) => {
