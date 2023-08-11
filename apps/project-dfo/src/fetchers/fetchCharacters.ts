@@ -1,5 +1,5 @@
 import { API_KEY, API_URL } from '~/constants/env';
-import { Server } from '~/fetchers/fetchServers';
+import { type Server } from '~/fetchers/fetchServers';
 
 export type Character = {
   characterId: string;
@@ -17,13 +17,11 @@ export type FetchCharactersParams = {
   jobId?: string;
   jobGrowId?: string;
   limit?: number;
-  serverId: Server['severId'];
+  serverId: Server['severId'] | 'all';
   wordType?: 'full' | 'match';
 };
 
-export type FetchCharactersResponse = {
-  rows: Character[];
-};
+export type FetchCharactersResponse = Character[];
 
 export const fetchCharacters = async (params: FetchCharactersParams): Promise<FetchCharactersResponse> => {
   const searchParams = new URLSearchParams(`apikey=${API_KEY}`);
@@ -38,10 +36,11 @@ export const fetchCharacters = async (params: FetchCharactersParams): Promise<Fe
 
   if (params.wordType) searchParams.append('wordType', params.wordType);
 
-  return await fetch(`${API_URL}/${params.serverId}/characters?${searchParams.toString()}`, {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
+  return await fetch(`${API_URL}/servers/${params.serverId}/characters?${searchParams.toString()}`, {
+    next: {
+      revalidate: 3600,
     },
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .then((res) => res.rows);
 };

@@ -10,7 +10,7 @@ export default async function Page({ params }) {
     serverId: params.serverId,
   });
 
-  const character = characters.rows?.[0];
+  const character = characters?.[0];
 
   const equipment = await getCharactersEquipment({
     characterId: character.characterId,

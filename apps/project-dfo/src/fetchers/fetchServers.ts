@@ -1,13 +1,11 @@
 import { API_KEY, API_URL } from '~/constants/env';
 
 export type Server = {
-  severId: string;
+  severId: 'cain' | 'siroco';
   serverName: string;
 };
 
-export type FetchServersResponse = {
-  rows: Server[];
-};
+export type FetchServersResponse = Server[];
 
 export const fetchServers = async (): Promise<FetchServersResponse> => {
   const searchParams = new URLSearchParams(`apikey=${API_KEY}`);
@@ -17,5 +15,7 @@ export const fetchServers = async (): Promise<FetchServersResponse> => {
     headers: {
       accept: 'application/json',
     },
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .then((res) => res.rows);
 };

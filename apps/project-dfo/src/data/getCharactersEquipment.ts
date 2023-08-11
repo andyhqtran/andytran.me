@@ -1,7 +1,7 @@
 import { cache } from 'react';
 
 import { API_KEY, API_URL } from '~/constants/env';
-import { Character } from '~/data/getCharacters';
+import { Character } from '~/fetchers/fetchCharacters';
 import { Server } from '~/fetchers/fetchServers';
 
 export const revalidate = 3600;

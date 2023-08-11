@@ -23,7 +23,7 @@
 
   input,
   textarea {
-    @apply outline-none focus-visible:ring-2 focus-visible:ring-blue-7;
+    @apply invalid:!border-red-7 invalid:!ring-red-7;
   }
 
   b {

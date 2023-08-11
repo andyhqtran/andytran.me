@@ -17,7 +17,7 @@ export default async function Page({ params }: PageProps) {
     serverId: params.serverId === 'sirocco' ? 'siroco' : 'cain',
   });
 
-  const character = characters.rows?.[0];
+  const character = characters?.[0];
 
   if (!character) {
     return (
@@ -84,7 +84,7 @@ export const generateMetadata = async ({ params }: PageProps) => {
     serverId: 'cain',
   });
 
-  const character = characters.rows?.[0];
+  const character = characters?.[0];
 
   if (!character) {
     return {

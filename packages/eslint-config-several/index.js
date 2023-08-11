@@ -16,6 +16,8 @@ module.exports = {
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
 
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }],
+
     /**
      * @see https://github.com/lydell/eslint-plugin-simple-import-sort/
      */
