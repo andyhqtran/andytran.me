@@ -2,7 +2,7 @@ import Image, { ImageProps } from 'next/image';
 import { ComponentProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-import { CharacterEquipment } from '~/data/getCharactersEquipment';
+import { type CharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
 
 export type EquipmentImageProps = ComponentProps<'div'> &
   Pick<ImageProps, 'alt'> & {

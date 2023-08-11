@@ -8,7 +8,7 @@ export async function GET(request: Request) {
 
   const characters = await fetchCharacters({
     characterName: searchParams.get('characterName') as string,
-    serverId: searchParams.get('serverId') as Server['severId'] | 'all',
+    serverId: searchParams.get('serverId') as Server['serverId'] | 'all',
   });
 
   return NextResponse.json(characters);

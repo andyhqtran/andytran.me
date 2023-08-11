@@ -1,7 +1,7 @@
 import { cache } from 'react';
 
-import { fetchCharactersEquipment } from '~/fetchers/fetchCharactersEquipment';
+import { fetchCharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
 
 export const revalidate = 3600;
 
-export const getCharactersEquipment = cache(fetchCharactersEquipment);
+export const getCharacterEquipment = cache(fetchCharacterEquipment);

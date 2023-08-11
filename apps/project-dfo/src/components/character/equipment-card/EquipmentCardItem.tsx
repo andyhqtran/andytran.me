@@ -10,7 +10,7 @@ import { EquipmentCardIspinsOptions } from '~/components/character/equipment-car
 import { EquipmentCardMachineRevolutionOptions } from '~/components/character/equipment-card/EquipmentCardMachineRevolutionOptions';
 import { EquipmentCardOptions } from '~/components/character/equipment-card/EquipmentCardOptions';
 import { EquipmentImage } from '~/components/EquipmentImage';
-import { CharacterEquipment } from '~/data/getCharactersEquipment';
+import { type CharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
 
 export type EquipmentCardItemProps = {
   equip: CharacterEquipment;
@@ -23,9 +23,15 @@ export const EquipmentCardItem = ({ equip }: EquipmentCardItemProps) => {
     <>
       <div className='flex items-center gap-8 border-b border-slate-5 py-4 first-of-type:pt-0 last-of-type:border-b-0 last-of-type:pb-0'>
         <div className='flex min-w-[72px] gap-2'>
-          <EquipmentImage alt={equip.itemName} itemId={equip.itemId} />
+          <EquipmentImage alt={equip.itemName} className='border-yellow-9 bg-yellow-2' itemId={equip.itemId} />
 
-          {equip?.upgradeInfo && <EquipmentImage alt={equip.upgradeInfo.itemName} itemId={equip.upgradeInfo.itemId} />}
+          {equip?.upgradeInfo && (
+            <EquipmentImage
+              alt={equip.upgradeInfo.itemName}
+              className='border-yellow-9 bg-yellow-2'
+              itemId={equip.upgradeInfo.itemId}
+            />
+          )}
         </div>
 
         <div className='min-w-[48px] text-sm font-medium text-blue-12'>

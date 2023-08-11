@@ -1,4 +1,4 @@
-import { CharacterEquipment } from '~/data/getCharactersEquipment';
+import { type CharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
 
 export type EquipmentCardOptionsProps = {
   buff?: number;

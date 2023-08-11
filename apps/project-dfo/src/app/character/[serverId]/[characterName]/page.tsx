@@ -1,6 +1,7 @@
 import { RocketIcon } from '@radix-ui/react-icons';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
+import { BuffEquipmentCard } from '~/components/character/buff-equipment-card/BuffEquipmentCard';
 import { EquipmentCard } from '~/components/character/equipment-card/EquipmentCard';
 import { getCharacters } from '~/data/getCharacters';
 
@@ -38,7 +39,7 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <div className='relative z-0 flex flex-col gap-8'>
+    <div className='relative z-0 flex flex-col gap-8' data-id={character.characterId}>
       <div className='flex flex-col gap-4'>
         <div className='flex items-center gap-4 rounded border border-blue-6 bg-blue-3 p-4 text-sm text-blue-11'>
           <RocketIcon className='h-3 w-3 shrink-0' />
@@ -55,6 +56,11 @@ export default async function Page({ params }: PageProps) {
       </div>
       <div className='flex flex-col gap-6'>
         <EquipmentCard
+          characterId={character.characterId}
+          serverId={params.serverId === 'sirocco' ? 'siroco' : 'cain'}
+        />
+
+        <BuffEquipmentCard
           characterId={character.characterId}
           serverId={params.serverId === 'sirocco' ? 'siroco' : 'cain'}
         />

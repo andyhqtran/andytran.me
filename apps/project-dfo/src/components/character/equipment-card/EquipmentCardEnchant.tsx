@@ -1,4 +1,4 @@
-import { CharacterEquipment } from '~/data/getCharactersEquipment';
+import { type CharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
 
 export type EquipmentCardEnchantProps = {
   details?: CharacterEquipment['enchant']['explain'];

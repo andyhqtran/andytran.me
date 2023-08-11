@@ -1,10 +1,17 @@
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
 import { EquipmentCardItem } from '~/components/character/equipment-card/EquipmentCardItem';
-import { getCharactersEquipment } from '~/data/getCharactersEquipment';
+import { getCharacterEquipment } from '~/data/getCharactersEquipment';
+import { type Character } from '~/fetchers/fetchCharacters';
+import { type Server } from '~/fetchers/fetchServers';
 
-export const EquipmentCard = async ({ characterId, serverId }) => {
-  const equipment = await getCharactersEquipment({ characterId, serverId });
+export type EquipmentCardProps = {
+  characterId: Character['characterId'];
+  serverId: Server['serverId'];
+};
+
+export const EquipmentCard = async ({ characterId, serverId }: EquipmentCardProps) => {
+  const equipment = await getCharacterEquipment({ characterId, serverId });
 
   return (
     <CollapsibleCard defaultOpen title='Equipment'>

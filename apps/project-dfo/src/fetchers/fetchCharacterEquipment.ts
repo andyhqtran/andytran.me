@@ -8,7 +8,7 @@ export type BakalInfo = {
     damage?: number;
     explain: string;
     explainDetail: string;
-  };
+  }[];
 };
 
 export type DimensionCloisterInfo = {
@@ -98,14 +98,14 @@ export type CharacterEquipment = {
   upgradeInfo?: UpgradeInfo;
 };
 
-export type FetchCharactersEquipmentParams = {
+export type FetchCharacterEquipmentParams = {
   characterId: Character['characterId'];
   serverId: Server['serverId'];
 };
 
-export type FetchCharactersEquipmentResponse = CharacterEquipment[];
+export type FetchCharacterEquipmentResponse = CharacterEquipment[];
 
-export const fetchCharactersEquipment = async (params: FetchCharactersEquipmentParams) => {
+export const fetchCharacterEquipment = async (params: FetchCharacterEquipmentParams) => {
   const searchParams = new URLSearchParams(`apikey=${API_KEY}`);
 
   return await fetch(
