@@ -17,7 +17,7 @@ export type FetchCharactersParams = {
   jobId?: string;
   jobGrowId?: string;
   limit?: number;
-  serverId: Server['severId'] | 'all';
+  serverId: Server['serverId'] | 'all';
   wordType?: 'full' | 'match';
 };
 

@@ -12,7 +12,7 @@ export type NeopleLogoProps = Omit<LinkProps, 'href' | keyof ComponentPropsWitho
 export const NeopleLogo = ({ className, target = '_blank', ...restOfProps }: NeopleLogoProps) => {
   return (
     <Link className={className} href={ExternalRoutes.NeopleAPI} target={target} {...restOfProps}>
-      <Image alt='Neople OpenAPI logo' height={18} src='/assets/neople-open-api-logo-gray.png' width={95.5} />
+      <Image alt='Neople OpenAPI logo' height={16} src='/assets/neople-open-api-logo-gray.png' width={84.8} />
     </Link>
   );
 };

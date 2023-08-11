@@ -1,7 +1,7 @@
 import { API_KEY, API_URL } from '~/constants/env';
 
 export type Server = {
-  severId: 'cain' | 'siroco';
+  serverId: 'cain' | 'siroco';
   serverName: string;
 };
 
