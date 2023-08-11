@@ -44,12 +44,6 @@ export default async function Page({ params }: PageProps) {
           <RocketIcon className='h-3 w-3 shrink-0' />
           This page is currently a work-in-progress and contains a limited amount of information.
         </div>
-
-        <div className='flex items-center gap-4 rounded border border-yellow-6 bg-yellow-3 p-4 text-sm text-yellow-11'>
-          <ExclamationTriangleIcon className='h-3 w-3 shrink-0' />
-          Hall of Dimensions fusions is currently not supported in Neople&apos;s API. We&apos;ve reached out to them and
-          got a confirmation that this is being worked on.
-        </div>
       </div>
 
       <div className='flex flex-col gap-1'>
