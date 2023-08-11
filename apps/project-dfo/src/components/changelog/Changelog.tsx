@@ -11,10 +11,10 @@ export const Changelog = () => {
           CHANGELOG.map((changelog, index) => {
             return (
               <div
-                className='flex flex-col gap-1 border-b border-b-slate-4 pb-4 last-of-type:border-b-0 last-of-type:pb-0'
+                className='flex gap-4 border-b border-b-slate-4 pb-4 last-of-type:border-b-0 last-of-type:pb-0'
                 key={index}
               >
-                <h4 className='flex items-center gap-2 text-xs text-slate-12'>
+                <div className='min-w-[72px] shrink-0'>
                   {changelog.type === 'bugfix' ? (
                     <Badge color='yellow' size='sm'>
                       Bugfix
@@ -32,9 +32,11 @@ export const Changelog = () => {
                       Other
                     </Badge>
                   )}
-                  {changelog.title}
-                </h4>
-                <p className='text-xs text-slate-11'>{changelog.description}</p>
+                </div>
+                <div className='flex flex-col gap-1'>
+                  <h4 className='flex items-center gap-2 text-xs text-slate-12'>{changelog.title}</h4>
+                  <p className='text-xs text-slate-11'>{changelog.description}</p>
+                </div>
               </div>
             );
           })

@@ -23,7 +23,7 @@
 
   input,
   textarea {
-    @apply invalid:!border-red-7 invalid:!ring-red-7;
+    @apply invalid:!border-red-7 invalid:!ring-1 invalid:!ring-red-7 focus:!border-blue-7 focus:!ring-blue-7;
   }
 
   b {
