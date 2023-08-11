@@ -63,7 +63,7 @@ export const BuffEquipmentCardAvatarItem = ({ avatar, itemInformation }: BuffEqu
               {avatar.emblems && (
                 <div className='flex flex-col gap-1'>
                   {avatar.emblems.map((emblem, index) => (
-                    <div className='text-xs text-green-11' key={index}>
+                    <div className='text-xs text-green-11' data-id={emblem} key={index}>
                       {emblem.itemName}
                     </div>
                   ))}
