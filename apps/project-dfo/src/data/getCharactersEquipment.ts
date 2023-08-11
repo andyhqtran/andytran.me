@@ -53,6 +53,14 @@ export type CharacterEquipment = {
       explainDetail: string;
     }[];
   };
+  dimensionCloisterInfo?: {
+    options: {
+      damage?: number;
+      buff: number;
+      explain: string;
+      explainDetail: string;
+    }[];
+  };
   upgradeInfo?: {
     itemId: string;
     itemName: string;

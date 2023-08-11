@@ -4,6 +4,7 @@ import { Dialog } from '@several-ui/dialog';
 import { useState } from 'react';
 
 import { EquipmentCardBakalFusionOptions } from '~/components/character/equipment-card/EquipmentCardBakalFusionOptions';
+import { EquipmentCardDimensionCloisterOptions } from '~/components/character/equipment-card/EquipmentCardDimensionCloisterOptions';
 import { EquipmentCardEnchant } from '~/components/character/equipment-card/EquipmentCardEnchant';
 import { EquipmentCardIspinsOptions } from '~/components/character/equipment-card/EquipmentCardIspinsOptions';
 import { EquipmentCardMachineRevolutionOptions } from '~/components/character/equipment-card/EquipmentCardMachineRevolutionOptions';
@@ -73,6 +74,10 @@ export const EquipmentCardItem = ({ equip }: EquipmentCardItemProps) => {
               <EquipmentCardMachineRevolutionOptions options={equip.machineRevolutionInfo.options} />
             )}
             {equip?.ispinsInfo && <EquipmentCardIspinsOptions options={equip.ispinsInfo.options} />}
+
+            {equip?.dimensionCloisterInfo && (
+              <EquipmentCardDimensionCloisterOptions options={equip.dimensionCloisterInfo.options} />
+            )}
           </div>
 
           <div className='flex flex-col gap-6'>

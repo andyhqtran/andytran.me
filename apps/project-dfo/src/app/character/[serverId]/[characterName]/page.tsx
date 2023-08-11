@@ -1,4 +1,4 @@
-import { ExclamationTriangleIcon, RocketIcon } from '@radix-ui/react-icons';
+import { RocketIcon } from '@radix-ui/react-icons';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
 import { EquipmentCard } from '~/components/character/equipment-card/EquipmentCard';
