@@ -10,4 +10,5 @@ export enum Routes {
 
 export enum ExternalRoutes {
   Discord = 'https://discord.gg/AmtqjPxMas',
+  NeopleAPI = 'https://www.dfoneople.com/developers',
 }
