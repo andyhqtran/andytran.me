@@ -1,5 +1,7 @@
 import './globals.css';
 
+import { HighlightInit } from '@highlight-run/next/client';
+import { ErrorBoundary } from '@highlight-run/next/client';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import Script from 'next/script';
@@ -10,29 +12,42 @@ import { Header } from '~/components/Header';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body className='antialiased'>
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
-        <Script id='google-analytics'>
-          {`
+    <>
+      <HighlightInit
+        projectId={process.env.NEXT_PUBLIC_HIGHLIGHT_PROJECT_ID}
+        tracingOrigins
+        networkRecording={{
+          enabled: true,
+          recordHeadersAndBody: true,
+          urlBlocklist: [],
+        }}
+      />
+      <html lang='en' suppressHydrationWarning>
+        <body className='antialiased'>
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`} />
+          <Script id='google-analytics'>
+            {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
           gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
         `}
-        </Script>
+          </Script>
 
-        <Providers>
-          <Header />
+          <ErrorBoundary>
+            <Providers>
+              <Header />
 
-          <main className='mx-auto max-w-3xl px-6 py-8'>{children}</main>
+              <main className='mx-auto max-w-3xl px-6 py-8'>{children}</main>
 
-          <Footer />
-          <Analytics />
-        </Providers>
-      </body>
-    </html>
+              <Footer />
+              <Analytics />
+            </Providers>
+          </ErrorBoundary>
+        </body>
+      </html>
+    </>
   );
 }
 

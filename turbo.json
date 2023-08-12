@@ -10,7 +10,8 @@
         "NEXT_PUBLIC_API_URL",
         "NEXT_PUBLIC_FLAGS_ENV_KEY",
         "NEXT_PUBLIC_GA_MEASUREMENT_ID",
-        "NEXT_PUBLIC_IMAGE_API_URL"
+        "NEXT_PUBLIC_IMAGE_API_URL",
+        "NEXT_PUBLIC_HIGHLIGHT_PROJECT_ID"
       ],
       "outputs": [".next/**", "!.next/cache/**", "storybook-static/**", "dist/**"]
     },
