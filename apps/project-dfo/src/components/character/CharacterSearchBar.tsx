@@ -38,7 +38,7 @@ export const CharacterSearchBar = ({ className, characterName = '' }: CharacterS
           <Field
             autoFocus
             as='input'
-            className='h-10 w-full rounded border-slate-5 bg-slate-1 px-4 text-sm text-slate-12'
+            className='h-10 w-full rounded border-slate-5 bg-slate-1 px-4 text-base text-slate-12 md:text-sm'
             maxLength={12}
             minLength={4}
             name='characterName'
