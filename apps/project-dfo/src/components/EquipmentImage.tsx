@@ -25,13 +25,19 @@ export type EquipmentImageVariants = VariantProps<typeof equipmentImage>;
 
 export type EquipmentImageProps = ComponentProps<'div'> &
   EquipmentImageVariants &
-  Pick<ImageProps, 'alt'> &
-  Pick<Item, 'itemId'>;
+  Partial<Pick<ImageProps, 'alt'>> &
+  Pick<Item, 'itemId' | 'itemName'>;
 
-export const EquipmentImage = ({ alt, className, itemId, rarity, ...restOfProps }: EquipmentImageProps) => {
+export const EquipmentImage = ({ alt, className, itemId, itemName, rarity, ...restOfProps }: EquipmentImageProps) => {
   return (
     <div className={equipmentImage({ rarity, className })} data-rarity={rarity} {...restOfProps}>
-      <Image alt={alt} fill sizes='28px' src={`https://img-api.dfoneople.com/df/items/${itemId}`} unoptimized />
+      <Image
+        alt={alt || `Equipment image for ${itemName}`}
+        fill
+        sizes='28px'
+        src={`https://img-api.dfoneople.com/df/items/${itemId}`}
+        unoptimized
+      />
     </div>
   );
 };

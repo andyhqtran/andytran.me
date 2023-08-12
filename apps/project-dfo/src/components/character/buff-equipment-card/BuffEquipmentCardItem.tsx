@@ -23,11 +23,7 @@ export const BuffEquipmentCardAvatarItem = ({ avatar, itemInformation }: BuffEqu
         data-id={avatar.itemId}
       >
         <div className='flex min-w-[72px] gap-2'>
-          <EquipmentImage
-            alt={`Image for ${avatar.itemName}`}
-            itemId={avatar.itemId}
-            rarity={ITEM_RARITY[avatar.itemRarity]}
-          />
+          <EquipmentImage itemId={avatar.itemId} itemName={avatar.itemName} rarity={ITEM_RARITY[avatar.itemRarity]} />
         </div>
 
         <div className='min-w-[48px]' />

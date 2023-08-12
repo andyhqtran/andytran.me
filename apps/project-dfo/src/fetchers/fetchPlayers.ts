@@ -1,4 +1,4 @@
-import { PLAYERS_API_URL } from '~/constants/apiUrls';
+// import { PLAYERS_API_URL } from '~/constants/apiUrls';
 
 export type Player = {
   id: string;
@@ -15,6 +15,8 @@ export type FetchPlayersResponse = {
   total_pages: number;
   total_results: number;
 };
+
+const PLAYERS_API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const fetchPlayers = async (params: FetchPlayersParams): Promise<FetchPlayersResponse> => {
   return await fetch(`${PLAYERS_API_URL}?page=${params.page}`, {

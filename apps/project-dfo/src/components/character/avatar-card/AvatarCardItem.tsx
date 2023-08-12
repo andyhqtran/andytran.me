@@ -23,12 +23,8 @@ export const AvatarCardItem = ({ avatar, itemInformation }: AvatarCardItemProps)
         data-id={avatar.itemId}
       >
         <div className='flex min-w-[72px] gap-2'>
-          <EquipmentImage
-            alt={`Image for ${avatar.itemName}`}
-            itemId={avatar.itemId}
-            rarity={ITEM_RARITY[avatar.itemRarity]}
-          />
-          <EquipmentImage alt={`Image for ${avatar.clone.itemName}`} itemId={avatar.clone.itemId} />
+          <EquipmentImage itemId={avatar.itemId} itemName={avatar.itemName} rarity={ITEM_RARITY[avatar.itemRarity]} />
+          <EquipmentImage itemId={avatar.clone.itemId} itemName={avatar.clone.itemName} />
         </div>
 
         <div className='min-w-[48px]' />

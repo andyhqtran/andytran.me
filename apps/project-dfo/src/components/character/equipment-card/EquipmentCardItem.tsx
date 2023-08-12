@@ -24,13 +24,13 @@ export const EquipmentCardItem = ({ equip }: EquipmentCardItemProps) => {
     <>
       <div className='flex items-center gap-8 border-b border-slate-5 py-4 first-of-type:pt-0 last-of-type:border-b-0 last-of-type:pb-0'>
         <div className='flex min-w-[72px] gap-2'>
-          <EquipmentImage alt={equip.itemName} itemId={equip.itemId} rarity={ITEM_RARITY[equip.itemRarity]} />
+          <EquipmentImage itemId={equip.itemId} itemName={equip.itemName} rarity={ITEM_RARITY[equip.itemRarity]} />
 
           {equip?.upgradeInfo && (
             <EquipmentImage
-              alt={equip.upgradeInfo.itemName}
               className='border-yellow-9 bg-yellow-2'
               itemId={equip.upgradeInfo.itemId}
+              itemName={equip.upgradeInfo.itemName}
             />
           )}
         </div>
