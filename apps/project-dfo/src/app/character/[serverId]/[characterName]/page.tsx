@@ -68,11 +68,9 @@ export default async function Page({ params }: PageProps) {
 
         <AvatarCard characterId={character.characterId} serverId={params.serverId === 'sirocco' ? 'siroco' : 'cain'} />
 
-        <CollapsibleCard title='Avatar'>No avatar entries.</CollapsibleCard>
+        <CollapsibleCard title='Statistics'>Coming soon.</CollapsibleCard>
 
-        <CollapsibleCard title='Statistics'>No statistics entries.</CollapsibleCard>
-
-        <CollapsibleCard title='Skill'>No skill entries.</CollapsibleCard>
+        <CollapsibleCard title='Skill'>Coming soon.</CollapsibleCard>
       </div>
     </div>
   );
