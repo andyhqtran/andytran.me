@@ -2,7 +2,7 @@
 import va from '@vercel/analytics';
 
 export type TrackClickedThemeSwitcher = {
-  currentTheme: string;
+  currentTheme?: string;
   newTheme: string;
 };
 

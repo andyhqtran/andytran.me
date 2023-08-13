@@ -16,9 +16,9 @@ export const Navigation = () => {
     });
 
     items.push({
-      href: Routes.Ranking,
-      id: 'ranking',
-      label: 'Ranking',
+      href: Routes.Rankings,
+      id: 'rankings',
+      label: 'Rankings',
     });
 
     // items.push({

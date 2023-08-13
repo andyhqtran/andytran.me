@@ -1,12 +1,17 @@
 'use client';
 import { flatten } from 'lodash';
-import { useMemo } from 'react';
+import { CSSProperties, useMemo } from 'react';
 import { AutoSizer, InfiniteLoader, List, WindowScroller } from 'react-virtualized';
 
 import { Player } from '~/components/player/Player';
 import { usePlayers } from '~/swr/usePlayers';
 
-const PlayerListRow = ({ index, style }) => {
+export type PlayerListRowProps = {
+  index: number;
+  style: CSSProperties;
+};
+
+const PlayerListRow = ({ index, style }: PlayerListRowProps) => {
   return (
     <div key={index} style={style}>
       <Player fame={50000 - index * 100} id={`${index + 1}`} name={`Player ${index + 1}`} rank={index + 1} />
@@ -14,8 +19,13 @@ const PlayerListRow = ({ index, style }) => {
   );
 };
 
-export const PlayerList = () => {
-  const { data, setSize, size } = usePlayers();
+export type PlayerListProps = {
+  jobId: string;
+  jobGrowId: string;
+};
+
+export const PlayerList = ({ jobId, jobGrowId }: PlayerListProps) => {
+  const { data, setSize, size } = usePlayers({ jobId, jobGrowId, serverId: 'all' });
 
   const players = useMemo(() => {
     return flatten(data?.map((data) => data.results));

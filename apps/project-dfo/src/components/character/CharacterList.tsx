@@ -2,16 +2,16 @@
 import { useWindowVirtualizer } from '@tanstack/react-virtual';
 import { ReactNode, useLayoutEffect, useRef } from 'react';
 
-import { Character } from '~/fetchers/fetchCharacters';
+import { Character } from '~/fetchers/neople/fetchCharacters';
 
 export type CharacterListProps = {
   characters: Character[];
-  getEstimateSize?: (index: number) => number;
+  getEstimateSize: (index: number) => number;
   renderCharacter: ({ character }: { character: Character; index: number }) => ReactNode;
 };
 
 export const CharacterList = ({ characters, getEstimateSize, renderCharacter }: CharacterListProps) => {
-  const parentRef = useRef(null);
+  const parentRef = useRef<HTMLDivElement>(null);
 
   const parentOffsetRef = useRef(0);
 

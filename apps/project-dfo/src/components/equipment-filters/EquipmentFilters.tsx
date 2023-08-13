@@ -21,7 +21,10 @@ export const EquipmentFilters = ({ onApplyFilters }: EquipmentFiltersProp) => {
   const [filters, setFilters] = useState<{ [key in EquipmentFilter['id']]?: EquipmentFilter['value'] } | undefined>(
     undefined,
   );
-  const [selectedEquipment, setSelectedEquipment] = useState<Equipment>();
+  const [selectedEquipment, setSelectedEquipment] = useState<Equipment>({
+    id: 'weapon',
+    label: 'Weapon',
+  });
 
   const handleClearFilters = useCallback(() => {
     setFilters(undefined);

@@ -3,8 +3,16 @@ import 'react-json-view-lite/dist/index.css';
 import { JsonViewer } from '~/components/JsonViewer';
 import { getCharacters } from '~/data/getCharacters';
 import { getCharacterEquipment } from '~/data/getCharactersEquipment';
+import { type Server } from '~/types/neople';
 
-export default async function Page({ params }) {
+export type PageProps = {
+  params: {
+    characterName: string;
+    serverId: Server['serverId'];
+  };
+};
+
+export default async function Page({ params }: PageProps) {
   const characters = await getCharacters({
     characterName: params.characterName,
     serverId: params.serverId,

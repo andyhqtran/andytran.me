@@ -3,6 +3,21 @@ export type Server = {
   serverName: string;
 };
 
+export type Job = {
+  jobId: string;
+  jobExplain?: string;
+  jobName: string;
+  jobSlug: string;
+  jobGrow: JobGrow[];
+};
+
+export type JobGrow = {
+  jobGrowId: string;
+  jobGrowImageSlug: string;
+  jobGrowName: string;
+  jobGrowSlug: string;
+};
+
 /**
  * Generic types
  */
@@ -25,10 +40,12 @@ export type Emblem = {
 
 export type Enchant = {
   explain?: string;
-  status?: {
-    name: string;
-    value: number;
-  }[];
+  status?: EnchantStatus[];
+};
+
+export type EnchantStatus = {
+  name: string;
+  value: string | number;
 };
 
 export type Option = {
@@ -41,20 +58,7 @@ export type Option = {
 /**
  * Equipment types
  */
-
-export type BakalInfo = {
-  options: Option[];
-};
-
-export type DimensionCloisterInfo = {
-  options: Option[];
-};
-
-export type IspinsInfo = {
-  options: Option[];
-};
-
-export type MachineRevolutionInfo = {
+export type FusionOptionInfo = {
   options: Option[];
 };
 
@@ -69,35 +73,31 @@ export type GrowInfo = {
     buff: number;
     level: number;
   };
-  options: {
-    level: number;
-    expRate: number;
-    explain: string;
-    explainDetail: string;
+  options: (Option & {
     default: {
       damage: number;
       buff: number;
     };
-    damage: number;
-    buff?: number;
-  }[];
+    expRate: number;
+    level: number;
+  })[];
   engraveName?: boolean;
 };
 
 export type Equipment = Item & {
   amplificationName: string | null;
-  bakalInfo?: BakalInfo;
-  dimensionCloisterInfo?: DimensionCloisterInfo;
+  bakalInfo?: FusionOptionInfo;
+  dimensionCloisterInfo?: FusionOptionInfo;
   enchant: Enchant;
   growInfo?: GrowInfo;
-  ispinsInfo?: IspinsInfo;
+  ispinsInfo?: FusionOptionInfo;
   itemAvailableLevel: number;
   itemGradeName?: string;
   itemTypeId: string;
   itemType: string;
   itemTypeDetailId: string;
   itemTypeDetail: string;
-  machineRevolutionInfo?: MachineRevolutionInfo;
+  machineRevolutionInfo?: FusionOptionInfo;
   refine: number;
   reinforce: number;
   setItemId: string | null;

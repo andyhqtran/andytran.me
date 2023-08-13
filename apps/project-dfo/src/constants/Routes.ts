@@ -4,6 +4,7 @@ export enum Routes {
   Database = '/database',
   Guides = '/Guides',
   Ranking = '/ranking',
+  Rankings = '/rankings',
   Root = '/',
   Statistics = '/statistics',
 }

@@ -14,13 +14,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <>
       <HighlightInit
-        projectId={process.env.NEXT_PUBLIC_HIGHLIGHT_PROJECT_ID}
-        tracingOrigins
+        excludedHostnames={['localhost']}
         networkRecording={{
           enabled: true,
           recordHeadersAndBody: true,
           urlBlocklist: [],
         }}
+        projectId={process.env.NEXT_PUBLIC_HIGHLIGHT_PROJECT_ID}
+        tracingOrigins
       />
       <html lang='en' suppressHydrationWarning>
         <body className='antialiased'>

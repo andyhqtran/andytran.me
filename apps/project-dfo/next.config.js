@@ -11,6 +11,20 @@ const nextConfig = {
     ],
   },
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/ranking',
+        destination: '/rankings',
+        permanent: true,
+      },
+      {
+        source: '/ranking/:path*',
+        destination: '/rankings/:path*',
+        permanent: true,
+      },
+    ];
+  },
   transpilePackages: [
     '@several-ui/badge',
     '@several-ui/button',
@@ -18,8 +32,10 @@ const nextConfig = {
     '@several-ui/dialog',
     '@several-ui/icon-button',
     '@several-ui/progress',
+    '@several-ui/separator',
     '@several-ui/spinner',
     '@several-ui/tooltip',
+    '@several-ui/visually-hidden',
   ],
 };
 

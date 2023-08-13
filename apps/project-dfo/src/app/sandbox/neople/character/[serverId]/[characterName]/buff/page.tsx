@@ -4,8 +4,16 @@ import { JsonViewer } from '~/components/JsonViewer';
 import { getCharacterBuffAvatar } from '~/data/getCharacterBuffAvatar';
 import { getCharacterBuffCreature } from '~/data/getCharacterBuffCreature';
 import { getCharacters } from '~/data/getCharacters';
+import { type Server } from '~/types/neople';
 
-export default async function Page({ params }) {
+export type PageProps = {
+  params: {
+    characterName: string;
+    serverId: Server['serverId'];
+  };
+};
+
+export default async function Page({ params }: PageProps) {
   const characters = await getCharacters({
     characterName: params.characterName,
     serverId: params.serverId,

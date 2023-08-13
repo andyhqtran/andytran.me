@@ -1,16 +1,20 @@
 'use client';
 import useSWRInfinite, { SWRInfiniteConfiguration } from 'swr/infinite';
 
-import { fetchPlayers, FetchPlayersParams, FetchPlayersResponse } from '~/fetchers/fetchPlayers';
+import {
+  fetchRankingsCharacters,
+  type FetchRankingsCharactersParams,
+  type FetchRankingsCharactersResponse,
+} from '~/fetchers/rankings/fetchRankingCharacters';
 
-export const PLAYERS_KEY = 'players';
+export const RANKINGS_CHARACTERS_KEY = 'RANKINGS_CHARACTERS';
 
-export type GetPlayersKeyParams = Omit<FetchPlayersParams, 'page'> & {
+export type GetPlayersKeyParams = Partial<Omit<FetchRankingsCharactersParams, 'page'>> & {
   pageIndex: number;
-  previousPageData: FetchPlayersResponse | null;
+  previousPageData: FetchRankingsCharactersResponse | null;
 };
 
-export type GetPlayersKeyReturn = [string, Omit<GetPlayersKeyParams, 'previousPageData'>];
+export type GetPlayersKeyReturn = [string, Omit<GetPlayersKeyParams, 'previousPageData'>] | null;
 
 export type GetPlayersKey = (params: GetPlayersKeyParams) => GetPlayersKeyReturn;
 
@@ -20,12 +24,12 @@ export const getPlayersKey: GetPlayersKey = ({ previousPageData, ...params }) =>
    */
   if (previousPageData?.results && !previousPageData?.results.length) return null;
 
-  return [PLAYERS_KEY, params];
+  return [RANKINGS_CHARACTERS_KEY, params];
 };
 
-export type UsePlayersParams = Omit<FetchPlayersResponse, 'page'>;
+export type UsePlayersParams = Omit<FetchRankingsCharactersParams, 'page'>;
 
-export type UsePlayersOptions = SWRInfiniteConfiguration<FetchPlayersResponse> & {
+export type UsePlayersOptions = SWRInfiniteConfiguration<FetchRankingsCharactersResponse> & {
   enabled?: boolean;
 };
 
@@ -33,7 +37,7 @@ export const usePlayers = (params?: UsePlayersParams, options?: UsePlayersOption
   const { enabled = true, ...swrOptions }: UsePlayersOptions = options || {};
   const players = useSWRInfinite(
     enabled ? (pageIndex, previousPageData) => getPlayersKey({ pageIndex, previousPageData }) : null,
-    (key: GetPlayersKeyReturn) => fetchPlayers({ page: key[1].pageIndex + 1 }),
+    (key: GetPlayersKeyReturn) => fetchRankingsCharacters({ ...params, page: key[1].pageIndex + 1 }),
     {
       initialSize: 1,
       revalidateFirstPage: false,

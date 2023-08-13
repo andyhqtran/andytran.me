@@ -1,6 +1,6 @@
 import { cache } from 'react';
 
-import { fetchCharacterEquipment } from '~/fetchers/fetchCharacterEquipment';
+import { fetchCharacterEquipment } from '~/fetchers/neople/fetchCharacterEquipment';
 
 export const revalidate = 3600;
 

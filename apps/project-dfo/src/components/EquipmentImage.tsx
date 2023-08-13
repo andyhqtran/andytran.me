@@ -5,7 +5,7 @@ import { tv, type VariantProps } from 'tailwind-variants';
 import { type Item } from '~/types/neople';
 
 export const equipmentImage = tv({
-  base: 'relative h-8 w-8 overflow-hidden rounded border border-slate-5 bg-slate-2',
+  base: 'relative h-7 w-7 overflow-hidden rounded border border-slate-5 bg-slate-2',
   variants: {
     rarity: {
       common: 'border-green-9 bg-green-2',

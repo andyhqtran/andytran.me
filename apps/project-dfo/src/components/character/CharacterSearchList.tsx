@@ -1,7 +1,7 @@
 'use client';
 import { CharacterCard } from '~/components/character/character-card/CharacterCard';
 import { CharacterList } from '~/components/character/CharacterList';
-import { type Character } from '~/fetchers/fetchCharacters';
+import { type Character } from '~/fetchers/neople/fetchCharacters';
 
 export type CharacterSearchListProps = {
   characters: Character[];

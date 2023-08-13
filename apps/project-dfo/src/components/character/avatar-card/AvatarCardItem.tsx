@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import { EquipmentImage } from '~/components/EquipmentImage';
 import { ITEM_RARITY } from '~/constants/itemRarity';
-import { type ItemInformation } from '~/fetchers/fetchItemInformation';
+import { type ItemInformation } from '~/fetchers/neople/fetchItemInformation';
 import { type Avatar } from '~/types/neople';
 
 export type AvatarCardItemProps = {
@@ -24,7 +24,7 @@ export const AvatarCardItem = ({ avatar, itemInformation }: AvatarCardItemProps)
       >
         <div className='flex min-w-[72px] gap-2'>
           <EquipmentImage itemId={avatar.itemId} itemName={avatar.itemName} rarity={ITEM_RARITY[avatar.itemRarity]} />
-          <EquipmentImage itemId={avatar.clone.itemId} itemName={avatar.clone.itemName} />
+          {!!avatar.clone && <EquipmentImage itemId={avatar.clone.itemId} itemName={avatar.clone.itemName} />}
         </div>
 
         <div className='min-w-[48px]' />

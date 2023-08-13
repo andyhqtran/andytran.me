@@ -1,6 +1,6 @@
 import { cache } from 'react';
 
-import { fetchItemInformation } from '~/fetchers/fetchItemInformation';
+import { fetchItemInformation } from '~/fetchers/neople/fetchItemInformation';
 
 export const revalidate = 3600;
 

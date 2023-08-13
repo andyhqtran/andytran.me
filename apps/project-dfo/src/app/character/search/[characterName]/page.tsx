@@ -8,7 +8,7 @@ export type PageProps = {
   };
 };
 
-export default async function Page({ params }) {
+export default async function Page({ params }: PageProps) {
   const characters = await getCharacters({
     characterName: params.characterName,
     limit: 50,

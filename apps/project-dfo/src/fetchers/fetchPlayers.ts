@@ -1,4 +1,4 @@
-// import { PLAYERS_API_URL } from '~/constants/apiUrls';
+import { RANKINGS_API_URL } from '~/constants/env';
 
 export type Player = {
   id: string;
@@ -16,14 +16,6 @@ export type FetchPlayersResponse = {
   total_results: number;
 };
 
-const PLAYERS_API_URL = process.env.NEXT_PUBLIC_API_URL;
-
 export const fetchPlayers = async (params: FetchPlayersParams): Promise<FetchPlayersResponse> => {
-  return await fetch(`${PLAYERS_API_URL}?page=${params.page}`, {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_ACCESS_TOKEN}`,
-    },
-  }).then((res) => res.json());
+  return await fetch(`${RANKINGS_API_URL}/characters?page=${params.page}`).then((res) => res.json());
 };

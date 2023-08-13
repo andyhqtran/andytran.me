@@ -5,7 +5,10 @@ import { EquipmentVisualizer } from '~/components/equipment-visualizer/Equipment
 import { Equipment } from '~/constants/equipmentType';
 
 export const EquipmentStatistics = () => {
-  const [selectedEquipment, setSelectedEquipment] = useState<Equipment>();
+  const [selectedEquipment, setSelectedEquipment] = useState<Equipment>({
+    id: 'weapon',
+    label: 'Weapon',
+  });
 
   return (
     <div className='flex items-start gap-8'>

@@ -4,8 +4,8 @@ import { CollapsibleCard } from '@several-ui/collapsible-card';
 import { BuffEquipmentCardAvatarItem } from '~/components/character/buff-equipment-card/BuffEquipmentCardItem';
 import { getCharacterBuffAvatar } from '~/data/getCharacterBuffAvatar';
 import { getItemInformation } from '~/data/getItemInformation';
-import { type Character } from '~/fetchers/fetchCharacters';
-import { type Server } from '~/fetchers/fetchServers';
+import { type Character } from '~/fetchers/neople/fetchCharacters';
+import { Server } from '~/types/neople';
 
 export type BuffEquipmentCardProps = {
   characterId: Character['characterId'];

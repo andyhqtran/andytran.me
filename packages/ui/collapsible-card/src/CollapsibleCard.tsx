@@ -11,7 +11,7 @@ export type CollapsibleCardProps = Omit<RadixCollapsible.CollapsibleProps, 'chil
 export const CollapsibleCard = ({ children, className, title, ...restOfProps }: CollapsibleCardProps) => {
   return (
     <RadixCollapsible.Root
-      className={twMerge('overflow-hidden rounded border border-slate-5 bg-slate-3', className)}
+      className={twMerge('overflow-hidden rounded border border-slate-6 bg-slate-3', className)}
       {...restOfProps}
     >
       <div className='flex h-12 items-center justify-between px-4'>
@@ -21,7 +21,7 @@ export const CollapsibleCard = ({ children, className, title, ...restOfProps }: 
         </RadixCollapsible.Trigger>
       </div>
 
-      <RadixCollapsible.Content className='overflow-hidden border-t border-t-slate-5 bg-slate-2 p-4 text-xs text-slate-11'>
+      <RadixCollapsible.Content className='overflow-hidden border-t border-t-slate-6 bg-slate-2 p-4 text-xs text-slate-11'>
         {children}
       </RadixCollapsible.Content>
     </RadixCollapsible.Root>

@@ -5,8 +5,8 @@ import { useState } from 'react';
 
 import { EquipmentImage } from '~/components/EquipmentImage';
 import { ITEM_RARITY } from '~/constants/itemRarity';
-import { BuffAvatar } from '~/fetchers/fetchCharacterBuffAvatar';
-import { ItemInformation } from '~/fetchers/fetchItemInformation';
+import { BuffAvatar } from '~/fetchers/neople/fetchCharacterBuffAvatar';
+import { ItemInformation } from '~/fetchers/neople/fetchItemInformation';
 
 export type BuffEquipmentCardAvatarItemProps = {
   avatar: BuffAvatar;
