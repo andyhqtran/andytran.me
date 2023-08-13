@@ -43,5 +43,5 @@ export const fetchCharacters = async (params: FetchCharactersParams): Promise<Fe
     },
   })
     .then((res) => res.json())
-    .then((res) => res.rows);
+    .then((res) => res?.rows || []);
 };
