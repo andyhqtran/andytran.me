@@ -1,5 +1,5 @@
 import { CollapsibleCard } from '@several-ui/collapsible-card';
-import { Separator } from '@several-ui/Separator';
+import { Separator } from '@several-ui/separator';
 import { Fragment } from 'react';
 
 import { CharacterEquipmentRow } from '~/components/character/CharacterEquipmentRow';
