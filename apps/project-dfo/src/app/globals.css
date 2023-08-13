@@ -30,6 +30,10 @@
     @apply font-medium;
   }
 
+  a {
+    @apply text-blue-9 hover:underline;
+  }
+
   svg {
     @apply block;
   }
