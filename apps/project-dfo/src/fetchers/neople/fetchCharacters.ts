@@ -1,3 +1,4 @@
+import { API_REVALIDATION } from '~/components/revalidate';
 import { API_KEY, API_URL } from '~/constants/env';
 import { type Server } from '~/fetchers/neople/fetchServers';
 
@@ -38,7 +39,7 @@ export const fetchCharacters = async (params: FetchCharactersParams): Promise<Fe
 
   return await fetch(`${API_URL}/servers/${params.serverId}/characters?${searchParams.toString()}`, {
     next: {
-      revalidate: 3600,
+      revalidate: API_REVALIDATION,
     },
   })
     .then((res) => res.json())

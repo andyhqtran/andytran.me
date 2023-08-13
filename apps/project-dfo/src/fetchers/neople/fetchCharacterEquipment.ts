@@ -1,6 +1,7 @@
+import { API_REVALIDATION } from '~/components/revalidate';
 import { API_KEY, API_URL } from '~/constants/env';
-import { type Server } from '~/fetchers/neople/fetchServers';
 import { type Character } from '~/fetchers/neople/fetchCharacters';
+import { type Server } from '~/fetchers/neople/fetchServers';
 import { type Equipment } from '~/types/neople';
 
 export type FetchCharacterEquipmentParams = {
@@ -19,7 +20,7 @@ export const fetchCharacterEquipment = async (
     `${API_URL}/servers/${params.serverId}/characters/${params.characterId}/equip/equipment?${searchParams.toString()}`,
     {
       next: {
-        revalidate: 3600,
+        revalidate: API_REVALIDATION,
       },
     },
   )

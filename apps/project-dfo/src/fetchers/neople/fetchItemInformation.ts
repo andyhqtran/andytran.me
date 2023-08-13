@@ -1,3 +1,4 @@
+import { API_REVALIDATION } from '~/components/revalidate';
 import { API_KEY, API_URL } from '~/constants/env';
 
 export type ItemInformation = {
@@ -58,5 +59,9 @@ export const fetchItemInformation = async (
 ): Promise<FetchItemInformationResponse> => {
   const searchParams = new URLSearchParams(`apikey=${API_KEY}`);
 
-  return await fetch(`${API_URL}/items/${params.itemId}?${searchParams.toString()}`).then((res) => res.json());
+  return await fetch(`${API_URL}/items/${params.itemId}?${searchParams.toString()}`, {
+    next: {
+      revalidate: API_REVALIDATION,
+    },
+  }).then((res) => res.json());
 };

@@ -1,6 +1,7 @@
+import { API_REVALIDATION } from '~/components/revalidate';
 import { API_KEY, API_URL } from '~/constants/env';
-import { Server } from '~/fetchers/neople/fetchServers';
 import { type Character } from '~/fetchers/neople/fetchCharacters';
+import { Server } from '~/fetchers/neople/fetchServers';
 
 export type BuffCreature = {
   itemId: string;
@@ -25,7 +26,7 @@ export const fetchCharacterBuffCreature = async (params: FetchCharacterBuffCreat
     }/skill/buff/equip/creature?${searchParams.toString()}`,
     {
       next: {
-        revalidate: 3600,
+        revalidate: API_REVALIDATION,
       },
     },
   )

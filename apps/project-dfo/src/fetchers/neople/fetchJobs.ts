@@ -1,5 +1,6 @@
 import slugify from 'slugify';
 
+import { API_REVALIDATION } from '~/components/revalidate';
 import { API_KEY, API_URL } from '~/constants/env';
 import { type Job } from '~/types/neople';
 
@@ -56,7 +57,7 @@ export const fetchJobs = async (): Promise<FetchServersResponse> => {
 
   return await fetch(`${API_URL}/jobs?${searchParams.toString()}`, {
     next: {
-      revalidate: 3600,
+      revalidate: API_REVALIDATION,
     },
   })
     .then((res) => res.json())
