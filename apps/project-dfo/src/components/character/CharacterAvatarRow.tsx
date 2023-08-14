@@ -1,6 +1,7 @@
 'use client';
 import { VisuallyHidden } from '@several-ui/visually-hidden';
 import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 import { CharacterAvatarDialog } from '~/components/character/CharacterAvatarDialog';
 import { EquipmentImage } from '~/components/EquipmentImage';
@@ -74,7 +75,17 @@ export const CharacterAvatarRow = ({ avatar, avatarInformation }: CharacterAvata
 
         <div className='hidden shrink-0 flex-col items-end sm:flex'>
           {avatar?.emblems?.map((emblem, index) => (
-            <span className='text-[10px] text-green-11' key={index}>
+            <span
+              className={twMerge(
+                'text-[10px]',
+                emblem.itemName.includes('Platinum') && 'text-orange-11',
+                emblem.itemName.includes('Red') && 'text-red-11',
+                emblem.itemName.includes('Blue') && 'text-blue-11',
+                emblem.itemName.includes('Yellow') && 'text-yellow-11',
+                emblem.itemName.includes('Green') && 'text-green-11',
+              )}
+              key={index}
+            >
               {emblem.itemName}
             </span>
           ))}
