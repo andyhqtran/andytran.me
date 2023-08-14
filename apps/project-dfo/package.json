@@ -23,7 +23,7 @@
     "@types/react-virtualized": "9.21.22",
     "eslint": "8.47.0",
     "eslint-config-several": "workspace:*",
-    "typescript": "5.1.3"
+    "typescript": "5.1.6"
   },
   "dependencies": {
     "@happykit/flags": "3.3.0",
