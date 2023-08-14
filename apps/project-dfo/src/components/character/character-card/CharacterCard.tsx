@@ -52,7 +52,7 @@ export const CharacterCard = ({
           </div>
         )}
 
-        <div className='rounded border border-slate-7 bg-slate-3 text-xs'>
+        <div className='hidden rounded border border-slate-7 bg-slate-3 text-xs sm:block'>
           <Image
             alt={`Avatar for ${name}`}
             height={64}
