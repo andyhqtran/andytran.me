@@ -113,7 +113,6 @@ export type Avatar = Item & {
   optionAbility: string;
 };
 
-export type BuffAvatar = Item & {
+export type BuffAvatar = Avatar & {
   cloneAvatarName: string | null;
-  emblems?: Emblem[];
 };

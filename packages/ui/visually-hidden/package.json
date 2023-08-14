@@ -1,8 +1,8 @@
 {
   "name": "@several-ui/visually-hidden",
   "version": "1.0.0",
-  "main": "./src/VisuallyHidden.tsx",
-  "types": "./src/VisuallyHidden.tsx",
+  "main": "./src/VisuallyHidden.ts",
+  "types": "./src/VisuallyHidden.ts",
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist ",
     "lint": "eslint .",

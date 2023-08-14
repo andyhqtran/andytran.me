@@ -10,7 +10,6 @@ export type CharacterEquipmentDialogProps = Pick<DialogProps, 'onOpenChange' | '
 };
 
 export const CharacterEquipmentDialog = ({ equip, onOpenChange, open }: CharacterEquipmentDialogProps) => {
-  console.log(equip.enchant);
   return (
     <Dialog onOpenChange={onOpenChange} open={open} title={`${equip.itemTypeDetail} details`}>
       <div className='grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2'>

@@ -1,22 +1,7 @@
 import { API_REVALIDATION } from '~/components/revalidate';
 import { API_KEY, API_URL } from '~/constants/env';
 import { type Character } from '~/fetchers/neople/fetchCharacters';
-import { type ItemRarity, type Server } from '~/types/neople';
-
-export type BuffAvatar = {
-  cloneAvatarName: string | null;
-  emblems: {
-    itemName: string;
-    itemRarity: string;
-    slotColor: string;
-    slotNo: number;
-  }[];
-  itemId: string;
-  itemName: string;
-  itemRarity: ItemRarity;
-  slotId: string;
-  slotName: string;
-};
+import { type BuffAvatar, type Server } from '~/types/neople';
 
 export type FetchCharacterBuffAvatarParams = {
   characterId: Character['characterId'];

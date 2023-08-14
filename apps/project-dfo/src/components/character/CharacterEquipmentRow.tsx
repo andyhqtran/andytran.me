@@ -1,4 +1,5 @@
 'use client';
+import { VisuallyHidden } from '@several-ui/visually-hidden';
 import { useState } from 'react';
 
 import { trackedClickedCharacterEquipmentRow } from '~/analytics/trackClickedEquipmentCard';
@@ -33,7 +34,9 @@ export const CharacterEquipmentRow = ({ equip }: CharacterEquipmentRowProps) => 
               itemType: equip.itemType,
             });
           }}
-        />
+        >
+          <VisuallyHidden>Open equipment details</VisuallyHidden>
+        </button>
 
         <div className='flex min-w-[72px] gap-2'>
           <EquipmentImage itemId={equip.itemId} itemName={equip.itemName} rarity={ITEM_RARITY[equip.itemRarity]} />
@@ -69,7 +72,7 @@ export const CharacterEquipmentRow = ({ equip }: CharacterEquipmentRowProps) => 
             </span>
             <span
               className='hidden whitespace-nowrap text-xs text-slate-11 sm:block'
-              data-testId='CHARACTER_EQUIPMENT_ROW_ITEM_TYPE'
+              data-testid='CHARACTER_EQUIPMENT_ROW_ITEM_TYPE'
             >
               {equip.itemType}
             </span>
