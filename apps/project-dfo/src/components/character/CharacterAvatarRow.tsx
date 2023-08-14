@@ -36,7 +36,7 @@ export const CharacterAvatarRow = ({ avatar, avatarInformation }: CharacterAvata
         <div className='flex min-w-[72px] gap-2'>
           <EquipmentImage itemId={avatar.itemId} itemName={avatar.itemName} rarity={ITEM_RARITY[avatar.itemRarity]} />
 
-          {avatar?.clone && (
+          {avatar?.clone?.itemId && (
             <EquipmentImage itemId={avatar.clone.itemId} itemName={avatar.clone.itemName} rarity='common' />
           )}
         </div>
