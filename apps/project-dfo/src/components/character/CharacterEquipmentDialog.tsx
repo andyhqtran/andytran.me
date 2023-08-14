@@ -17,12 +17,13 @@ export const CharacterEquipmentDialog = ({ equip, onOpenChange, open }: Characte
           {!!equip.reinforce && (
             <div className='text-xs'>
               {equip.amplificationName ? (
-                <span className='text-purple-9'>
-                  +{equip.reinforce} {equip.amplificationName}
+                <span className='text-pink-11'>
+                  +{equip.reinforce} Amplification ({equip.amplificationName})
                 </span>
               ) : (
-                <span className='text-blue-12'>+{equip.reinforce} Reinforce</span>
+                <span className='text-blue-11'>+{equip.reinforce} Reinforce</span>
               )}
+              {!!equip.refine && <span className='text-purple-11'> / {equip.refine} Refine</span>}
             </div>
           )}
 

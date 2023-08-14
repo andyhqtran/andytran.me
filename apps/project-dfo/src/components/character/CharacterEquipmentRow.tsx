@@ -50,15 +50,19 @@ export const CharacterEquipmentRow = ({ equip }: CharacterEquipmentRowProps) => 
           )}
         </div>
 
-        <div className='hidden min-w-[48px] text-sm font-medium text-blue-12 sm:block'>
-          <span
-            className={equip.amplificationName ? 'text-purple-9' : 'text-blue-12'}
-            data-testid='CHARACTER_EQUIPMENT_ROW_REINFORCE'
-          >
-            +{equip.reinforce}
-          </span>
-          {(equip.slotId === 'WEAPON' || equip.slotId === 'SUPPORT_WEAPON') && (
-            <span data-testid='CHARACTER_EQUIPMENT_ROW_REFINE'>/{equip.refine}</span>
+        <div className='hidden min-w-[48px] text-sm font-medium sm:block'>
+          {!!equip.reinforce && (
+            <span
+              className={equip.amplificationName ? 'text-pink-10' : 'text-blue-11'}
+              data-testid='CHARACTER_EQUIPMENT_ROW_REINFORCE'
+            >
+              +{equip.reinforce}
+            </span>
+          )}
+          {!!equip.refine && (equip.slotId === 'WEAPON' || equip.slotId === 'SUPPORT_WEAPON') && (
+            <span className='text-purple-10' data-testid='CHARACTER_EQUIPMENT_ROW_REFINE'>
+              /{equip.refine}
+            </span>
           )}
         </div>
 
