@@ -1,5 +1,6 @@
 import { InfoCircledIcon } from '@radix-ui/react-icons';
 import { Banner } from '@several-ui/banner';
+import { redirect } from 'next/navigation';
 
 import { CharacterSearchBar } from '~/components/character/CharacterSearchBar';
 import { CharacterSearchList } from '~/components/character/CharacterSearchList';
@@ -18,6 +19,10 @@ export default async function Page({ params }: PageProps) {
     serverId: 'all',
     wordType: 'full',
   });
+
+  if (characters.length === 1) {
+    redirect(`/character/${characters[0].serverId}/${characters[0].characterName.trim()}`);
+  }
 
   return (
     <div className='flex flex-col gap-8'>
