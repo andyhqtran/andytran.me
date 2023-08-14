@@ -13,6 +13,14 @@ export const ROADMAP: Roadmap[] = [
     description: 'Displays the top 200 players for each class advancements.',
   },
   {
+    title: 'Guild page',
+    description: 'Displays all the information about a searched guild.',
+  },
+  {
+    title: 'Explorer Club page',
+    description: 'Displays all the information about a searched explorer club.',
+  },
+  {
     title: 'Statistics page',
     description: 'Displays all in-game statistics.',
   },
