@@ -31,7 +31,7 @@ export const Tooltip = ({
       <RadixTooltip.Portal>
         <RadixTooltip.Content
           className={twMerge(
-            'max-h-screen overflow-y-auto rounded border border-slate-4 bg-slate-1 py-2 px-4 text-xs shadow-sm',
+            'max-h-screen overflow-y-auto rounded border border-slate-4 bg-slate-1 px-4 py-2 text-xs shadow-sm',
             className,
           )}
           sideOffset={sideOffset}
