@@ -1,4 +1,5 @@
 import { RocketIcon } from '@radix-ui/react-icons';
+import { Banner } from '@several-ui/banner';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
 import { AvatarCard } from '~/components/character/avatar-card/AvatarCard';
@@ -36,12 +37,9 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <div className='relative z-0 flex flex-col gap-8' data-id={character.characterId}>
-      <div className='flex flex-col gap-4'>
-        <div className='flex items-center gap-4 rounded border border-blue-6 bg-blue-3 p-4 text-sm text-blue-11'>
-          <RocketIcon className='h-3 w-3 shrink-0' />
-          This page is currently a work-in-progress and contains a limited amount of information.
-        </div>
-      </div>
+      <Banner appearance='info' prefix={<RocketIcon className='h-3 w-3' />} size='sm'>
+        This page is currently a work-in-progress and contains a limited amount of information.
+      </Banner>
 
       <div className='flex flex-col gap-1'>
         <h1 className='text-xl text-slate-12'>{character.characterName}</h1>

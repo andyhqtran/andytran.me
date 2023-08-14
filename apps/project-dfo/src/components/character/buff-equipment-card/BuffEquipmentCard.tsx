@@ -1,4 +1,5 @@
 import { ExclamationTriangleIcon } from '@radix-ui/react-icons';
+import { Banner } from '@several-ui/banner';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 
 import { BuffEquipmentCardAvatarItem } from '~/components/character/buff-equipment-card/BuffEquipmentCardItem';
@@ -21,12 +22,9 @@ export const BuffEquipmentCard = async ({ characterId, serverId }: BuffEquipment
 
   return (
     <CollapsibleCard defaultOpen title='Buff equipment'>
-      <div className='flex flex-col gap-4'>
-        <div className='flex items-center gap-4 rounded border border-yellow-7 bg-yellow-3 px-4 py-2 text-xs text-yellow-11'>
-          <ExclamationTriangleIcon className='h-3 w-3 shrink-0' />
-          Neople currently doesn&apos;t return buff equipment information.
-        </div>
-      </div>
+      <Banner appearance='warning' prefix={<ExclamationTriangleIcon className='h-3 w-3' />} size='sm'>
+        Neople currently doesn&apos;t return buff equipment information.
+      </Banner>
 
       {buffAvatar.map((avatar, index) => (
         <BuffEquipmentCardAvatarItem

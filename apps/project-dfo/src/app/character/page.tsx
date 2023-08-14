@@ -1,6 +1,6 @@
 import { type Metadata } from 'next';
 
-import { CharacterSearch } from '~/components/character/CharacterSearch';
+import { CharacterSearchBar } from '~/components/character/CharacterSearchBar';
 
 export default async function Page() {
   return (
@@ -13,7 +13,7 @@ export default async function Page() {
       </div>
 
       <div>
-        <CharacterSearch />
+        <CharacterSearchBar />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
-import { ExclamationTriangleIcon } from '@radix-ui/react-icons';
+import { InfoCircledIcon } from '@radix-ui/react-icons';
+import { Banner } from '@several-ui/banner';
 
 import { CharacterSearchBar } from '~/components/character/CharacterSearchBar';
 import { CharacterSearchList } from '~/components/character/CharacterSearchList';
@@ -34,10 +35,10 @@ export default async function Page({ params }: PageProps) {
 
         {characters?.length > 0 ? (
           <>
-            <div className='mb-4 flex items-center gap-4 rounded border border-yellow-6 bg-yellow-3 p-4 text-sm text-yellow-11'>
-              <ExclamationTriangleIcon className='h-3 w-3 shrink-0' />
+            <Banner appearance='info' className='mb-4' prefix={<InfoCircledIcon className='h-3 w-3' />} size='sm'>
               Avatar images are not currently supported by Neople&apos;s API.
-            </div>
+            </Banner>
+
             <CharacterSearchList characters={characters} />
           </>
         ) : (

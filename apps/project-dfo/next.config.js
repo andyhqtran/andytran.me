@@ -10,6 +10,16 @@ const nextConfig = {
       },
     ],
   },
+  modularizeImports: {
+    lodash: {
+      transform: 'lodash/{{member}}',
+      preventFullImport: true,
+    },
+    'lodash-es': {
+      transform: 'lodash-es/{{member}}',
+      preventFullImport: true,
+    },
+  },
   reactStrictMode: true,
   async redirects() {
     return [
@@ -26,7 +36,9 @@ const nextConfig = {
     ];
   },
   transpilePackages: [
+    'lodash-es',
     '@several-ui/badge',
+    '@several-ui/banner',
     '@several-ui/button',
     '@several-ui/collapsible-card',
     '@several-ui/dialog',

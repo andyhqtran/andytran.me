@@ -1,5 +1,5 @@
 'use client';
-import { flatten } from 'lodash';
+import flatten from 'lodash-es/flatten';
 import { CSSProperties, useMemo } from 'react';
 import { AutoSizer, InfiniteLoader, List, WindowScroller } from 'react-virtualized';
 

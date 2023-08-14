@@ -1,4 +1,4 @@
-import { isNumber } from 'lodash';
+import isNumber from 'lodash-es/isNumber';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ComponentProps } from 'react';
