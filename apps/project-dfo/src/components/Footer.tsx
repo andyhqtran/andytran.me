@@ -14,7 +14,7 @@ export const Footer = () => {
         <div className='text-xs text-slate-11'>
           &copy; {year}{' '}
           <Link className='hover:underline' href={Routes.Root}>
-            dfo.gg
+            {process.env.NEXT_PUBLIC_SITE_NAME}
           </Link>
         </div>
 
