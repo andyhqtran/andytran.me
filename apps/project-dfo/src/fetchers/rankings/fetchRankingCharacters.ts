@@ -29,9 +29,31 @@ export const fetchRankingsCharacters = async (
 
   if (params.limit) searchParams.append('limit', params.limit.toString());
 
-  return await fetch(`${RANKINGS_API_URL}/characters?${searchParams.toString()}`, {
-    next: {
-      revalidate: 3600,
-    },
-  }).then((res) => res.json());
+  try {
+    const response = await fetch(`${RANKINGS_API_URL}/characters?${searchParams.toString()}`, {
+      next: {
+        revalidate: 3600,
+      },
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+
+      throw new Error(errorData.error);
+    }
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+
+  // return await fetch(`${RANKINGS_API_URL}/characters?${searchParams.toString()}`, {
+  //   next: {
+  //     revalidate: 3600,
+  //   },
+  // })
+  //   .then((res) => res.json())
+  //   .catch((error) => console.log(error));
 };
