@@ -14,7 +14,7 @@
     "@several/components": "workspace:*",
     "@several/hooks": "workspace:*",
     "@several/primitives": "workspace:*",
-    "@vercel/analytics": "^1.0.1",
+    "@vercel/analytics": "^1.0.2",
     "classnames": "^2.3.2",
     "next": "13.4.7",
     "next-sitemap": "^4.1.3",
