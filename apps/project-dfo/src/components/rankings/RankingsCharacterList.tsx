@@ -16,12 +16,17 @@ export const RankingsCharacterList = ({ jobGrowId, jobId }) => {
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
-  } = useRankings({
-    limit: 100,
-    jobId,
-    jobGrowId,
-    serverId: 'all',
-  });
+  } = useRankings(
+    {
+      limit: 100,
+      jobId,
+      jobGrowId,
+      serverId: 'all',
+    },
+    {
+      enabled: !!flags?.ranking,
+    },
+  );
 
   const characterRows = useMemo(() => {
     return characters ? characters.pages.flatMap((group) => group.results) : [];

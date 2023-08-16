@@ -9,11 +9,16 @@ export const getRankingsKey = (params: UseRankingsParams) => [RANKINGS_KEY, para
 
 export type UseRankingsParams = Omit<FetchRankingsCharactersParams, 'page'>;
 
-export const useRankings = (params: UseRankingsParams) => {
+export type UseRankingsOptions = {
+  enabled?: boolean;
+};
+
+export const useRankings = (params: UseRankingsParams, options: UseRankingsOptions) => {
   const rankings = useInfiniteQuery(
     getRankingsKey(params),
     (context) => fetchRankingsCharacters({ page: context.pageParam, ...params }),
     {
+      ...options,
       getNextPageParam: (lastPage) => (lastPage.total_pages > lastPage.page ? lastPage.page + 1 : undefined),
     },
   );
