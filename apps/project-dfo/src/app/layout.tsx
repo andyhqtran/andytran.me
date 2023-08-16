@@ -36,7 +36,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         `}
           </Script>
 
-          <ErrorBoundary>
+          <ErrorBoundary showDialog={process.env.NEXT_PUBLIC_ENV === 'production'}>
             <Providers>
               <Header />
 

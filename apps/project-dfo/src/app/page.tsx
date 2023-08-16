@@ -1,7 +1,7 @@
 import { type Metadata } from 'next';
 
-import { Changelog } from '~/components/changelog/Changelog';
-import { Roadmap } from '~/components/roadmap/Roadmap';
+import { Changelog } from '~/components/Changelog';
+import { Roadmap } from '~/components/Roadmap';
 
 export default function Page() {
   return (

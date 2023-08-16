@@ -12,7 +12,6 @@ export type CharacterListProps = {
 
 export const CharacterList = ({ characters, getEstimateSize, renderCharacter }: CharacterListProps) => {
   const parentRef = useRef<HTMLDivElement>(null);
-
   const parentOffsetRef = useRef(0);
 
   useLayoutEffect(() => {

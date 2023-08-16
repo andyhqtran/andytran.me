@@ -13,7 +13,7 @@ export type CharacterCardProps = ComponentProps<'div'> & {
   index: number;
   label: string;
   job?: string;
-  level: number;
+  level?: number;
   name: string;
   serverId: string;
 };
@@ -42,7 +42,7 @@ export const CharacterCard = ({
     >
       <Link
         className='absolute inset-0 rounded'
-        href={`${Routes.Character}/${serverId === 'siroco' ? 'sirocco' : serverId}/${name}`}
+        href={encodeURIComponent(`${Routes.Character}/${serverId === 'siroco' ? 'sirocco' : serverId}/${name}`)}
       />
       <div className='flex shrink-0 gap-4'>
         {label && (

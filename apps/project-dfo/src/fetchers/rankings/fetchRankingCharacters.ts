@@ -29,7 +29,7 @@ export const fetchRankingsCharacters = async (
 
   if (params.limit) searchParams.append('limit', params.limit.toString());
 
-  return await fetch(`${RANKINGS_API_URL}/characters/?${searchParams.toString()}`, {
+  return await fetch(`${RANKINGS_API_URL}/characters?${searchParams.toString()}`, {
     next: {
       revalidate: 3600,
     },

@@ -13,7 +13,8 @@
         "NEXT_PUBLIC_IMAGE_API_URL",
         "NEXT_PUBLIC_RANKINGS_API_URL",
         "NEXT_PUBLIC_RANKINGS_API_KEY",
-        "NEXT_PUBLIC_HIGHLIGHT_PROJECT_ID"
+        "NEXT_PUBLIC_HIGHLIGHT_PROJECT_ID",
+        "NEXT_PUBLIC_ENV"
       ],
       "outputs": [".next/**", "!.next/cache/**", "storybook-static/**", "dist/**"]
     },
