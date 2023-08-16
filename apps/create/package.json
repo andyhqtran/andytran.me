@@ -13,7 +13,7 @@
   "devDependencies": {
     "@several/tailwind-config": "workspace:*",
     "@several/tsconfig": "workspace:*",
-    "@types/node": "20.3.2",
+    "@types/node": "20.5.0",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "eslint": "8.47.0",
