@@ -5,10 +5,12 @@ import { useMemo } from 'react';
 import { CharacertInfiniteList } from '~/components/character/CharacterInfiniteList';
 import { CharacterCard } from '~/components/CharacterCard';
 import { FetchRankingsCharactersResponse } from '~/fetchers/rankings/fetchRankingCharacters';
+import { useFlags } from '~/flags/client';
 import { useRankings } from '~/hooks/queries/useRankings';
 import { Character } from '~/types/rankings';
 
 export const RankingsCharacterList = ({ jobGrowId, jobId }) => {
+  const { flags } = useFlags();
   const {
     data: characters,
     fetchNextPage,
@@ -25,7 +27,7 @@ export const RankingsCharacterList = ({ jobGrowId, jobId }) => {
     return characters ? characters.pages.flatMap((group) => group.results) : [];
   }, [characters]);
 
-  if (!characterRows?.length) return null;
+  if (!characterRows?.length || !flags?.ranking) return null;
 
   return (
     <CharacertInfiniteList<Character, FetchRankingsCharactersResponse>
