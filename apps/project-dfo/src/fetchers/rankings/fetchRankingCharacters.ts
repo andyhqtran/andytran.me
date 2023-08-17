@@ -48,12 +48,4 @@ export const fetchRankingsCharacters = async (
   } catch (error) {
     console.error(error);
   }
-
-  // return await fetch(`${RANKINGS_API_URL}/characters?${searchParams.toString()}`, {
-  //   next: {
-  //     revalidate: 3600,
-  //   },
-  // })
-  //   .then((res) => res.json())
-  //   .catch((error) => console.log(error));
 };

@@ -15,7 +15,6 @@ export const CharacterAvatarDialog = ({
   onOpenChange,
   open,
 }: CharacterAvatarDialogProps) => {
-  console.log(avatarInformation?.itemName, avatarInformation);
   return (
     <Dialog onOpenChange={onOpenChange} open={open} title={`${avatar.itemName} details`}>
       <div className='flex flex-col gap-6'>
