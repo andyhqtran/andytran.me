@@ -42,7 +42,7 @@ export const CharacterCard = ({
     >
       <Link
         className='absolute inset-0 rounded'
-        href={encodeURIComponent(`${Routes.Character}/${serverId === 'siroco' ? 'sirocco' : serverId}/${name}`)}
+        href={`${Routes.Character}/${serverId === 'siroco' ? 'sirocco' : serverId}/${encodeURIComponent(name)}`}
       />
       <div className='flex shrink-0 gap-4'>
         {label && (
