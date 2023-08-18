@@ -4,7 +4,9 @@ import { CollapsibleCard } from '@several-ui/collapsible-card';
 
 import { CharacterAvatarCard } from '~/components/character/CharacterAvatarCard';
 import { CharacterBuffEquipmentCard } from '~/components/character/CharacterBuffEquipmentCard';
+import { CharacterCreatureCard } from '~/components/character/CharacterCreatureCard';
 import { CharacterEquipmentCard } from '~/components/character/CharacterEquipmentCard';
+import { CharacterTalismanCard } from '~/components/character/CharacterTalismanCard';
 import { getCharacters } from '~/data/getCharacters';
 
 export type PageProps = {
@@ -50,6 +52,16 @@ export default async function Page({ params }: PageProps) {
       </div>
       <div className='flex flex-col gap-6'>
         <CharacterEquipmentCard
+          characterId={character.characterId}
+          serverId={params.serverId === 'sirocco' ? 'siroco' : 'cain'}
+        />
+
+        <CharacterTalismanCard
+          characterId={character.characterId}
+          serverId={params.serverId === 'sirocco' ? 'siroco' : 'cain'}
+        />
+
+        <CharacterCreatureCard
           characterId={character.characterId}
           serverId={params.serverId === 'sirocco' ? 'siroco' : 'cain'}
         />

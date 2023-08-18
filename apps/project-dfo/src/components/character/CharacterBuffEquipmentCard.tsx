@@ -1,6 +1,8 @@
 import { ExclamationTriangleIcon } from '@radix-ui/react-icons';
 import { Banner } from '@several-ui/banner';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
+import { Separator } from '@several-ui/separator';
+import { Fragment } from 'react';
 
 import { CharacterAvatarRow } from '~/components/character/CharacterAvatarRow';
 import { getCharacterBuffAvatar } from '~/data/getCharacterBuffAvatar';
@@ -22,15 +24,31 @@ export const CharacterBuffEquipmentCard = async ({ characterId, serverId }: Char
 
   return (
     <CollapsibleCard defaultOpen title='Buff equipment'>
-      <div className='-m-4 flex flex-col'>
-        <Banner appearance='warning' className='m-4' prefix={<ExclamationTriangleIcon className='h-3 w-3' />} size='sm'>
-          Neople currently doesn&apos;t return buff equipment information.
-        </Banner>
+      {buffAvatars?.length ? (
+        <div className='-m-4 flex flex-col'>
+          <Banner
+            appearance='warning'
+            className='m-4'
+            prefix={<ExclamationTriangleIcon className='h-3 w-3' />}
+            size='sm'
+          >
+            Neople currently doesn&apos;t return buff equipment information.
+          </Banner>
 
-        {buffAvatars.map((avatar, index) => (
-          <CharacterAvatarRow avatar={avatar} avatarInformation={buffAvatarsItemInformations[index]} key={index} />
-        ))}
-      </div>
+          {buffAvatars?.map((avatar, index) => {
+            const isLast = index === buffAvatars.length - 1;
+
+            return (
+              <Fragment key={index}>
+                <CharacterAvatarRow avatar={avatar} avatarInformation={buffAvatarsItemInformations[index]} />
+                {!isLast && <Separator />}
+              </Fragment>
+            );
+          })}
+        </div>
+      ) : (
+        <p>Unable to retrieve buff equipment information</p>
+      )}
     </CollapsibleCard>
   );
 };

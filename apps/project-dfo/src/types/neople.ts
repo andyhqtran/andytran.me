@@ -56,6 +56,51 @@ export type Option = {
 };
 
 /**
+ * Creature
+ */
+export type Artifact = Pick<Item, 'itemId' | 'itemName' | 'itemRarity'> & {
+  itemAvailableLevel: number;
+  slotColor: 'BLUE' | 'GREEN' | 'RED';
+};
+
+export type Creature = Pick<Item, 'itemId' | 'itemName' | 'itemRarity'> & {
+  artifact?: Artifact[];
+  clone?: Pick<Item, 'itemId' | 'itemName'>;
+};
+
+/**
+ * Insignia
+ */
+export type Gem = Pick<Item, 'itemId' | 'itemName' | 'itemRarity'> & {
+  itemAbility: string;
+  slotNo: number;
+};
+
+export type Insignia = Pick<Item, 'itemId' | 'itemName' | 'itemRarity'> & {
+  gems?: Gem[];
+  itemAbility: string;
+  itemAvailableLevel: number;
+  reinforce: number;
+};
+
+/**
+ * Talisman
+ */
+export type RuneType = 'Ancient Library' | 'Circle Mage' | 'Second Pact' | 'The Guardians' | 'Terra Cotta';
+
+export type Rune = Pick<Item, 'itemId' | 'itemName'> & {
+  slotNo: number;
+};
+
+export type Talisman = {
+  talisman: Pick<Item, 'itemId' | 'itemName'> & {
+    runeTypes: [RuneType, RuneType, RuneType];
+    slotNo: number;
+  };
+  runes?: Rune[];
+};
+
+/**
  * Equipment types
  */
 export type FusionOptionInfo = {

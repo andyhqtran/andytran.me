@@ -30,7 +30,7 @@ export const CharacterAvatarRow = ({ avatar, avatarInformation }: CharacterAvata
             setIsDialogOpen(true);
           }}
         >
-          <VisuallyHidden>Open equipment details</VisuallyHidden>
+          <VisuallyHidden>Open avatar details</VisuallyHidden>
         </button>
 
         <div className='flex min-w-[72px] gap-2'>
