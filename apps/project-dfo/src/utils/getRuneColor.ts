@@ -9,8 +9,8 @@ export const getRuneTextColor = (runeType: RuneType | string) => {
 
   if (runeType === 'Terra Cotta' || runeType.includes('Terra Cotta')) return 'text-purple-11';
 
-  if (runeType === 'The Guardians' || runeType.includes('The Guardians')) return 'text-blue-11';
-
+  if (runeType === 'The Guardians' || runeType.includes('Guardians')) return 'text-blue-11';
+  console.log(runeType);
   return 'text-slate-11';
 };
 
@@ -23,7 +23,7 @@ export const getRuneBorderColor = (runeType: RuneType | string) => {
 
   if (runeType === 'Terra Cotta' || runeType.includes('Terra Cotta')) return 'border-purple-9 bg-purple-2';
 
-  if (runeType === 'The Guardians' || runeType.includes('The Guardians')) return 'border-blue-9 bg-blue-2';
+  if (runeType === 'Guardians' || runeType.includes('Guardians')) return 'border-blue-9 bg-blue-2';
 
   return 'border-slate-9 bg-slate-2';
 };
