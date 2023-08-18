@@ -5,12 +5,8 @@ export type Roadmap = {
 
 export const ROADMAP: Roadmap[] = [
   {
-    title: 'Character page',
-    description: 'Displays all the information about a searched character.',
-  },
-  {
     title: 'Rankings page',
-    description: 'Displays the top 200 players for each class advancements.',
+    description: 'Displays the top players for each class advancements.',
   },
   {
     title: 'Guild page',
