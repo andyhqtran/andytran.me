@@ -1,5 +1,3 @@
-import { ExclamationTriangleIcon } from '@radix-ui/react-icons';
-import { Banner } from '@several-ui/banner';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
 import { Separator } from '@several-ui/separator';
 import { Fragment } from 'react';
@@ -24,16 +22,6 @@ export const CharacterTalismanCard = async ({ characterId, serverId }: Character
     <CollapsibleCard defaultOpen title='Talisman'>
       {talismans?.length ? (
         <div className='-m-4 flex flex-col'>
-          <Banner
-            appearance='warning'
-            className='m-4'
-            prefix={<ExclamationTriangleIcon className='h-3 w-3' />}
-            size='sm'
-          >
-            Neople currently doesn&apos;t support rune images.
-          </Banner>
-          <Separator />
-
           {talismans.map((talisman, index) => {
             const isLast = index === talismans.length - 1;
 
