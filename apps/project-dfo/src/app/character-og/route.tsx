@@ -43,8 +43,7 @@ export async function GET(request: Request) {
             </div>
 
             <div tw='flex text-white text-2xl'>
-              {process.env.SITE_URL}
-              {serverId}/{characterName}
+              {process.env.SITE_URL}/character/{serverId}/{characterName}
             </div>
           </div>
 
