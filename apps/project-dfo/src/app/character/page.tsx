@@ -1,6 +1,7 @@
 import { type Metadata } from 'next';
 
 import { CharacterSearchBar } from '~/components/character/CharacterSearchBar';
+import { CharacterCardSkeleton } from '~/components/CharacterCardSkeleton';
 
 export default async function Page() {
   return (
@@ -12,8 +13,16 @@ export default async function Page() {
         </p>
       </div>
 
-      <div>
-        <CharacterSearchBar />
+      <div className='flex flex-col gap-8'>
+        <CharacterSearchBar className='z-10' />
+
+        <div className='flex flex-col gap-4'>
+          <CharacterCardSkeleton className='opacity-50' />
+          <CharacterCardSkeleton className='opacity-40' />
+          <CharacterCardSkeleton className='opacity-30' />
+          <CharacterCardSkeleton className='opacity-20' />
+          <CharacterCardSkeleton className='opacity-10' />
+        </div>
       </div>
     </div>
   );
