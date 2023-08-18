@@ -8,6 +8,11 @@ export type Changelog = {
 
 export const CHANGELOG: Changelog[] = [
   {
+    title: 'Character talisman and creatures',
+    description: 'Added talisman and creatures to the character page',
+    type: 'improvement',
+  },
+  {
     title: 'Equipment upgrade colors',
     description: 'Fixed amplification/reinforcement/refine colors',
     type: 'bugfix',
