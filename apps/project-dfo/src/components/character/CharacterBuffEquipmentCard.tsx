@@ -35,6 +35,8 @@ export const CharacterBuffEquipmentCard = async ({ characterId, serverId }: Char
             Neople currently doesn&apos;t return buff equipment information.
           </Banner>
 
+          <Separator />
+
           {buffAvatars?.map((avatar, index) => {
             const isLast = index === buffAvatars.length - 1;
 

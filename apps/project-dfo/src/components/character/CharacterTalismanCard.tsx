@@ -26,12 +26,13 @@ export const CharacterTalismanCard = async ({ characterId, serverId }: Character
         <div className='-m-4 flex flex-col'>
           <Banner
             appearance='warning'
-            className='mb-8'
+            className='m-4'
             prefix={<ExclamationTriangleIcon className='h-3 w-3' />}
             size='sm'
           >
             Neople currently doesn&apos;t support rune images.
           </Banner>
+          <Separator />
 
           {talismans.map((talisman, index) => {
             const isLast = index === talismans.length - 1;
