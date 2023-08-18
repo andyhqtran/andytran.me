@@ -52,14 +52,14 @@ export const CharacterCard = ({
           </div>
         )}
 
-        <div className='hidden rounded border border-slate-7 bg-slate-3 text-xs sm:block'>
+        {/* <div className='hidden rounded border border-slate-7 bg-slate-3 text-xs sm:block'>
           <Image
             alt={`Avatar for ${name}`}
             height={64}
             src={`https://img-api.dfoneople.com/df/servers/${serverId}/characters/${id}`}
             width={64}
           />
-        </div>
+        </div> */}
 
         <div className='flex items-center'>
           <div className='flex flex-col gap-1'>
