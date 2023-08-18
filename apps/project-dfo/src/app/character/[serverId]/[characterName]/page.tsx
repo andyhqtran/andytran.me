@@ -1,6 +1,7 @@
 import { RocketIcon } from '@radix-ui/react-icons';
 import { Banner } from '@several-ui/banner';
 import { CollapsibleCard } from '@several-ui/collapsible-card';
+import slugify from 'slugify';
 
 import { CharacterAvatarCard } from '~/components/character/CharacterAvatarCard';
 import { CharacterBuffEquipmentCard } from '~/components/character/CharacterBuffEquipmentCard';
@@ -101,8 +102,19 @@ export const generateMetadata = async ({ params }: PageProps) => {
     };
   }
 
+  const avatarImageUrl = `${process.env.SITE_URL}/assets/characters/${slugify(
+    `${character.jobName}-${character.jobGrowName.replace('Neo: ', '')}`,
+    {
+      lower: true,
+      strict: true,
+    },
+  )}.jpeg`;
+
   return {
     description: `Character information for ${character.characterName}`,
     title: `${character.characterName} (${character.jobGrowName}) - ${character.fame} - Dungeon Fighter Online Resources`,
+    openGraph: {
+      images: `/character-og?characterName=${character.characterName}&jobGrowName=${character.jobGrowName}&serverId=${character.serverId}&fame=${character.fame}&avatarImageUrl=${avatarImageUrl}`,
+    },
   };
 };
