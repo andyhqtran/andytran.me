@@ -1,22 +1,38 @@
 import isNumber from 'lodash-es/isNumber';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ComponentProps } from 'react';
-import { twMerge } from 'tailwind-merge';
+import { type ComponentProps } from 'react';
+import { tv, type VariantProps } from 'tailwind-variants';
 
 import { Routes } from '~/constants/Routes';
 
-export type CharacterCardProps = ComponentProps<'div'> & {
-  fame?: number;
-  guild?: string;
-  id: string;
-  index: number;
-  label: string;
-  job?: string;
-  level?: number;
-  name: string;
-  serverId: string;
-};
+export const characterCard = tv({
+  base: 'relative flex cursor-pointer items-center justify-between gap-4 rounded border border-slate-7 bg-slate-3 py-4 pr-4 text-slate-11 hover:bg-slate-4',
+  variants: {
+    size: {
+      sm: 'min-h-[80px]',
+      md: 'min-h-[96px]',
+    },
+  },
+  defaultVariants: {
+    size: 'md',
+  },
+});
+
+export type CharacterCardVariantsProps = VariantProps<typeof characterCard>;
+
+export type CharacterCardProps = Omit<ComponentProps<'div'>, keyof CharacterCardVariantsProps> &
+  CharacterCardVariantsProps & {
+    fame?: number;
+    guild?: string;
+    id: string;
+    index: number;
+    label: string;
+    job?: string;
+    level?: number;
+    name: string;
+    serverId: string;
+  };
 
 export const CharacterCard = ({
   className,
@@ -29,17 +45,11 @@ export const CharacterCard = ({
   level,
   name,
   serverId,
+  size,
   ...restOfProps
 }: CharacterCardProps) => {
   return (
-    <div
-      className={twMerge(
-        'relative flex min-h-[96px] cursor-pointer items-center justify-between gap-4 rounded border border-slate-7 bg-slate-3 py-4 pr-4 text-slate-11 hover:bg-slate-4',
-        className,
-      )}
-      data-character-id={id}
-      {...restOfProps}
-    >
+    <div className={characterCard({ size, className })} data-character-id={id} {...restOfProps}>
       <Link
         className='absolute inset-0 rounded'
         href={`${Routes.Character}/${serverId === 'siroco' ? 'sirocco' : serverId}/${encodeURIComponent(name)}`}

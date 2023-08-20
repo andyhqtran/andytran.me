@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 
 import { CharacertInfiniteList } from '~/components/character/CharacterInfiniteList';
 import { CharacterCard } from '~/components/CharacterCard';
+import { RankingsCharacterListSkeleton } from '~/components/rankings/RankingsCharacterListSkeleton';
 import { FetchRankingsCharactersResponse } from '~/fetchers/rankings/fetchRankingCharacters';
 import { useFlags } from '~/flags/client';
 import { useRankings } from '~/hooks/queries/useRankings';
@@ -16,6 +17,7 @@ export const RankingsCharacterList = ({ jobGrowId, jobId }) => {
     fetchNextPage,
     hasNextPage,
     isFetchingNextPage,
+    isInitialLoading,
   } = useRankings(
     {
       limit: 100,
@@ -32,12 +34,14 @@ export const RankingsCharacterList = ({ jobGrowId, jobId }) => {
     return characters ? characters.pages.flatMap((group) => group.results) : [];
   }, [characters]);
 
-  if (!characterRows?.length || !flags?.ranking) return null;
+  if (isInitialLoading || !characters || !flags?.ranking) {
+    return <RankingsCharacterListSkeleton />;
+  }
 
   return (
     <CharacertInfiniteList<Character, FetchRankingsCharactersResponse>
       characters={characterRows}
-      getEstimateSize={() => 96 + 16}
+      getEstimateSize={() => 80 + 16}
       hasNextPage={hasNextPage}
       isFetchingNextPage={isFetchingNextPage}
       onFetchNextPage={fetchNextPage}
@@ -50,6 +54,7 @@ export const RankingsCharacterList = ({ jobGrowId, jobId }) => {
           label='Rank'
           name={character.characterName}
           serverId={character.serverId}
+          size='sm'
         />
       )}
       renderLoaderRow={() => (

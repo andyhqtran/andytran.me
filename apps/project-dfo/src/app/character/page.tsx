@@ -13,15 +13,15 @@ export default async function Page() {
         </p>
       </div>
 
-      <div className='flex flex-col gap-8'>
-        <CharacterSearchBar className='z-10' />
+      <div className='relative z-0'>
+        <CharacterSearchBar className='mb-8' />
 
         <div className='hidden flex-col gap-4 sm:flex'>
-          <CharacterCardSkeleton className='opacity-50' />
-          <CharacterCardSkeleton className='opacity-40' />
-          <CharacterCardSkeleton className='opacity-30' />
-          <CharacterCardSkeleton className='opacity-20' />
-          <CharacterCardSkeleton className='opacity-10' />
+          <CharacterCardSkeleton hasJob />
+          <CharacterCardSkeleton hasJob />
+          <CharacterCardSkeleton hasJob />
+          <CharacterCardSkeleton hasJob />
+          <CharacterCardSkeleton hasJob />
         </div>
       </div>
     </div>
