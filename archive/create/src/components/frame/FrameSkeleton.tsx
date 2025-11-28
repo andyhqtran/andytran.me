@@ -1,4 +1,4 @@
-import { Spinner } from "@several-ui/spinner";
+import { Spinner } from "@several/ui";
 
 export const FrameSkeleton = () => {
   return (

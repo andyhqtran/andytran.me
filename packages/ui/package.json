@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "@radix-ui/react-separator": "^1.0.3",
+    "classnames": "2.3.2",
+    "radix-ui": "1.4.3",
+    "tailwind-merge": "1.14.0",
     "tailwind-variants": "0.1.13"
   },
   "devDependencies": {
@@ -13,17 +15,18 @@
     "react-dom": "19.2.0",
     "typescript": "5.1.6"
   },
-  "main": "./src/Separator.tsx",
-  "name": "@several-ui/separator",
+  "main": "./src/index.ts",
+  "name": "@several/ui",
   "peerDependencies": {
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
+  "private": true,
   "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist ",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "format": "biome format --write",
     "lint": "biome check"
   },
-  "types": "./src/Separator.tsx",
+  "types": "./src/index.ts",
   "version": "1.0.0"
 }
