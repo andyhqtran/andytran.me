@@ -11,7 +11,7 @@ export default meta;
 
 export const Example: StoryObj<typeof Button> = {
   args: {
-    appearance: "primary",
+    appearance: "default",
     children: "Button",
     size: "md",
   },
