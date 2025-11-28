@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "eslint-config-several": "workspace:*",
-    "turbo": "1.10.12"
+    "turbo": "2.6.1"
   },
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@10.24.0",
+  "name": "andytran.me"
 }
