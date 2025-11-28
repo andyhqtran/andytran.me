@@ -1,12 +1,6 @@
 {
-  "name": "@several-ui/visually-hidden",
-  "version": "1.0.0",
-  "main": "./src/VisuallyHidden.ts",
-  "types": "./src/VisuallyHidden.ts",
-  "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist ",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+  "dependencies": {
+    "@radix-ui/react-visually-hidden": "1.0.3"
   },
   "devDependencies": {
     "@several/tailwind-config": "workspace:*",
@@ -14,17 +8,21 @@
     "@storybook/react": "7.0.23",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
-    "eslint": "8.47.0",
-    "eslint-config-several": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.1.6"
   },
-  "dependencies": {
-    "@radix-ui/react-visually-hidden": "1.0.3"
-  },
+  "main": "./src/VisuallyHidden.ts",
+  "name": "@several-ui/visually-hidden",
   "peerDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
-  }
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist ",
+    "format": "biome format --write",
+    "lint": "biome check"
+  },
+  "types": "./src/VisuallyHidden.ts",
+  "version": "1.0.0"
 }

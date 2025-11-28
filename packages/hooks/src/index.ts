@@ -1,1 +1,1 @@
-export * from './usePageScrollPercentage';
+export * from "./usePageScrollPercentage";

@@ -1,5 +1,5 @@
-import { getCookie, setCookie } from 'cookies-next';
-import { AtomEffect } from 'recoil';
+import { getCookie, setCookie } from "cookies-next";
+import { type AtomEffect } from "recoil";
 
 export const nextCookieEffect =
   <Type>(key: string): AtomEffect<Type> =>
@@ -8,13 +8,13 @@ export const nextCookieEffect =
       const savedValue = getCookie(key);
 
       if (savedValue != null) {
-        if (typeof savedValue === 'string') {
+        if (typeof savedValue === "string") {
           setSelf(JSON.parse(savedValue));
         }
       }
     };
 
-    if (trigger === 'get') {
+    if (trigger === "get") {
       loadPersisted();
     }
 

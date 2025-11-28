@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { type Meta, type StoryObj } from "@storybook/react";
 
-import { Progress } from './Progress';
+import { Progress } from "./Progress";
 
 const meta: Meta<typeof Progress> = {
-  title: 'UI/Progress',
   component: Progress,
+  title: "UI/Progress",
 };
 
 export default meta;

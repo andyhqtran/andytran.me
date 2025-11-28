@@ -1,9 +1,13 @@
 {
-  "name": "@several/tsconfig",
-  "version": "0.0.1",
-  "private": true,
   "license": "MIT",
+  "name": "@several/tsconfig",
+  "private": true,
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "scripts": {
+    "format": "biome format --write",
+    "lint": "biome check"
+  },
+  "version": "0.0.1"
 }

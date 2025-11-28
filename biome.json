@@ -1,0 +1,118 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [
+                ":URL:",
+                ":BUN:",
+                ":NODE:",
+                ":PACKAGE:",
+                ":PACKAGE_WITH_PROTOCOL:"
+              ],
+              ":BLANK_LINE:",
+              ":NODE:"
+            ]
+          }
+        },
+        "useSortedAttributes": "on",
+        "useSortedKeys": "on",
+        "useSortedProperties": "on"
+      }
+    }
+  },
+  "css": {
+    "assist": {
+      "enabled": true
+    },
+    "formatter": {
+      "enabled": true
+    },
+    "parser": {
+      "cssModules": true,
+      "tailwindDirectives": true
+    }
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
+    },
+    "enabled": true,
+    "rules": {
+      "nursery": {
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "error",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["clsx", "cva", "classNames", "tw", "tw.*"]
+          }
+        }
+      },
+      "recommended": true,
+      "style": {
+        "noDefaultExport": "error",
+        "noUnusedTemplateLiteral": "error",
+        "useConsistentTypeDefinitions": {
+          "fix": "unsafe",
+          "level": "error",
+          "options": {
+            "style": "type"
+          }
+        },
+        "useImportType": {
+          "fix": "safe",
+          "level": "error",
+          "options": {
+            "style": "inlineType"
+          }
+        },
+        "useNamingConvention": "error"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off",
+        "noUnknownAtRules": "off"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        ".storybook/**",
+        "**/*.stories.ts",
+        "**/*.stories.tsx",
+        "./*.ts",
+        "./*.mjs",
+        "**/app/**/page.tsx",
+        "**/app/**/template.tsx",
+        "**/app/**/layout.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    }
+  ],
+  "vcs": {
+    "clientKind": "git",
+    "enabled": true,
+    "useIgnoreFile": true
+  }
+}

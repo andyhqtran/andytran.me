@@ -1,5 +1,5 @@
-'use client';
-import { useEffect, useMemo, useState } from 'react';
+"use client";
+import { useEffect, useMemo, useState } from "react";
 
 export const usePageScrollPercentage = () => {
   const [scrollHeight, setScrollHeight] = useState(1);
@@ -18,12 +18,12 @@ export const usePageScrollPercentage = () => {
       setScrollPosition(window.scrollY);
     };
 
-    window.addEventListener('resize', onResize);
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("resize", onResize);
+    window.addEventListener("scroll", onScroll);
 
     return () => {
-      window.removeEventListener('resize', onResize);
-      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 

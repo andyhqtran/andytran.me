@@ -8,9 +8,9 @@ importers:
 
   .:
     devDependencies:
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:packages/eslint-config-several
+      '@biomejs/biome':
+        specifier: 2.3.8
+        version: 2.3.8
       turbo:
         specifier: 2.6.1
         version: 2.6.1
@@ -87,12 +87,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../packages/eslint-config-several
       typescript:
         specifier: 5.1.6
         version: 5.1.6
@@ -145,9 +139,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.22(postcss@8.5.6)
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../packages/eslint-config-several
       postcss:
         specifier: ^8.4.27
         version: 8.5.6
@@ -239,12 +230,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.6
         version: 18.2.7
-      eslint:
-        specifier: ^8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../eslint-config-several
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -294,12 +279,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.6
         version: 18.2.7
-      eslint:
-        specifier: ^8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../eslint-config-several
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -343,12 +322,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.6
         version: 18.2.7
-      eslint:
-        specifier: ^8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../eslint-config-several
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -371,12 +344,6 @@ importers:
       '@tailwindcss/forms':
         specifier: ^0.5.4
         version: 0.5.10(tailwindcss@3.4.18)
-      eslint:
-        specifier: ^8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../eslint-config-several
       tailwindcss:
         specifier: ^3.3.2
         version: 3.4.18
@@ -407,12 +374,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -444,12 +405,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -481,12 +436,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -524,12 +473,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -570,12 +513,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -607,12 +544,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -647,12 +578,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -687,12 +612,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -724,12 +643,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -764,12 +677,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.7
         version: 18.2.7
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -801,12 +708,6 @@ importers:
       '@types/react-dom':
         specifier: 18.2.6
         version: 18.2.6
-      eslint:
-        specifier: 8.47.0
-        version: 8.47.0
-      eslint-config-several:
-        specifier: workspace:*
-        version: link:../../eslint-config-several
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -1418,6 +1319,59 @@ packages:
 
   '@base2/pretty-print-object@1.0.1':
     resolution: {integrity: sha512-4iri8i1AqYHJE2DstZYkyEprg6Pq6sKx3xn5FpySk9sNhH7qN2LLlHJCfDTZRILNwQNPD7mATWM0TBui7uC1pA==}
+
+  '@biomejs/biome@2.3.8':
+    resolution: {integrity: sha512-Qjsgoe6FEBxWAUzwFGFrB+1+M8y/y5kwmg5CHac+GSVOdmOIqsAiXM5QMVGZJ1eCUCLlPZtq4aFAQ0eawEUuUA==}
+    engines: {node: '>=14.21.3'}
+    hasBin: true
+
+  '@biomejs/cli-darwin-arm64@2.3.8':
+    resolution: {integrity: sha512-HM4Zg9CGQ3txTPflxD19n8MFPrmUAjaC7PQdLkugeeC0cQ+PiVrd7i09gaBS/11QKsTDBJhVg85CEIK9f50Qww==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@biomejs/cli-darwin-x64@2.3.8':
+    resolution: {integrity: sha512-lUDQ03D7y/qEao7RgdjWVGCu+BLYadhKTm40HkpJIi6kn8LSv5PAwRlew/DmwP4YZ9ke9XXoTIQDO1vAnbRZlA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@biomejs/cli-linux-arm64-musl@2.3.8':
+    resolution: {integrity: sha512-PShR4mM0sjksUMyxbyPNMxoKFPVF48fU8Qe8Sfx6w6F42verbwRLbz+QiKNiDPRJwUoMG1nPM50OBL3aOnTevA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@biomejs/cli-linux-arm64@2.3.8':
+    resolution: {integrity: sha512-Uo1OJnIkJgSgF+USx970fsM/drtPcQ39I+JO+Fjsaa9ZdCN1oysQmy6oAGbyESlouz+rzEckLTF6DS7cWse95g==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@biomejs/cli-linux-x64-musl@2.3.8':
+    resolution: {integrity: sha512-YGLkqU91r1276uwSjiUD/xaVikdxgV1QpsicT0bIA1TaieM6E5ibMZeSyjQ/izBn4tKQthUSsVZacmoJfa3pDA==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+
+  '@biomejs/cli-linux-x64@2.3.8':
+    resolution: {integrity: sha512-QDPMD5bQz6qOVb3kiBui0zKZXASLo0NIQ9JVJio5RveBEFgDgsvJFUvZIbMbUZT3T00M/1wdzwWXk4GIh0KaAw==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [linux]
+
+  '@biomejs/cli-win32-arm64@2.3.8':
+    resolution: {integrity: sha512-H4IoCHvL1fXKDrTALeTKMiE7GGWFAraDwBYFquE/L/5r1927Te0mYIGseXi4F+lrrwhSWbSGt5qPFswNoBaCxg==}
+    engines: {node: '>=14.21.3'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@biomejs/cli-win32-x64@2.3.8':
+    resolution: {integrity: sha512-RguzimPoZWtBapfKhKjcWXBVI91tiSprqdBYu7tWhgN8pKRZhw24rFeNZTNf6UiBfjCYCi9eFQs/JzJZIhuK4w==}
+    engines: {node: '>=14.21.3'}
+    cpu: [x64]
+    os: [win32]
 
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
@@ -8159,6 +8113,41 @@ snapshots:
       '@babel/helper-validator-identifier': 7.28.5
 
   '@base2/pretty-print-object@1.0.1': {}
+
+  '@biomejs/biome@2.3.8':
+    optionalDependencies:
+      '@biomejs/cli-darwin-arm64': 2.3.8
+      '@biomejs/cli-darwin-x64': 2.3.8
+      '@biomejs/cli-linux-arm64': 2.3.8
+      '@biomejs/cli-linux-arm64-musl': 2.3.8
+      '@biomejs/cli-linux-x64': 2.3.8
+      '@biomejs/cli-linux-x64-musl': 2.3.8
+      '@biomejs/cli-win32-arm64': 2.3.8
+      '@biomejs/cli-win32-x64': 2.3.8
+
+  '@biomejs/cli-darwin-arm64@2.3.8':
+    optional: true
+
+  '@biomejs/cli-darwin-x64@2.3.8':
+    optional: true
+
+  '@biomejs/cli-linux-arm64-musl@2.3.8':
+    optional: true
+
+  '@biomejs/cli-linux-arm64@2.3.8':
+    optional: true
+
+  '@biomejs/cli-linux-x64-musl@2.3.8':
+    optional: true
+
+  '@biomejs/cli-linux-x64@2.3.8':
+    optional: true
+
+  '@biomejs/cli-win32-arm64@2.3.8':
+    optional: true
+
+  '@biomejs/cli-win32-x64@2.3.8':
+    optional: true
 
   '@colors/colors@1.5.0':
     optional: true

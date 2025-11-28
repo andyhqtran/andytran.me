@@ -1,19 +1,19 @@
 {
+  "devDependencies": {
+    "@biomejs/biome": "2.3.8",
+    "turbo": "2.6.1"
+  },
+  "name": "andytran.me",
+  "packageManager": "pnpm@10.24.0",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "clean": "turbo run clean && rm -rf node_modules",
     "dev": "turbo run dev --no-cache --parallel --continue",
+    "format": "biome format --write",
+    "lint": "biome check",
     "preinstall": "npx only-allow pnpm",
-    "lint": "turbo run lint",
-    "lint:fix": "turbo run lint:fix",
     "start": "turbo run start",
     "test": "turbo run test"
-  },
-  "devDependencies": {
-    "eslint-config-several": "workspace:*",
-    "turbo": "2.6.1"
-  },
-  "packageManager": "pnpm@10.24.0",
-  "name": "andytran.me"
+  }
 }

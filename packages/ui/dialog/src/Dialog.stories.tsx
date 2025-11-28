@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { type Meta, type StoryObj } from "@storybook/react";
 
-import { Dialog } from './Dialog';
+import { Dialog } from "./Dialog";
 
 const meta: Meta<typeof Dialog> = {
-  title: 'UI/Dialog',
   component: Dialog,
+  title: "UI/Dialog",
 };
 
 export default meta;

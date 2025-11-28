@@ -1,4 +1,4 @@
-import * as RadixVisuallyHidden from '@radix-ui/react-visually-hidden';
+import * as RadixVisuallyHidden from "@radix-ui/react-visually-hidden";
 
 export type VisuallyHiddenProps = RadixVisuallyHidden.VisuallyHiddenProps;
 

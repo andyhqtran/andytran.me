@@ -1,15 +1,4 @@
 {
-  "name": "personal",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
-    "dev": "next dev --port 3000",
-    "lint": "next lint",
-    "lint:fix": "eslint . --fix",
-    "start": "next start"
-  },
   "dependencies": {
     "@several/components": "workspace:*",
     "@several/hooks": "workspace:*",
@@ -28,9 +17,19 @@
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "autoprefixer": "^10.4.14",
-    "eslint-config-several": "workspace:*",
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.6"
-  }
+  },
+  "name": "personal",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
+    "dev": "next dev --port 3000",
+    "format": "biome format --write",
+    "lint": "biome check",
+    "start": "next start"
+  },
+  "version": "0.1.0"
 }

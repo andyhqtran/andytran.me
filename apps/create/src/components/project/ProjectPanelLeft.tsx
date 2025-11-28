@@ -1,14 +1,15 @@
-import { ProjectPanelLeftHeader } from '~/components/project/ProjectPanelLeftHeader';
-import { Resizer } from '~/components/Resizer';
-import { useProjectPanelActiveValue } from '~/hooks/useProjectPanelActiveValue';
-import { useProjectPanelSizeValue } from '~/hooks/useProjectPanelSizeValue';
+import { ProjectPanelLeftHeader } from "~/components/project/ProjectPanelLeftHeader";
+import { Resizer } from "~/components/Resizer";
+import { useProjectPanelActiveValue } from "~/hooks/useProjectPanelActiveValue";
+import { useProjectPanelSizeValue } from "~/hooks/useProjectPanelSizeValue";
 
 const MIN_PANEL_SIZE = 160;
 
 const MAX_PANEL_SIZE = 360;
 
 export const ProjectPanelLeft = () => {
-  const { projectPanelSizeValue, setProjectPanelSizeValue } = useProjectPanelSizeValue();
+  const { projectPanelSizeValue, setProjectPanelSizeValue } =
+    useProjectPanelSizeValue();
   const { projectPanelActiveValue } = useProjectPanelActiveValue();
 
   if (projectPanelActiveValue === null) {
@@ -17,7 +18,7 @@ export const ProjectPanelLeft = () => {
 
   return (
     <div
-      className='relative shrink-0 border-r border-r-slate-4 bg-slate-1'
+      className="relative shrink-0 border-r border-r-slate-4 bg-slate-1"
       style={{
         width: projectPanelSizeValue,
       }}
@@ -34,7 +35,7 @@ export const ProjectPanelLeft = () => {
             setProjectPanelSizeValue(value);
           }
         }}
-        position='right'
+        position="right"
       />
     </div>
   );

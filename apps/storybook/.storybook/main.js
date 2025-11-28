@@ -1,28 +1,29 @@
 /** @type { import('@storybook/nextjs').StorybookConfig } */
 const config = {
-  stories: [
-    // '../../../apps/**/src/components/**/*.stories.@(js|jsx|ts|tsx)',
-    '../../../packages/**/src/**/*.stories.@(js|jsx|ts|tsx)',
-  ],
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
     {
-      name: '@storybook/addon-styling',
+      name: "@storybook/addon-styling",
       options: {
         postCss: {
-          implementation: require('postcss'),
+          implementation: require("postcss"),
         },
       },
     },
   ],
+  docs: {
+    autodocs: "tag",
+  },
   framework: {
-    name: '@storybook/nextjs',
+    name: "@storybook/nextjs",
     options: {},
   },
-  docs: {
-    autodocs: 'tag',
-  },
+  stories: [
+    // '../../../apps/**/src/components/**/*.stories.@(js|jsx|ts|tsx)',
+    "../../../packages/**/src/**/*.stories.@(js|jsx|ts|tsx)",
+  ],
 };
+// biome-ignore lint/style/noDefaultExport: Storybook config requires a default export
 export default config;

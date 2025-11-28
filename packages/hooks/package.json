@@ -1,26 +1,24 @@
 {
-  "name": "@several/hooks",
-  "version": "0.0.1",
-  "private": true,
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
-  "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  },
   "devDependencies": {
     "@several/tsconfig": "workspace:*",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
-    "eslint": "^8.47.0",
-    "eslint-config-several": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.1.6"
   },
+  "main": "./src/index.ts",
+  "name": "@several/hooks",
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "format": "biome format --write",
+    "lint": "biome check"
+  },
+  "types": "./src/index.ts",
+  "version": "0.0.1"
 }

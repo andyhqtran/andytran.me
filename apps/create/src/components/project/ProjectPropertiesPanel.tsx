@@ -1,16 +1,19 @@
-import { Resizer } from '~/components/Resizer';
-import { useProjectPropertiesPanelSizeValue } from '~/hooks/useProjectPropertiesPanelSizeValue';
+import { Resizer } from "~/components/Resizer";
+import { useProjectPropertiesPanelSizeValue } from "~/hooks/useProjectPropertiesPanelSizeValue";
 
 const MIN_PANEL_SIZE = 256;
 
 const MAX_PANEL_SIZE = 360;
 
 export const ProjectPropertiesPanel = () => {
-  const { projectPropertiesPanelSizeValue, setProjectPropertiesPanelSizeValue } = useProjectPropertiesPanelSizeValue();
+  const {
+    projectPropertiesPanelSizeValue,
+    setProjectPropertiesPanelSizeValue,
+  } = useProjectPropertiesPanelSizeValue();
 
   return (
     <div
-      className='relative shrink-0 border-l border-l-slate-4 bg-slate-1'
+      className="relative shrink-0 border-l border-l-slate-4 bg-slate-1"
       style={{ width: projectPropertiesPanelSizeValue }}
     >
       <Resizer
@@ -24,7 +27,7 @@ export const ProjectPropertiesPanel = () => {
             setProjectPropertiesPanelSizeValue(value);
           }
         }}
-        position='left'
+        position="left"
       />
     </div>
   );

@@ -1,139 +1,156 @@
-import { type ComponentPropsWithoutRef, forwardRef } from 'react';
-import { tv, type VariantProps } from 'tailwind-variants';
+import { type ComponentPropsWithoutRef, forwardRef } from "react";
+import { tv, type VariantProps } from "tailwind-variants";
 
 export const iconButton = tv(
   {
-    base: 'inline-flex cursor-pointer items-center justify-center rounded border-0 bg-transparent text-center font-medium text-slate-12 outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:grayscale',
-    variants: {
-      appearance: {
-        default: '',
-        ghost: '',
-        outline: '',
-        text: '',
-      },
-      color: {
-        blue: '',
-        green: '',
-        red: '',
-        slate: '',
-        yellow: '',
-      },
-      size: {
-        lg: 'h-10 w-10 text-sm',
-        md: 'h-8 w-8 text-sm',
-        sm: 'h-6 w-6 text-xs',
-        xs: 'h-4 w-4 text-xs',
-      },
-    },
+    base: "inline-flex cursor-pointer items-center justify-center rounded border-0 bg-transparent text-center font-medium text-slate-12 outline-none disabled:cursor-not-allowed disabled:opacity-60 disabled:grayscale",
     compoundVariants: [
       {
-        appearance: 'default',
-        color: 'blue',
-        class: 'bg-blue-9 text-blue-1 hover:bg-blue-10 active:bg-blue-11 disabled:bg-blue-9',
-      },
-      {
-        appearance: 'default',
-        color: 'green',
-        class: 'bg-green-9 text-green-1 hover:bg-green-10 active:bg-green-11 disabled:bg-green-9',
-      },
-      {
-        appearance: 'default',
-        color: 'red',
-        class: 'bg-red-9 text-red-1 hover:bg-red-10 active:bg-red-11 disabled:bg-red-9',
-      },
-      {
-        appearance: 'default',
-        color: 'slate',
-        class: 'bg-slate-9 text-slate-1 hover:bg-slate-10 active:bg-slate-11 disabled:bg-slate-9',
-      },
-      {
-        appearance: 'default',
-        color: 'yellow',
-        class: 'bg-yellow-9 text-yellow-1 hover:bg-yellow-10 active:bg-yellow-11 disabled:bg-yellow-9',
-      },
-      {
-        appearance: 'ghost',
-        color: 'blue',
-        class: 'bg-blue-3 text-blue-11 hover:bg-blue-4 active:bg-blue-5 disabled:bg-blue-3',
-      },
-      {
-        appearance: 'ghost',
-        color: 'green',
-        class: 'bg-green-3 text-green-11 hover:bg-green-4 active:bg-green-5 disabled:bg-green-3',
-      },
-      {
-        appearance: 'ghost',
-        color: 'red',
-        class: 'bg-red-3 text-red-11 hover:bg-red-4 active:bg-red-5 disabled:bg-red-3',
-      },
-      {
-        appearance: 'ghost',
-        color: 'slate',
-        class: 'bg-slate-3 text-slate-11 hover:bg-slate-4 active:bg-slate-5 disabled:bg-slate-3',
-      },
-      {
-        appearance: 'ghost',
-        color: 'yellow',
-        class: 'bg-yellow-3 text-yellow-11 hover:bg-yellow-4 active:bg-yellow-5 disabled:bg-yellow-3',
-      },
-      {
-        appearance: 'outline',
-        color: 'blue',
-        class: 'border border-blue-6 bg-blue-1 text-blue-11 hover:bg-blue-2 active:bg-blue-3 disabled:bg-transparent',
-      },
-      {
-        appearance: 'outline',
-        color: 'green',
+        appearance: "default",
         class:
-          'border border-green-6 bg-green-1 text-green-11 hover:bg-green-2 active:bg-green-3 disabled:bg-transparent',
+          "bg-blue-9 text-blue-1 hover:bg-blue-10 active:bg-blue-11 disabled:bg-blue-9",
+        color: "blue",
       },
       {
-        appearance: 'outline',
-        color: 'red',
-        class: 'border border-red-6 bg-red-1 text-red-11 hover:bg-red-2 active:bg-red-3 disabled:bg-transparent',
-      },
-      {
-        appearance: 'outline',
-        color: 'slate',
+        appearance: "default",
         class:
-          'border border-slate-6 bg-slate-1 text-slate-11 hover:bg-slate-2 active:bg-slate-3 disabled:bg-transparent',
+          "bg-green-9 text-green-1 hover:bg-green-10 active:bg-green-11 disabled:bg-green-9",
+        color: "green",
       },
       {
-        appearance: 'outline',
-        color: 'yellow',
+        appearance: "default",
         class:
-          'border border-yellow-6 bg-yellow-1 text-yellow-11 hover:bg-yellow-2 active:bg-yellow-3 disabled:bg-transparent',
+          "bg-red-9 text-red-1 hover:bg-red-10 active:bg-red-11 disabled:bg-red-9",
+        color: "red",
       },
       {
-        appearance: 'text',
-        color: 'blue',
-        class: 'bg-transparent text-blue-11 hover:bg-blue-2 active:bg-blue-3 disabled:bg-transparent',
+        appearance: "default",
+        class:
+          "bg-slate-9 text-slate-1 hover:bg-slate-10 active:bg-slate-11 disabled:bg-slate-9",
+        color: "slate",
       },
       {
-        appearance: 'text',
-        color: 'green',
-        class: 'bg-transparent text-green-11 hover:bg-green-2 active:bg-green-3 disabled:bg-transparent',
+        appearance: "default",
+        class:
+          "bg-yellow-9 text-yellow-1 hover:bg-yellow-10 active:bg-yellow-11 disabled:bg-yellow-9",
+        color: "yellow",
       },
       {
-        appearance: 'text',
-        color: 'red',
-        class: 'bg-transparent text-red-11 hover:bg-red-2 active:bg-red-3 disabled:bg-transparent',
+        appearance: "ghost",
+        class:
+          "bg-blue-3 text-blue-11 hover:bg-blue-4 active:bg-blue-5 disabled:bg-blue-3",
+        color: "blue",
       },
       {
-        appearance: 'text',
-        color: 'slate',
-        class: 'bg-transparent text-slate-11 hover:bg-slate-2 active:bg-slate-3 disabled:bg-transparent',
+        appearance: "ghost",
+        class:
+          "bg-green-3 text-green-11 hover:bg-green-4 active:bg-green-5 disabled:bg-green-3",
+        color: "green",
       },
       {
-        appearance: 'text',
-        color: 'yellow',
-        class: 'bg-transparent text-yellow-11 hover:bg-yellow-2 active:bg-yellow-3 disabled:bg-transparent',
+        appearance: "ghost",
+        class:
+          "bg-red-3 text-red-11 hover:bg-red-4 active:bg-red-5 disabled:bg-red-3",
+        color: "red",
+      },
+      {
+        appearance: "ghost",
+        class:
+          "bg-slate-3 text-slate-11 hover:bg-slate-4 active:bg-slate-5 disabled:bg-slate-3",
+        color: "slate",
+      },
+      {
+        appearance: "ghost",
+        class:
+          "bg-yellow-3 text-yellow-11 hover:bg-yellow-4 active:bg-yellow-5 disabled:bg-yellow-3",
+        color: "yellow",
+      },
+      {
+        appearance: "outline",
+        class:
+          "border border-blue-6 bg-blue-1 text-blue-11 hover:bg-blue-2 active:bg-blue-3 disabled:bg-transparent",
+        color: "blue",
+      },
+      {
+        appearance: "outline",
+        class:
+          "border border-green-6 bg-green-1 text-green-11 hover:bg-green-2 active:bg-green-3 disabled:bg-transparent",
+        color: "green",
+      },
+      {
+        appearance: "outline",
+        class:
+          "border border-red-6 bg-red-1 text-red-11 hover:bg-red-2 active:bg-red-3 disabled:bg-transparent",
+        color: "red",
+      },
+      {
+        appearance: "outline",
+        class:
+          "border border-slate-6 bg-slate-1 text-slate-11 hover:bg-slate-2 active:bg-slate-3 disabled:bg-transparent",
+        color: "slate",
+      },
+      {
+        appearance: "outline",
+        class:
+          "border border-yellow-6 bg-yellow-1 text-yellow-11 hover:bg-yellow-2 active:bg-yellow-3 disabled:bg-transparent",
+        color: "yellow",
+      },
+      {
+        appearance: "text",
+        class:
+          "bg-transparent text-blue-11 hover:bg-blue-2 active:bg-blue-3 disabled:bg-transparent",
+        color: "blue",
+      },
+      {
+        appearance: "text",
+        class:
+          "bg-transparent text-green-11 hover:bg-green-2 active:bg-green-3 disabled:bg-transparent",
+        color: "green",
+      },
+      {
+        appearance: "text",
+        class:
+          "bg-transparent text-red-11 hover:bg-red-2 active:bg-red-3 disabled:bg-transparent",
+        color: "red",
+      },
+      {
+        appearance: "text",
+        class:
+          "bg-transparent text-slate-11 hover:bg-slate-2 active:bg-slate-3 disabled:bg-transparent",
+        color: "slate",
+      },
+      {
+        appearance: "text",
+        class:
+          "bg-transparent text-yellow-11 hover:bg-yellow-2 active:bg-yellow-3 disabled:bg-transparent",
+        color: "yellow",
       },
     ],
     defaultVariants: {
-      appearance: 'default',
-      color: 'blue',
-      size: 'md',
+      appearance: "default",
+      color: "blue",
+      size: "md",
+    },
+    variants: {
+      appearance: {
+        default: "",
+        ghost: "",
+        outline: "",
+        text: "",
+      },
+      color: {
+        blue: "",
+        green: "",
+        red: "",
+        slate: "",
+        yellow: "",
+      },
+      size: {
+        lg: "h-10 w-10 text-sm",
+        md: "h-8 w-8 text-sm",
+        sm: "h-6 w-6 text-xs",
+        xs: "h-4 w-4 text-xs",
+      },
     },
   },
   {
@@ -143,14 +160,18 @@ export const iconButton = tv(
 
 export type IconButtonVariants = VariantProps<typeof iconButton>;
 
-export type IconButtonProps = IconButtonVariants & Omit<ComponentPropsWithoutRef<'button'>, 'prefix'>;
+export type IconButtonProps = IconButtonVariants &
+  Omit<ComponentPropsWithoutRef<"button">, "prefix">;
 
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
-  ({ appearance, children, className, color, size, ...restOfProps }, forwardedRef) => {
+  (
+    { appearance, children, className, color, size, ...restOfProps },
+    forwardedRef,
+  ) => {
     return (
       <button
-        className={iconButton({ appearance, color, size, className })}
-        data-testid='ICON_BUTTON'
+        className={iconButton({ appearance, className, color, size })}
+        data-testid="ICON_BUTTON"
         {...restOfProps}
         ref={forwardedRef}
       >
@@ -160,4 +181,4 @@ export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   },
 );
 
-IconButton.displayName = 'IconButton';
+IconButton.displayName = "IconButton";

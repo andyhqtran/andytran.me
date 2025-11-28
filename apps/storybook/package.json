@@ -1,16 +1,6 @@
 {
-  "name": "storybook",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "storybook build",
-    "clean": "rm -rf .turbo && rm -rf node_modules",
-    "dev": "storybook dev -p 6006"
-  },
-  "keywords": [],
   "author": "Andy Tran",
-  "license": "ISC",
+  "description": "",
   "devDependencies": {
     "@several/tailwind-config": "workspace:*",
     "@storybook/addon-essentials": "^7.1.0",
@@ -26,5 +16,17 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.1.0"
-  }
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "storybook",
+  "scripts": {
+    "build": "storybook build",
+    "clean": "rm -rf .turbo && rm -rf node_modules",
+    "dev": "storybook dev -p 6006",
+    "format": "biome format --write",
+    "lint": "biome check"
+  },
+  "version": "1.0.0"
 }

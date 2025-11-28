@@ -1,6 +1,6 @@
-import * as RadixTooltip from '@radix-ui/react-tooltip';
-import { type ReactNode } from 'react';
-import { twMerge } from 'tailwind-merge';
+import * as RadixTooltip from "@radix-ui/react-tooltip";
+import { type ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 export type TooltipProps = RadixTooltip.TooltipProps &
   RadixTooltip.TooltipContentProps & {
@@ -24,14 +24,14 @@ export const Tooltip = ({
       defaultOpen={defaultOpen}
       delayDuration={delayDuration}
       disableHoverableContent={disableHoverableContent}
-      open={open}
       onOpenChange={onOpenChange}
+      open={open}
     >
       <RadixTooltip.Trigger asChild>{children}</RadixTooltip.Trigger>
       <RadixTooltip.Portal>
         <RadixTooltip.Content
           className={twMerge(
-            'max-h-screen overflow-y-auto rounded border border-slate-4 bg-slate-1 px-4 py-2 text-xs shadow-sm',
+            "max-h-screen overflow-y-auto rounded border border-slate-4 bg-slate-1 px-4 py-2 text-xs shadow-sm",
             className,
           )}
           sideOffset={sideOffset}
@@ -44,4 +44,4 @@ export const Tooltip = ({
   );
 };
 
-export { TooltipProvider } from '@radix-ui/react-tooltip';
+export { TooltipProvider } from "@radix-ui/react-tooltip";

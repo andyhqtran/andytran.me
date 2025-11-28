@@ -1,13 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [
-    ".env"
-  ],
+  "globalDependencies": [".env"],
   "tasks": {
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
+      "dependsOn": ["^build"],
       "env": [
         "SITE_URL",
         "NEXT_PUBLIC_API_ACCESS_TOKEN",
@@ -29,7 +25,13 @@
         "dist/**"
       ]
     },
-    "test": {},
+    "clean": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
     "lint": {},
     "lint:fix": {
       "cache": false
@@ -37,12 +39,6 @@
     "start": {
       "cache": false
     },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "clean": {
-      "cache": false
-    }
+    "test": {}
   }
 }

@@ -1,7 +1,7 @@
-'use client';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
+"use client";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 
-import { projectPanelSizeValue } from '~/recoil/selectors/projectPanelSizeValue';
+import { projectPanelSizeValue } from "~/recoil/selectors/projectPanelSizeValue";
 
 export const useProjectPanelSizeValue = () => {
   return {

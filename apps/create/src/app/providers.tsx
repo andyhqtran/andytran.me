@@ -1,7 +1,7 @@
-'use client';
-import { ThemeProvider } from 'next-themes';
-import type { ReactNode } from 'react';
-import { RecoilRoot } from 'recoil';
+"use client";
+import { ThemeProvider } from "next-themes";
+import { type ReactNode } from "react";
+import { RecoilRoot } from "recoil";
 
 export const Providers = ({ children }: { children: ReactNode }) => {
   return (

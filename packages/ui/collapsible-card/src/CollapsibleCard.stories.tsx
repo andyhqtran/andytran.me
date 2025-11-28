@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { type Meta, type StoryObj } from "@storybook/react";
 
-import { CollapsibleCard } from './CollapsibleCard';
+import { CollapsibleCard } from "./CollapsibleCard";
 
 const meta: Meta<typeof CollapsibleCard> = {
-  title: 'UI/CollapsibleCard',
   component: CollapsibleCard,
+  title: "UI/CollapsibleCard",
 };
 
 export default meta;

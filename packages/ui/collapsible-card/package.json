@@ -1,12 +1,8 @@
 {
-  "name": "@several-ui/collapsible-card",
-  "version": "1.0.0",
-  "main": "./src/CollapsibleCard.tsx",
-  "types": "./src/CollapsibleCard.tsx",
-  "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist ",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+  "dependencies": {
+    "@radix-ui/react-collapsible": "1.0.3",
+    "@radix-ui/react-icons": "1.3.0",
+    "tailwind-merge": "1.14.0"
   },
   "devDependencies": {
     "@several/tailwind-config": "workspace:*",
@@ -14,19 +10,21 @@
     "@storybook/react": "7.0.23",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
-    "eslint": "8.47.0",
-    "eslint-config-several": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.1.6"
   },
-  "dependencies": {
-    "@radix-ui/react-collapsible": "1.0.3",
-    "@radix-ui/react-icons": "1.3.0",
-    "tailwind-merge": "1.14.0"
-  },
+  "main": "./src/CollapsibleCard.tsx",
+  "name": "@several-ui/collapsible-card",
   "peerDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
-  }
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist ",
+    "format": "biome format --write",
+    "lint": "biome check"
+  },
+  "types": "./src/CollapsibleCard.tsx",
+  "version": "1.0.0"
 }

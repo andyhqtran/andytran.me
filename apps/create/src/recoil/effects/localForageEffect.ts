@@ -1,5 +1,5 @@
-import localForage from 'localforage';
-import { AtomEffect } from 'recoil';
+import localForage from "localforage";
+import { type AtomEffect } from "recoil";
 
 export const localForageEffect =
   <Type>(key: string): AtomEffect<Type> =>
@@ -12,11 +12,13 @@ export const localForageEffect =
       }
     };
 
-    if (trigger === 'get') {
+    if (trigger === "get") {
       loadPersisted();
     }
 
     onSet((newValue, _, isReset) => {
-      isReset ? localForage.removeItem(key) : localForage.setItem(key, JSON.stringify(newValue));
+      isReset
+        ? localForage.removeItem(key)
+        : localForage.setItem(key, JSON.stringify(newValue));
     });
   };

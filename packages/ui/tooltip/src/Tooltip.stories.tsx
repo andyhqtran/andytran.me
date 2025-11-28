@@ -1,21 +1,21 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import { type Meta, type StoryObj } from "@storybook/react";
 
-import { Tooltip, TooltipProvider } from './Tooltip';
+import { Tooltip, TooltipProvider } from "./Tooltip";
 
 const meta: Meta<typeof Tooltip> = {
-  title: 'UI/Tooltip',
   component: Tooltip,
+  title: "UI/Tooltip",
 };
 
 export default meta;
 
 export const Example: StoryObj<typeof Tooltip> = {
+  args: {
+    label: "Tooltip",
+  },
   render: (args) => (
     <TooltipProvider>
       <Tooltip {...args} />
     </TooltipProvider>
   ),
-  args: {
-    label: 'Tooltip',
-  },
 };
