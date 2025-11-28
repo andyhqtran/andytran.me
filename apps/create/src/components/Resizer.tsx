@@ -2,7 +2,7 @@
 import classNames from "classnames";
 import { type ComponentProps, memo, useState } from "react";
 
-export type ResizerProps = ComponentProps<"div"> & {
+export type ResizerProps = ComponentProps<"button"> & {
   initialSize: number;
   onSizeChange: (value: number) => void;
   position: "bottom" | "left" | "right" | "top";
