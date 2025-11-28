@@ -1,5 +1,6 @@
 import * as RadixDialog from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
+
 import { IconButton } from "./IconButton";
 
 export type DialogProps = Pick<
