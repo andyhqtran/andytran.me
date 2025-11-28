@@ -209,8 +209,8 @@ importers:
         specifier: ^1.0.3
         version: 1.1.8(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@tanstack/react-table':
-        specifier: 8.9.3
-        version: 8.9.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: 8.21.3
+        version: 8.21.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       classnames:
         specifier: ^2.3.2
         version: 2.3.2
@@ -2364,15 +2364,15 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20 || >= 4.0.0-beta.1'
 
-  '@tanstack/react-table@8.9.3':
-    resolution: {integrity: sha512-Ng9rdm3JPoSCi6cVZvANsYnF+UoGVRxflMb270tVj0+LjeT/ZtZ9ckxF6oLPLcKesza6VKBqtdF9mQ+vaz24Aw==}
+  '@tanstack/react-table@8.21.3':
+    resolution: {integrity: sha512-5nNMTSETP4ykGegmVkhjcS8tTLW6Vl4axfEGQN3v0zdHYbK4UfoqfPChclTrJ4EoK9QynqAu9oUf8VEmrpZ5Ww==}
     engines: {node: '>=12'}
     peerDependencies:
-      react: '>=16'
-      react-dom: '>=16'
+      react: '>=16.8'
+      react-dom: '>=16.8'
 
-  '@tanstack/table-core@8.9.3':
-    resolution: {integrity: sha512-NpHZBoHTfqyJk0m/s/+CSuAiwtebhYK90mDuf5eylTvgViNOujiaOaxNDxJkQQAsVvHWZftUGAx1EfO1rkKtLg==}
+  '@tanstack/table-core@8.21.3':
+    resolution: {integrity: sha512-ldZXEhOBb8Is7xLs01fR3YEc3DERiz5silj8tnGkFZytt1abEvl/GhUmCE0PMLaMPTa3Jk4HbKmRlHmu+gCftg==}
     engines: {node: '>=12'}
 
   '@testing-library/dom@9.3.4':
@@ -9011,13 +9011,13 @@ snapshots:
       mini-svg-data-uri: 1.4.4
       tailwindcss: 3.4.18
 
-  '@tanstack/react-table@8.9.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@tanstack/react-table@8.21.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
-      '@tanstack/table-core': 8.9.3
+      '@tanstack/table-core': 8.21.3
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
-  '@tanstack/table-core@8.9.3': {}
+  '@tanstack/table-core@8.21.3': {}
 
   '@testing-library/dom@9.3.4':
     dependencies:
