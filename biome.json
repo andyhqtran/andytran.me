@@ -92,9 +92,6 @@
   "overrides": [
     {
       "includes": [
-        ".storybook/**",
-        "**/*.stories.ts",
-        "**/*.stories.tsx",
         "./*.ts",
         "./*.mjs",
         "**/app/**/page.tsx",

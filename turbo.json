@@ -18,12 +18,7 @@
         "NEXT_PUBLIC_ENV",
         "NEXT_PUBLIC_SITE_NAME"
       ],
-      "outputs": [
-        ".next/**",
-        "!.next/cache/**",
-        "storybook-static/**",
-        "dist/**"
-      ]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
     "clean": {
       "cache": false

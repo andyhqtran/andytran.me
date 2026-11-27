@@ -1,11 +1,12 @@
 import "./globals.css";
 
-import { Footer, ThemeProviderWrapper } from "@several/components";
 import classNames from "classnames";
 import { Inter } from "next/font/google";
 import { type ReactNode } from "react";
 
 import { AnalyticsWrapper } from "~/components/AnalyticsWrapper";
+import { Footer } from "~/components/Footer";
+import { ThemeProviderWrapper } from "~/components/ThemeProviderWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 

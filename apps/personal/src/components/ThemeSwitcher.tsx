@@ -1,8 +1,9 @@
 "use client";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { IconButton } from "@several/primitives";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+
+import { IconButton } from "./IconButton";
 
 export const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
