@@ -34,14 +34,14 @@ export const Table = <Data extends Record<string, never>>({
 
   return (
     <table className={classNames(className)}>
-      <thead className="border-b border-b-slate-4 bg-slate-2">
+      <thead className="border-b-slate-4 bg-slate-2 border-b">
         {table.getHeaderGroups().map((headerGroup) => (
           <tr key={headerGroup.id}>
             {headerGroup.headers.map((header) => {
               return (
                 <th className="h-10" colSpan={header.colSpan} key={header.id}>
                   {header.isPlaceholder ? null : (
-                    <div className="font-semibold text-xs">
+                    <div className="text-xs font-semibold">
                       {flexRender(
                         header.column.columnDef.header,
                         header.getContext(),

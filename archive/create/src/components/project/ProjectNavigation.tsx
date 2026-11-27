@@ -54,7 +54,7 @@ export const ProjectNavigation = () => {
     useProjectPanelActiveValue();
 
   return (
-    <nav className="flex h-full w-16 shrink-0 flex-col gap-3 border-r border-r-slate-4 bg-slate-1 p-3">
+    <nav className="border-r-slate-4 bg-slate-1 flex h-full w-16 shrink-0 flex-col gap-3 border-r p-3">
       {PROJECT_NAVIGATION.map((panel) => {
         const isActive = projectPanelActiveValue === panel.id;
 

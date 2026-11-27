@@ -32,7 +32,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <div className="flex w-full grow items-stretch">
         <ProjectNavigation />
         <ProjectPanelLeft />
-        <div className="grow bg-slate-2">{children}</div>
+        <div className="bg-slate-2 grow">{children}</div>
         <ProjectPropertiesPanel />
       </div>
     </div>

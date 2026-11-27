@@ -85,7 +85,7 @@ export const Resizer = memo(
       >
         <div
           className={classNames(
-            "pointer-events-none bg-blue-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100",
+            "bg-blue-6 pointer-events-none opacity-0 transition-opacity duration-300 group-hover:opacity-100",
             isVertical ? "h-full w-1" : "h-1 w-full",
           )}
         />

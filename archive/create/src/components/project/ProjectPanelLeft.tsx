@@ -18,7 +18,7 @@ export const ProjectPanelLeft = () => {
 
   return (
     <div
-      className="relative shrink-0 border-r border-r-slate-4 bg-slate-1"
+      className="border-r-slate-4 bg-slate-1 relative shrink-0 border-r"
       style={{
         width: projectPanelSizeValue,
       }}

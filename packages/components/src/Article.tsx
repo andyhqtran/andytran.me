@@ -21,7 +21,7 @@ export const Article = ({
     <article className={classNames("flex flex-col gap-3", className)}>
       {thumbnail && (
         <Link
-          className="relative min-h-[120px] overflow-hidden rounded border border-slate-4 outline-none focus-visible:ring-2 focus-visible:ring-blue-7"
+          className="border-slate-4 focus-visible:ring-blue-7 relative min-h-[120px] overflow-hidden rounded border outline-none focus-visible:ring-2"
           href={href}
         >
           <Image
@@ -37,10 +37,10 @@ export const Article = ({
         <div className="flex flex-col items-start gap-1">
           {title && (
             <Link
-              className="outline-none hover:underline focus-visible:underline focus-visible:ring-2 focus-visible:ring-blue-7"
+              className="focus-visible:ring-blue-7 outline-none hover:underline focus-visible:underline focus-visible:ring-2"
               href={href}
             >
-              <h2 className="font-semibold text-base text-slate-12">{title}</h2>
+              <h2 className="text-slate-12 text-base font-semibold">{title}</h2>
             </Link>
           )}
 

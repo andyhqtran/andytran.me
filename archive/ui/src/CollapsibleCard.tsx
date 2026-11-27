@@ -26,13 +26,13 @@ export const CollapsibleCard = ({
       {...restOfProps}
     >
       <div className="flex h-12 items-center justify-between px-4">
-        <h3 className="font-medium text-slate-12 text-sm">{title}</h3>
-        <RadixCollapsible.Trigger className="flex h-6 w-6 radix-state-open:rotate-180 items-center justify-center rounded-full border border-slate-5 transition-transform hover:bg-slate-3">
-          <ChevronDownIcon className="h-3 w-3 text-slate-11" />
+        <h3 className="text-slate-12 text-sm font-medium">{title}</h3>
+        <RadixCollapsible.Trigger className="radix-state-open:rotate-180 border-slate-5 hover:bg-slate-3 flex h-6 w-6 items-center justify-center rounded-full border transition-transform">
+          <ChevronDownIcon className="text-slate-11 h-3 w-3" />
         </RadixCollapsible.Trigger>
       </div>
 
-      <RadixCollapsible.Content className="overflow-hidden border-t border-t-slate-6 bg-slate-2 p-4 text-slate-11 text-xs">
+      <RadixCollapsible.Content className="border-t-slate-6 bg-slate-2 text-slate-11 overflow-hidden border-t p-4 text-xs">
         {children}
       </RadixCollapsible.Content>
     </RadixCollapsible.Root>

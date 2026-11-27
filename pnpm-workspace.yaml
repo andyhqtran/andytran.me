@@ -1,8 +1,8 @@
 packages:
-  - 'apps/*'
-  - 'packages/**'
+  - "apps/*"
+  - "packages/**"
 allowBuilds:
-  '@swc/core': false
+  "@swc/core": false
   core-js-pure: false
   esbuild: false
   sharp: false

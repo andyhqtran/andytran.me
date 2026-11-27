@@ -16,11 +16,11 @@ export const ProjectNavigation = ({
   title,
 }: ProjectNavigationProps) => {
   return (
-    <nav className="sticky top-0 z-10 flex items-center border-slate-4 border-b bg-slate-1">
-      <div className="container relative mx-auto flex h-14 items-center">
+    <nav className="border-slate-4 bg-slate-1 sticky top-0 z-10 flex items-center border-b">
+      <div className="relative container mx-auto flex h-14 items-center">
         {title ? (
           <>
-            <h1 className="font-semibold text-slate-12 text-sm">{title}</h1>
+            <h1 className="text-slate-12 text-sm font-semibold">{title}</h1>
             <Separator className="mx-4" orientation="vertical" />
           </>
         ) : null}
@@ -30,7 +30,7 @@ export const ProjectNavigation = ({
             {navigation.map((navigationItem, index) => {
               return (
                 <Link
-                  className="text-slate-11 text-sm hover:text-slate-12 hover:underline"
+                  className="text-slate-11 hover:text-slate-12 text-sm hover:underline"
                   href={navigationItem.href}
                   key={navigationItem?.id ?? index}
                 >

@@ -9,7 +9,7 @@ export const Spinner = ({ className, ...restOfProps }: SpinnerProps) => {
       aria-label="Loading"
       aria-live="polite"
       className={classNames(
-        "block origin-center animate-spinner-rotate motion-reduce:animate-none",
+        "animate-spinner-rotate block origin-center motion-reduce:animate-none",
         className,
       )}
       height={24}
@@ -20,7 +20,7 @@ export const Spinner = ({ className, ...restOfProps }: SpinnerProps) => {
       {...restOfProps}
     >
       <circle
-        className="origin-center animate-spinner-dash motion-reduce:animate-none"
+        className="animate-spinner-dash origin-center motion-reduce:animate-none"
         cx={33}
         cy={33}
         fill="none"
