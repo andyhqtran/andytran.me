@@ -4,7 +4,6 @@ import classNames from "classnames";
 import {
   type ComponentProps,
   type ForwardRefExoticComponent,
-  forwardRef,
   type RefAttributes,
 } from "react";
 
@@ -37,47 +36,41 @@ const ICON_SIZE_CLASS_NAMES: { [Key in IconButtonSize]: string } = {
 
 export type IconButtonProps = Pick<
   ComponentProps<"button">,
-  "className" | "onClick" | "type"
+  "className" | "onClick" | "ref" | "type"
 > & {
   appearance?: IconButtonAppearance;
   icon: ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>;
   size?: IconButtonSize;
 };
 
-export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
-  (
-    {
-      appearance = "fill",
-      className,
-      icon: Icon = StarIcon,
-      onClick,
-      size = "sm",
-      type = "button",
-    },
-    forwardedRef,
-  ) => {
-    return (
-      <button
+export const IconButton = ({
+  appearance = "fill",
+  className,
+  icon: Icon = StarIcon,
+  onClick,
+  ref,
+  size = "sm",
+  type = "button",
+}: IconButtonProps) => {
+  return (
+    <button
+      className={classNames(
+        "text-slate-12 flex cursor-pointer items-center justify-center rounded-full outline-hidden",
+        "focus-visible:ring-blue-7 focus-visible:ring-2",
+        BUTTON_APPEARANCE_CLASS_NAMES[appearance],
+        BUTTON_SIZE_CLASS_NAMES[size],
+        className,
+      )}
+      onClick={onClick}
+      ref={ref}
+      type={type}
+    >
+      <Icon
         className={classNames(
-          "flex cursor-pointer items-center justify-center rounded-full text-slate-12 outline-none",
-          "focus-visible:ring-2 focus-visible:ring-blue-7",
-          BUTTON_APPEARANCE_CLASS_NAMES[appearance],
-          BUTTON_SIZE_CLASS_NAMES[size],
-          className,
+          "block text-current",
+          ICON_SIZE_CLASS_NAMES[size],
         )}
-        onClick={onClick}
-        ref={forwardedRef}
-        type={type}
-      >
-        <Icon
-          className={classNames(
-            "block text-current",
-            ICON_SIZE_CLASS_NAMES[size],
-          )}
-        />
-      </button>
-    );
-  },
-);
-
-IconButton.displayName = "IconButton";
+      />
+    </button>
+  );
+};

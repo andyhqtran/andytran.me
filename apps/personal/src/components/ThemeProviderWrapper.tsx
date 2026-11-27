@@ -9,5 +9,5 @@ export type ThemeProviderWrapperProps = {
 export const ThemeProviderWrapper = ({
   children,
 }: ThemeProviderWrapperProps) => {
-  return <ThemeProvider attribute="data-theme">{children}</ThemeProvider>;
+  return <ThemeProvider attribute="class">{children}</ThemeProvider>;
 };

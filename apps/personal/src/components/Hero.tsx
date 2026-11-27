@@ -19,13 +19,13 @@ export const Hero = () => {
   return (
     <section className="flex flex-col gap-6 px-14 pt-10 pb-16">
       <div className="flex flex-col gap-4">
-        <h1 className="font-black text-7xl text-slate-12 tracking-tight">
+        <h1 className="text-slate-12 text-7xl font-black tracking-tight">
           Andy Tran
         </h1>
-        <p className="text-2xl text-slate-11">
+        <p className="text-slate-11 text-2xl">
           Senior Front-end Engineer at{" "}
           <Link
-            className="text-slate-12 tracking-tight underline hover:text-blue-9"
+            className="text-slate-12 hover:text-blue-9 tracking-tight underline"
             href="https://air.inc"
             target="_blank"
           >
@@ -39,7 +39,7 @@ export const Hero = () => {
         {NAVIGATION.map((navigationItem, index) => {
           return (
             <Link
-              className="text-lg text-slate-12 underline hover:text-blue-9"
+              className="text-slate-12 hover:text-blue-9 text-lg underline"
               href={navigationItem.href}
               key={index}
               target="_blank"
