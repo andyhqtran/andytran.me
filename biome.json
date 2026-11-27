@@ -46,7 +46,8 @@
       "!dist",
       "!build",
       "!.agents",
-      "!.claude"
+      "!.claude",
+      "!openspec"
     ]
   },
   "formatter": {
@@ -96,9 +97,6 @@
   "overrides": [
     {
       "includes": [
-        ".storybook/**",
-        "**/*.stories.ts",
-        "**/*.stories.tsx",
         "./*.ts",
         "./*.mjs",
         "**/app/**/page.tsx",
