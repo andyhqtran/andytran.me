@@ -11,7 +11,7 @@ export const Progress = ({ className, value }: ProgressProps) => {
   return (
     <RadixProgress.Root
       className={classNames(
-        "h-1 overflow-hidden bg-slate-2 text-blue-9",
+        "bg-slate-2 text-blue-9 h-1 overflow-hidden",
         className,
       )}
       value={value}

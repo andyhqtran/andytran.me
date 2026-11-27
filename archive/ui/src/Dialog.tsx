@@ -36,21 +36,21 @@ export const Dialog = ({
       )}
 
       <RadixDialog.Portal>
-        <RadixDialog.Overlay className="fixed inset-0 bg-slate-1 opacity-80" />
+        <RadixDialog.Overlay className="bg-slate-1 fixed inset-0 opacity-80" />
         <RadixDialog.Content
-          className="-translate-x-1/2 -translate-y-1/2 fixed top-1/2 left-1/2 flex max-h-[80vh] w-full max-w-[calc(100%-48px)] flex-col rounded border border-slate-4 bg-slate-1 shadow-lg sm:max-w-2xl"
+          className="border-slate-4 bg-slate-1 fixed top-1/2 left-1/2 flex max-h-[80vh] w-full max-w-[calc(100%-48px)] -translate-x-1/2 -translate-y-1/2 flex-col rounded border shadow-lg sm:max-w-2xl"
           {...restOfProps}
         >
           {(!!title || !!description) && (
-            <div className="flex justify-between gap-8 border-slate-4 border-b px-6 py-4">
+            <div className="border-slate-4 flex justify-between gap-8 border-b px-6 py-4">
               <div className="flex flex-col gap-1">
                 {!!title && (
-                  <RadixDialog.Title className="truncate font-semibold text-base text-slate-12">
+                  <RadixDialog.Title className="text-slate-12 truncate text-base font-semibold">
                     {title}
                   </RadixDialog.Title>
                 )}
                 {!!description && (
-                  <RadixDialog.Description className="line-clamp-2 text-slate-11 text-xs">
+                  <RadixDialog.Description className="text-slate-11 line-clamp-2 text-xs">
                     {description}
                   </RadixDialog.Description>
                 )}

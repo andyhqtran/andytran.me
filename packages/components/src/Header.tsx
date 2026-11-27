@@ -17,7 +17,7 @@ export const Header = ({ isSticky = false }: HeaderProps) => {
       <div ref={ref} />
       <header
         className={classNames(
-          "flex h-24 items-center border-b bg-slate-1",
+          "bg-slate-1 flex h-24 items-center border-b",
           isSticky ? "sticky top-0" : undefined,
           isSticky
             ? isStickied

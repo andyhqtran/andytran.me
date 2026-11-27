@@ -17,11 +17,11 @@ export const Collapsible = ({
 }: CollapsibleProps) => {
   return (
     <RadixCollapsible.Root className={className}>
-      <div className="flex items-center gap-3 border-slate-4 border-b py-3">
-        <RadixCollapsible.Trigger className="flex h-5 w-5 items-center justify-center rounded-full border border-slate-4">
+      <div className="border-slate-4 flex items-center gap-3 border-b py-3">
+        <RadixCollapsible.Trigger className="border-slate-4 flex h-5 w-5 items-center justify-center rounded-full border">
           <ChevronDownIcon className="block h-2.5 w-2.5" />
         </RadixCollapsible.Trigger>
-        <div className="font-semibold text-sm">{title}</div>
+        <div className="text-sm font-semibold">{title}</div>
       </div>
       <RadixCollapsible.Content className="radix-state-closed:animate-collapsible-slide-up radix-state-open:animate-collapsible-slide-down overflow-hidden">
         {children}
